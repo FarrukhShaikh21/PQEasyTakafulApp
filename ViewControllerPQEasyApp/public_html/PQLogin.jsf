@@ -5,22 +5,44 @@
 <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>  
     <af:form id="f1">
       <af:panelGridLayout id="pgl1">
-        <af:gridRow marginTop="5px" height="auto" id="gr1">
-          <af:gridCell marginStart="5px" width="34%" id="gc1"/>
-          <af:gridCell marginStart="5px" width="33%" id="gc2"/>
-          <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc3"/>
-        </af:gridRow>
-        <af:gridRow marginTop="5px" height="auto" id="gr2">
-          <af:gridCell marginStart="5px" width="34%" id="gc4"/>
-          <af:gridCell marginStart="5px" width="33%" id="gc5" halign="stretch">
-            <af:panelFormLayout id="pfl1"/>
+        <af:gridRow marginTop="5px" id="gr2" height="100%">
+          <af:gridCell id="gc1" width="10%"/>
+          <af:gridCell marginStart="5px" width="80%" id="gc5" valign="stretch" halign="stretch">
+            <af:panelBox text="PanelBox1" id="pb1" showDisclosure="false" showHeader="never"
+                         styleClass="PQLoginFormCurve">
+              <f:facet name="toolbar"/>
+              <af:panelGridLayout id="pgl2">
+                <af:gridRow id="gr3" height="100px">
+                  <af:gridCell id="gc4"/>
+                </af:gridRow>
+                <af:gridRow marginTop="20px" height="auto" id="gr5">
+                  <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc11" halign="stretch"
+                               valign="stretch">
+                    <af:panelGroupLayout id="pgl3" layout="vertical" styleClass="AFStretchWidth" halign="center">
+                      <af:inputText label="Label 1" id="it1" simple="true" styleClass="PQLoginTextBox"
+                                    placeholder="Enter User Name"/>
+                    </af:panelGroupLayout>
+                  </af:gridCell>
+                </af:gridRow>
+                <af:gridRow id="gr1" marginTop="20px">
+                  <af:gridCell id="gc3" halign="stretch" valign="stretch">
+                    <af:panelGroupLayout id="pgl4" layout="vertical" styleClass="AFStretchWidth" halign="center">
+                      <af:inputText label="Label 1" id="it2" simple="true" styleClass="PQLoginTextBox"
+                                    placeholder="Enter Password"/>
+                    </af:panelGroupLayout>
+                  </af:gridCell>
+                </af:gridRow>
+                <af:gridRow id="gr4">
+                  <af:gridCell id="gc6" halign="stretch" valign="stretch">
+                    <af:panelGroupLayout id="pgl5" layout="vertical" styleClass="AFStretchWidth" halign="center">
+                      <af:button text="button 1" id="b1"/>
+                    </af:panelGroupLayout>
+                  </af:gridCell>
+                </af:gridRow>
+              </af:panelGridLayout>
+            </af:panelBox>
           </af:gridCell>
-          <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc6"/>
-        </af:gridRow>
-        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr3">
-          <af:gridCell marginStart="5px" width="34%" id="gc7"/>
-          <af:gridCell marginStart="5px" width="33%" id="gc8"/>
-          <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc9"/>
+          <af:gridCell id="gc2" width="10%"/>
         </af:gridRow>
       </af:panelGridLayout>
     </af:form>

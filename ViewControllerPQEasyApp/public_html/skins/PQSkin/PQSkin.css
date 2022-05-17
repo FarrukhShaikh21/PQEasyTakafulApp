@@ -3,3 +3,17 @@
 @namespace af "http://xmlns.oracle.com/adf/faces/rich";
 @namespace dvt "http://xmlns.oracle.com/dss/adf/faces";
 
+.PQLoginFormCurve
+{
+   border: 2px solid;
+   border-radius: 15px;
+}
+
+
+
+.PQLoginTextBox af|inputText::content 
+{
+  width:50%;
+  height:25px;
+}
+
