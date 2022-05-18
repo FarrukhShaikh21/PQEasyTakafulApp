@@ -1,36 +1,42 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
-    <af:document title="PQMain.jsf" id="d1">
-    <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>      
-        <af:form id="f1">
-            <af:panelGridLayout id="pgl1">
-                <af:gridRow marginTop="5px" height="auto" id="gr1">
-                    <af:gridCell marginStart="5px" width="34%" id="gc1"/>
-                    <af:gridCell marginStart="5px" width="33%" id="gc2"/>
-                    <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc3"/>
-                </af:gridRow>
-                <af:gridRow marginTop="5px" height="auto" id="gr2">
-                    <af:gridCell marginStart="5px" width="34%" id="gc4"/>
-                    <af:gridCell marginStart="5px" width="33%" id="gc5"/>
-                    <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc6"/>
-                </af:gridRow>
-                <af:gridRow marginTop="5px" height="auto" id="gr3">
-                    <af:gridCell marginStart="5px" width="34%" id="gc7"/>
-                    <af:gridCell marginStart="5px" width="33%" id="gc8"/>
-                    <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc9"/>
-                </af:gridRow>
-                <af:gridRow marginTop="5px" height="auto" id="gr4">
-                    <af:gridCell marginStart="5px" width="34%" id="gc10"/>
-                    <af:gridCell marginStart="5px" width="33%" id="gc11"/>
-                    <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc12"/>
-                </af:gridRow>
-                <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr5">
-                    <af:gridCell marginStart="5px" width="34%" id="gc13"/>
-                    <af:gridCell marginStart="5px" width="33%" id="gc14"/>
-                    <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc15"/>
-                </af:gridRow>
+  <af:document title="PQLogin.jsf" id="d1">
+<meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>  
+    <af:form id="f1">
+      <af:panelGridLayout id="pgl1">
+        <af:gridRow id="gr2" height="100%" marginTop="10px">
+          <af:gridCell id="gc1" width="10%"/>
+          <af:gridCell marginStart="5px" width="80%" id="gc5" valign="stretch" halign="stretch">
+            <af:panelGridLayout id="pgl2" dimensionsFrom="parent" styleClass="PQLoginFormCurve">
+              <af:gridRow id="gr3" height="100px" marginTop="10px">
+                <af:gridCell id="gc4" halign="center" valign="stretch" columnSpan="3" rowSpan="1">
+                  <af:image source="#{resource['images:imgPQGT.png']}" id="i1" styleClass="AFStretchWidth"/>
+                </af:gridCell>
+              </af:gridRow>
+              <af:gridRow marginTop="50px" height="auto" id="gr5" marginBottom="10px">
+                <af:gridCell id="gc3" width="33%" marginStart="5px" marginEnd="5px">
+                  <af:panelGroupLayout id="pgl3" layout="vertical" styleClass="AFStretchWidth" halign="center">
+                    <af:link id="l1" icon="#{resource['images:imgMyProfile.png']}" partialSubmit="true"/>
+                  </af:panelGroupLayout>
+                </af:gridCell>
+                <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc11" halign="stretch" valign="stretch">
+                  <af:panelGroupLayout id="pgl4" layout="vertical">
+                    <af:link text="link 1" id="l2" icon="#{resource['images:imgMyProfile.png']}"/>
+                  </af:panelGroupLayout>
+                </af:gridCell>
+                <af:gridCell id="gc6" width="34px"/>
+              </af:gridRow>
             </af:panelGridLayout>
-        </af:form>
-    </af:document>
+          </af:gridCell>
+          <af:gridCell id="gc2" width="10%"/>
+        </af:gridRow>
+        <af:gridRow id="gr6" marginTop="10px">
+          <af:gridCell id="gc7"/>
+          <af:gridCell id="gc8" halign="center" valign="stretch"/>
+          <af:gridCell id="gc9"/>
+        </af:gridRow>
+      </af:panelGridLayout>
+    </af:form>
+  </af:document>
 </f:view>
