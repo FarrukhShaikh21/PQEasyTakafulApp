@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:document title="PQLogin.jsf" id="d1">
+<meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>  
+    <af:form id="f1">
+      <af:decorativeBox id="db1" dimensionsFrom="parent">
+        <f:facet name="top"/>
+        <f:facet name="center">
+          <af:panelGridLayout id="pgl1" dimensionsFrom="parent">
+            <af:gridRow id="gr2" height="100%" marginTop="10px">
+              <af:gridCell id="gc1" width="10%"/>
+              <af:gridCell marginStart="5px" width="80%" id="gc5" valign="stretch" halign="stretch">
+                <af:panelGridLayout id="pgl2" dimensionsFrom="parent" styleClass="PQLoginFormCurve">
+                  <af:gridRow id="gr3" height="100px" marginTop="10px">
+                    <af:gridCell id="gc4" halign="center" valign="stretch" columnSpan="3" rowSpan="1">
+                      <af:image source="#{resource['images:imgPQGT.png']}" id="i1" styleClass="AFStretchWidth"/>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow id="gr7" marginTop="10px">
+                    <af:gridCell id="gc17" halign="center" valign="middle" columnSpan="3" rowSpan="1">
+                      <af:panelGroupLayout id="pgl12" layout="vertical" halign="center">
+                        <af:outputText value="EasyTakaful" id="ot1"
+                                       inlineStyle="color:red; font-size:xx-large; font-style:italic;"/>
+                        <af:outputText value="Together We Protect" id="ot2"
+                                       inlineStyle="color:red; font-style:italic;"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow marginTop="30px" height="auto" id="gr5" marginBottom="10px">
+                    <af:gridCell id="gc3" width="33%" marginStart="5px" marginEnd="5px" halign="stretch"
+                                 valign="stretch">
+                      <af:panelGroupLayout id="pgl4" layout="vertical" halign="center">
+                        <af:link id="l2" icon="#{resource['images:imgPQMyProfile.png']}"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                    <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc11" halign="stretch"
+                                 valign="stretch">
+                      <af:panelGroupLayout id="pgl3" layout="vertical" styleClass="AFStretchWidth" halign="center">
+                        <af:link id="l1" partialSubmit="true" icon="#{resource['images:imgPQMyTakaful.png']}"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                    <af:gridCell id="gc6" width="34%" valign="stretch" halign="stretch">
+                      <af:panelGroupLayout id="pgl5" layout="vertical" halign="center">
+                        <af:link id="l3" icon="#{resource['images:imgPQMyClaims.png']}"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow id="gr1" marginTop="20px">
+                    <af:gridCell id="gc10" width="33%" halign="stretch" valign="stretch">
+                      <af:panelGroupLayout id="pgl6" layout="vertical" valign="middle" halign="center">
+                        <af:link id="l5" icon="#{resource['images:imgPQProducts.png']}"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                    <af:gridCell id="gc12" width="33%" halign="stretch" valign="stretch">
+                      <af:panelGroupLayout id="pgl7" halign="center" layout="vertical">
+                        <af:link id="l4" icon="#{resource['images:imgPQGetQuote.png']}"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                    <af:gridCell id="gc13" width="34%" halign="stretch" valign="stretch">
+                      <af:panelGroupLayout id="pgl8" halign="center" layout="vertical">
+                        <af:link id="l6" icon="#{resource['images:imgPQContribution.png']}"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow id="gr4" marginTop="20px">
+                    <af:gridCell id="gc14" width="33%" halign="stretch" valign="stretch">
+                      <af:panelGroupLayout id="pgl9" layout="vertical" valign="middle" halign="center">
+                        <af:link id="l7" icon="#{resource['images:imgPQTakafulCenter.png']}"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                    <af:gridCell id="gc15" width="33%" halign="stretch" valign="stretch">
+                      <af:panelGroupLayout id="pgl10" halign="center" layout="vertical">
+                        <af:link id="l8" icon="#{resource['images:imgPQSupport.png']}"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                    <af:gridCell id="gc16" width="34%" halign="stretch" valign="stretch">
+                      <af:panelGroupLayout id="pgl11" halign="center" layout="vertical">
+                        <af:link id="l9" icon="#{resource['images:imgPQGuidelines.png']}"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                  </af:gridRow>
+                </af:panelGridLayout>
+              </af:gridCell>
+              <af:gridCell id="gc2" width="10%"/>
+            </af:gridRow>
+            <af:gridRow id="gr6" marginTop="10px">
+              <af:gridCell id="gc7"/>
+              <af:gridCell id="gc8" halign="center" valign="stretch"/>
+              <af:gridCell id="gc9"/>
+            </af:gridRow>
+          </af:panelGridLayout>
+        </f:facet>
+      </af:decorativeBox>
+    </af:form>
+  </af:document>
+</f:view>
