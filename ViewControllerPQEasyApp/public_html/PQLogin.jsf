@@ -53,9 +53,11 @@
           </af:gridCell>
           <af:gridCell id="gc2" width="10%"/>
         </af:gridRow>
-        <af:gridRow id="gr6" marginTop="010px">
+        <af:gridRow id="gr6" marginTop="10px">
           <af:gridCell id="gc7"/>
-          <af:gridCell id="gc8"/>
+          <af:gridCell id="gc8" halign="center" valign="stretch">
+            <af:image source="#{resource['images:imgBottomBorder.png']}" id="i2" styleClass="AFStretchWidth"/>
+          </af:gridCell>
           <af:gridCell id="gc9"/>
         </af:gridRow>
       </af:panelGridLayout>
