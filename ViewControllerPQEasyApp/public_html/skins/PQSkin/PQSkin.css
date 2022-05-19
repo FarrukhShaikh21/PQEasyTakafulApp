@@ -29,3 +29,16 @@
     color:white; 
     background:green; 
 }
+
+.PQTransactionButton{
+    font-size:10px; 
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    border: green  3.0px solid;
+    padding: 6px; 
+    color:white; 
+    width:90px;
+    height:30px;
+    background:#c00000 ; 
+}

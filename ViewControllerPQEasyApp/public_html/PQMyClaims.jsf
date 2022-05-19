@@ -11,7 +11,7 @@
             <af:gridRow id="gr2" height="100%" marginTop="10px">
               <af:gridCell id="gc1" width="10%"/>
               <af:gridCell marginStart="5px" width="80%" id="gc5" valign="stretch" halign="stretch">
-                <af:panelGridLayout id="pgl2" dimensionsFrom="parent" styleClass="PQLoginFormCurve">
+                <af:panelGridLayout id="pgl2" styleClass="PQLoginFormCurve">
                   <af:gridRow id="gr3" height="100px" marginTop="10px">
                     <af:gridCell id="gc6" halign="stretch" valign="middle" width="30%">
                       <af:panelGroupLayout id="pgl5" layout="vertical" halign="end">
@@ -29,27 +29,125 @@
                     <af:gridCell marginStart="5px" width="30%" marginEnd="5px" id="gc11" halign="end"
                                  valign="stretch">
                       <af:panelGroupLayout id="pgl3" layout="horizontal">
-                        <af:inputText label="Label 1" id="it2" simple="true" contentStyle="width:100%"/>
+                        <af:inputText label="Label 1" id="it2" simple="true"
+                                      value="Policy /Certificate No."
+                                      contentStyle="width:100%;color:red;border-color:green"/>
                       </af:panelGroupLayout>
                     </af:gridCell>
                     <af:gridCell id="gc3" width="70%" marginStart="5px" halign="stretch"
-                                 valign="stretch" marginEnd="10px">
+                                 valign="stretch" marginEnd="10px" columnSpan="1" rowSpan="1">
                       <af:panelGroupLayout id="pgl4" layout="vertical" halign="end">
-                        <af:inputText label="Label 1" id="it1" simple="true" contentStyle="width:100%"/>
+                        <af:inputText label="Label 1" id="it1" simple="true"
+                                      contentStyle="width:100%;color:red;border-color:green"
+                                      value="03-2003-PO-MTR-PCCM-D-000109"/>
                       </af:panelGroupLayout>
                     </af:gridCell>
                   </af:gridRow>
                   <af:gridRow marginTop="30px" height="auto" id="gr1" marginBottom="10px">
                     <af:gridCell id="gc12" width="30%" marginStart="5px" marginEnd="5px" valign="stretch" halign="end">
                       <af:panelGroupLayout id="pgl7" layout="vertical" halign="end">
-                        <af:inputText label="Label 1" id="it4" simple="true" contentStyle="width:100%"/>
+                        <af:inputText label="Label 1" id="it4" simple="true"
+                                      value="Participant Name" contentStyle="width:100%;color:red;border-color:green"/>
                       </af:panelGroupLayout>
                     </af:gridCell>
                     <af:gridCell marginStart="5px" width="70%" id="gc10" halign="stretch"
-                                 valign="stretch" marginEnd="10px">
+                                 valign="stretch" marginEnd="10px" columnSpan="1" rowSpan="1">
                       <af:panelGroupLayout id="pgl6" layout="vertical" halign="end" styleClass="width:100%">
-                        <af:inputText label="Label 1" id="it3" simple="true" contentStyle="width:100%"/>
+                        <af:inputText label="Label 1" id="it3" simple="true"
+                                      contentStyle="width:100%;color:red;border-color:green"
+                                      value="Kalimuddin Ahmed"/>
                       </af:panelGroupLayout>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow marginTop="30px" height="auto" id="gr4" marginBottom="10px">
+                    <af:gridCell id="gc13" width="30%" marginStart="5px" marginEnd="5px" valign="stretch" halign="end">
+                      <af:panelGroupLayout id="pgl9" layout="vertical" halign="end">
+                        <af:inputText label="Label 1" id="it5" simple="true"
+                                      value="Policy Expiry Date"
+                                      contentStyle="width:100%;color:red;border-color:green"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                    <af:gridCell marginStart="5px" width="70%" id="gc14" halign="stretch" valign="stretch"
+                                 marginEnd="10px" columnSpan="1">
+                      <af:panelGroupLayout id="pgl10" layout="vertical" halign="end" styleClass="width:100%">
+                        <af:inputText label="Label 1" id="it6" simple="true"
+                                      contentStyle="width:100%;color:red;border-color:green"
+                                      value="13-Mar-2021"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow marginTop="30px" height="auto" id="gr7" marginBottom="10px">
+                    <af:gridCell id="gc15" width="30%" marginStart="5px" marginEnd="5px" valign="stretch" halign="end">
+                      <af:panelGroupLayout id="pgl11" layout="vertical" halign="end">
+                        <af:inputText label="Label 1" id="it7" simple="true" value="Make"
+                                      contentStyle="width:100%;color:red;border-color:green"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                    <af:gridCell marginStart="5px" width="70%" id="gc16" halign="stretch" valign="stretch"
+                                 marginEnd="10px" columnSpan="1">
+                      <af:panelGroupLayout id="pgl12" layout="vertical" halign="end" styleClass="width:100%">
+                        <af:inputText label="Label 1" id="it8" simple="true"
+                                      contentStyle="width:100%;color:red;border-color:green"
+                                      value="Honda City"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow marginTop="30px" height="auto" id="gr8" marginBottom="10px">
+                    <af:gridCell id="gc17" width="30%" marginStart="5px" marginEnd="5px" valign="stretch" halign="end">
+                      <af:panelGroupLayout id="pgl13" layout="vertical" halign="end">
+                        <af:inputText label="Label 1" id="it9" simple="true" value="Model"
+                                      contentStyle="width:100%;color:red;border-color:green"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                    <af:gridCell marginStart="5px" width="70%" id="gc18" halign="stretch" valign="stretch"
+                                 marginEnd="10px" columnSpan="1">
+                      <af:panelGroupLayout id="pgl14" layout="vertical" halign="end" styleClass="width:100%">
+                        <af:inputText label="Label 1" id="it10" simple="true"
+                                      contentStyle="width:100%;color:red;border-color:green" value="2017"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow marginTop="30px" height="auto" id="gr9" marginBottom="10px">
+                    <af:gridCell id="gc19" width="30%" marginStart="5px" marginEnd="5px" valign="stretch" halign="end">
+                      <af:panelGroupLayout id="pgl15" layout="vertical" halign="end">
+                        <af:inputText label="Label 1" id="it11" simple="true"
+                                      value="Registration No." contentStyle="width:100%;color:red;border-color:green"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                    <af:gridCell marginStart="5px" width="70%" id="gc20" halign="stretch" valign="stretch"
+                                 marginEnd="10px" columnSpan="1" rowSpan="1">
+                      <af:panelGroupLayout id="pgl16" layout="vertical" halign="end" styleClass="width:100%">
+                        <af:inputText label="Label 1" id="it12" simple="true"
+                                      contentStyle="width:100%;color:red;border-color:green"
+                                      value="LEB-17-5034"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow id="gr10">
+                    <af:gridCell id="gc22" halign="stretch" valign="stretch" columnSpan="2" width="100%">
+                      <af:panelGridLayout id="pgl17">
+                        <af:gridRow marginTop="5px" height="auto" id="gr11">
+                          <af:gridCell marginStart="40px" width="34%" id="gc23" marginEnd="5px" halign="stretch">
+                            <af:button text="Claim Intimation" id="b1" styleClass="PQTransactionButton"/>
+                          </af:gridCell>
+                          <af:gridCell marginStart="5px" width="33%" id="gc24" marginEnd="5px" halign="stretch">
+                            <af:button text="Claim Tracking" id="b2" styleClass="PQTransactionButton"/>
+                          </af:gridCell>
+                          <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc25" halign="stretch">
+                            <af:button text="Claim History" id="b3" styleClass="PQTransactionButton"/>
+                          </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow marginTop="5px" height="auto" id="gr12">
+                          <af:gridCell marginStart="5px" width="34%" id="gc26"/>
+                          <af:gridCell marginStart="5px" width="33%" id="gc27"/>
+                          <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc28"/>
+                        </af:gridRow>
+                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr13">
+                          <af:gridCell marginStart="5px" width="34%" id="gc29"/>
+                          <af:gridCell marginStart="5px" width="33%" id="gc30"/>
+                          <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc31"/>
+                        </af:gridRow>
+                      </af:panelGridLayout>
                     </af:gridCell>
                   </af:gridRow>
                 </af:panelGridLayout>
