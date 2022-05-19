@@ -13,40 +13,40 @@
               <af:gridCell marginStart="5px" width="80%" id="gc5" valign="stretch" halign="stretch">
                 <af:panelGridLayout id="pgl2" dimensionsFrom="parent" styleClass="PQLoginFormCurve">
                   <af:gridRow id="gr3" height="100px" marginTop="10px">
-                    <af:gridCell id="gc6" halign="stretch" valign="middle">
-                      <af:panelGroupLayout id="pgl5" layout="vertical" halign="center">
+                    <af:gridCell id="gc6" halign="stretch" valign="middle" width="30%">
+                      <af:panelGroupLayout id="pgl5" layout="vertical" halign="end">
                         <af:outputText value="MyClaims" id="ot1"
                                        inlineStyle="font-size:xx-large; font-style:italic; color:green;"/>
                       </af:panelGroupLayout>
                     </af:gridCell>
-                    <af:gridCell id="gc4" halign="stretch" columnSpan="1" rowSpan="1" valign="middle">
-                      <af:panelGroupLayout id="pgl8" layout="vertical" halign="center" styleClass="AFStretchWidth">
+                    <af:gridCell id="gc4" halign="stretch" columnSpan="1" rowSpan="1" valign="middle" width="70%">
+                      <af:panelGroupLayout id="pgl8" layout="vertical" halign="end" styleClass="AFStretchWidth">
                         <af:image source="#{resource['images:imgPQGT.png']}" id="i1"/>
                       </af:panelGroupLayout>
                     </af:gridCell>
                   </af:gridRow>
                   <af:gridRow marginTop="30px" height="auto" id="gr5" marginBottom="10px">
-                    <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc11" halign="stretch"
+                    <af:gridCell marginStart="5px" width="30%" marginEnd="5px" id="gc11" halign="end"
                                  valign="stretch">
                       <af:panelGroupLayout id="pgl3" layout="horizontal">
                         <af:inputText label="Label 1" id="it2" simple="true" contentStyle="width:100%"/>
                       </af:panelGroupLayout>
                     </af:gridCell>
-                    <af:gridCell id="gc3" width="50%" marginStart="5px" marginEnd="5px" halign="stretch"
-                                 valign="stretch">
+                    <af:gridCell id="gc3" width="70%" marginStart="5px" halign="stretch"
+                                 valign="stretch" marginEnd="10px">
                       <af:panelGroupLayout id="pgl4" layout="vertical" halign="end">
                         <af:inputText label="Label 1" id="it1" simple="true" contentStyle="width:100%"/>
                       </af:panelGroupLayout>
                     </af:gridCell>
                   </af:gridRow>
                   <af:gridRow marginTop="30px" height="auto" id="gr1" marginBottom="10px">
-                    <af:gridCell id="gc12" width="50%" marginStart="5px" marginEnd="5px" valign="stretch">
+                    <af:gridCell id="gc12" width="30%" marginStart="5px" marginEnd="5px" valign="stretch" halign="end">
                       <af:panelGroupLayout id="pgl7" layout="vertical" halign="end">
                         <af:inputText label="Label 1" id="it4" simple="true" contentStyle="width:100%"/>
                       </af:panelGroupLayout>
                     </af:gridCell>
-                    <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc10" halign="stretch"
-                                 valign="stretch">
+                    <af:gridCell marginStart="5px" width="70%" id="gc10" halign="stretch"
+                                 valign="stretch" marginEnd="10px">
                       <af:panelGroupLayout id="pgl6" layout="vertical" halign="end" styleClass="width:100%">
                         <af:inputText label="Label 1" id="it3" simple="true" contentStyle="width:100%"/>
                       </af:panelGroupLayout>
