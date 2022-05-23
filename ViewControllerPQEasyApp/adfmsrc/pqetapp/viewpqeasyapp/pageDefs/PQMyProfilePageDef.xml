@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.57" id="PQMyProfilePageDef"
+                Package="pqetapp.viewpqeasyapp.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="VuPortalClientInfoQVORO" RangeSize="25" DataControl="EasyTakafulAppModuleDataControl"
+              id="VuPortalClientInfoQVOROIterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="VuPortalClientInfoQVOROIterator" id="ParticipantName">
+      <AttrNames>
+        <Item Value="ParticipantName"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

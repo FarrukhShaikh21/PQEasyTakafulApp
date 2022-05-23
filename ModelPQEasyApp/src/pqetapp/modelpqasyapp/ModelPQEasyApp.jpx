@@ -12,7 +12,16 @@
     <Attr Name="_jbo.TypeMapEntries" Value="OracleApps"/>
     <Attr Name="_jprName" Value="../../../ModelPQEasyApp.jpr"/>
     <Attr Name="_NamedConnection" Value="ConnEashApp"/>
+    <Attr Name="_appModuleNames0" Value="pqetapp.modelpqasyapp.am.EasyTakafulAppModule"/>
   </DesignTime>
+  <Containee
+    Name="am"
+    PackageName="pqetapp.modelpqasyapp.am"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_AM" Value="true"/>
+    </DesignTime>
+  </Containee>
   <Containee
     Name="qvo"
     PackageName="pqetapp.modelpqasyapp.qvo"

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.11.57" id="DataBindings"
+             SeparateXMLFiles="false" Package="pqetapp.viewpqeasyapp" ClientType="Generic">
+  <pageMap>
+    <page path="/PQMyClaims.jsf" usageId="pqetapp_viewpqeasyapp_PQMyClaimsPageDef"/>
+    <page path="/PQMyProfile.jsf" usageId="pqetapp_viewpqeasyapp_PQMyProfilePageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="pqetapp_viewpqeasyapp_PQMyClaimsPageDef" path="pqetapp.viewpqeasyapp.pageDefs.PQMyClaimsPageDef"/>
+    <page id="pqetapp_viewpqeasyapp_PQMyProfilePageDef" path="pqetapp.viewpqeasyapp.pageDefs.PQMyProfilePageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="EasyTakafulAppModuleDataControl" Package="pqetapp.modelpqasyapp.am"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="EasyTakafulAppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

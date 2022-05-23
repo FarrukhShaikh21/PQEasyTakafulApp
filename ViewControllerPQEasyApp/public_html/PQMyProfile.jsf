@@ -2,9 +2,10 @@
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
   <af:document title="PQLogin.jsf" id="d1">
-<meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>  
+    <af:messages id="m1"/>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>  
     <af:form id="f1">
-      <af:decorativeBox id="db1" dimensionsFrom="parent">
+      <af:decorativeBox id="db1">
         <f:facet name="top"/>
         <f:facet name="center">
           <af:panelGridLayout id="pgl1">
@@ -15,7 +16,7 @@
                   <af:gridRow id="gr3" height="100px" marginTop="10px">
                     <af:gridCell id="gc6" halign="stretch" valign="middle" width="30%">
                       <af:panelGroupLayout id="pgl5" layout="vertical" halign="end">
-                        <af:outputText value="MyClaims" id="ot1"
+                        <af:outputText value="My Profile" id="ot1"
                                        inlineStyle="font-size:xx-large; font-style:italic; color:green;"/>
                       </af:panelGroupLayout>
                     </af:gridCell>
@@ -28,7 +29,7 @@
                   <af:gridRow marginTop="30px" height="auto" id="gr5" marginBottom="10px">
                     <af:gridCell marginStart="5px" width="30%" marginEnd="5px" id="gc11" halign="end"
                                  valign="stretch">
-                      <af:panelGroupLayout id="pgl3" layout="horizontal" inlineStyle="border-color:red">
+                      <af:panelGroupLayout id="pgl3" layout="horizontal">
                         <af:inputText label="Label 1" id="it2" simple="true"
                                       value="Policy /Certificate No."
                                       contentStyle="width:100%;color:red;border-color:green"/>
@@ -36,7 +37,7 @@
                     </af:gridCell>
                     <af:gridCell id="gc3" width="70%" marginStart="5px" halign="stretch"
                                  valign="stretch" marginEnd="10px" columnSpan="1" rowSpan="1">
-                      <af:panelGroupLayout id="pgl4" layout="vertical" halign="end">
+                      <af:panelGroupLayout id="pgl4" layout="vertical" halign="end" styleClass="PQTextFielColor">
                         <af:inputText label="Label 1" id="it1" simple="true"
                                       contentStyle="width:100%;color:red;border-color:green"
                                       value="03-2003-PO-MTR-PCCM-D-000109"/>
@@ -52,10 +53,18 @@
                     </af:gridCell>
                     <af:gridCell marginStart="5px" width="70%" id="gc10" halign="stretch"
                                  valign="stretch" marginEnd="10px" columnSpan="1" rowSpan="1">
-                      <af:panelGroupLayout id="pgl6" layout="vertical" halign="end" styleClass="width:100%">
-                        <af:inputText label="Label 1" id="it3" simple="true"
-                                      contentStyle="width:100%;color:red;border-color:green"
-                                      value="Kalimuddin Ahmed"/>
+                      <af:panelGroupLayout id="pgl6" layout="vertical" halign="end">
+                        <af:outputText value="outputText1" id="ot2" inlineStyle="color:red"/>
+                        <af:inputText value="#{bindings.ParticipantName.inputValue}"
+                                      label="#{bindings.ParticipantName.hints.label}"
+                                      required="#{bindings.ParticipantName.hints.mandatory}"
+                                      columns="#{bindings.ParticipantName.hints.displayWidth}"
+                                      maximumLength="#{bindings.ParticipantName.hints.precision}"
+                                      shortDesc="#{bindings.ParticipantName.hints.tooltip}" id="it13" simple="true"
+                                      contentStyle="border-color:red"
+                                      inlineStyle="border-color:#00e700; border-width:medium medium medium medium;">
+                          <f:validator binding="#{bindings.ParticipantName.validator}"/>
+                        </af:inputText>
                       </af:panelGroupLayout>
                     </af:gridCell>
                   </af:gridRow>
@@ -71,8 +80,8 @@
                                  marginEnd="10px" columnSpan="1">
                       <af:panelGroupLayout id="pgl10" layout="vertical" halign="end" styleClass="width:100%">
                         <af:inputText label="Label 1" id="it6" simple="true"
-                                      contentStyle="width:100%;color:red;border-color:green"
-                                      value="13-Mar-2021"/>
+                                      contentStyle="width:100%;"
+                                      value="13-Mar-2021" styleClass="PQTextFielColor"/>
                       </af:panelGroupLayout>
                     </af:gridCell>
                   </af:gridRow>

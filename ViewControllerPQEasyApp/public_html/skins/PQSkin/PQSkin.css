@@ -42,3 +42,12 @@
     height:30px;
     background:#c00000 ; 
 }
+.PQTextFielColor{
+    color:red;border-color:green
+}
+
+.PQLBorderOnly
+{
+   border: #d17575 2px solid;
+   border-radius: 15px;
+}
