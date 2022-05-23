@@ -26,46 +26,115 @@
                       </af:panelGroupLayout>
                     </af:gridCell>
                   </af:gridRow>
-                  <af:gridRow marginTop="30px" height="auto" id="gr5" marginBottom="10px">
-                    <af:gridCell marginStart="5px" width="30%" marginEnd="5px" id="gc11" halign="end"
-                                 valign="stretch">
-                      <af:panelGroupLayout id="pgl3" layout="horizontal">
-                        <af:inputText label="Label 1" id="it2" simple="true"
-                                      value="Policy /Certificate No."
-                                      contentStyle="width:100%;color:red;border-color:green"/>
+                  <af:gridRow marginTop="10px" height="auto" id="gr14" marginBottom="10px">
+                    <af:gridCell id="gc21" width="30%" marginStart="5px" marginEnd="5px" valign="stretch"
+                                 halign="stretch">
+                      <af:panelGroupLayout id="pgl18" layout="vertical" halign="center" styleClass="PQLBorderOnly">
+                        <af:inputText label="Label 1" id="it3" simple="true" value="Name"
+                                      contentStyle="width:100%;color:red;" readOnly="true"/>
                       </af:panelGroupLayout>
                     </af:gridCell>
-                    <af:gridCell id="gc3" width="70%" marginStart="5px" halign="stretch"
-                                 valign="stretch" marginEnd="10px" columnSpan="1" rowSpan="1">
-                      <af:panelGroupLayout id="pgl4" layout="vertical" halign="end" styleClass="PQTextFielColor">
-                        <af:inputText label="Label 1" id="it1" simple="true"
-                                      contentStyle="width:100%;color:red;border-color:green"
-                                      value="03-2003-PO-MTR-PCCM-D-000109"/>
-                      </af:panelGroupLayout>
-                    </af:gridCell>
-                  </af:gridRow>
-                  <af:gridRow marginTop="30px" height="auto" id="gr1" marginBottom="10px">
-                    <af:gridCell id="gc12" width="30%" marginStart="5px" marginEnd="5px" valign="stretch" halign="end">
-                      <af:panelGroupLayout id="pgl7" layout="vertical" halign="end">
-                        <af:inputText label="Label 1" id="it4" simple="true"
-                                      value="Participant Name" contentStyle="width:100%;color:red;border-color:green"/>
-                      </af:panelGroupLayout>
-                    </af:gridCell>
-                    <af:gridCell marginStart="5px" width="70%" id="gc10" halign="stretch"
-                                 valign="stretch" marginEnd="10px" columnSpan="1" rowSpan="1">
-                      <af:panelGroupLayout id="pgl6" layout="vertical" halign="end">
-                        <af:outputText value="outputText1" id="ot2" inlineStyle="color:red"/>
+                    <af:gridCell marginStart="5px" width="70%" id="gc32" halign="stretch" marginEnd="10px"
+                                 columnSpan="1" rowSpan="1">
+                      <af:panelGroupLayout id="pgl19" layout="vertical" styleClass="PQLBorderOnly">
                         <af:inputText value="#{bindings.ParticipantName.inputValue}"
                                       label="#{bindings.ParticipantName.hints.label}"
                                       required="#{bindings.ParticipantName.hints.mandatory}"
                                       columns="#{bindings.ParticipantName.hints.displayWidth}"
                                       maximumLength="#{bindings.ParticipantName.hints.precision}"
-                                      shortDesc="#{bindings.ParticipantName.hints.tooltip}" id="it13" simple="true"
-                                      contentStyle="border-color:red"
-                                      inlineStyle="border-color:#00e700; border-width:medium medium medium medium;">
+                                      shortDesc="#{bindings.ParticipantName.hints.tooltip}" id="it14" simple="true"
+                                      contentStyle="color:red;padding-left:15px;"
+                                      inlineStyle="border-color:#00e700; border-width:medium medium medium medium;"
+                                      readOnly="true">
                           <f:validator binding="#{bindings.ParticipantName.validator}"/>
                         </af:inputText>
                       </af:panelGroupLayout>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow marginTop="10px" height="auto" id="gr1" marginBottom="10px">
+                    <af:gridCell id="gc12" width="30%" marginStart="5px" marginEnd="5px" valign="stretch"
+                                 halign="stretch">
+                      <af:panelGroupLayout id="pgl7" layout="vertical" halign="center" styleClass="PQLBorderOnly">
+                        <af:inputText label="Label 1" id="it4" simple="true"
+                                      value="Occupation" contentStyle="width:100%;color:red;" readOnly="true"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                    <af:gridCell marginStart="5px" width="70%" id="gc10" halign="stretch" marginEnd="10px" columnSpan="1" rowSpan="1">
+                      <af:panelGroupLayout id="pgl6" layout="vertical" styleClass="PQLBorderOnly">
+                        <af:inputText value="#{bindings.Occupation.inputValue}"
+                                      label="#{bindings.Occupation.hints.label}"
+                                      required="#{bindings.Occupation.hints.mandatory}"
+                                      columns="#{bindings.Occupation.hints.displayWidth}"
+                                      maximumLength="#{bindings.Occupation.hints.precision}"
+                                      shortDesc="#{bindings.Occupation.hints.tooltip}" id="it13" simple="true"
+                                      contentStyle="color:red;padding-left:15px;"
+                                      inlineStyle="border-color:#00e700; border-width:medium medium medium medium;">
+                          <f:validator binding="#{bindings.Occupation.validator}"/>
+                        </af:inputText>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow marginTop="10px" height="50px" id="gr5" marginBottom="10px">
+                    <af:gridCell id="gc3" width="30%" marginStart="5px" marginEnd="5px" valign="stretch"
+                                 halign="stretch">
+                      <af:panelGroupLayout id="pgl3" layout="vertical" halign="center" styleClass="PQLBorderOnly">
+                        <af:inputText label="Label 1" id="it1" simple="true" value="Address"
+                                      contentStyle="width:100%;color:red;vertical-align: middle;" readOnly="true" rows="1"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                    <af:gridCell marginStart="5px" width="70%" id="gc11" halign="stretch" marginEnd="10px"
+                                 columnSpan="1" rowSpan="1" valign="stretch">
+                      <af:panelGroupLayout id="pgl4" layout="vertical" styleClass="PQLBorderOnly">
+                        <af:inputText value="#{bindings.Address.inputValue}"
+                                      label="#{bindings.Address.hints.label}"
+                                      required="#{bindings.Address.hints.mandatory}"
+                                      columns="#{bindings.Address.hints.displayWidth}"
+                                      maximumLength="#{bindings.Address.hints.precision}"
+                                      shortDesc="#{bindings.Address.hints.tooltip}" id="it2" simple="true"
+                                      contentStyle="color:red;padding-left:15px;"
+                                      inlineStyle="border-color:#00e700; border-width:medium medium medium medium;"
+                                      rows="5" readOnly="true">
+                          <f:validator binding="#{bindings.Address.validator}"/>
+                        </af:inputText>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow marginTop="10px" height="auto" id="gr15" marginBottom="10px">
+                    <af:gridCell id="gc33" width="100%" marginStart="5px" marginEnd="5px" valign="stretch"
+                                 halign="stretch" rowSpan="1" columnSpan="2">
+                      <af:panelGridLayout id="pgl22">
+                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr16">
+                          <af:gridCell marginStart="5px" width="25%" id="gc35" halign="stretch" valign="stretch">
+                            <af:panelGroupLayout id="pgl20" layout="vertical" halign="center"
+                                                 styleClass="PQLBorderOnly">
+                              <af:inputText label="Label 1" id="it15" simple="true" value="City"
+                                            contentStyle="width:100%;color:red;" readOnly="true"/>
+                            </af:panelGroupLayout>
+                          </af:gridCell>
+                          <af:gridCell marginStart="5px" width="25%" id="gc36" halign="stretch" valign="stretch">
+                            <af:panelGroupLayout id="pgl21" layout="vertical" styleClass="PQLBorderOnly">
+                              <af:inputText value="#{bindings.CityName.inputValue}"
+                                            label="#{bindings.CityName.hints.label}"
+                                            required="#{bindings.CityName.hints.mandatory}"
+                                            columns="#{bindings.CityName.hints.displayWidth}"
+                                            maximumLength="#{bindings.CityName.hints.precision}"
+                                            shortDesc="#{bindings.CityName.hints.tooltip}" id="it16" simple="true"
+                                            contentStyle="color:red;padding-left:15px;"
+                                            inlineStyle="border-color:#00e700; border-width:medium medium medium medium;">
+                                <f:validator binding="#{bindings.CityName.validator}"/>
+                              </af:inputText>
+                            </af:panelGroupLayout>
+                          </af:gridCell>
+                          <af:gridCell marginStart="5px" width="25%" id="gc37" halign="stretch" valign="stretch">
+                            <af:panelGroupLayout id="pgl23" layout="vertical" halign="center"
+                                                 styleClass="PQLBorderOnly">
+                              <af:inputText label="Label 1" id="it17" simple="true" value="Province"
+                                            contentStyle="width:100%;color:red;" readOnly="true"/>
+                            </af:panelGroupLayout>
+                          </af:gridCell>
+                          <af:gridCell marginStart="5px" width="25%" marginEnd="5px" id="gc38"/>
+                        </af:gridRow>
+                      </af:panelGridLayout>
                     </af:gridCell>
                   </af:gridRow>
                   <af:gridRow marginTop="30px" height="auto" id="gr4" marginBottom="10px">

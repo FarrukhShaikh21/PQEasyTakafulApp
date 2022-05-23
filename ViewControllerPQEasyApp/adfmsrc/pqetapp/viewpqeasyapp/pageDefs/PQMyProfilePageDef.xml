@@ -13,5 +13,20 @@
         <Item Value="ParticipantName"/>
       </AttrNames>
     </attributeValues>
+    <attributeValues IterBinding="VuPortalClientInfoQVOROIterator" id="Occupation">
+      <AttrNames>
+        <Item Value="Occupation"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="VuPortalClientInfoQVOROIterator" id="Address">
+      <AttrNames>
+        <Item Value="Address"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="VuPortalClientInfoQVOROIterator" id="CityName">
+      <AttrNames>
+        <Item Value="CityName"/>
+      </AttrNames>
+    </attributeValues>
   </bindings>
 </pageDefinition>

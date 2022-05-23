@@ -48,6 +48,8 @@
 
 .PQLBorderOnly
 {
-   border: #d17575 2px solid;
+   border: green 1px solid;
+   height: 20px;
    border-radius: 15px;
+   
 }

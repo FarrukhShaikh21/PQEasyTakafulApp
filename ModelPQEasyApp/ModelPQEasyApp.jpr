@@ -70,7 +70,6 @@
    </list>
    <value n="defaultPackage" v="pqetapp.modelpqasyapp"/>
    <value n="jbo.JpxName" v="pqetapp.modelpqasyapp.ModelPQEasyApp"/>
-   <value n="jbo.NoAttrEnumClasses" v="true"/>
    <value n="JboProject" v="true"/>
    <hash n="oracle.ide.model.TechnologyScopeConfiguration">
       <list n="technologyScope">
@@ -108,46 +107,6 @@
    </hash>
    <hash n="oracle.jdeveloper.deploy.dt.DeploymentProfiles">
       <hash n="profileDefinitions">
-         <hash n="PQEasyTakafulApp_ModelPQEasyApp">
-            <value n="adflib-connectionDetails" v="true"/>
-            <value n="adflib-nonReusablesError" v="false"/>
-            <hash n="archiveOptions">
-               <value n="hasManifest" v="true"/>
-            </hash>
-            <hash n="fileGroups">
-               <list n="groups">
-                  <hash>
-                     <list n="contributors">
-                        <hash>
-                           <value n="type" v="2"/>
-                        </hash>
-                        <hash>
-                           <value n="type" v="5"/>
-                        </hash>
-                     </list>
-                     <value n="displayName" v="Project Output"/>
-                     <hash n="filters">
-                        <list n="rules">
-                           <hash>
-                              <value n="pattern" v="WEB-INF/classes/**"/>
-                              <value n="type" v="1"/>
-                           </hash>
-                           <hash>
-                              <value n="pattern" v="**"/>
-                              <value n="type" v="0"/>
-                           </hash>
-                        </list>
-                     </hash>
-                     <value n="internalName" v="project-output"/>
-                     <value n="type" v="1"/>
-                  </hash>
-               </list>
-            </hash>
-            <url n="jarURL" path="deploy/PQEasyTakafulApp_ModelPQEasyApp.jar"/>
-            <hash n="LibraryDependencies"/>
-            <value n="profileClass" v="oracle.adfdt.common.deploy.impl.AdfLibraryProfile"/>
-            <value n="profileName" v="PQEasyTakafulApp_ModelPQEasyApp"/>
-         </hash>
          <hash n="PQEasyTakafulApp_ModelPQEasyApp_adflib">
             <value n="adflib-connectionDetails" v="true"/>
             <value n="adflib-nonReusablesError" v="false"/>
@@ -191,7 +150,6 @@
       </hash>
       <list n="profileList">
          <string v="PQEasyTakafulApp_ModelPQEasyApp_adflib"/>
-         <string v="PQEasyTakafulApp_ModelPQEasyApp"/>
       </list>
    </hash>
    <hash n="oracle.jdevimpl.config.JProjectLibraries">
@@ -224,14 +182,6 @@
             <value n="id" v="BC4J Oracle Domains"/>
             <value n="isJDK" v="false"/>
          </hash>
-         <hash>
-            <value n="id" v="Resource Bundle Support"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="ADF Common Runtime"/>
-            <value n="isJDK" v="false"/>
-         </hash>
       </list>
       <list n="libraryReferences">
          <hash>
@@ -260,14 +210,6 @@
          </hash>
          <hash>
             <value n="id" v="BC4J Oracle Domains"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="Resource Bundle Support"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="ADF Common Runtime"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
