@@ -53,3 +53,23 @@
    border-radius: 15px;
    
 }
+
+.PQFontSize af|inputText::content {
+
+    font-size: medium;
+    color:Red;
+   
+    
+}
+
+@media screen and (max-width:950px) {
+
+            .PQFontSize af|inputText::content {
+
+                font-size:xx-small;
+                color:Red;
+                 
+
+            }
+
+        }

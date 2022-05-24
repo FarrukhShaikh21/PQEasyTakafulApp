@@ -17,10 +17,10 @@
         <Contents>1521</Contents>
       </StringRefAddr>
       <StringRefAddr addrType="serviceName">
-        <Contents>ELEVENG</Contents>
+        <Contents>XE</Contents>
       </StringRefAddr>
       <StringRefAddr addrType="user">
-        <Contents>ERP</Contents>
+        <Contents>ORAERP</Contents>
       </StringRefAddr>
     </RefAddresses>
   </Reference>

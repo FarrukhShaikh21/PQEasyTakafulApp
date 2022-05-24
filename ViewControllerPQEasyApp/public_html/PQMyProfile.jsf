@@ -5,37 +5,44 @@
     <af:messages id="m1"/>
     <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>  
     <af:form id="f1">
-      <af:decorativeBox id="db1">
+      <af:decorativeBox id="db1" dimensionsFrom="parent">
         <f:facet name="top"/>
         <f:facet name="center">
-          <af:panelGridLayout id="pgl1">
+          <af:panelGridLayout id="pgl1" dimensionsFrom="parent">
             <af:gridRow id="gr2" height="100%" marginTop="10px">
               <af:gridCell id="gc1" width="10%"/>
               <af:gridCell marginStart="5px" width="80%" id="gc5" valign="stretch" halign="stretch">
-                <af:panelGridLayout id="pgl2" styleClass="PQLoginFormCurve">
-                  <af:gridRow id="gr3" height="100px" marginTop="10px">
-                    <af:gridCell id="gc6" halign="stretch" valign="middle" width="30%">
+                <af:panelGridLayout id="pgl2" styleClass="PQLoginFormCurve" dimensionsFrom="parent">
+                  <af:gridRow marginTop="5px" height="auto" id="gr11">
+                    <af:gridCell marginStart="5px" width="30%" id="gc26" halign="stretch" valign="middle">
                       <af:panelGroupLayout id="pgl5" layout="vertical" halign="end">
                         <af:outputText value="My Profile" id="ot1"
                                        inlineStyle="font-size:xx-large; font-style:italic; color:green;"/>
                       </af:panelGroupLayout>
                     </af:gridCell>
-                    <af:gridCell id="gc4" halign="stretch" columnSpan="1" rowSpan="1" valign="middle" width="70%">
+                    <af:gridCell marginStart="5px" width="70%" marginEnd="5px" id="gc27" valign="stretch"
+                                 halign="stretch">
                       <af:panelGroupLayout id="pgl8" layout="vertical" halign="end" styleClass="AFStretchWidth">
                         <af:image source="#{resource['images:imgPQGT.png']}" id="i1"/>
                       </af:panelGroupLayout>
                     </af:gridCell>
                   </af:gridRow>
-                  <af:gridRow marginTop="10px" height="auto" id="gr14" marginBottom="10px">
-                    <af:gridCell id="gc21" width="30%" marginStart="5px" marginEnd="5px" valign="stretch"
-                                 halign="stretch">
-                      <af:panelGroupLayout id="pgl18" layout="vertical" halign="center" styleClass="PQLBorderOnly">
-                        <af:inputText label="Label 1" id="it3" simple="true" value="Name"
-                                      contentStyle="width:100%;color:red;" readOnly="true"/>
+                  <af:gridRow id="gr8" height="30px" marginBottom="5px">
+                    <af:gridCell id="gc19" width="100%" columnSpan="2" rowSpan="1" valign="stretch" halign="stretch">
+                      <af:panelGroupLayout id="pgl15" layout="vertical" styleClass="AFStretchWidth PQLBorderOnly"
+                                           inlineStyle=" background-color: #e70000;" halign="center">
+                        <af:outputText value="Customer Profile" id="ot2" inlineStyle="color:white;font-size:large"/>
                       </af:panelGroupLayout>
                     </af:gridCell>
-                    <af:gridCell marginStart="5px" width="70%" id="gc32" halign="stretch" marginEnd="10px"
-                                 columnSpan="1" rowSpan="1">
+                  </af:gridRow>
+                  <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr12">
+                    <af:gridCell marginStart="5px" width="30%" id="gc4" halign="stretch">
+                      <af:panelGroupLayout id="pgl18" layout="vertical" halign="center" styleClass="PQLBorderOnly">
+                        <af:inputText label="Label 1" id="it3" simple="true" value="Name"
+                                      contentStyle="padding-left:15px" readOnly="true" styleClass="PQFontSize"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                    <af:gridCell marginStart="5px" width="70%" marginEnd="5px" id="gc28" halign="stretch">
                       <af:panelGroupLayout id="pgl19" layout="vertical" styleClass="PQLBorderOnly">
                         <af:inputText value="#{bindings.ParticipantName.inputValue}"
                                       label="#{bindings.ParticipantName.hints.label}"
@@ -43,9 +50,7 @@
                                       columns="#{bindings.ParticipantName.hints.displayWidth}"
                                       maximumLength="#{bindings.ParticipantName.hints.precision}"
                                       shortDesc="#{bindings.ParticipantName.hints.tooltip}" id="it14" simple="true"
-                                      contentStyle="color:red;padding-left:15px;"
-                                      inlineStyle="border-color:#00e700; border-width:medium medium medium medium;"
-                                      readOnly="true">
+                                      contentStyle="padding-left:15px;" readOnly="true" styleClass="PQFontSize">
                           <f:validator binding="#{bindings.ParticipantName.validator}"/>
                         </af:inputText>
                       </af:panelGroupLayout>
@@ -55,11 +60,12 @@
                     <af:gridCell id="gc12" width="30%" marginStart="5px" marginEnd="5px" valign="stretch"
                                  halign="stretch">
                       <af:panelGroupLayout id="pgl7" layout="vertical" halign="center" styleClass="PQLBorderOnly">
-                        <af:inputText label="Label 1" id="it4" simple="true"
-                                      value="Occupation" contentStyle="width:100%;color:red;" readOnly="true"/>
+                        <af:inputText label="Label 1" id="it4" simple="true" value="Occupation"
+                                      contentStyle="padding-left:15px" readOnly="true" styleClass="PQFontSize"/>
                       </af:panelGroupLayout>
                     </af:gridCell>
-                    <af:gridCell marginStart="5px" width="70%" id="gc10" halign="stretch" marginEnd="10px" columnSpan="1" rowSpan="1">
+                    <af:gridCell marginStart="5px" width="70%" id="gc10" halign="stretch" marginEnd="5px"
+                                 columnSpan="1" rowSpan="1">
                       <af:panelGroupLayout id="pgl6" layout="vertical" styleClass="PQLBorderOnly">
                         <af:inputText value="#{bindings.Occupation.inputValue}"
                                       label="#{bindings.Occupation.hints.label}"
@@ -67,8 +73,7 @@
                                       columns="#{bindings.Occupation.hints.displayWidth}"
                                       maximumLength="#{bindings.Occupation.hints.precision}"
                                       shortDesc="#{bindings.Occupation.hints.tooltip}" id="it13" simple="true"
-                                      contentStyle="color:red;padding-left:15px;"
-                                      inlineStyle="border-color:#00e700; border-width:medium medium medium medium;">
+                                      contentStyle="padding-left:15px;" styleClass="PQFontSize">
                           <f:validator binding="#{bindings.Occupation.validator}"/>
                         </af:inputText>
                       </af:panelGroupLayout>
@@ -79,21 +84,20 @@
                                  halign="stretch">
                       <af:panelGroupLayout id="pgl3" layout="vertical" halign="center" styleClass="PQLBorderOnly">
                         <af:inputText label="Label 1" id="it1" simple="true" value="Address"
-                                      contentStyle="width:100%;color:red;vertical-align: middle;" readOnly="true" rows="1"/>
+                                      contentStyle="padding-left:15px" readOnly="true" rows="1"
+                                      styleClass="PQFontSize"/>
                       </af:panelGroupLayout>
                     </af:gridCell>
                     <af:gridCell marginStart="5px" width="70%" id="gc11" halign="stretch" marginEnd="10px"
                                  columnSpan="1" rowSpan="1" valign="stretch">
                       <af:panelGroupLayout id="pgl4" layout="vertical" styleClass="PQLBorderOnly">
-                        <af:inputText value="#{bindings.Address.inputValue}"
-                                      label="#{bindings.Address.hints.label}"
+                        <af:inputText value="#{bindings.Address.inputValue}" label="#{bindings.Address.hints.label}"
                                       required="#{bindings.Address.hints.mandatory}"
                                       columns="#{bindings.Address.hints.displayWidth}"
                                       maximumLength="#{bindings.Address.hints.precision}"
                                       shortDesc="#{bindings.Address.hints.tooltip}" id="it2" simple="true"
-                                      contentStyle="color:red;padding-left:15px;"
-                                      inlineStyle="border-color:#00e700; border-width:medium medium medium medium;"
-                                      rows="5" readOnly="true">
+                                      contentStyle="padding-left:15px;" rows="5" readOnly="true"
+                                      styleClass="PQFontSize" wrap="off">
                           <f:validator binding="#{bindings.Address.validator}"/>
                         </af:inputText>
                       </af:panelGroupLayout>
@@ -108,7 +112,7 @@
                             <af:panelGroupLayout id="pgl20" layout="vertical" halign="center"
                                                  styleClass="PQLBorderOnly">
                               <af:inputText label="Label 1" id="it15" simple="true" value="City"
-                                            contentStyle="width:100%;color:red;" readOnly="true"/>
+                                            contentStyle="padding-left:15px" readOnly="true" styleClass="PQFontSize"/>
                             </af:panelGroupLayout>
                           </af:gridCell>
                           <af:gridCell marginStart="5px" width="25%" id="gc36" halign="stretch" valign="stretch">
@@ -119,8 +123,7 @@
                                             columns="#{bindings.CityName.hints.displayWidth}"
                                             maximumLength="#{bindings.CityName.hints.precision}"
                                             shortDesc="#{bindings.CityName.hints.tooltip}" id="it16" simple="true"
-                                            contentStyle="color:red;padding-left:15px;"
-                                            inlineStyle="border-color:#00e700; border-width:medium medium medium medium;">
+                                            contentStyle="padding-left:15px" styleClass="PQFontSize">
                                 <f:validator binding="#{bindings.CityName.validator}"/>
                               </af:inputText>
                             </af:panelGroupLayout>
@@ -129,103 +132,183 @@
                             <af:panelGroupLayout id="pgl23" layout="vertical" halign="center"
                                                  styleClass="PQLBorderOnly">
                               <af:inputText label="Label 1" id="it17" simple="true" value="Province"
-                                            contentStyle="width:100%;color:red;" readOnly="true"/>
+                                            contentStyle="padding-left:15px" readOnly="true" styleClass="PQFontSize"/>
                             </af:panelGroupLayout>
                           </af:gridCell>
-                          <af:gridCell marginStart="5px" width="25%" marginEnd="5px" id="gc38"/>
+                          <af:gridCell marginStart="5px" width="25%" id="gc38" valign="stretch"
+                                       halign="stretch">
+                            <af:panelGroupLayout id="pgl24" layout="vertical" styleClass="PQLBorderOnly">
+                              <af:inputText value="#{bindings.ProvinceName.inputValue}"
+                                            label="#{bindings.ProvinceName.hints.label}"
+                                            required="#{bindings.ProvinceName.hints.mandatory}"
+                                            columns="#{bindings.ProvinceName.hints.displayWidth}"
+                                            maximumLength="#{bindings.ProvinceName.hints.precision}"
+                                            shortDesc="#{bindings.ProvinceName.hints.tooltip}" id="it18" simple="true"
+                                            contentStyle="padding-left:15px" styleClass="PQFontSize">
+                                <f:validator binding="#{bindings.ProvinceName.validator}"/>
+                              </af:inputText>
+                            </af:panelGroupLayout>
+                          </af:gridCell>
                         </af:gridRow>
                       </af:panelGridLayout>
                     </af:gridCell>
                   </af:gridRow>
-                  <af:gridRow marginTop="30px" height="auto" id="gr4" marginBottom="10px">
-                    <af:gridCell id="gc13" width="30%" marginStart="5px" marginEnd="5px" valign="stretch" halign="end">
-                      <af:panelGroupLayout id="pgl9" layout="vertical" halign="end">
-                        <af:inputText label="Label 1" id="it5" simple="true"
-                                      value="Policy Expiry Date"
-                                      contentStyle="width:100%;color:red;border-color:green"/>
+                  <af:gridRow marginTop="10px" height="auto" id="gr17" marginBottom="10px">
+                    <af:gridCell id="gc34" width="30%" marginStart="5px" marginEnd="5px" valign="stretch"
+                                 halign="stretch">
+                      <af:panelGroupLayout id="pgl25" layout="vertical" halign="center" styleClass="PQLBorderOnly">
+                        <af:inputText label="Label 1" id="it19" simple="true" value="Email Address" readOnly="true"
+                                      styleClass="PQFontSize"/>
                       </af:panelGroupLayout>
                     </af:gridCell>
-                    <af:gridCell marginStart="5px" width="70%" id="gc14" halign="stretch" valign="stretch"
-                                 marginEnd="10px" columnSpan="1">
-                      <af:panelGroupLayout id="pgl10" layout="vertical" halign="end" styleClass="width:100%">
-                        <af:inputText label="Label 1" id="it6" simple="true"
-                                      contentStyle="width:100%;"
-                                      value="13-Mar-2021" styleClass="PQTextFielColor"/>
-                      </af:panelGroupLayout>
-                    </af:gridCell>
-                  </af:gridRow>
-                  <af:gridRow marginTop="30px" height="auto" id="gr7" marginBottom="10px">
-                    <af:gridCell id="gc15" width="30%" marginStart="5px" marginEnd="5px" valign="stretch" halign="end">
-                      <af:panelGroupLayout id="pgl11" layout="vertical" halign="end">
-                        <af:inputText label="Label 1" id="it7" simple="true" value="Make"
-                                      contentStyle="width:100%;color:red;border-color:green"/>
-                      </af:panelGroupLayout>
-                    </af:gridCell>
-                    <af:gridCell marginStart="5px" width="70%" id="gc16" halign="stretch" valign="stretch"
-                                 marginEnd="10px" columnSpan="1">
-                      <af:panelGroupLayout id="pgl12" layout="vertical" halign="end" styleClass="width:100%">
-                        <af:inputText label="Label 1" id="it8" simple="true"
-                                      contentStyle="width:100%;color:red;border-color:green"
-                                      value="Honda City"/>
+                    <af:gridCell marginStart="5px" width="70%" id="gc39" halign="stretch" marginEnd="10px"
+                                 columnSpan="1" rowSpan="1">
+                      <af:panelGroupLayout id="pgl26" layout="vertical" styleClass="PQLBorderOnly">
+                        <af:inputText value="#{bindings.Email.inputValue}" label="#{bindings.Email.hints.label}"
+                                      required="#{bindings.Email.hints.mandatory}"
+                                      columns="#{bindings.Email.hints.displayWidth}"
+                                      maximumLength="#{bindings.Email.hints.precision}"
+                                      shortDesc="#{bindings.Email.hints.tooltip}" id="it20" simple="true"
+                                      styleClass="PQFontSize" contentStyle="padding-left:15px">
+                          <f:validator binding="#{bindings.Email.validator}"/>
+                        </af:inputText>
                       </af:panelGroupLayout>
                     </af:gridCell>
                   </af:gridRow>
-                  <af:gridRow marginTop="30px" height="auto" id="gr8" marginBottom="10px">
-                    <af:gridCell id="gc17" width="30%" marginStart="5px" marginEnd="5px" valign="stretch" halign="end">
-                      <af:panelGroupLayout id="pgl13" layout="vertical" halign="end">
-                        <af:inputText label="Label 1" id="it9" simple="true" value="Model"
-                                      contentStyle="width:100%;color:red;border-color:green"/>
-                      </af:panelGroupLayout>
-                    </af:gridCell>
-                    <af:gridCell marginStart="5px" width="70%" id="gc18" halign="stretch" valign="stretch"
-                                 marginEnd="10px" columnSpan="1">
-                      <af:panelGroupLayout id="pgl14" layout="vertical" halign="end" styleClass="width:100%">
-                        <af:inputText label="Label 1" id="it10" simple="true"
-                                      contentStyle="width:100%;color:red;border-color:green" value="2017"/>
-                      </af:panelGroupLayout>
-                    </af:gridCell>
-                  </af:gridRow>
-                  <af:gridRow marginTop="30px" height="auto" id="gr9" marginBottom="10px">
-                    <af:gridCell id="gc19" width="30%" marginStart="5px" marginEnd="5px" valign="stretch" halign="end">
-                      <af:panelGroupLayout id="pgl15" layout="vertical" halign="end">
-                        <af:inputText label="Label 1" id="it11" simple="true"
-                                      value="Registration No." contentStyle="width:100%;color:red;border-color:green"/>
-                      </af:panelGroupLayout>
-                    </af:gridCell>
-                    <af:gridCell marginStart="5px" width="70%" id="gc20" halign="stretch" valign="stretch"
-                                 marginEnd="10px" columnSpan="1" rowSpan="1">
-                      <af:panelGroupLayout id="pgl16" layout="vertical" halign="end" styleClass="width:100%">
-                        <af:inputText label="Label 1" id="it12" simple="true"
-                                      contentStyle="width:100%;color:red;border-color:green"
-                                      value="LEB-17-5034"/>
-                      </af:panelGroupLayout>
-                    </af:gridCell>
-                  </af:gridRow>
-                  <af:gridRow id="gr10">
-                    <af:gridCell id="gc22" halign="stretch" valign="stretch" columnSpan="2" width="100%">
-                      <af:panelGridLayout id="pgl17">
-                        <af:gridRow marginTop="5px" height="auto" id="gr11">
-                          <af:gridCell marginStart="40px" width="34%" id="gc23" marginEnd="5px" halign="stretch">
-                            <af:button text="Claim Intimation" id="b1" styleClass="PQTransactionButton"/>
+                  <af:gridRow marginTop="10px" height="auto" id="gr4" marginBottom="10px">
+                    <af:gridCell id="gc13" width="100%" marginStart="5px" marginEnd="5px" valign="stretch"
+                                 halign="stretch" rowSpan="1" columnSpan="2">
+                      <af:panelGridLayout id="pgl9">
+                        <af:gridRow marginTop="5px" height="50px" marginBottom="5px" id="gr18">
+                          <af:gridCell marginStart="5px" width="25%" id="gc14" halign="stretch" valign="middle">
+                            <af:panelGroupLayout id="pgl10" layout="vertical" halign="center"
+                                                 styleClass="PQLBorderOnly">
+                              <af:inputText label="Label 1" id="it5" simple="true" value="CNIC Expiry"
+                                            contentStyle="padding-left:15px" readOnly="true" styleClass="PQFontSize"/>
+                            </af:panelGroupLayout>
                           </af:gridCell>
-                          <af:gridCell marginStart="5px" width="33%" id="gc24" marginEnd="5px" halign="stretch">
-                            <af:button text="Claim Tracking" id="b2" styleClass="PQTransactionButton"/>
+                          <af:gridCell marginStart="5px" width="25%" id="gc40" halign="stretch" valign="middle">
+                            <af:panelGroupLayout id="pgl27" styleClass="PQLBorderOnly" layout="vertical">
+                              <af:inputText value="#{bindings.CityName.inputValue}"
+                                            label="#{bindings.CityName.hints.label}"
+                                            required="#{bindings.CityName.hints.mandatory}"
+                                            columns="#{bindings.CityName.hints.displayWidth}"
+                                            maximumLength="#{bindings.CityName.hints.precision}"
+                                            shortDesc="#{bindings.CityName.hints.tooltip}" id="it6" simple="true"
+                                            contentStyle="padding-left:15px" styleClass="PQFontSize">
+                                <f:validator binding="#{bindings.CityName.validator}"/>
+                              </af:inputText>
+                            </af:panelGroupLayout>
                           </af:gridCell>
-                          <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc25" halign="stretch">
-                            <af:button text="Claim History" id="b3" styleClass="PQTransactionButton"/>
+                          <af:gridCell marginStart="5px" width="25%" id="gc41" halign="stretch" valign="stretch">
+                            <af:panelGroupLayout id="pgl28" layout="vertical" halign="center"
+                                                 styleClass="PQLBorderOnly">
+                              <af:inputText label="Label 1" id="it21" simple="true" value="Driving License Expiry Date"
+                                            contentStyle="padding-left:15px" readOnly="true" styleClass="PQFontSize"/>
+                            </af:panelGroupLayout>
                           </af:gridCell>
-                        </af:gridRow>
-                        <af:gridRow marginTop="5px" height="auto" id="gr12">
-                          <af:gridCell marginStart="5px" width="34%" id="gc26"/>
-                          <af:gridCell marginStart="5px" width="33%" id="gc27"/>
-                          <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc28"/>
-                        </af:gridRow>
-                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr13">
-                          <af:gridCell marginStart="5px" width="34%" id="gc29"/>
-                          <af:gridCell marginStart="5px" width="33%" id="gc30"/>
-                          <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc31"/>
+                          <af:gridCell marginStart="5px" width="25%" id="gc42" halign="stretch"
+                                       valign="middle">
+                            <af:panelGroupLayout id="pgl29" layout="vertical" styleClass="PQLBorderOnly">
+                              <af:inputText value="#{bindings.ProvinceName.inputValue}"
+                                            label="#{bindings.ProvinceName.hints.label}"
+                                            required="#{bindings.ProvinceName.hints.mandatory}"
+                                            columns="#{bindings.ProvinceName.hints.displayWidth}"
+                                            maximumLength="#{bindings.ProvinceName.hints.precision}"
+                                            shortDesc="#{bindings.ProvinceName.hints.tooltip}" id="it22" simple="true"
+                                            contentStyle="padding-left:15px;" styleClass="PQFontSize">
+                                <f:validator binding="#{bindings.ProvinceName.validator}"/>
+                              </af:inputText>
+                            </af:panelGroupLayout>
+                          </af:gridCell>
                         </af:gridRow>
                       </af:panelGridLayout>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow marginTop="10px" height="auto" id="gr7" marginBottom="10px">
+                    <af:gridCell id="gc15" width="100%" marginStart="5px" marginEnd="5px" valign="stretch"
+                                 halign="stretch" rowSpan="1" columnSpan="2">
+                      <af:panelGridLayout id="pgl11">
+                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr19">
+                          <af:gridCell marginStart="5px" width="50%" id="gc16" halign="stretch" valign="stretch">
+                            <af:panelGroupLayout id="pgl12" layout="vertical" halign="center"
+                                                 styleClass="PQLBorderOnly">
+                              <af:inputText label="Label 1" id="it7" simple="true" value="Do you want claim payment by?"
+                                            readOnly="true" styleClass="PQFontSize"/>
+                            </af:panelGroupLayout>
+                          </af:gridCell>
+                          <af:gridCell id="gc17" width="20%" halign="stretch">
+                            <af:panelGroupLayout id="pgl13" layout="vertical" styleClass="PQLBorderOnly">
+                              <af:selectBooleanCheckbox text="Cheque" label="Label 1" id="sbc1" simple="true"
+                                                        value="Cheque" contentStyle="color:red"/>
+                            </af:panelGroupLayout>
+                          </af:gridCell>
+                          <af:gridCell id="gc18" width="30%" halign="stretch">
+                            <af:panelGroupLayout id="pgl14" layout="vertical" styleClass="PQLBorderOnly">
+                              <af:selectBooleanCheckbox text="Online Transfer" label="Label 1" id="sbc2" simple="true"
+                                                        value="Online Transfer" contentStyle="color:red"/>
+                            </af:panelGroupLayout>
+                          </af:gridCell>
+                        </af:gridRow>
+                      </af:panelGridLayout>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow id="gr9" marginBottom="15px">
+                    <af:gridCell id="gc20" width="100%" columnSpan="2" rowSpan="1" valign="stretch" halign="stretch">
+                      <af:panelGroupLayout id="pgl16" layout="vertical" styleClass="PQLBorderOnly" halign="center">
+                        <af:inputText label="Label 2" id="it8" simple="true" readOnly="true"
+                                      value="If Online Transfer, please give us account detail:" styleClass="PQFontSize"
+                                      contentStyle="padding-left:15px;font-weight:bold"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow id="gr3" marginBottom="15px">
+                    <af:gridCell marginStart="5px" width="30%" id="gc21" halign="stretch" valign="stretch">
+                      <af:panelGroupLayout id="pgl30" layout="vertical" halign="center" styleClass="PQLBorderOnly">
+                        <af:inputText label="Label 1" id="it9" simple="true" value="Bank Name"
+                                      contentStyle="padding-left:15px" readOnly="true" styleClass="PQFontSize"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                    <af:gridCell marginStart="5px" width="70%" marginEnd="5px" id="gc22" halign="stretch"
+                                 valign="stretch">
+                      <af:panelGroupLayout id="pgl31" layout="vertical" halign="center" styleClass="PQLBorderOnly">
+                        <af:inputText label="#{bindings.BankName.hints.label}" id="it10" simple="true"
+                                      value="#{bindings.BankName.inputValue}" contentStyle="padding-left:15px"
+                                      styleClass="PQFontSize" required="#{bindings.BankName.hints.mandatory}"
+                                      columns="#{bindings.BankName.hints.displayWidth}"
+                                      maximumLength="#{bindings.BankName.hints.precision}">
+                          <f:validator binding="#{bindings.BankName.validator}"/>
+                        </af:inputText>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow id="gr10" marginBottom="15px">
+                    <af:gridCell marginStart="5px" width="30%" id="gc6" halign="stretch" valign="stretch">
+                      <af:panelGroupLayout id="pgl17" layout="vertical" halign="center" styleClass="PQLBorderOnly">
+                        <af:inputText label="Label 1" id="it11" simple="true" value="Branch Name"
+                                      contentStyle="padding-left:15px" readOnly="true" styleClass="PQFontSize"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                    <af:gridCell marginStart="5px" width="70%" marginEnd="5px" id="gc23" halign="stretch"
+                                 valign="stretch">
+                      <af:panelGroupLayout id="pgl32" layout="vertical" halign="center" styleClass="PQLBorderOnly">
+                        <af:inputText label="#{bindings.BranchName.hints.label}" id="it12" simple="true"
+                                      value="#{bindings.BranchName.inputValue}" contentStyle="padding-left:15px"
+                                      styleClass="PQFontSize" required="#{bindings.BranchName.hints.mandatory}"
+                                      columns="#{bindings.BranchName.hints.displayWidth}"
+                                      maximumLength="#{bindings.BranchName.hints.precision}">
+                          <f:validator binding="#{bindings.BranchName.validator}"/>
+                        </af:inputText>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow id="gr13" height="30px" marginBottom="5px">
+                    <af:gridCell id="gc24" width="100%" columnSpan="2" rowSpan="1" valign="stretch" halign="stretch">
+                      <af:panelGroupLayout id="pgl33" layout="vertical" styleClass="AFStretchWidth PQLBorderOnly"
+                                           inlineStyle=" background-color: #e70000;" halign="center">
+                        <af:outputText value="Driver Profile" id="ot3" inlineStyle="color:white;font-size:large"
+                                       truncateAt="0"/>
+                      </af:panelGroupLayout>
                     </af:gridCell>
                   </af:gridRow>
                 </af:panelGridLayout>

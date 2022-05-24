@@ -28,5 +28,25 @@
         <Item Value="CityName"/>
       </AttrNames>
     </attributeValues>
+    <attributeValues IterBinding="VuPortalClientInfoQVOROIterator" id="ProvinceName">
+      <AttrNames>
+        <Item Value="ProvinceName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="VuPortalClientInfoQVOROIterator" id="Email">
+      <AttrNames>
+        <Item Value="Email"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="VuPortalClientInfoQVOROIterator" id="BankName">
+      <AttrNames>
+        <Item Value="BankName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="VuPortalClientInfoQVOROIterator" id="BranchName">
+      <AttrNames>
+        <Item Value="BranchName"/>
+      </AttrNames>
+    </attributeValues>
   </bindings>
 </pageDefinition>
