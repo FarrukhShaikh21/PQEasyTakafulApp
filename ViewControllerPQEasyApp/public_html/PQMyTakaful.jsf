@@ -10,73 +10,98 @@
         <f:facet name="center">
           <af:panelGridLayout id="pgl2">
             <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr4">
-              <af:gridCell marginStart="5px" width="10%" id="gc4"/>
+              <af:gridCell marginStart="5px" width="10%" id="gc4" marginEnd="5px"/>
               <af:gridCell marginStart="5px" width="80%" id="gc5" valign="stretch" halign="stretch">
-                <af:panelGridLayout id="pgl1">
+                <af:panelGridLayout id="pgl1" styleClass="PQLoginFormCurve">
+                  <af:gridRow marginTop="5px" height="auto" id="gr11">
+                    <af:gridCell marginStart="5px" width="30%" id="gc26" halign="stretch" valign="middle">
+                      <af:panelGroupLayout id="pgl5" layout="vertical" halign="center">
+                        <af:outputText value="MyTakaful" id="ot1"
+                                       inlineStyle="font-size:xx-large; font-style:italic; color:green;"/>
+                        <af:outputText value="Know Your Protections" id="ot2"
+                                       inlineStyle="font-size:xx-small; font-style:italic; color:green;"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                    <af:gridCell marginStart="5px" width="70%" marginEnd="5px" id="gc27" valign="stretch"
+                                 halign="stretch">
+                      <af:panelGroupLayout id="pgl8" layout="vertical" halign="end" styleClass="AFStretchWidth">
+                        <af:image source="#{resource['images:imgPQGT.png']}" id="i1"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                  </af:gridRow>                
                   <af:gridRow marginTop="5px" height="auto" id="gr1">
-                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc1" halign="center">
-                      <af:table value="#{bindings.VuPortalPolicyInfoQVORO.collectionModel}" var="row"
-                                rows="#{bindings.VuPortalPolicyInfoQVORO.rangeSize}"
-                                emptyText="#{bindings.VuPortalPolicyInfoQVORO.viewable ? 'No data to display.' : 'Access Denied.'}"
-                                rowBandingInterval="0"
-                                selectedRowKeys="#{bindings.VuPortalPolicyInfoQVORO.collectionModel.selectedRow}"
-                                selectionListener="#{bindings.VuPortalPolicyInfoQVORO.collectionModel.makeCurrent}"
-                                rowSelection="single" fetchSize="#{bindings.VuPortalPolicyInfoQVORO.rangeSize}" id="t1"
-                                styleClass="AFStretchWidth">
-                        <af:column headerText="#{bindings.VuPortalPolicyInfoQVORO.hints.DocumentNoUk.label}" id="c1"
-                                   width="200" minimumWidth="12" headerClass="PQTableHeight">
-                          <af:inputText value="#{row.bindings.DocumentNoUk.inputValue}"
-                                        label="#{bindings.VuPortalPolicyInfoQVORO.hints.DocumentNoUk.label}"
-                                        required="#{bindings.VuPortalPolicyInfoQVORO.hints.DocumentNoUk.mandatory}"
-                                        columns="#{bindings.VuPortalPolicyInfoQVORO.hints.DocumentNoUk.displayWidth}"
-                                        maximumLength="#{bindings.VuPortalPolicyInfoQVORO.hints.DocumentNoUk.precision}"
-                                        shortDesc="#{bindings.VuPortalPolicyInfoQVORO.hints.DocumentNoUk.tooltip}"
-                                        id="it1">
-                            <f:validator binding="#{row.bindings.DocumentNoUk.validator}"/>
-                          </af:inputText>
-                          <f:facet name="header"/>
-                        </af:column>
-                        <af:column headerText="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.label}" id="c2"
-                                   headerClass="PQTableHeight">
-                          <af:inputDate value="#{row.bindings.PeriodTo.inputValue}"
-                                        label="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.label}"
-                                        required="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.mandatory}"
-                                        columns="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.displayWidth}"
-                                        shortDesc="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.tooltip}" id="id1">
-                            <f:validator binding="#{row.bindings.PeriodTo.validator}"/>
-                            <af:convertDateTime pattern="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.format}"/>
-                          </af:inputDate>
-                        </af:column>
-                        <af:column headerText="#{bindings.VuPortalPolicyInfoQVORO.hints.Status.label}" id="c3"
-                                   headerClass="PQTableHeight">
-                          <af:inputText value="#{row.bindings.Status.inputValue}"
-                                        label="#{bindings.VuPortalPolicyInfoQVORO.hints.Status.label}"
-                                        required="#{bindings.VuPortalPolicyInfoQVORO.hints.Status.mandatory}"
-                                        columns="#{bindings.VuPortalPolicyInfoQVORO.hints.Status.displayWidth}"
-                                        maximumLength="#{bindings.VuPortalPolicyInfoQVORO.hints.Status.precision}"
-                                        shortDesc="#{bindings.VuPortalPolicyInfoQVORO.hints.Status.tooltip}" id="it2">
-                            <f:validator binding="#{row.bindings.Status.validator}"/>
-                          </af:inputText>
-                        </af:column>
-                        <af:column headerText="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.label}" id="c4"
-                                   headerClass="PQTableHeight">
-                          <af:inputDate value="#{row.bindings.PeriodTo.inputValue}"
-                                        label="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.label}"
-                                        required="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.mandatory}"
-                                        columns="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.displayWidth}"
-                                        shortDesc="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.tooltip}" id="id2">
-                            <f:validator binding="#{row.bindings.PeriodTo.validator}"/>
-                            <af:convertDateTime pattern="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.format}"/>
-                          </af:inputDate>
-                        </af:column>
-                      </af:table>
+                    <af:gridCell marginStart="15px" width="100%" marginEnd="15px" id="gc1" halign="stretch" columnSpan="2"
+                                 rowSpan="1">
+                      <af:panelGroupLayout id="pgl3" layout="vertical" halign="center" styleClass="AFStretchWidth">
+                        <af:table value="#{bindings.VuPortalPolicyInfoQVORO.collectionModel}" var="row"
+                                  rows="#{bindings.VuPortalPolicyInfoQVORO.rangeSize}"
+                                  emptyText="#{bindings.VuPortalPolicyInfoQVORO.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                  rowBandingInterval="0"
+                                  selectedRowKeys="#{bindings.VuPortalPolicyInfoQVORO.collectionModel.selectedRow}"
+                                  selectionListener="#{bindings.VuPortalPolicyInfoQVORO.collectionModel.makeCurrent}"
+                                  rowSelection="single" fetchSize="#{bindings.VuPortalPolicyInfoQVORO.rangeSize}"
+                                  id="t1" columnStretching="last">
+                          <af:column headerText="#{bindings.VuPortalPolicyInfoQVORO.hints.DocumentNoUk.label}" id="c1"
+                                     width="200" minimumWidth="12">
+                            <af:inputText value="#{row.bindings.DocumentNoUk.inputValue}"
+                                          label="#{bindings.VuPortalPolicyInfoQVORO.hints.DocumentNoUk.label}"
+                                          required="#{bindings.VuPortalPolicyInfoQVORO.hints.DocumentNoUk.mandatory}"
+                                          columns="#{bindings.VuPortalPolicyInfoQVORO.hints.DocumentNoUk.displayWidth}"
+                                          maximumLength="#{bindings.VuPortalPolicyInfoQVORO.hints.DocumentNoUk.precision}"
+                                          shortDesc="#{bindings.VuPortalPolicyInfoQVORO.hints.DocumentNoUk.tooltip}"
+                                          id="it1" contentStyle="font-weight:bold;font-size:xx-small">
+                              <f:validator binding="#{row.bindings.DocumentNoUk.validator}"/>
+                            </af:inputText>
+                            <f:facet name="header"/>
+                          </af:column>
+                          <af:column headerText="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.label}" id="c2">
+                            <af:inputDate value="#{row.bindings.PeriodTo.inputValue}"
+                                          label="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.label}"
+                                          required="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.mandatory}"
+                                          columns="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.displayWidth}"
+                                          shortDesc="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.tooltip}"
+                                          id="id1" contentStyle="font-weight:bold;font-size:xx-small">
+                              <f:validator binding="#{row.bindings.PeriodTo.validator}"/>
+                              <af:convertDateTime pattern="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.format}"/>
+                            </af:inputDate>
+                          </af:column>
+                          <af:column headerText="#{bindings.VuPortalPolicyInfoQVORO.hints.Status.label}" id="c3">
+                            <af:inputText value="#{row.bindings.Status.inputValue}"
+                                          label="#{bindings.VuPortalPolicyInfoQVORO.hints.Status.label}"
+                                          required="#{bindings.VuPortalPolicyInfoQVORO.hints.Status.mandatory}"
+                                          columns="#{bindings.VuPortalPolicyInfoQVORO.hints.Status.displayWidth}"
+                                          maximumLength="#{bindings.VuPortalPolicyInfoQVORO.hints.Status.precision}"
+                                          shortDesc="#{bindings.VuPortalPolicyInfoQVORO.hints.Status.tooltip}" id="it2"
+                                          contentStyle="font-weight:bold;font-size:xx-small;#{row.bindings.Status.inputValue=='IN-ACTIVE'?'color:red':'color:green'}">
+                              <f:validator binding="#{row.bindings.Status.validator}"/>
+                            </af:inputText>
+                          </af:column>
+                          <af:column headerText="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.label}" id="c4">
+                            <af:inputDate value="#{row.bindings.PeriodTo.inputValue}"
+                                          label="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.label}"
+                                          required="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.mandatory}"
+                                          columns="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.displayWidth}"
+                                          shortDesc="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.tooltip}"
+                                          id="id2" contentStyle="font-weight:bold;font-size:xx-small">
+                              <f:validator binding="#{row.bindings.PeriodTo.validator}"/>
+                              <af:convertDateTime pattern="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.format}"/>
+                            </af:inputDate>
+                          </af:column>
+                          <af:column id="c5" headerText="Add-On">
+                            <af:link text="Make a Request" id="l1" partialSubmit="true"/>
+                          </af:column>
+                          <af:column id="c6" headerText="Services">
+                            <af:link text="#{row.bindings.Status.inputValue=='IN-ACTIVE'?'Request for Renewal':'Policy View'}" id="l2" partialSubmit="true"/>
+                          </af:column>
+                        </af:table>
+                      </af:panelGroupLayout>
                     </af:gridCell>
                   </af:gridRow>
                   <af:gridRow marginTop="5px" height="auto" id="gr2">
-                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2"/>
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2" columnSpan="2" rowSpan="1"/>
                   </af:gridRow>
                   <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr3">
-                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc3"/>
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc3" columnSpan="2" rowSpan="1"/>
                   </af:gridRow>
                 </af:panelGridLayout>
               </af:gridCell>

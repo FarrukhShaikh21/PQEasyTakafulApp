@@ -85,3 +85,14 @@ af|column::data-cell {
     border: white  3.0px solid;
     
 }
+
+af|column::column-header-cell-content {
+    color: white;
+    font-weight: bold;
+    font-size: xx-small;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 15.0px;
+    height: 30px;
+    background-color: #5fcbef;
+}
