@@ -57,7 +57,7 @@
 .PQFontSize af|inputText::content {
 
     font-size: medium;
-    color:Red;
+    color:Black;
    
     
 }
@@ -67,7 +67,7 @@
             .PQFontSize af|inputText::content {
 
                 font-size:xx-small;
-                color:Red;
+                color:Black;
                  
 
             }

@@ -48,5 +48,10 @@
         <Item Value="BranchName"/>
       </AttrNames>
     </attributeValues>
+    <attributeValues IterBinding="VuPortalClientInfoQVOROIterator" id="NicExpireDate">
+      <AttrNames>
+        <Item Value="NicExpireDate"/>
+      </AttrNames>
+    </attributeValues>
   </bindings>
 </pageDefinition>
