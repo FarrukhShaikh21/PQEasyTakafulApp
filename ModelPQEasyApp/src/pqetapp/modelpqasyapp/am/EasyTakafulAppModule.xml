@@ -16,6 +16,9 @@
   <ViewUsage
     Name="VuPortalClientInfoQVORO"
     ViewObjectName="pqetapp.modelpqasyapp.qvo.VuPortalClientInfoQVO"/>
+  <ViewUsage
+    Name="VuPortalPolicyInfoQVORO"
+    ViewObjectName="pqetapp.modelpqasyapp.qvo.VuPortalPolicyInfoQVO"/>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="pqetapp.modelpqasyapp.ModelPQEasyAppBundle"/>

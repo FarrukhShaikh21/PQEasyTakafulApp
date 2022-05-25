@@ -73,3 +73,15 @@
             }
 
         }
+
+.PQTableHeight{
+    height: 30px;
+    text-align: center;
+    
+}
+af|column::data-cell {
+    color: red;
+    background-color: #d2ecf9;
+    border: white  3.0px solid;
+    
+}
