@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="VuPortalClaiminfoQVO"
+  Version="12.2.1.11.57"
+  InheritPersonalization="merge"
+  BindingStyle="OracleName"
+  CustomQuery="true"
+  PageIterMode="Full">
+  <DesignTime>
+    <Attr Name="_isExpertMode" Value="true"/>
+  </DesignTime>
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="pqetapp.modelpqasyapp.qvo.VuPortalClaiminfoQVO_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <SQLQuery><![CDATA[select  
+participant_id_fk,  
+claim_id_pk,  
+claim_no,  
+loss_type,  
+intimation_date,  
+loss_date,  
+vehicle_name,  
+registration_no,  
+claim_amount 
+from vu_portal_claim_info]]></SQLQuery>
+  <ViewAttribute
+    Name="ParticipantIdFk"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    AliasName="PARTICIPANT_ID_FK"
+    Expression="PARTICIPANT_ID_FK"
+    SQLType="NUMERIC"/>
+  <ViewAttribute
+    Name="ClaimIdPk"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    AliasName="CLAIM_ID_PK"
+    Expression="CLAIM_ID_PK"
+    SQLType="NUMERIC"/>
+  <ViewAttribute
+    Name="ClaimNo"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="50"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="CLAIM_NO"
+    Expression="CLAIM_NO"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="LossType"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="100"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="LOSS_TYPE"
+    Expression="LOSS_TYPE"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="IntimationDate"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    AliasName="INTIMATION_DATE"
+    Expression="INTIMATION_DATE"
+    SQLType="DATE"/>
+  <ViewAttribute
+    Name="LossDate"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    AliasName="LOSS_DATE"
+    Expression="LOSS_DATE"
+    SQLType="DATE"/>
+  <ViewAttribute
+    Name="VehicleName"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="201"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="VEHICLE_NAME"
+    Expression="VEHICLE_NAME"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="201"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="RegistrationNo"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="50"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="REGISTRATION_NO"
+    Expression="REGISTRATION_NO"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="ClaimAmount"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    AliasName="CLAIM_AMOUNT"
+    Expression="CLAIM_AMOUNT"
+    SQLType="NUMERIC"/>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="ClaimIdPk"/>
+  </AttrArray>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="pqetapp.modelpqasyapp.ModelPQEasyAppBundle"/>
+  </ResourceBundle>
+</ViewObject>
