@@ -38,7 +38,7 @@ from vu_portal_claim_info]]></SQLQuery>
     ColumnType="NUMBER"
     AliasName="PARTICIPANT_ID_FK"
     Expression="PARTICIPANT_ID_FK"
-    SQLType="NUMERIC"/>
+    SQLType="INTEGER"/>
   <ViewAttribute
     Name="ClaimIdPk"
     IsUpdateable="false"
@@ -63,6 +63,14 @@ from vu_portal_claim_info]]></SQLQuery>
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="pqetapp.modelpqasyapp.qvo.VuPortalClaiminfoQVO.ClaimNo_LABEL"/>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
   </ViewAttribute>
   <ViewAttribute
     Name="LossType"
@@ -78,6 +86,14 @@ from vu_portal_claim_info]]></SQLQuery>
     <DesignTime>
       <Attr Name="_DisplaySize" Value="100"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="pqetapp.modelpqasyapp.qvo.VuPortalClaiminfoQVO.LossType_LABEL"/>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
   </ViewAttribute>
   <ViewAttribute
     Name="IntimationDate"
@@ -88,7 +104,16 @@ from vu_portal_claim_info]]></SQLQuery>
     ColumnType="DATE"
     AliasName="INTIMATION_DATE"
     Expression="INTIMATION_DATE"
-    SQLType="DATE"/>
+    SQLType="DATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="pqetapp.modelpqasyapp.qvo.VuPortalClaiminfoQVO.IntimationDate_LABEL"/>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="LossDate"
     IsUpdateable="false"
@@ -113,6 +138,14 @@ from vu_portal_claim_info]]></SQLQuery>
     <DesignTime>
       <Attr Name="_DisplaySize" Value="201"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="pqetapp.modelpqasyapp.qvo.VuPortalClaiminfoQVO.VehicleName_LABEL"/>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
   </ViewAttribute>
   <ViewAttribute
     Name="RegistrationNo"
@@ -128,6 +161,14 @@ from vu_portal_claim_info]]></SQLQuery>
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="pqetapp.modelpqasyapp.qvo.VuPortalClaiminfoQVO.RegistrationNo_LABEL"/>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
   </ViewAttribute>
   <ViewAttribute
     Name="ClaimAmount"
@@ -138,7 +179,16 @@ from vu_portal_claim_info]]></SQLQuery>
     ColumnType="NUMBER"
     AliasName="CLAIM_AMOUNT"
     Expression="CLAIM_AMOUNT"
-    SQLType="NUMERIC"/>
+    SQLType="NUMERIC">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="pqetapp.modelpqasyapp.qvo.VuPortalClaiminfoQVO.ClaimAmount_LABEL"/>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <AttrArray Name="KeyAttributes">
     <Item Value="ClaimIdPk"/>
   </AttrArray>

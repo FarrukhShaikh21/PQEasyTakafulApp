@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.57" id="PQClaimsHistoryPageDef"
+                Package="pqetapp.viewpqeasyapp.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="VuPortalClaiminfoQVORO" RangeSize="25" DataControl="EasyTakafulAppModuleDataControl"
+              id="VuPortalClaiminfoQVOROIterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="VuPortalClaiminfoQVOROIterator" id="VuPortalClaiminfoQVORO">
+      <nodeDefinition DefName="pqetapp.modelpqasyapp.qvo.VuPortalClaiminfoQVO" Name="VuPortalClaiminfoQVORO0">
+        <AttrNames>
+          <Item Value="ClaimNo"/>
+          <Item Value="IntimationDate"/>
+          <Item Value="LossType"/>
+          <Item Value="LossDate"/>
+          <Item Value="VehicleName"/>
+          <Item Value="RegistrationNo"/>
+          <Item Value="ClaimAmount"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

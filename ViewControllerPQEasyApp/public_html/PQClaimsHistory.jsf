@@ -16,7 +16,7 @@
                   <af:gridRow marginTop="5px" height="auto" id="gr11">
                     <af:gridCell marginStart="5px" width="30%" id="gc26" halign="stretch" valign="middle">
                       <af:panelGroupLayout id="pgl5" layout="vertical" halign="center">
-                        <af:outputText value="MyTakaful" id="ot1"
+                        <af:outputText value="Claim History" id="ot1"
                                        inlineStyle="font-size:xx-large; font-style:italic; color:green;"/>
                         <af:outputText value="Know Your Protections" id="ot2"
                                        inlineStyle="font-size:xx-small; font-style:italic; color:green;"/>
@@ -33,65 +33,95 @@
                     <af:gridCell marginStart="15px" width="100%" marginEnd="15px" id="gc1" halign="stretch" columnSpan="2"
                                  rowSpan="1">
                       <af:panelGroupLayout id="pgl3" layout="vertical" halign="center" styleClass="AFStretchWidth">
-                        <af:table value="#{bindings.VuPortalPolicyInfoQVORO.collectionModel}" var="row"
-                                  rows="#{bindings.VuPortalPolicyInfoQVORO.rangeSize}"
-                                  emptyText="#{bindings.VuPortalPolicyInfoQVORO.viewable ? 'No data to display.' : 'Access Denied.'}"
+                        <af:table value="#{bindings.VuPortalClaiminfoQVORO.collectionModel}" var="row"
+                                  rows="#{bindings.VuPortalClaiminfoQVORO.rangeSize}"
+                                  emptyText="#{bindings.VuPortalClaiminfoQVORO.viewable ? 'No data to display.' : 'Access Denied.'}"
                                   rowBandingInterval="0"
-                                  selectedRowKeys="#{bindings.VuPortalPolicyInfoQVORO.collectionModel.selectedRow}"
-                                  selectionListener="#{bindings.VuPortalPolicyInfoQVORO.collectionModel.makeCurrent}"
-                                  rowSelection="single" fetchSize="#{bindings.VuPortalPolicyInfoQVORO.rangeSize}"
-                                  id="t1" columnStretching="last">
-                          <af:column headerText="#{bindings.VuPortalPolicyInfoQVORO.hints.DocumentNoUk.label}" id="c1"
-                                     width="200" minimumWidth="12">
-                            <af:inputText value="#{row.bindings.DocumentNoUk.inputValue}"
-                                          label="#{bindings.VuPortalPolicyInfoQVORO.hints.DocumentNoUk.label}"
-                                          required="#{bindings.VuPortalPolicyInfoQVORO.hints.DocumentNoUk.mandatory}"
-                                          columns="#{bindings.VuPortalPolicyInfoQVORO.hints.DocumentNoUk.displayWidth}"
-                                          maximumLength="#{bindings.VuPortalPolicyInfoQVORO.hints.DocumentNoUk.precision}"
-                                          shortDesc="#{bindings.VuPortalPolicyInfoQVORO.hints.DocumentNoUk.tooltip}"
-                                          id="it1" contentStyle="font-weight:bold;font-size:xx-small">
-                              <f:validator binding="#{row.bindings.DocumentNoUk.validator}"/>
-                            </af:inputText>
-                            <f:facet name="header"/>
-                          </af:column>
-                          <af:column headerText="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.label}" id="c2">
-                            <af:inputDate value="#{row.bindings.PeriodTo.inputValue}"
-                                          label="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.label}"
-                                          required="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.mandatory}"
-                                          columns="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.displayWidth}"
-                                          shortDesc="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.tooltip}"
-                                          id="id1" contentStyle="font-weight:bold;font-size:xx-small">
-                              <f:validator binding="#{row.bindings.PeriodTo.validator}"/>
-                              <af:convertDateTime pattern="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.format}"/>
-                            </af:inputDate>
-                          </af:column>
-                          <af:column headerText="#{bindings.VuPortalPolicyInfoQVORO.hints.Status.label}" id="c3">
-                            <af:inputText value="#{row.bindings.Status.inputValue}"
-                                          label="#{bindings.VuPortalPolicyInfoQVORO.hints.Status.label}"
-                                          required="#{bindings.VuPortalPolicyInfoQVORO.hints.Status.mandatory}"
-                                          columns="#{bindings.VuPortalPolicyInfoQVORO.hints.Status.displayWidth}"
-                                          maximumLength="#{bindings.VuPortalPolicyInfoQVORO.hints.Status.precision}"
-                                          shortDesc="#{bindings.VuPortalPolicyInfoQVORO.hints.Status.tooltip}" id="it2"
-                                          contentStyle="font-weight:bold;font-size:xx-small;#{row.bindings.Status.inputValue=='IN-ACTIVE'?'color:red':'color:green'}">
-                              <f:validator binding="#{row.bindings.Status.validator}"/>
+                                  selectedRowKeys="#{bindings.VuPortalClaiminfoQVORO.collectionModel.selectedRow}"
+                                  selectionListener="#{bindings.VuPortalClaiminfoQVORO.collectionModel.makeCurrent}"
+                                  rowSelection="single" fetchSize="#{bindings.VuPortalClaiminfoQVORO.rangeSize}"
+                                  id="t2" columnStretching="column:c11">
+                          <af:column headerText="#{bindings.VuPortalClaiminfoQVORO.hints.ClaimNo.label}" id="c7"
+                                     width="200">
+                            <af:inputText value="#{row.bindings.ClaimNo.inputValue}"
+                                          label="#{bindings.VuPortalClaiminfoQVORO.hints.ClaimNo.label}"
+                                          required="#{bindings.VuPortalClaiminfoQVORO.hints.ClaimNo.mandatory}"
+                                          columns="#{bindings.VuPortalClaiminfoQVORO.hints.ClaimNo.displayWidth}"
+                                          maximumLength="#{bindings.VuPortalClaiminfoQVORO.hints.ClaimNo.precision}"
+                                          shortDesc="#{bindings.VuPortalClaiminfoQVORO.hints.ClaimNo.tooltip}" id="it3">
+                              <f:validator binding="#{row.bindings.ClaimNo.validator}"/>
                             </af:inputText>
                           </af:column>
-                          <af:column headerText="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.label}" id="c4">
-                            <af:inputDate value="#{row.bindings.PeriodTo.inputValue}"
-                                          label="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.label}"
-                                          required="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.mandatory}"
-                                          columns="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.displayWidth}"
-                                          shortDesc="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.tooltip}"
-                                          id="id2" contentStyle="font-weight:bold;font-size:xx-small">
-                              <f:validator binding="#{row.bindings.PeriodTo.validator}"/>
-                              <af:convertDateTime pattern="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.format}"/>
+                          <af:column headerText="#{bindings.VuPortalClaiminfoQVORO.hints.IntimationDate.label}" id="c8"
+                                     displayIndex="-1" width="80">
+                            <af:inputDate value="#{row.bindings.IntimationDate.inputValue}"
+                                          label="#{bindings.VuPortalClaiminfoQVORO.hints.IntimationDate.label}"
+                                          required="#{bindings.VuPortalClaiminfoQVORO.hints.IntimationDate.mandatory}"
+                                          columns="#{bindings.VuPortalClaiminfoQVORO.hints.IntimationDate.displayWidth}"
+                                          shortDesc="#{bindings.VuPortalClaiminfoQVORO.hints.IntimationDate.tooltip}"
+                                          id="id3">
+                              <f:validator binding="#{row.bindings.IntimationDate.validator}"/>
+                              <af:convertDateTime pattern="#{bindings.VuPortalClaiminfoQVORO.hints.IntimationDate.format}"/>
                             </af:inputDate>
                           </af:column>
-                          <af:column id="c5" headerText="Add-On">
-                            <af:link text="Make a Request" id="l1" partialSubmit="true"/>
+                          <af:column headerText="#{bindings.VuPortalClaiminfoQVORO.hints.LossType.label}" id="c9">
+                            <af:inputText value="#{row.bindings.LossType.inputValue}"
+                                          label="#{bindings.VuPortalClaiminfoQVORO.hints.LossType.label}"
+                                          required="#{bindings.VuPortalClaiminfoQVORO.hints.LossType.mandatory}"
+                                          columns="#{bindings.VuPortalClaiminfoQVORO.hints.LossType.displayWidth}"
+                                          maximumLength="#{bindings.VuPortalClaiminfoQVORO.hints.LossType.precision}"
+                                          shortDesc="#{bindings.VuPortalClaiminfoQVORO.hints.LossType.tooltip}"
+                                          id="it4">
+                              <f:validator binding="#{row.bindings.LossType.validator}"/>
+                            </af:inputText>
                           </af:column>
-                          <af:column id="c6" headerText="Services">
-                            <af:link text="#{row.bindings.Status.inputValue=='IN-ACTIVE'?'Request for Renewal':'Policy View'}" id="l2" partialSubmit="true"/>
+                          <af:column headerText="#{bindings.VuPortalClaiminfoQVORO.hints.LossDate.label}" id="c10"
+                                     width="80">
+                            <af:inputDate value="#{row.bindings.LossDate.inputValue}"
+                                          label="#{bindings.VuPortalClaiminfoQVORO.hints.LossDate.label}"
+                                          required="#{bindings.VuPortalClaiminfoQVORO.hints.LossDate.mandatory}"
+                                          columns="#{bindings.VuPortalClaiminfoQVORO.hints.LossDate.displayWidth}"
+                                          shortDesc="#{bindings.VuPortalClaiminfoQVORO.hints.LossDate.tooltip}"
+                                          id="id4">
+                              <f:validator binding="#{row.bindings.LossDate.validator}"/>
+                              <af:convertDateTime pattern="#{bindings.VuPortalClaiminfoQVORO.hints.LossDate.format}"/>
+                            </af:inputDate>
+                          </af:column>
+                          <af:column headerText="#{bindings.VuPortalClaiminfoQVORO.hints.VehicleName.label}" id="c11">
+                            <af:inputText value="#{row.bindings.VehicleName.inputValue}"
+                                          label="#{bindings.VuPortalClaiminfoQVORO.hints.VehicleName.label}"
+                                          required="#{bindings.VuPortalClaiminfoQVORO.hints.VehicleName.mandatory}"
+                                          columns="#{bindings.VuPortalClaiminfoQVORO.hints.VehicleName.displayWidth}"
+                                          maximumLength="#{bindings.VuPortalClaiminfoQVORO.hints.VehicleName.precision}"
+                                          shortDesc="#{bindings.VuPortalClaiminfoQVORO.hints.VehicleName.tooltip}"
+                                          id="it5">
+                              <f:validator binding="#{row.bindings.VehicleName.validator}"/>
+                            </af:inputText>
+                          </af:column>
+                          <af:column headerText="#{bindings.VuPortalClaiminfoQVORO.hints.RegistrationNo.label}"
+                                     id="c12">
+                            <af:inputText value="#{row.bindings.RegistrationNo.inputValue}"
+                                          label="#{bindings.VuPortalClaiminfoQVORO.hints.RegistrationNo.label}"
+                                          required="#{bindings.VuPortalClaiminfoQVORO.hints.RegistrationNo.mandatory}"
+                                          columns="#{bindings.VuPortalClaiminfoQVORO.hints.RegistrationNo.displayWidth}"
+                                          maximumLength="#{bindings.VuPortalClaiminfoQVORO.hints.RegistrationNo.precision}"
+                                          shortDesc="#{bindings.VuPortalClaiminfoQVORO.hints.RegistrationNo.tooltip}"
+                                          id="it6">
+                              <f:validator binding="#{row.bindings.RegistrationNo.validator}"/>
+                            </af:inputText>
+                          </af:column>
+                          <af:column headerText="#{bindings.VuPortalClaiminfoQVORO.hints.ClaimAmount.label}" id="c13">
+                            <af:inputText value="#{row.bindings.ClaimAmount.inputValue}"
+                                          label="#{bindings.VuPortalClaiminfoQVORO.hints.ClaimAmount.label}"
+                                          required="#{bindings.VuPortalClaiminfoQVORO.hints.ClaimAmount.mandatory}"
+                                          columns="#{bindings.VuPortalClaiminfoQVORO.hints.ClaimAmount.displayWidth}"
+                                          maximumLength="#{bindings.VuPortalClaiminfoQVORO.hints.ClaimAmount.precision}"
+                                          shortDesc="#{bindings.VuPortalClaiminfoQVORO.hints.ClaimAmount.tooltip}"
+                                          id="it7">
+                              <f:validator binding="#{row.bindings.ClaimAmount.validator}"/>
+                              <af:convertNumber groupingUsed="false"
+                                                pattern="#{bindings.VuPortalClaiminfoQVORO.hints.ClaimAmount.format}"/>
+                            </af:inputText>
                           </af:column>
                         </af:table>
                       </af:panelGroupLayout>
