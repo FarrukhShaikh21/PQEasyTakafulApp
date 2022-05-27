@@ -78,6 +78,7 @@
          <string v="XML"/>
       </list>
    </hash>
+   <value n="oracle.jbo.enableGroovyCodeSource" v="false"/>
    <value n="oracle.jbo.SavedPreferences" v="true"/>
    <hash n="oracle.jdeveloper.compiler.OjcConfiguration">
       <list n="copyRes">

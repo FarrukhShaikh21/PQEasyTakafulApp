@@ -8,7 +8,6 @@
   SeparateXMLFiles="true"
   PackageName="pqetapp.modelpqasyapp">
   <DesignTime>
-    <Attr Name="_DTExpressionTypeChecking" Value="true"/>
     <Attr Name="_jbo.TypeMapEntries" Value="OracleApps"/>
     <Attr Name="_jprName" Value="../../../ModelPQEasyApp.jpr"/>
     <Attr Name="_NamedConnection" Value="ConnEashApp"/>

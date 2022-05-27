@@ -18,7 +18,7 @@
                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc11" halign="stretch" valign="stretch">
                   <af:panelGroupLayout id="pgl3" layout="vertical" styleClass="AFStretchWidth" halign="center">
                     <af:inputText label="Label 1" id="it1" simple="true" styleClass="PQLoginTextBox"
-                                  placeholder="Enter User Name"/>
+                                  placeholder="Enter User Name" value="#{PQEasyTakafulBeanClass.strUserName}"/>
                   </af:panelGroupLayout>
                 </af:gridCell>
               </af:gridRow>
