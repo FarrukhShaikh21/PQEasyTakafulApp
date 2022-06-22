@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TmsClmWebClaim"
+  Version="12.2.1.11.57"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="TMS_CLM_WEB_CLAIM"
+  AliasName="TmsClmWebClaim"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="WebClaimIdPk"
+    ColumnName="WEB_CLAIM_ID_PK"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="TMS_CLM_WEB_CLAIM"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="LossTypeIdFk"
+    ColumnName="LOSS_TYPE_ID_FK"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="TMS_CLM_WEB_CLAIM"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="LossCause"
+    Precision="300"
+    ColumnName="LOSS_CAUSE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TMS_CLM_WEB_CLAIM"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="300"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="LossDate"
+    ColumnName="LOSS_DATE"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="TMS_CLM_WEB_CLAIM"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="LossTime"
+    Precision="100"
+    ColumnName="LOSS_TIME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TMS_CLM_WEB_CLAIM"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CityIdFk"
+    ColumnName="CITY_ID_FK"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="TMS_CLM_WEB_CLAIM"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="Area"
+    Precision="350"
+    ColumnName="AREA"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TMS_CLM_WEB_CLAIM"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="350"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="WorkshopIdFk"
+    ColumnName="WORKSHOP_ID_FK"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="TMS_CLM_WEB_CLAIM"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="ContactPerson"
+    Precision="250"
+    ColumnName="CONTACT_PERSON"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TMS_CLM_WEB_CLAIM"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="250"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ContactNumber"
+    Precision="25"
+    ColumnName="CONTACT_NUMBER"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TMS_CLM_WEB_CLAIM"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="25"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="IntimationDate"
+    ColumnName="INTIMATION_DATE"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="TMS_CLM_WEB_CLAIM"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="DetailRemarks"
+    Precision="500"
+    ColumnName="DETAIL_REMARKS"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TMS_CLM_WEB_CLAIM"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="500"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="DocumentIdFk"
+    ColumnName="DOCUMENT_ID_FK"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="TMS_CLM_WEB_CLAIM"
+    PrimaryKey="true"/>
+  <Key
+    Name="TmsclmwebclaimPrimaryKey"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="TMSCLMWEBCLAIM_PRIMARY_KEY"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebClaim.WebClaimIdPk"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebClaim.LossTypeIdFk"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebClaim.LossCause"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebClaim.LossDate"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebClaim.LossTime"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebClaim.CityIdFk"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebClaim.Area"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebClaim.WorkshopIdFk"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebClaim.ContactPerson"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebClaim.ContactNumber"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebClaim.IntimationDate"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebClaim.DetailRemarks"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebClaim.DocumentIdFk"/>
+    </AttrArray>
+  </Key>
+</Entity>

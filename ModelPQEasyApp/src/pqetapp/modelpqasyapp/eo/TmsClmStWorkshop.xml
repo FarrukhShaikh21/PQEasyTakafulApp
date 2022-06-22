@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TmsClmStWorkshop"
+  Version="12.2.1.11.57"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="TMS_CLM_ST_WORKSHOP"
+  AliasName="TmsClmStWorkshop"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="WorkshopIdPk"
+    IsNotNull="true"
+    ColumnName="WORKSHOP_ID_PK"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="TMS_CLM_ST_WORKSHOP"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="WorkshopName"
+    IsNotNull="true"
+    Precision="200"
+    ColumnName="WORKSHOP_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TMS_CLM_ST_WORKSHOP"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Address"
+    Precision="2000"
+    ColumnName="ADDRESS"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TMS_CLM_ST_WORKSHOP"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="2000"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ContactPerson"
+    Precision="100"
+    ColumnName="CONTACT_PERSON"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TMS_CLM_ST_WORKSHOP"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="PhoneNo"
+    Precision="100"
+    ColumnName="PHONE_NO"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TMS_CLM_ST_WORKSHOP"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="FaxNo"
+    Precision="100"
+    ColumnName="FAX_NO"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TMS_CLM_ST_WORKSHOP"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="RegNo"
+    Precision="100"
+    ColumnName="REG_NO"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TMS_CLM_ST_WORKSHOP"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="NtnNo"
+    Precision="100"
+    ColumnName="NTN_NO"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TMS_CLM_ST_WORKSHOP"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Email"
+    Precision="200"
+    ColumnName="EMAIL"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TMS_CLM_ST_WORKSHOP"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Url"
+    Precision="200"
+    ColumnName="URL"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TMS_CLM_ST_WORKSHOP"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ZipCode"
+    Precision="100"
+    ColumnName="ZIP_CODE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TMS_CLM_ST_WORKSHOP"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="PoBox"
+    Precision="100"
+    ColumnName="PO_BOX"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TMS_CLM_ST_WORKSHOP"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Cnic"
+    Precision="100"
+    ColumnName="CNIC"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TMS_CLM_ST_WORKSHOP"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="TaxDeduct"
+    Precision="1"
+    ColumnName="TAX_DEDUCT"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TMS_CLM_ST_WORKSHOP"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="TaxExemptNo"
+    Precision="100"
+    ColumnName="TAX_EXEMPT_NO"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TMS_CLM_ST_WORKSHOP"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="UserIdFk"
+    ColumnName="USER_ID_FK"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="TMS_CLM_ST_WORKSHOP"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="EnterDate"
+    ColumnName="ENTER_DATE"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="TMS_CLM_ST_WORKSHOP"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="OldCode"
+    Precision="20"
+    ColumnName="OLD_CODE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TMS_CLM_ST_WORKSHOP"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CityIdFk"
+    ColumnName="CITY_ID_FK"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="TMS_CLM_ST_WORKSHOP"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="BusinessType"
+    Precision="1"
+    ColumnName="BUSINESS_TYPE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TMS_CLM_ST_WORKSHOP"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Registered"
+    Precision="1"
+    ColumnName="REGISTERED"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TMS_CLM_ST_WORKSHOP"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="RegisteredDate"
+    ColumnName="REGISTERED_DATE"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="TMS_CLM_ST_WORKSHOP"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="SttypeIdFk"
+    ColumnName="STTYPE_ID_FK"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="TMS_CLM_ST_WORKSHOP"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="Workshop3s"
+    Precision="1"
+    ColumnName="WORKSHOP_3S"
+    SQLType="CHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="TMS_CLM_ST_WORKSHOP"
+    PrimaryKey="true"
+    RetrievedOnUpdate="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="DmsCode"
+    Precision="100"
+    ColumnName="DMS_CODE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TMS_CLM_ST_WORKSHOP"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Taxable"
+    Precision="1"
+    ColumnName="TAXABLE"
+    SQLType="CHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="TMS_CLM_ST_WORKSHOP"
+    PrimaryKey="true"
+    RetrievedOnUpdate="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="RegisteredSrb"
+    Precision="1"
+    ColumnName="REGISTERED_SRB"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TMS_CLM_ST_WORKSHOP"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="RegisteredDateSrb"
+    ColumnName="REGISTERED_DATE_SRB"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="TMS_CLM_ST_WORKSHOP"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="AtlStatus"
+    Precision="1"
+    ColumnName="ATL_STATUS"
+    SQLType="CHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="TMS_CLM_ST_WORKSHOP"
+    PrimaryKey="true"
+    RetrievedOnUpdate="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="RegisteredPra"
+    Precision="1"
+    ColumnName="REGISTERED_PRA"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TMS_CLM_ST_WORKSHOP"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="RegisteredDatePra"
+    ColumnName="REGISTERED_DATE_PRA"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="TMS_CLM_ST_WORKSHOP"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="Active"
+    Precision="1"
+    ColumnName="ACTIVE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TMS_CLM_ST_WORKSHOP"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ParentWorkshopId"
+    ColumnName="PARENT_WORKSHOP_ID"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="TMS_CLM_ST_WORKSHOP"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="RegisteredKpra"
+    Precision="1"
+    ColumnName="REGISTERED_KPRA"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TMS_CLM_ST_WORKSHOP"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="RegisteredDateKpra"
+    ColumnName="REGISTERED_DATE_KPRA"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="TMS_CLM_ST_WORKSHOP"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="AccountTitle"
+    Precision="500"
+    ColumnName="ACCOUNT_TITLE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TMS_CLM_ST_WORKSHOP"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="500"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="BranchName"
+    Precision="500"
+    ColumnName="BRANCH_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TMS_CLM_ST_WORKSHOP"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="500"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="BankAddress"
+    Precision="500"
+    ColumnName="BANK_ADDRESS"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TMS_CLM_ST_WORKSHOP"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="500"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="AccountNumber"
+    Precision="100"
+    ColumnName="ACCOUNT_NUMBER"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TMS_CLM_ST_WORKSHOP"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="BankIbanNo"
+    Precision="100"
+    ColumnName="BANK_IBAN_NO"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TMS_CLM_ST_WORKSHOP"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="BankIdFk"
+    ColumnName="BANK_ID_FK"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="TMS_CLM_ST_WORKSHOP"
+    PrimaryKey="true"/>
+  <Key
+    Name="TmsclmstworkshopPrimaryKey"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="TMSCLMSTWORKSHOP_PRIMARY_KEY"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.WorkshopIdPk"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.WorkshopName"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.Address"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.ContactPerson"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.PhoneNo"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.FaxNo"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.RegNo"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.NtnNo"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.Email"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.Url"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.ZipCode"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.PoBox"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.Cnic"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.TaxDeduct"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.TaxExemptNo"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.UserIdFk"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.EnterDate"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.OldCode"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.CityIdFk"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.BusinessType"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.Registered"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.RegisteredDate"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.SttypeIdFk"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.Workshop3s"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.DmsCode"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.Taxable"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.RegisteredSrb"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.RegisteredDateSrb"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.AtlStatus"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.RegisteredPra"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.RegisteredDatePra"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.Active"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.ParentWorkshopId"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.RegisteredKpra"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.RegisteredDateKpra"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.AccountTitle"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.BranchName"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.BankAddress"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.AccountNumber"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.BankIbanNo"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.BankIdFk"/>
+    </AttrArray>
+  </Key>
+</Entity>

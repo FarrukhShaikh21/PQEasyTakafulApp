@@ -22,8 +22,24 @@
     </DesignTime>
   </Containee>
   <Containee
+    Name="eo"
+    PackageName="pqetapp.modelpqasyapp.eo"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_EO" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
     Name="qvo"
     PackageName="pqetapp.modelpqasyapp.qvo"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_VO" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="vo"
+    PackageName="pqetapp.modelpqasyapp.vo"
     ObjectType="JboPackage">
     <DesignTime>
       <Attr Name="_VO" Value="true"/>
