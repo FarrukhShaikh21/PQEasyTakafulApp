@@ -4,8 +4,8 @@
   <af:document title="PQ Claim Intimation.jsf" id="d1">
     <af:messages id="m1"/>
     <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>  
-    <af:form id="f1">
-      <af:decorativeBox id="db1" dimensionsFrom="parent">
+    <af:form id="f1" usesUpload="true">
+      <af:decorativeBox id="db1">
         <f:facet name="top"/>
         <f:facet name="center">
           <af:panelGridLayout id="pgl1">
@@ -26,16 +26,27 @@
                       </af:panelGroupLayout>
                     </af:gridCell>
                   </af:gridRow>
+                  <af:gridRow marginTop="30px" height="auto" id="gr12" marginBottom="10px">
+                    <af:gridCell id="gc25" width="100%" marginStart="5px" halign="stretch" valign="stretch"
+                                 marginEnd="10px" columnSpan="2" rowSpan="1">
+                      <af:panelGroupLayout id="pgl28" styleClass="width:80%" halign="center" layout="vertical">
+                        <af:panelLabelAndMessage label="Upload Video/Image/Document" id="plam1">
+                          <af:inputFile label="Label 1" id="if1" simple="true" rows="1"/>
+                        </af:panelLabelAndMessage>
+                        <f:facet name="separator"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                  </af:gridRow>
                   <af:gridRow marginTop="30px" height="auto" id="gr5" marginBottom="10px">
-                    <af:gridCell marginStart="5px" width="30%" marginEnd="5px" id="gc11" halign="stretch"
-                                 valign="stretch">
-                      <af:panelGroupLayout id="pgl3" layout="horizontal" inlineStyle="border-color:red" halign="center">
+                    <af:gridCell marginStart="5px" width="30%" marginEnd="5px" id="gc11"
+                                 valign="middle">
+                      <af:panelGroupLayout id="pgl3" layout="vertical" inlineStyle="border-color:red" halign="end">
                         <af:outputLabel value="#{bindings.txtLossTypeDescription.hints.label}" id="ol1"/>
                       </af:panelGroupLayout>
                     </af:gridCell>
                     <af:gridCell id="gc3" width="70%" marginStart="5px" halign="stretch"
                                  valign="stretch" marginEnd="10px" columnSpan="1" rowSpan="1">
-                      <af:panelGroupLayout id="pgl4" layout="vertical" halign="center" styleClass="width:80%">
+                      <af:panelGroupLayout id="pgl4" layout="vertical" styleClass="width:80%">
                         <af:inputListOfValues id="txtLossTypeDescriptionId"
                                               popupTitle="Search and Select: #{bindings.txtLossTypeDescription.hints.label}"
                                               value="#{bindings.txtLossTypeDescription.inputValue}"
@@ -51,15 +62,14 @@
                     </af:gridCell>
                   </af:gridRow>
                   <af:gridRow marginTop="30px" height="auto" id="gr1" marginBottom="10px">
-                    <af:gridCell id="gc12" width="30%" marginStart="5px" marginEnd="5px" valign="stretch"
-                                 halign="stretch">
+                    <af:gridCell id="gc12" width="30%" marginStart="5px" marginEnd="5px" valign="stretch">
                       <af:panelGroupLayout id="pgl7" layout="vertical" halign="center">
                         <af:outputLabel value="#{bindings.LossCause.hints.label}" id="ol2"/>
                       </af:panelGroupLayout>
                     </af:gridCell>
                     <af:gridCell marginStart="5px" width="70%" id="gc10" halign="stretch"
                                  valign="stretch" marginEnd="10px" columnSpan="1" rowSpan="1">
-                      <af:panelGroupLayout id="pgl6" layout="vertical" halign="center" styleClass="width:100%">
+                      <af:panelGroupLayout id="pgl6" layout="vertical" styleClass="width:100%">
                         <af:inputText value="#{bindings.LossCause.inputValue}" label="#{bindings.LossCause.hints.label}"
                                       required="#{bindings.LossCause.hints.mandatory}"
                                       columns="#{bindings.LossCause.hints.displayWidth}"
@@ -74,18 +84,18 @@
                   <af:gridRow marginTop="30px" height="auto" id="gr4" marginBottom="10px">
                     <af:gridCell id="gc13" width="30%" marginStart="5px" marginEnd="5px" valign="stretch"
                                  halign="stretch">
-                      <af:panelGroupLayout id="pgl9" layout="horizontal" halign="center">
+                      <af:panelGroupLayout id="pgl9" layout="horizontal">
                         <af:outputLabel value="#{bindings.LossDate.hints.label}" id="ol3"/>
                       </af:panelGroupLayout>
                     </af:gridCell>
                     <af:gridCell marginStart="5px" width="70%" id="gc14" halign="stretch" valign="stretch"
                                  marginEnd="10px" columnSpan="1">
-                      <af:panelGroupLayout id="pgl10" layout="vertical" halign="center" styleClass="width:100%">
+                      <af:panelGroupLayout id="pgl10" layout="vertical" styleClass="width:100%">
                         <af:inputDate value="#{bindings.LossDate.inputValue}" label="#{bindings.LossDate.hints.label}"
                                       required="#{bindings.LossDate.hints.mandatory}"
                                       columns="#{bindings.LossDate.hints.displayWidth}"
                                       shortDesc="#{bindings.LossDate.hints.tooltip}" id="id1" simple="true"
-                                      styleClass="PQTDateBox" contentStyle="width:90%">
+                                      styleClass="PQTDateBox" contentStyle="width:85%">
                           <f:validator binding="#{bindings.LossDate.validator}"/>
                           <af:convertDateTime pattern="#{bindings.LossDate.format}" type="both"/>
                         </af:inputDate>
@@ -95,13 +105,13 @@
                   <af:gridRow marginTop="30px" height="auto" id="gr7" marginBottom="10px">
                     <af:gridCell id="gc15" width="30%" marginStart="5px" marginEnd="5px" valign="stretch"
                                  halign="stretch">
-                      <af:panelGroupLayout id="pgl11" layout="vertical" halign="center">
+                      <af:panelGroupLayout id="pgl11" layout="vertical">
                         <af:outputLabel value="#{bindings.Area.hints.label}" id="ol4"/>
                       </af:panelGroupLayout>
                     </af:gridCell>
                     <af:gridCell marginStart="5px" width="70%" id="gc16" halign="stretch" valign="stretch"
                                  marginEnd="10px" columnSpan="1">
-                      <af:panelGroupLayout id="pgl12" layout="vertical" halign="center">
+                      <af:panelGroupLayout id="pgl12" layout="vertical">
                         <af:inputText value="#{bindings.Area.inputValue}" label="#{bindings.Area.hints.label}"
                                       required="#{bindings.Area.hints.mandatory}"
                                       columns="#{bindings.Area.hints.displayWidth}"
@@ -114,15 +124,15 @@
                     </af:gridCell>
                   </af:gridRow>
                   <af:gridRow marginTop="30px" height="auto" id="gr8" marginBottom="10px">
-                    <af:gridCell id="gc17" width="30%" marginStart="5px" marginEnd="5px" valign="stretch"
+                    <af:gridCell id="gc17" width="30%" marginStart="5px" marginEnd="5px" valign="middle"
                                  halign="stretch">
-                      <af:panelGroupLayout id="pgl13" layout="vertical" halign="center">
+                      <af:panelGroupLayout id="pgl13" layout="vertical">
                         <af:outputLabel value="#{bindings.txtCityName.hints.label}" id="ol5"/>
                       </af:panelGroupLayout>
                     </af:gridCell>
                     <af:gridCell marginStart="5px" width="70%" id="gc18" halign="stretch" valign="stretch"
                                  marginEnd="10px" columnSpan="1">
-                      <af:panelGroupLayout id="pgl14" layout="vertical" halign="center" styleClass="width:100%">
+                      <af:panelGroupLayout id="pgl14" layout="vertical" styleClass="width:100%">
                         <af:inputListOfValues id="txtCityNameId"
                                               popupTitle="Search and Select: #{bindings.txtCityName.hints.label}"
                                               value="#{bindings.txtCityName.inputValue}"
@@ -138,46 +148,133 @@
                     </af:gridCell>
                   </af:gridRow>
                   <af:gridRow marginTop="30px" height="auto" id="gr9" marginBottom="10px">
-                    <af:gridCell id="gc19" width="30%" marginStart="5px" marginEnd="5px" valign="stretch" halign="end">
-                      <af:panelGroupLayout id="pgl15" layout="vertical" halign="end">
-                        <af:inputText label="Label 1" id="it11" simple="true"
-                                      value="Registration No." contentStyle="width:100%;color:red;border-color:green"/>
+                    <af:gridCell id="gc19" width="30%" marginStart="5px" marginEnd="5px" valign="middle"
+                                 halign="stretch">
+                      <af:panelGroupLayout id="pgl15" layout="vertical">
+                        <af:outputLabel value="#{bindings.txtWorkshopName.hints.label}" id="ol6"/>
                       </af:panelGroupLayout>
                     </af:gridCell>
                     <af:gridCell marginStart="5px" width="70%" id="gc20" halign="stretch" valign="stretch"
                                  marginEnd="10px" columnSpan="1" rowSpan="1">
-                      <af:panelGroupLayout id="pgl16" layout="vertical" halign="end" styleClass="width:100%">
-                        <af:inputText label="Label 1" id="it12" simple="true"
-                                      contentStyle="width:100%;color:red;border-color:green"
-                                      value="LEB-17-5034"/>
+                      <af:panelGroupLayout id="pgl16" layout="vertical" styleClass="width:100%">
+                        <af:inputListOfValues id="txtWorkshopNameId"
+                                              popupTitle="Search and Select: #{bindings.txtWorkshopName.hints.label}"
+                                              value="#{bindings.txtWorkshopName.inputValue}"
+                                              label="#{bindings.txtWorkshopName.hints.label}"
+                                              model="#{bindings.txtWorkshopName.listOfValuesModel}"
+                                              required="#{bindings.txtWorkshopName.hints.mandatory}"
+                                              columns="#{bindings.txtWorkshopName.hints.displayWidth}"
+                                              shortDesc="#{bindings.txtWorkshopName.hints.tooltip}" simple="true"
+                                              contentStyle="width:90%" styleClass="PQTLovBox">
+                          <f:validator binding="#{bindings.txtWorkshopName.validator}"/>
+                        </af:inputListOfValues>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow marginTop="30px" height="auto" id="gr14" marginBottom="10px">
+                    <af:gridCell id="gc21" width="30%" marginStart="5px" marginEnd="5px" valign="middle"
+                                 halign="stretch">
+                      <af:panelGroupLayout id="pgl18" layout="vertical">
+                        <af:outputLabel value="#{bindings.ContactPerson.hints.label}" id="ol7"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                    <af:gridCell marginStart="5px" width="70%" id="gc32" halign="stretch" valign="stretch"
+                                 marginEnd="10px" columnSpan="1" rowSpan="1">
+                      <af:panelGroupLayout id="pgl19" layout="vertical" styleClass="width:100%">
+                        <af:inputText value="#{bindings.ContactPerson.inputValue}"
+                                      label="#{bindings.ContactPerson.hints.label}"
+                                      required="#{bindings.ContactPerson.hints.mandatory}"
+                                      columns="#{bindings.ContactPerson.hints.displayWidth}"
+                                      maximumLength="#{bindings.ContactPerson.hints.precision}"
+                                      shortDesc="#{bindings.ContactPerson.hints.tooltip}" id="it4" simple="true"
+                                      styleClass="PQTTextBox" contentStyle="width:100%">
+                          <f:validator binding="#{bindings.ContactPerson.validator}"/>
+                        </af:inputText>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow marginTop="30px" height="auto" id="gr15" marginBottom="10px">
+                    <af:gridCell id="gc33" width="30%" marginStart="5px" marginEnd="5px" valign="middle"
+                                 halign="stretch">
+                      <af:panelGroupLayout id="pgl20" layout="vertical">
+                        <af:outputLabel value="#{bindings.ContactNumber.hints.label}" id="ol8"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                    <af:gridCell marginStart="5px" width="70%" id="gc34" halign="stretch" valign="middle"
+                                 marginEnd="10px" columnSpan="1" rowSpan="1">
+                      <af:panelGroupLayout id="pgl21" layout="vertical" styleClass="width:100%">
+                        <af:inputText value="#{bindings.ContactNumber.inputValue}"
+                                      label="#{bindings.ContactNumber.hints.label}"
+                                      required="#{bindings.ContactNumber.hints.mandatory}"
+                                      columns="#{bindings.ContactNumber.hints.displayWidth}"
+                                      maximumLength="#{bindings.ContactNumber.hints.precision}"
+                                      shortDesc="#{bindings.ContactNumber.hints.tooltip}" id="it5"
+                                      styleClass="PQTTextBox" contentStyle="width:100%" simple="true">
+                          <f:validator binding="#{bindings.ContactNumber.validator}"/>
+                        </af:inputText>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow marginTop="30px" height="auto" id="gr16" marginBottom="10px">
+                    <af:gridCell id="gc35" width="30%" marginStart="5px" marginEnd="5px" valign="middle"
+                                 halign="stretch">
+                      <af:panelGroupLayout id="pgl22" layout="vertical">
+                        <af:outputLabel value="#{bindings.IntimationDate.hints.label}" id="ol9"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                    <af:gridCell marginStart="5px" width="70%" id="gc36" halign="stretch" valign="middle"
+                                 marginEnd="10px" columnSpan="1">
+                      <af:panelGroupLayout id="pgl23" layout="vertical" styleClass="width:100%" halign="start">
+                        <af:inputDate value="#{bindings.IntimationDate.inputValue}"
+                                      label="#{bindings.IntimationDate.hints.label}"
+                                      required="#{bindings.IntimationDate.hints.mandatory}"
+                                      columns="#{bindings.IntimationDate.hints.displayWidth}"
+                                      shortDesc="#{bindings.IntimationDate.hints.tooltip}" id="id3"
+                                      styleClass="PQTDateBox" contentStyle="width:85%" simple="true">
+                          <f:validator binding="#{bindings.IntimationDate.validator}"/>
+                          <af:convertDateTime pattern="#{bindings.IntimationDate.format}"/>
+                        </af:inputDate>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow marginTop="30px" height="auto" id="gr17" marginBottom="10px">
+                    <af:gridCell id="gc37" width="30%" marginStart="5px" marginEnd="5px" valign="middle"
+                                 halign="stretch">
+                      <af:panelGroupLayout id="pgl24" layout="horizontal">
+                        <af:outputLabel value="#{bindings.DetailRemarks.hints.label}" id="ol10"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                    <af:gridCell marginStart="5px" width="70%" id="gc38" halign="stretch" valign="stretch"
+                                 marginEnd="10px" columnSpan="1">
+                      <af:panelGroupLayout id="pgl25" layout="vertical" styleClass="width:100%">
+                        <af:inputText value="#{bindings.DetailRemarks.inputValue}"
+                                      label="#{bindings.DetailRemarks.hints.label}"
+                                      required="#{bindings.DetailRemarks.hints.mandatory}"
+                                      columns="#{bindings.DetailRemarks.hints.displayWidth}"
+                                      maximumLength="#{bindings.DetailRemarks.hints.precision}"
+                                      shortDesc="#{bindings.DetailRemarks.hints.tooltip}" id="it3" simple="true"
+                                      styleClass="PQTTextBox" contentStyle="width:100%" rows="3">
+                          <f:validator binding="#{bindings.DetailRemarks.validator}"/>
+                        </af:inputText>
                       </af:panelGroupLayout>
                     </af:gridCell>
                   </af:gridRow>
                   <af:gridRow id="gr10">
-                    <af:gridCell id="gc22" halign="stretch" valign="stretch" columnSpan="2" width="100%">
+                    <af:gridCell id="gc22" halign="center" valign="stretch" columnSpan="2" width="100%">
                       <af:panelGridLayout id="pgl17">
                         <af:gridRow marginTop="5px" height="auto" id="gr11">
-                          <af:gridCell marginStart="40px" width="34%" id="gc23" marginEnd="5px" halign="stretch">
-                            <af:button actionListener="#{bindings.CreateInsert.execute}" text="CreateInsert"
-                                       disabled="#{!bindings.CreateInsert.enabled}" id="b4"/>
-                            <af:button text="Claim Intimation" id="b1" styleClass="PQTransactionButton"/>
+                          <af:gridCell marginStart="5px" width="100%" id="gc23" marginEnd="5px"
+                                       columnSpan="3" rowSpan="1">
+                            <af:panelGroupLayout id="pgl26" layout="horizontal" halign="center">
+                              <af:button actionListener="#{bindings.Commit.execute}" text="Submit"
+                                         disabled="#{!bindings.Commit.enabled}" id="b2"
+                                         styleClass="PQTransactionButton"/>
+                              <af:button actionListener="#{bindings.CreateInsert.execute}" text="CreateInsert"
+                                         disabled="#{!bindings.CreateInsert.enabled}" id="b4" rendered="false"/>
+                              <af:button text="Claim Intimation" id="b1" styleClass="PQTransactionButton"
+                                         rendered="false"/>
+                            </af:panelGroupLayout>
                           </af:gridCell>
-                          <af:gridCell marginStart="5px" width="33%" id="gc24" marginEnd="5px" halign="stretch">
-                            <af:button text="Claim Tracking" id="b2" styleClass="PQTransactionButton"/>
-                          </af:gridCell>
-                          <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc25" halign="stretch">
-                            <af:button text="Claim History" id="b3" styleClass="PQTransactionButton"/>
-                          </af:gridCell>
-                        </af:gridRow>
-                        <af:gridRow marginTop="5px" height="auto" id="gr12">
-                          <af:gridCell marginStart="5px" width="34%" id="gc26"/>
-                          <af:gridCell marginStart="5px" width="33%" id="gc27"/>
-                          <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc28"/>
-                        </af:gridRow>
-                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr13">
-                          <af:gridCell marginStart="5px" width="34%" id="gc29"/>
-                          <af:gridCell marginStart="5px" width="33%" id="gc30"/>
-                          <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc31"/>
                         </af:gridRow>
                       </af:panelGridLayout>
                     </af:gridCell>

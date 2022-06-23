@@ -473,4 +473,8 @@
       <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop.WorkshopIdPk"/>
     </AttrArray>
   </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="pqetapp.modelpqasyapp.ModelPQEasyAppBundle"/>
+  </ResourceBundle>
 </Entity>

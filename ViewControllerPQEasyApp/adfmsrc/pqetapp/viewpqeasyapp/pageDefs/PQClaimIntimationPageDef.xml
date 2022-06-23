@@ -28,5 +28,29 @@
       </AttrNames>
     </attributeValues>
     <listOfValues IterBinding="TmsClmWebClaimCRUDIterator" StaticList="false" Uses="LovtxtCityName" id="txtCityName"/>
+    <listOfValues IterBinding="TmsClmWebClaimCRUDIterator" StaticList="false" Uses="LovtxtWorkshopName"
+                  id="txtWorkshopName"/>
+    <attributeValues IterBinding="TmsClmWebClaimCRUDIterator" id="ContactPerson">
+      <AttrNames>
+        <Item Value="ContactPerson"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmsClmWebClaimCRUDIterator" id="ContactNumber">
+      <AttrNames>
+        <Item Value="ContactNumber"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmsClmWebClaimCRUDIterator" id="IntimationDate">
+      <AttrNames>
+        <Item Value="IntimationDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmsClmWebClaimCRUDIterator" id="DetailRemarks">
+      <AttrNames>
+        <Item Value="DetailRemarks"/>
+      </AttrNames>
+    </attributeValues>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction"
+            DataControl="EasyTakafulAppModuleDataControl"/>
   </bindings>
 </pageDefinition>

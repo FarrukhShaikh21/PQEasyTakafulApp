@@ -107,3 +107,7 @@ af|column::column-header-cell-content {
 .PQTLovBox af|inputListOfValues::content{
     color:red;border-color:green
 }
+
+af|inputFile::content{
+    color:white;
+}

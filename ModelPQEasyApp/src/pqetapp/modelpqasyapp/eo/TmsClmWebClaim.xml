@@ -244,6 +244,32 @@
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
+  <Attribute
+    Name="txtWorkshopName"
+    Precision="80"
+    ColumnName="TXT_WORKSHOP_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TMS_CLM_WEB_CLAIM"
+    IsPersistent="false"
+    IsQueriable="false">
+    <TransientExpression
+      trustMode="untrusted"
+      Name="ExpressionScript"><![CDATA[TmsClmStWorkshop?.WorkshopName]]></TransientExpression>
+    <Dependencies>
+      <Item
+        Value="WorkshopIdFk"/>
+    </Dependencies>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="pqetapp.modelpqasyapp.eo.TmsClmWebClaim.txtWorkshopName_LABEL"/>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <AccessorAttribute
     Name="TmsClmStLossType"
     Association="pqetapp.modelpqasyapp.assoc.TmSClmStLossTypeTmsClmWebClaimLossTypeIDAssoc"

@@ -21,6 +21,10 @@
     Name="AccTmsGenStCityView"
     ViewObjectName="pqetapp.modelpqasyapp.vo.TmsGenStCityView"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AccTmsClmStWorkshopView"
+    ViewObjectName="pqetapp.modelpqasyapp.vo.TmsClmStWorkshopView"
+    RowLevelBinds="true"/>
   <ListBinding
     Name="LovtxtLossTypeDescription"
     ListVOName="AccTmsClmStLossTypeView"
@@ -64,6 +68,29 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="CityName"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LovtxtWorkshopName"
+    ListVOName="AccTmsClmStWorkshopView"
+    ListRangeSize="-1"
+    ComboRowCountHint="10"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="txtWorkshopName"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="DerivedAttrNames">
+      <Item Value="WorkshopIdFk"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="WorkshopName"/>
+      <Item Value="WorkshopIdPk"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="WorkshopName"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -173,6 +200,22 @@
     EntityUsage="TmsClmWebClaim"
     AliasName="TXT_CITY_NAME"
     LOVName="LovtxtCityName">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="input_text_lov"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="txtWorkshopName"
+    IsQueriable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    EntityAttrName="txtWorkshopName"
+    EntityUsage="TmsClmWebClaim"
+    AliasName="TXT_WORKSHOP_NAME"
+    LOVName="LovtxtWorkshopName">
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE
