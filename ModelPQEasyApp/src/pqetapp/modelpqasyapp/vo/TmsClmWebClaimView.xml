@@ -94,4 +94,10 @@
     EntityAttrName="DocumentIdFk"
     EntityUsage="TmsClmWebClaim"
     AliasName="DOCUMENT_ID_FK"/>
+  <ViewLinkAccessor
+    Name="TmsClmStLossTypeView"
+    ViewLink="pqetapp.modelpqasyapp.link.TmSClmStLossTypeTmsClmWebClaimLossTypeIDLink"
+    Type="oracle.jbo.Row"
+    Reversed="true"
+    IsUpdateable="false"/>
 </ViewObject>

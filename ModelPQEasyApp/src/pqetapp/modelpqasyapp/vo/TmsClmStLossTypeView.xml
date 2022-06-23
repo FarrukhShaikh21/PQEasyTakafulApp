@@ -47,4 +47,9 @@
     EntityAttrName="TotalLoss"
     EntityUsage="TmsClmStLossType"
     AliasName="TOTAL_LOSS"/>
+  <ViewLinkAccessor
+    Name="TmsClmWebClaimView"
+    ViewLink="pqetapp.modelpqasyapp.link.TmSClmStLossTypeTmsClmWebClaimLossTypeIDLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
 </ViewObject>
