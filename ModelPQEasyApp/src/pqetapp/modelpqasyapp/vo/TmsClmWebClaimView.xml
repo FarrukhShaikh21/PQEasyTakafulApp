@@ -143,4 +143,10 @@
     Type="oracle.jbo.Row"
     Reversed="true"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TmsGenStCityView"
+    ViewLink="pqetapp.modelpqasyapp.link.TmSGenStCityTmsClmWebClaimCityIdLink"
+    Type="oracle.jbo.Row"
+    Reversed="true"
+    IsUpdateable="false"/>
 </ViewObject>

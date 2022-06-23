@@ -6,6 +6,7 @@
     <page path="/PQMyProfile.jsf" usageId="pqetapp_viewpqeasyapp_PQMyProfilePageDef"/>
     <page path="/PQMyTakaful.jsf" usageId="pqetapp_viewpqeasyapp_PQMyTakafulPageDef"/>
     <page path="/PQClaimsHistory.jsf" usageId="pqetapp_viewpqeasyapp_PQClaimsHistoryPageDef"/>
+    <page path="/PQClaimIntimation.jsf" usageId="pqetapp_viewpqeasyapp_PQClaimIntimationPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="pqetapp_viewpqeasyapp_PQMyClaimsPageDef" path="pqetapp.viewpqeasyapp.pageDefs.PQMyClaimsPageDef"/>
@@ -13,6 +14,8 @@
     <page id="pqetapp_viewpqeasyapp_PQMyTakafulPageDef" path="pqetapp.viewpqeasyapp.pageDefs.PQMyTakafulPageDef"/>
     <page id="pqetapp_viewpqeasyapp_PQClaimsHistoryPageDef"
           path="pqetapp.viewpqeasyapp.pageDefs.PQClaimsHistoryPageDef"/>
+    <page id="pqetapp_viewpqeasyapp_PQClaimIntimationPageDef"
+          path="pqetapp.viewpqeasyapp.pageDefs.PQClaimIntimationPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="EasyTakafulAppModuleDataControl" Package="pqetapp.modelpqasyapp.am"

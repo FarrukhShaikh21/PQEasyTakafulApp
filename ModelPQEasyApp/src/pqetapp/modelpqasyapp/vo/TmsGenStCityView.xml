@@ -73,4 +73,9 @@
     EntityAttrName="ProvinceIdFk"
     EntityUsage="TmsGenStCity"
     AliasName="PROVINCE_ID_FK"/>
+  <ViewLinkAccessor
+    Name="TmsClmWebClaimView"
+    ViewLink="pqetapp.modelpqasyapp.link.TmSGenStCityTmsClmWebClaimCityIdLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
 </ViewObject>

@@ -96,3 +96,14 @@ af|column::column-header-cell-content {
     height: 30px;
     background-color: #5fcbef;
 }
+.PQTTextBox af|inputText::content{
+    color:red;border-color:green
+}
+
+.PQTDateBox af|inputDate::content{
+    color:red;border-color:green
+}
+
+.PQTLovBox af|inputListOfValues::content{
+    color:red;border-color:green
+}

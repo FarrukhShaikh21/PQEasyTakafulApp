@@ -15,7 +15,7 @@
     IsNotNull="true"
     ColumnName="CITY_ID_PK"
     SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
+    Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
     TableName="TMS_GEN_ST_CITY"
     PrimaryKey="true"/>
@@ -87,6 +87,13 @@
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
     TableName="TMS_GEN_ST_CITY"/>
+  <AccessorAttribute
+    Name="TmsClmWebClaim"
+    Association="pqetapp.modelpqasyapp.assoc.TmSGenStCityTmsClmWebClaimCityIdAssoc"
+    AssociationEnd="pqetapp.modelpqasyapp.assoc.TmSGenStCityTmsClmWebClaimCityIdAssoc.TmsClmWebClaim"
+    AssociationOtherEnd="pqetapp.modelpqasyapp.assoc.TmSGenStCityTmsClmWebClaimCityIdAssoc.TmsGenStCity"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="CityPk"
     PrimaryKey="true">

@@ -18,7 +18,16 @@
     Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
     TableName="TMS_CLM_ST_LOSS_TYPE"
-    PrimaryKey="true"/>
+    PrimaryKey="true">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="pqetapp.modelpqasyapp.eo.TmsClmStLossType.LossTypeIdPk_LABEL"/>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="LossDescription"
     Precision="100"
@@ -30,6 +39,12 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="100"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="UserIdFk"
@@ -37,21 +52,42 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="TMS_CLM_ST_LOSS_TYPE"/>
+    TableName="TMS_CLM_ST_LOSS_TYPE">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="EnterDate"
     ColumnName="ENTER_DATE"
     SQLType="DATE"
     Type="oracle.jbo.domain.Date"
     ColumnType="DATE"
-    TableName="TMS_CLM_ST_LOSS_TYPE"/>
+    TableName="TMS_CLM_ST_LOSS_TYPE">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="TotalLoss"
     ColumnName="TOTAL_LOSS"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="TMS_CLM_ST_LOSS_TYPE"/>
+    TableName="TMS_CLM_ST_LOSS_TYPE">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <AccessorAttribute
     Name="TmsClmWebClaim"
     Association="pqetapp.modelpqasyapp.assoc.TmSClmStLossTypeTmsClmWebClaimLossTypeIDAssoc"
@@ -69,4 +105,8 @@
       <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStLossType.LossTypeIdPk"/>
     </AttrArray>
   </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="pqetapp.modelpqasyapp.ModelPQEasyAppBundle"/>
+  </ResourceBundle>
 </Entity>

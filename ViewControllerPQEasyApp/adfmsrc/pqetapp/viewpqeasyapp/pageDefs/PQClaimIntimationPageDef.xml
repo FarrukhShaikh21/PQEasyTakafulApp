@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.57" id="PQClaimIntimationPageDef"
+                Package="pqetapp.viewpqeasyapp.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="TmsClmWebClaimCRUD" RangeSize="25" DataControl="EasyTakafulAppModuleDataControl"
+              id="TmsClmWebClaimCRUDIterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="TmsClmWebClaimCRUDIterator" id="LossCause">
+      <AttrNames>
+        <Item Value="LossCause"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="TmsClmWebClaimCRUDIterator" id="CreateInsert" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <listOfValues IterBinding="TmsClmWebClaimCRUDIterator" StaticList="false" Uses="LovtxtLossTypeDescription"
+                  id="txtLossTypeDescription"/>
+    <attributeValues IterBinding="TmsClmWebClaimCRUDIterator" id="LossDate">
+      <AttrNames>
+        <Item Value="LossDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmsClmWebClaimCRUDIterator" id="Area">
+      <AttrNames>
+        <Item Value="Area"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>
