@@ -27,5 +27,6 @@
         <Item Value="Area"/>
       </AttrNames>
     </attributeValues>
+    <listOfValues IterBinding="TmsClmWebClaimCRUDIterator" StaticList="false" Uses="LovtxtCityName" id="txtCityName"/>
   </bindings>
 </pageDefinition>

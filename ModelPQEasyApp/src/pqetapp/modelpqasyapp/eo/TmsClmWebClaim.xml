@@ -223,6 +223,27 @@
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
+  <Attribute
+    Name="txtCityName"
+    Precision="80"
+    ColumnName="TXT_CITY_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    IsPersistent="false"
+    IsQueriable="false">
+    <TransientExpression
+      trustMode="untrusted"
+      Name="ExpressionScript"><![CDATA[TmsGenStCity?.CityName]]></TransientExpression>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="pqetapp.modelpqasyapp.eo.TmsClmWebClaim.txtCityName_LABEL"/>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <AccessorAttribute
     Name="TmsClmStLossType"
     Association="pqetapp.modelpqasyapp.assoc.TmSClmStLossTypeTmsClmWebClaimLossTypeIDAssoc"

@@ -114,17 +114,26 @@
                     </af:gridCell>
                   </af:gridRow>
                   <af:gridRow marginTop="30px" height="auto" id="gr8" marginBottom="10px">
-                    <af:gridCell id="gc17" width="30%" marginStart="5px" marginEnd="5px" valign="stretch" halign="end">
-                      <af:panelGroupLayout id="pgl13" layout="vertical" halign="end">
-                        <af:inputText label="Label 1" id="it9" simple="true" value="Model"
-                                      contentStyle="width:100%;color:red;border-color:green"/>
+                    <af:gridCell id="gc17" width="30%" marginStart="5px" marginEnd="5px" valign="stretch"
+                                 halign="stretch">
+                      <af:panelGroupLayout id="pgl13" layout="vertical" halign="center">
+                        <af:outputLabel value="#{bindings.txtCityName.hints.label}" id="ol5"/>
                       </af:panelGroupLayout>
                     </af:gridCell>
                     <af:gridCell marginStart="5px" width="70%" id="gc18" halign="stretch" valign="stretch"
                                  marginEnd="10px" columnSpan="1">
-                      <af:panelGroupLayout id="pgl14" layout="vertical" halign="end" styleClass="width:100%">
-                        <af:inputText label="Label 1" id="it10" simple="true"
-                                      contentStyle="width:100%;color:red;border-color:green" value="2017"/>
+                      <af:panelGroupLayout id="pgl14" layout="vertical" halign="center" styleClass="width:100%">
+                        <af:inputListOfValues id="txtCityNameId"
+                                              popupTitle="Search and Select: #{bindings.txtCityName.hints.label}"
+                                              value="#{bindings.txtCityName.inputValue}"
+                                              label="#{bindings.txtCityName.hints.label}"
+                                              model="#{bindings.txtCityName.listOfValuesModel}"
+                                              required="#{bindings.txtCityName.hints.mandatory}"
+                                              columns="#{bindings.txtCityName.hints.displayWidth}"
+                                              shortDesc="#{bindings.txtCityName.hints.tooltip}" styleClass="PQTLovBox"
+                                              contentStyle="width:90%" simple="true">
+                          <f:validator binding="#{bindings.txtCityName.validator}"/>
+                        </af:inputListOfValues>
                       </af:panelGroupLayout>
                     </af:gridCell>
                   </af:gridRow>
