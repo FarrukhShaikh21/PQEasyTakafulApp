@@ -13,6 +13,33 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <ViewAccessor
+    Name="AccTmsClmStLossTypeView"
+    ViewObjectName="pqetapp.modelpqasyapp.vo.TmsClmStLossTypeView"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LovtxtLossTypeDescription"
+    ListVOName="AccTmsClmStLossTypeView"
+    ListRangeSize="-1"
+    ComboRowCountHint="10"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="txtLossTypeDescription"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="DerivedAttrNames">
+      <Item Value="LossTypeIdFk"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="LossDescription"/>
+      <Item Value="LossTypeIdPk"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="LossDescription"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="TmsClmWebClaim"
     Entity="pqetapp.modelpqasyapp.eo.TmsClmWebClaim"/>
@@ -94,6 +121,22 @@
     EntityAttrName="DocumentIdFk"
     EntityUsage="TmsClmWebClaim"
     AliasName="DOCUMENT_ID_FK"/>
+  <ViewAttribute
+    Name="txtLossTypeDescription"
+    IsQueriable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    EntityAttrName="txtLossTypeDescription"
+    EntityUsage="TmsClmWebClaim"
+    AliasName="TXT_LOSS_TYPE_DESCRIPTION"
+    LOVName="LovtxtLossTypeDescription">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo_lov"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewLinkAccessor
     Name="TmsClmStLossTypeView"
     ViewLink="pqetapp.modelpqasyapp.link.TmSClmStLossTypeTmsClmWebClaimLossTypeIDLink"

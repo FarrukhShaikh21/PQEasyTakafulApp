@@ -132,6 +132,24 @@
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
     TableName="TMS_CLM_WEB_CLAIM"/>
+  <Attribute
+    Name="txtLossTypeDescription"
+    Precision="80"
+    ColumnName="TXT_LOSS_TYPE_DESCRIPTION"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TMS_CLM_WEB_CLAIM"
+    IsPersistent="false"
+    IsQueriable="false">
+    <TransientExpression
+      trustMode="untrusted"
+      Name="ExpressionScript"><![CDATA[TmsClmStLossType?.LossDescription]]></TransientExpression>
+    <Dependencies>
+      <Item
+        Value="LossTypeIdFk"/>
+    </Dependencies>
+  </Attribute>
   <AccessorAttribute
     Name="TmsClmStLossType"
     Association="pqetapp.modelpqasyapp.assoc.TmSClmStLossTypeTmsClmWebClaimLossTypeIDAssoc"
