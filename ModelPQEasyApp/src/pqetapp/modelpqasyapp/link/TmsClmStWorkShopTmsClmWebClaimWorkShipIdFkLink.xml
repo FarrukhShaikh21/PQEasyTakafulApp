@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TmsClmStWorkShopTmsClmWebClaimWorkShipIdFkLink"
+  Version="12.2.1.11.57"
+  InheritPersonalization="merge"
+  EntityAssociation="pqetapp.modelpqasyapp.assoc.TmsClmStWorkShopTmsClmWebClaimWorkShipIdFkAssoc">
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="pqetapp.modelpqasyapp.link.TmsClmStWorkShopTmsClmWebClaimWorkShipIdFkLink_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <ViewLinkDefEnd
+    Name="TmsClmStWorkshopView"
+    Cardinality="1"
+    Source="true"
+    Owner="pqetapp.modelpqasyapp.vo.TmsClmStWorkshopView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_accessor" Value="true"/>
+      <Attr Name="_finderName" Value="TmsClmStWorkshopView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="pqetapp.modelpqasyapp.vo.TmsClmStWorkshopView.WorkshopIdPk"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="TmsClmWebClaimView"
+    Cardinality="-1"
+    Owner="pqetapp.modelpqasyapp.vo.TmsClmWebClaimView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="TmsClmWebClaimView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="pqetapp.modelpqasyapp.vo.TmsClmWebClaimView.WebClaimIdPk"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="pqetapp.modelpqasyapp.ModelPQEasyAppBundle"/>
+  </ResourceBundle>
+</ViewLink>

@@ -264,4 +264,9 @@
     EntityAttrName="BankIdFk"
     EntityUsage="TmsClmStWorkshop"
     AliasName="BANK_ID_FK"/>
+  <ViewLinkAccessor
+    Name="TmsClmWebClaimView"
+    ViewLink="pqetapp.modelpqasyapp.link.TmsClmStWorkShopTmsClmWebClaimWorkShipIdFkLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
 </ViewObject>

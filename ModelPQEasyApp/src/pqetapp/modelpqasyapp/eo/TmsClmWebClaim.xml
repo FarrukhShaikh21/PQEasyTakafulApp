@@ -112,7 +112,7 @@
     Name="WorkshopIdFk"
     ColumnName="WORKSHOP_ID_FK"
     SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
+    Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
     TableName="TMS_CLM_WEB_CLAIM"/>
   <Attribute
@@ -258,6 +258,13 @@
     AssociationOtherEnd="pqetapp.modelpqasyapp.assoc.TmSGenStCityTmsClmWebClaimCityIdAssoc.TmsClmWebClaim"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="TmsClmStWorkshop"
+    Association="pqetapp.modelpqasyapp.assoc.TmsClmStWorkShopTmsClmWebClaimWorkShipIdFkAssoc"
+    AssociationEnd="pqetapp.modelpqasyapp.assoc.TmsClmStWorkShopTmsClmWebClaimWorkShipIdFkAssoc.TmsClmStWorkshop"
+    AssociationOtherEnd="pqetapp.modelpqasyapp.assoc.TmsClmStWorkShopTmsClmWebClaimWorkShipIdFkAssoc.TmsClmWebClaim"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
   <Key
     Name="TmsclmwebclaimPrimaryKey"
     PrimaryKey="true">
@@ -288,6 +295,17 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebClaim.CityIdFk"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="fk_TmsClmWebClaim2">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="TMSCLMSTWORKSHOP_PRIMARY_KEY"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK_TMS_CLM_WEB_CLAIM2"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebClaim.WebClaimIdPk"/>
     </AttrArray>
   </Key>
   <ResourceBundle>

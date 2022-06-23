@@ -192,4 +192,10 @@
     Type="oracle.jbo.Row"
     Reversed="true"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TmsClmStWorkshopView"
+    ViewLink="pqetapp.modelpqasyapp.link.TmsClmStWorkShopTmsClmWebClaimWorkShipIdFkLink"
+    Type="oracle.jbo.Row"
+    Reversed="true"
+    IsUpdateable="false"/>
 </ViewObject>

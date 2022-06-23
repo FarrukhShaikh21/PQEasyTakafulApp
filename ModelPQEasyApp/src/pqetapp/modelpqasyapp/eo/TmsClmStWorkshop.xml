@@ -15,7 +15,7 @@
     IsNotNull="true"
     ColumnName="WORKSHOP_ID_PK"
     SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
+    Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
     TableName="TMS_CLM_ST_WORKSHOP"
     PrimaryKey="true"/>
@@ -456,6 +456,13 @@
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
     TableName="TMS_CLM_ST_WORKSHOP"/>
+  <AccessorAttribute
+    Name="TmsClmWebClaim"
+    Association="pqetapp.modelpqasyapp.assoc.TmsClmStWorkShopTmsClmWebClaimWorkShipIdFkAssoc"
+    AssociationEnd="pqetapp.modelpqasyapp.assoc.TmsClmStWorkShopTmsClmWebClaimWorkShipIdFkAssoc.TmsClmWebClaim"
+    AssociationOtherEnd="pqetapp.modelpqasyapp.assoc.TmsClmStWorkShopTmsClmWebClaimWorkShipIdFkAssoc.TmsClmStWorkshop"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="TmsclmstworkshopPrimaryKey"
     PrimaryKey="true">
