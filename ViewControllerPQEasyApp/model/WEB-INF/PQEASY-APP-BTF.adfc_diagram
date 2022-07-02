@@ -7,13 +7,13 @@
       <property
          name="activityId">PQMyClaims</property>
       <property
-         name="x">234.00098</property>
+         name="x">162.00098</property>
       <property
          name="start">false</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>PQMyClaims&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">209.0459</property>
+         name="y">833.3447</property>
       <property
          name="page">/PQMyClaims.jsf</property>
       <property
@@ -24,11 +24,11 @@
       <property
          name="activityId">PQClaimsHistory</property>
       <property
-         name="x">38.6709</property>
+         name="x">23.670898</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>PQClaimsHistory&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">351.79883</property>
+         name="y">802.09766</property>
       <property
          name="page">/PQClaimsHistory.jsf</property>
       <property
@@ -39,11 +39,11 @@
       <property
          name="activityId">PQMyProfile</property>
       <property
-         name="x">206.67383</property>
+         name="x">190.67383</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>PQMyProfile&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">351.79883</property>
+         name="y">547.09766</property>
       <property
          name="page">/PQMyProfile.jsf</property>
       <property
@@ -54,11 +54,11 @@
       <property
          name="activityId">PQClaimIntimation</property>
       <property
-         name="x">43.015625</property>
+         name="x">232.01562</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>PQClaimIntimation&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">453.79883</property>
+         name="y">733.6953</property>
       <property
          name="page">/PQClaimIntimation.jsf</property>
       <property
@@ -69,11 +69,11 @@
       <property
          name="activityId">PQMyTakaful</property>
       <property
-         name="x">209.34277</property>
+         name="x">-116.65723</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>PQMyTakaful&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">453.79883</property>
+         name="y">733.3965</property>
       <property
          name="page">/PQMyTakaful.jsf</property>
       <property
@@ -84,16 +84,66 @@
       <property
          name="activityId">PQMain</property>
       <property
-         name="x">23.5</property>
+         name="x">-116.5</property>
       <property
          name="start">true</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>PQMain&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">555.7988</property>
+         name="y">547.09766</property>
       <property
          name="page">/PQMain.jsf</property>
       <property
          name="exceptionHandler">false</property>
    </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase8"
+      from="View7"
+      to="View4">
+      <property
+         name="fromOutcome">ACT-GOTO-PROFILE</property>
+      <property
+         name="sdm:polyPoints">R46,-74.38638,543.2471,149.67383,546.7471,L50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase9"
+      from="View7"
+      to="View6">
+      <property
+         name="fromOutcome">ACT-GOTO-MYTAKAFUL</property>
+      <property
+         name="sdm:polyPoints">B39,-123.5,605.59125,-116.65723,679.0459,T50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase10"
+      from="View7"
+      to="View5">
+      <property
+         name="fromOutcome">ACT-GOTO-MYCLAIMINTIMATION</property>
+      <property
+         name="sdm:polyPoints">R54,-75.5,550.2471,191.01562,733.3447,L50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase11"
+      from="View7"
+      to="View3">
+      <property
+         name="fromOutcome">ACT-GOTO-MYCLAIMHISTORY</property>
+      <property
+         name="sdm:polyPoints">B50,-116.5,604.03735,23.670898,747.7471,T50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase12"
+      from="View7"
+      to="View2">
+      <property
+         name="fromOutcome">ACT-GOTO-MYCLAIMS</property>
+      <property
+         name="sdm:polyPoints">L13,T7</property>
+   </ControlFlowCase>
 </SDM>

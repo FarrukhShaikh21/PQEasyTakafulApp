@@ -45,7 +45,7 @@
               <af:gridRow id="gr4" marginTop="100px" height="50%">
                 <af:gridCell id="gc6" halign="stretch" valign="middle">
                   <af:panelGroupLayout id="pgl5" layout="vertical" styleClass="AFStretchWidth" halign="center">
-                    <af:button text="Login" id="b1" styleClass="PQLoginButton"/>
+                    <af:button text="Login" id="b1" styleClass="PQLoginButton" action="ACT-PQET-LOGIN"/>
                   </af:panelGroupLayout>
                 </af:gridCell>
               </af:gridRow>

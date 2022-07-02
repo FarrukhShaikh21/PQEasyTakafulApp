@@ -7,7 +7,7 @@
       <af:decorativeBox id="db1" dimensionsFrom="parent">
         <f:facet name="top"/>
         <f:facet name="center">
-          <af:panelGridLayout id="pgl1" dimensionsFrom="parent">
+          <af:panelGridLayout id="pgl1">
             <af:gridRow id="gr2" height="100%" marginTop="10px">
               <af:gridCell id="gc1" width="10%"/>
               <af:gridCell marginStart="5px" width="80%" id="gc5" valign="stretch" halign="stretch">
@@ -20,8 +20,9 @@
                   <af:gridRow id="gr7" marginTop="10px">
                     <af:gridCell id="gc17" halign="center" valign="middle" columnSpan="3" rowSpan="1">
                       <af:panelGroupLayout id="pgl12" layout="vertical" halign="center">
-                        <af:outputText value="EasyTakaful" id="ot1"
-                                       inlineStyle="color:red; font-size:xx-large; font-style:italic;"/>
+                        <af:outputText id="ot1"
+                                       inlineStyle="color:red; font-size:xx-large; font-style:italic;"
+                                       value="EasyTakaful"/>
                         <af:outputText value="Together We Protect" id="ot2"
                                        inlineStyle="color:red; font-style:italic;"/>
                       </af:panelGroupLayout>
@@ -31,18 +32,20 @@
                     <af:gridCell id="gc3" width="33%" marginStart="5px" marginEnd="5px" halign="stretch"
                                  valign="stretch">
                       <af:panelGroupLayout id="pgl4" layout="vertical" halign="center">
-                        <af:link id="l2" icon="#{resource['images:imgPQMyProfile.png']}"/>
+                        <af:link id="l2" icon="#{resource['images:imgPQMyProfile.png']}" action="ACT-GOTO-PROFILE"/>
                       </af:panelGroupLayout>
                     </af:gridCell>
                     <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc11" halign="stretch"
                                  valign="stretch">
                       <af:panelGroupLayout id="pgl3" layout="vertical" styleClass="AFStretchWidth" halign="center">
-                        <af:link id="l1" partialSubmit="true" icon="#{resource['images:imgPQMyTakaful.png']}"/>
+                        <af:link id="l1" partialSubmit="true" icon="#{resource['images:imgPQMyTakaful.png']}"
+                                 action="ACT-GOTO-MYTAKAFUL"/>
                       </af:panelGroupLayout>
                     </af:gridCell>
                     <af:gridCell id="gc6" width="34%" valign="stretch" halign="stretch">
                       <af:panelGroupLayout id="pgl5" layout="vertical" halign="center">
-                        <af:link id="l3" icon="#{resource['images:imgPQMyClaims.png']}"/>
+                        <af:link id="l3" icon="#{resource['images:imgPQMyClaims.png']}"
+                                 action="ACT-GOTO-MYCLAIMS"/>
                       </af:panelGroupLayout>
                     </af:gridCell>
                   </af:gridRow>

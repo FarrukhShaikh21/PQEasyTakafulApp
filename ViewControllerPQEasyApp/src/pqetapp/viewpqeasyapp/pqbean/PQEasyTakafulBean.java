@@ -23,7 +23,7 @@ public class PQEasyTakafulBean {
     }
     
     public String doLoginPQEashApp() {
-        ADFContext.getCurrent().getPageFlowScope().put("pCNICNo",getStrUserName());
+        ADFContext.getCurrent().getSessionScope().put("pCNICNo",getStrUserName());
         return null;
     }
 }
