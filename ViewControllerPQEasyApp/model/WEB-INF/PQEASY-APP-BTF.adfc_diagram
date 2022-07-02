@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View2">
+      <property
+         name="activityId">PQMyClaims</property>
+      <property
+         name="x">234.00098</property>
+      <property
+         name="start">false</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>PQMyClaims&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">209.0459</property>
+      <property
+         name="page">/PQMyClaims.jsf</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <View
+      id="View3">
+      <property
+         name="activityId">PQClaimsHistory</property>
+      <property
+         name="x">38.6709</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>PQClaimsHistory&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">351.79883</property>
+      <property
+         name="page">/PQClaimsHistory.jsf</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <View
+      id="View4">
+      <property
+         name="activityId">PQMyProfile</property>
+      <property
+         name="x">206.67383</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>PQMyProfile&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">351.79883</property>
+      <property
+         name="page">/PQMyProfile.jsf</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <View
+      id="View5">
+      <property
+         name="activityId">PQClaimIntimation</property>
+      <property
+         name="x">43.015625</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>PQClaimIntimation&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">453.79883</property>
+      <property
+         name="page">/PQClaimIntimation.jsf</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <View
+      id="View6">
+      <property
+         name="activityId">PQMyTakaful</property>
+      <property
+         name="x">209.34277</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>PQMyTakaful&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">453.79883</property>
+      <property
+         name="page">/PQMyTakaful.jsf</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <View
+      id="View7">
+      <property
+         name="activityId">PQMain</property>
+      <property
+         name="x">23.5</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>PQMain&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">555.7988</property>
+      <property
+         name="page">/PQMain.jsf</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+</SDM>
