@@ -10,14 +10,14 @@ public class PQEasyTakafulModelGlobal {
         super();
     }
     
-    public String dogetUserID() {
+    public static String dogetUserID() {
         
         return ADFContext.getCurrent().getSessionScope().get("pCNICNo").toString();
     }
    
-    public String dogetParticipantID() {
+    public static Integer dogetParticipantID() {
         
-        return ADFContext.getCurrent().getSessionScope().get("pParticipantId").toString();
+        return Integer.parseInt(ADFContext.getCurrent().getSessionScope().get("pParticipantId").toString() );
     }
     
 }

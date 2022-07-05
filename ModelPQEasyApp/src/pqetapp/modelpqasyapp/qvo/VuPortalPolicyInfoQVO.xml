@@ -18,17 +18,26 @@
         ResId="pqetapp.modelpqasyapp.qvo.VuPortalPolicyInfoQVO_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
-  <SQLQuery><![CDATA[SELECT a.document_id_pk,     
-a.document_no_uk,     
-a.participant_id_fk,     
-a.class_name,     
-a.period_from,     
-a.period_to,     
-a.status,     
-a.gross,     
-a.net,     
-a.sum_covered   
- FROM VU_PORTAL_POLICY_INFO A WHERE A.PARTICIPANT_ID_FK=8094]]></SQLQuery>
+  <Variable
+    Name="P_ADF_PARTICIPANT_ID"
+    Kind="where"
+    Type="java.lang.Integer">
+    <TransientExpression
+      Name="VariableScript"
+      trustMode="trusted"
+      CodeSourceName="VuPortalPolicyInfoQVO"/>
+  </Variable>
+  <SQLQuery><![CDATA[SELECT a.document_id_pk,       
+a.document_no_uk,       
+a.participant_id_fk,       
+a.class_name,       
+a.period_from,       
+a.period_to,       
+a.status,       
+a.gross,       
+a.net,       
+a.sum_covered     
+ FROM VU_PORTAL_POLICY_INFO A WHERE A.PARTICIPANT_ID_FK=:P_ADF_PARTICIPANT_ID]]></SQLQuery>
   <ViewAttribute
     Name="DocumentIdPk"
     IsUpdateable="false"

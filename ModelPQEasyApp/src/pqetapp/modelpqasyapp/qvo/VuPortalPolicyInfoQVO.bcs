@@ -1,0 +1,12 @@
+//Groovy Scripts for pqetapp.modelpqasyapp.qvo.VuPortalPolicyInfoQVO
+
+package pqetapp.modelpqasyapp.qvo
+
+import oracle.jbo.script.annotation.VariableExpression;
+
+@VariableExpression(path="P_ADF_PARTICIPANT_ID")
+def P_ADF_PARTICIPANT_ID_VariableScript_Variable()
+{
+pqetapp.modelpqasyapp.gclass.PQEasyTakafulModelGlobal.dogetParticipantID()
+}
+

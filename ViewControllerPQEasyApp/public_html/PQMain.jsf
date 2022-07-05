@@ -22,7 +22,7 @@
                       <af:panelGroupLayout id="pgl12" layout="vertical" halign="center">
                         <af:outputText id="ot1"
                                        inlineStyle="color:red; font-size:xx-large; font-style:italic;"
-                                       value="EasyTakaful"/>
+                                       value="EasyTakaful #{PQEasyTakafulBeanClass.strParticipantId}"/>
                         <af:outputText value="Together We Protect" id="ot2"
                                        inlineStyle="color:red; font-style:italic;"/>
                       </af:panelGroupLayout>

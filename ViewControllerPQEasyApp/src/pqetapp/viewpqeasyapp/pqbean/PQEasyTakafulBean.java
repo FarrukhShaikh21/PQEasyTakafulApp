@@ -1,5 +1,6 @@
 package pqetapp.viewpqeasyapp.pqbean;
 
+import javax.faces.application.FacesMessage;
 import javax.faces.context.ExternalContext;
 
 import javax.faces.context.FacesContext;
@@ -16,6 +17,16 @@ public class PQEasyTakafulBean {
         super();
     }
     String strUserName;
+    Integer strParticipantId;
+
+
+    public void setStrParticipantId(Integer strParticipantId) {
+        this.strParticipantId = strParticipantId;
+    }
+
+    public Integer getStrParticipantId() {
+        return strParticipantId;
+    }
 
     public void setStrUserName(String strUserName) {
         this.strUserName = strUserName;
@@ -28,7 +39,15 @@ public class PQEasyTakafulBean {
     public String doLoginPQEashApp() {
         DCBindingContainer bc=(DCBindingContainer)BindingContext.getCurrent().getCurrentBindingsEntry();
         DCIteratorBinding ib=bc.findIteratorBinding("VuPortalClientInfoQVOROIterator");
-        ADFContext.getCurrent().getSessionScope().put("pCNICNo",getStrUserName());
-        return "ACT-PQET-LOGIN";
+        ib.getViewObject().setWhereClause("nic='"+getStrUserName()+"'");
+        ib.getViewObject().executeQuery();
+        if (ib.getEstimatedRowCount()>0) {
+            ADFContext.getCurrent().getSessionScope().put("pCNICNo", getStrUserName());
+            ADFContext.getCurrent().getSessionScope().put("pParticipantId", ib.getViewObject().first().getAttribute("ParticipantIdPk"));
+            setStrParticipantId(Integer.parseInt(ib.getViewObject().first().getAttribute("ParticipantIdPk").toString()));
+            return "ACT-PQET-LOGIN";
+        }
+        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Invalid CNIC No"));
+        return null;
     }
 }

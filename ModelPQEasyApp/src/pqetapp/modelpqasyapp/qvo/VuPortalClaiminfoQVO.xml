@@ -18,17 +18,27 @@
         ResId="pqetapp.modelpqasyapp.qvo.VuPortalClaiminfoQVO_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
-  <SQLQuery><![CDATA[select  
-participant_id_fk,  
-claim_id_pk,  
-claim_no,  
-loss_type,  
-intimation_date,  
-loss_date,  
-vehicle_name,  
-registration_no,  
-claim_amount 
-from vu_portal_claim_info]]></SQLQuery>
+  <Variable
+    Name="P_ADF_PARTICIPANT_ID"
+    Kind="where"
+    Type="java.lang.Integer">
+    <TransientExpression
+      Name="VariableScript"
+      trustMode="trusted"
+      CodeSourceName="VuPortalClaiminfoQVO"/>
+  </Variable>
+  <SQLQuery><![CDATA[select    
+participant_id_fk,    
+claim_id_pk,    
+claim_no,    
+loss_type,    
+intimation_date,    
+loss_date,    
+vehicle_name,    
+registration_no,    
+claim_amount   
+from vu_portal_claim_info  
+where participant_id_fk=:P_ADF_PARTICIPANT_ID]]></SQLQuery>
   <ViewAttribute
     Name="ParticipantIdFk"
     IsUpdateable="false"
