@@ -18,22 +18,23 @@
         ResId="pqetapp.modelpqasyapp.qvo.VuPortalClientInfoQVO_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
-  <SQLQuery><![CDATA[select PARTICIPANT_ID_PK, 
-PARTICIPANT_NAME, 
-OCCUPATION, 
-ADDRESS, 
-CONTACT_PERSON, 
-CORP_IND, 
-CITY_NAME, 
-PROVINCE_NAME, 
-PHONE, 
-MOBILE, 
-EMAIL, 
-NIC_ISSUE_DATE, 
-NIC_EXPIRE_DATE, 
-BANK_NAME, 
-BRANCH_NAME, 
-IBAN_NO 
+  <SQLQuery><![CDATA[select PARTICIPANT_ID_PK,   
+PARTICIPANT_NAME,   
+OCCUPATION,   
+ADDRESS,   
+CONTACT_PERSON,   
+CORP_IND,   
+CITY_NAME,   
+PROVINCE_NAME,   
+PHONE,   
+MOBILE,   
+EMAIL,   
+NIC_ISSUE_DATE,   
+NIC_EXPIRE_DATE,   
+BANK_NAME,   
+BRANCH_NAME,   
+IBAN_NO ,  
+NIC  
  from Vu_portal_client_info]]></SQLQuery>
   <ViewAttribute
     Name="ParticipantIdPk"
@@ -115,7 +116,7 @@ IBAN_NO
     ColumnType="CHAR"
     AliasName="CORP_IND"
     Expression="CORP_IND"
-    SQLType="CHAR">
+    SQLType="VARCHAR">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
@@ -245,6 +246,21 @@ IBAN_NO
     AliasName="IBAN_NO"
     Expression="IBAN_NO"
     SQLType="VARCHAR"/>
+  <ViewAttribute
+    Name="Nic"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="60"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="NIC"
+    Expression="NIC"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="60"/>
+    </DesignTime>
+  </ViewAttribute>
   <AttrArray Name="KeyAttributes">
     <Item Value="ParticipantIdPk"/>
   </AttrArray>

@@ -2,8 +2,15 @@
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
   <af:document title="PQLogin.jsf" id="d1">
-<meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>  
+    <af:messages id="m1"/>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>  
     <af:form id="f1">
+      <af:inputText value="#{bindings.Nic.inputValue}" label="#{bindings.Nic.hints.label}"
+                    required="#{bindings.Nic.hints.mandatory}" columns="#{bindings.Nic.hints.displayWidth}"
+                    maximumLength="#{bindings.Nic.hints.precision}" shortDesc="#{bindings.Nic.hints.tooltip}" id="it3"
+                    rendered="false">
+        <f:validator binding="#{bindings.Nic.validator}"/>
+      </af:inputText>
       <af:panelGridLayout id="pgl1">
         <af:gridRow id="gr2" height="100%" marginTop="10px">
           <af:gridCell id="gc1" width="10%"/>
