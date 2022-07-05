@@ -59,11 +59,11 @@ a.sum_covered
     IsUpdateable="false"
     IsPersistent="false"
     PrecisionRule="true"
-    Type="java.math.BigDecimal"
+    Type="java.lang.Integer"
     ColumnType="NUMBER"
     AliasName="PARTICIPANT_ID_FK"
     Expression="PARTICIPANT_ID_FK"
-    SQLType="NUMERIC"/>
+    SQLType="INTEGER"/>
   <ViewAttribute
     Name="ClassName"
     IsUpdateable="false"

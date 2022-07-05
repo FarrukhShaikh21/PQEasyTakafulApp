@@ -6,6 +6,9 @@ import javax.faces.context.FacesContext;
 
 import javax.servlet.http.HttpSession;
 
+import oracle.adf.model.BindingContext;
+import oracle.adf.model.binding.DCBindingContainer;
+import oracle.adf.model.binding.DCIteratorBinding;
 import oracle.adf.share.ADFContext;
 
 public class PQEasyTakafulBean {
@@ -23,7 +26,9 @@ public class PQEasyTakafulBean {
     }
     
     public String doLoginPQEashApp() {
+        DCBindingContainer bc=(DCBindingContainer)BindingContext.getCurrent().getCurrentBindingsEntry();
+        DCIteratorBinding ib=bc.findIteratorBinding("VuPortalClientInfoQVOROIterator");
         ADFContext.getCurrent().getSessionScope().put("pCNICNo",getStrUserName());
-        return null;
+        return "ACT-PQET-LOGIN";
     }
 }
