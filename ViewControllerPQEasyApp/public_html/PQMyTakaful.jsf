@@ -33,6 +33,14 @@
                     <af:gridCell marginStart="15px" width="100%" marginEnd="15px" id="gc1" halign="stretch" columnSpan="2"
                                  rowSpan="1">
                       <af:panelGroupLayout id="pgl3" layout="vertical" halign="center" styleClass="AFStretchWidth">
+                        <af:inputText value="#{bindings.DocumentNoUk.inputValue}"
+                                      label="#{bindings.DocumentNoUk.hints.label}"
+                                      required="#{bindings.DocumentNoUk.hints.mandatory}"
+                                      columns="#{bindings.DocumentNoUk.hints.displayWidth}"
+                                      maximumLength="#{bindings.DocumentNoUk.hints.precision}"
+                                      shortDesc="#{bindings.DocumentNoUk.hints.tooltip}" id="it3" rendered="false">
+                          <f:validator binding="#{bindings.DocumentNoUk.validator}"/>
+                        </af:inputText>
                         <af:table value="#{bindings.VuPortalPolicyInfoQVORO.collectionModel}" var="row"
                                   rows="#{bindings.VuPortalPolicyInfoQVORO.rangeSize}"
                                   emptyText="#{bindings.VuPortalPolicyInfoQVORO.viewable ? 'No data to display.' : 'Access Denied.'}"

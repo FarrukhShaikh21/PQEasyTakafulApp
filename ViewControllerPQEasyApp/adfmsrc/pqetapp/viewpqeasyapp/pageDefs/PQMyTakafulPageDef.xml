@@ -17,5 +17,10 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <attributeValues IterBinding="VuPortalPolicyInfoQVOROIterator" id="DocumentNoUk">
+      <AttrNames>
+        <Item Value="DocumentNoUk"/>
+      </AttrNames>
+    </attributeValues>
   </bindings>
 </pageDefinition>

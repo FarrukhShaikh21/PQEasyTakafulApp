@@ -19,34 +19,29 @@
     </SchemaBasedProperties>
   </Properties>
   <Variable
-    Name="P_ADF_PARTICIPANT_ID_FK"
+    Name="P_ADF_DOCUMENT_NO_UK"
     Kind="where"
-    Type="java.lang.Integer">
-    <TransientExpression
-      Name="VariableScript"
-      trustMode="trusted"
-      CodeSourceName="VuPortalMtrPolicyDtlQVO"/>
-  </Variable>
-  <SQLQuery><![CDATA[select document_id_pk,  
-document_no_uk,  
-participant_id_fk,  
-class_name,  
-period_from,  
-period_to,  
-status,  
-sum_covered,  
-gross,  
-vehicle_name,  
-body_name,  
-color_name,  
-model_no,  
-registration_year,  
-registration_no,  
-engine_no,  
-chassis_no,  
-tracker_company 
-  from VU_PORTAL_MTR_POLICY_DTL 
-  WHERE participant_id_fk=:P_ADF_PARTICIPANT_ID_FK]]></SQLQuery>
+    Type="java.lang.String"/>
+  <SQLQuery><![CDATA[select document_id_pk,   
+document_no_uk,   
+participant_id_fk,   
+class_name,   
+period_from,   
+period_to,   
+status,   
+sum_covered,   
+gross,   
+vehicle_name,   
+body_name,   
+color_name,   
+model_no,   
+registration_year,   
+registration_no,   
+engine_no,   
+chassis_no,   
+tracker_company  
+  from VU_PORTAL_MTR_POLICY_DTL  
+  WHERE DocumentNoUk=:P_ADF_DOCUMENT_NO_UK]]></SQLQuery>
   <ViewAttribute
     Name="DocumentIdPk"
     IsUpdateable="false"
