@@ -97,7 +97,7 @@
    </hash>
    <hash n="oracle.jdeveloper.deploy.dt.DeploymentProfiles">
       <hash n="profileDefinitions">
-         <hash n="PQEasyTakafulApp_ViewControllerPQEasyApp_webapp">
+         <hash n="EasyTakafulApp">
             <hash n="appletArchives"/>
             <hash n="appletFiles">
                <value n="autoInclude" v="true"/>
@@ -108,7 +108,8 @@
             <hash n="archiveOptions">
                <value n="hasManifest" v="false"/>
             </hash>
-            <value n="enterpriseAppName" v="PQEasyTakafulApp_ViewControllerPQEasyApp_webapp"/>
+            <value n="contextRoot" v="EasyTakafulApp"/>
+            <value n="enterpriseAppName" v="EasyTakafulApp"/>
             <hash n="fileGroups">
                <list n="groups">
                   <hash>
@@ -167,13 +168,13 @@
                   </hash>
                </list>
             </hash>
-            <url n="jarURL" path="deploy/PQEasyTakafulApp_ViewControllerPQEasyApp_webapp.war"/>
+            <url n="jarURL" path="deploy/EasyTakafulApp.war"/>
             <value n="profileClass" v="oracle.jdeveloper.deploy.war.WarProfile"/>
-            <value n="profileName" v="PQEasyTakafulApp_ViewControllerPQEasyApp_webapp"/>
+            <value n="profileName" v="EasyTakafulApp"/>
          </hash>
       </hash>
       <list n="profileList">
-         <string v="PQEasyTakafulApp_ViewControllerPQEasyApp_webapp"/>
+         <string v="EasyTakafulApp"/>
       </list>
    </hash>
    <hash n="oracle.jdevimpl.config.JProjectLibraries">
