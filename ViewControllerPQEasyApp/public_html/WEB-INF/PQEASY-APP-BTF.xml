@@ -29,6 +29,15 @@
         <fixed-outcome>ACT-GOTO-MYCLAIMINTIMATION</fixed-outcome>
       </outcome>
     </method-call>
+    <view id="PQPolicyView">
+      <page>/PQPolicyView.jsf</page>
+    </view>
+    <method-call id="ExecutePolicyVew">
+      <method>#{bindings.Execute.execute}</method>
+      <outcome>
+        <fixed-outcome>ACT-GOTO-MYPOLICYVIEW</fixed-outcome>
+      </outcome>
+    </method-call>
     <control-flow-rule id="__1">
       <from-activity-id>PQMain</from-activity-id>
       <control-flow-case id="__2">
@@ -67,6 +76,20 @@
       <control-flow-case id="__11">
         <from-outcome>ACT-GOTO-MYCLAIMINTIMATION</from-outcome>
         <to-activity-id>PQClaimIntimation</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__12">
+      <from-activity-id>PQMyTakaful</from-activity-id>
+      <control-flow-case id="__13">
+        <from-outcome>ACT-GOTO-MYPOLICYVIEW</from-outcome>
+        <to-activity-id>ExecutePolicyVew</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__14">
+      <from-activity-id>ExecutePolicyVew</from-activity-id>
+      <control-flow-case id="__15">
+        <from-outcome>ACT-GOTO-MYPOLICYVIEW</from-outcome>
+        <to-activity-id>PQPolicyView</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
   </task-flow-definition>

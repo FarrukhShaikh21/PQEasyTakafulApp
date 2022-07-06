@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.57" id="PQPolicyViewPageDef"
+                Package="pqetapp.viewpqeasyapp.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="VuPortalMtrPolicyDtlQVORO" RangeSize="25" DataControl="EasyTakafulAppModuleDataControl"
+              id="VuPortalMtrPolicyDtlQVOROIterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="VuPortalMtrPolicyDtlQVOROIterator" id="VuPortalMtrPolicyDtlQVORO">
+      <nodeDefinition DefName="pqetapp.modelpqasyapp.qvo.VuPortalMtrPolicyDtlQVO" Name="VuPortalMtrPolicyDtlQVORO0">
+        <AttrNames>
+          <Item Value="VehicleName"/>
+          <Item Value="ClassName"/>
+          <Item Value="PeriodFrom"/>
+          <Item Value="PeriodTo"/>
+          <Item Value="Status"/>
+          <Item Value="SumCovered"/>
+          <Item Value="BodyName"/>
+          <Item Value="ColorName"/>
+          <Item Value="ModelNo"/>
+          <Item Value="RegistrationYear"/>
+          <Item Value="RegistrationNo"/>
+          <Item Value="EngineNo"/>
+          <Item Value="ChassisNo"/>
+          <Item Value="TrackerCompany"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

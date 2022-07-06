@@ -92,7 +92,8 @@
                           </af:column>
                           <af:column id="c6" headerText="Services">
                             <af:link text="Policy View" id="l3" partialSubmit="true"
-                                     visible="#{row.bindings.Status.inputValue=='ACTIVE'}"/>
+                                     visible="#{row.bindings.Status.inputValue=='ACTIVE'}"
+                                     action="ACT-GOTO-MYPOLICYVIEW"/>
                             <af:link text="Request for Renewal" id="l2" partialSubmit="true"
                                      visible="#{row.bindings.Status.inputValue=='IN-ACTIVE'}"/>
                           </af:column>
