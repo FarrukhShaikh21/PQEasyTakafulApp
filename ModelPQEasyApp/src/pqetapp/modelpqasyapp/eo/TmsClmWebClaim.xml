@@ -9,7 +9,12 @@
   DBObjectType="table"
   DBObjectName="TMS_CLM_WEB_CLAIM"
   AliasName="TmsClmWebClaim"
-  BindingStyle="OracleName">
+  BindingStyle="OracleName"
+  RowClass="pqetapp.modelpqasyapp.eo.TmsClmWebClaimImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|DML"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
   <Attribute
     Name="WebClaimIdPk"
     ColumnName="WEB_CLAIM_ID_PK"
@@ -251,7 +256,6 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="TMS_CLM_WEB_CLAIM"
     IsPersistent="false"
     IsQueriable="false">
     <TransientExpression
