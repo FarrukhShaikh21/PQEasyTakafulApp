@@ -128,7 +128,8 @@
                       <af:panelGridLayout id="pgl17">
                         <af:gridRow marginTop="5px" height="auto" id="gr11">
                           <af:gridCell marginStart="40px" width="34%" id="gc23" marginEnd="5px" halign="stretch">
-                            <af:button text="Claim Intimation" id="b1" styleClass="PQTransactionButton"/>
+                            <af:button text="Claim Intimation" id="b1" styleClass="PQTransactionButton"
+                                       action="ACT-GOTO-MYCLAIMINTIMATION"/>
                           </af:gridCell>
                           <af:gridCell marginStart="5px" width="33%" id="gc24" marginEnd="5px" halign="stretch">
                             <af:button text="Claim Tracking" id="b2" styleClass="PQTransactionButton"/>

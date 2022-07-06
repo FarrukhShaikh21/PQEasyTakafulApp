@@ -7,13 +7,13 @@
       <property
          name="activityId">PQMyClaims</property>
       <property
-         name="x">162.00098</property>
+         name="x">183.00098</property>
       <property
          name="start">false</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>PQMyClaims&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">833.3447</property>
+         name="y">862.64355</property>
       <property
          name="page">/PQMyClaims.jsf</property>
       <property
@@ -54,11 +54,11 @@
       <property
          name="activityId">PQClaimIntimation</property>
       <property
-         name="x">232.01562</property>
+         name="x">336.01562</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>PQClaimIntimation&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">733.6953</property>
+         name="y">684.99414</property>
       <property
          name="page">/PQClaimIntimation.jsf</property>
       <property
@@ -90,7 +90,7 @@
       <property
          name="description">&lt;html>&lt;p>&lt;b>PQMain&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">547.09766</property>
+         name="y">546.3965</property>
       <property
          name="page">/PQMain.jsf</property>
       <property
@@ -104,7 +104,7 @@
       <property
          name="fromOutcome">ACT-GOTO-PROFILE</property>
       <property
-         name="sdm:polyPoints">R46,-74.38638,543.2471,149.67383,546.7471,L50</property>
+         name="sdm:polyPoints">R50,-75.5,546.0459,149.67383,546.7471,L50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -114,17 +114,17 @@
       <property
          name="fromOutcome">ACT-GOTO-MYTAKAFUL</property>
       <property
-         name="sdm:polyPoints">B39,-123.5,605.59125,-116.65723,679.0459,T50</property>
+         name="sdm:polyPoints">B39,-123.5,604.7692,-116.65723,679.0459,T50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
       id="ControlFlowCase10"
-      from="View7"
-      to="View5">
+      from="View2"
+      to="MethodCall14">
       <property
          name="fromOutcome">ACT-GOTO-MYCLAIMINTIMATION</property>
       <property
-         name="sdm:polyPoints">R54,-75.5,550.2471,191.01562,733.3447,L50</property>
+         name="sdm:polyPoints">B50,183.00098,916.29297,215.01465,965.3965,L50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -134,7 +134,7 @@
       <property
          name="fromOutcome">ACT-GOTO-MYCLAIMHISTORY</property>
       <property
-         name="sdm:polyPoints">B50,-116.5,604.03735,23.670898,747.7471,T50</property>
+         name="sdm:polyPoints">B50,-116.5,603.2343,23.670898,747.7471,T50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -144,6 +144,39 @@
       <property
          name="fromOutcome">ACT-GOTO-MYCLAIMS</property>
       <property
-         name="sdm:polyPoints">L13,T7</property>
+         name="sdm:polyPoints">B61,-109.5,600.0459,176.00098,808.29297,T39</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase13"
+      from="View5"
+      to="View2">
+      <property
+         name="fromOutcome">ACT-BACK-TO-INTIMATION</property>
+      <property
+         name="sdm:polyPoints">L54,295.01562,688.14355,190.00098,808.29297,T61</property>
+   </ControlFlowCase>
+   <MethodCall
+      id="MethodCall14">
+      <property
+         name="activityId">CreateInsertIntimation</property>
+      <property
+         name="x">256.01465</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>CreateInsertIntimation&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="y">965.7471</property>
+      <property
+         name="exceptionHandler">false</property>
+   </MethodCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase15"
+      from="MethodCall14"
+      to="View5">
+      <property
+         name="fromOutcome">ACT-GOTO-MYCLAIMINTIMATION</property>
+      <property
+         name="sdm:polyPoints">T50,256.01465,911.3965,336.01562,738.64355,B50</property>
    </ControlFlowCase>
 </SDM>

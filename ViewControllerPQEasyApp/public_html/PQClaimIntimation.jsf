@@ -268,7 +268,7 @@
                             <af:panelGroupLayout id="pgl26" layout="horizontal" halign="center">
                               <af:button actionListener="#{bindings.Commit.execute}" text="Submit"
                                          disabled="#{!bindings.Commit.enabled}" id="b2"
-                                         styleClass="PQTransactionButton"/>
+                                         styleClass="PQTransactionButton" action="ACT-BACK-TO-INTIMATION"/>
                               <af:button actionListener="#{bindings.CreateInsert.execute}" text="CreateInsert"
                                          disabled="#{!bindings.CreateInsert.enabled}" id="b4" rendered="false"/>
                               <af:button text="Claim Intimation" id="b1" styleClass="PQTransactionButton"

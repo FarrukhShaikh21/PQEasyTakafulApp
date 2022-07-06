@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.57"
+                id="PQEASY_APP_BTF_PQEASY_APP_BTF_CreateInsertPageDef" Package="pqetapp.viewpqeasyapp.pageDefs"
+                SkipValidation="true">
+  <parameters/>
+  <executables>
+    <iterator Binds="TmsClmWebClaimCRUD" RangeSize="25" DataControl="EasyTakafulAppModuleDataControl"
+              id="TmsClmWebClaimCRUDIterator"/>
+  </executables>
+  <bindings>
+    <action IterBinding="TmsClmWebClaimCRUDIterator" id="CreateInsert" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+  </bindings>
+</pageDefinition>

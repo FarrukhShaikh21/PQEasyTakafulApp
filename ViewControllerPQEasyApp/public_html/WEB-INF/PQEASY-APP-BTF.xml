@@ -23,6 +23,12 @@
     <view id="PQMain">
       <page>/PQMain.jsf</page>
     </view>
+    <method-call id="CreateInsertIntimation">
+      <method>#{bindings.CreateInsert.execute}</method>
+      <outcome>
+        <fixed-outcome>ACT-GOTO-MYCLAIMINTIMATION</fixed-outcome>
+      </outcome>
+    </method-call>
     <control-flow-rule id="__1">
       <from-activity-id>PQMain</from-activity-id>
       <control-flow-case id="__2">
@@ -33,10 +39,6 @@
         <from-outcome>ACT-GOTO-MYTAKAFUL</from-outcome>
         <to-activity-id>PQMyTakaful</to-activity-id>
       </control-flow-case>
-      <control-flow-case id="__6">
-        <from-outcome>ACT-GOTO-MYCLAIMINTIMATION</from-outcome>
-        <to-activity-id>PQClaimIntimation</to-activity-id>
-      </control-flow-case>
       <control-flow-case id="__9">
         <from-outcome>ACT-GOTO-MYCLAIMHISTORY</from-outcome>
         <to-activity-id>PQClaimsHistory</to-activity-id>
@@ -44,6 +46,27 @@
       <control-flow-case id="__10">
         <from-outcome>ACT-GOTO-MYCLAIMS</from-outcome>
         <to-activity-id>PQMyClaims</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__4">
+      <from-activity-id>PQMyClaims</from-activity-id>
+      <control-flow-case id="__5">
+        <from-outcome>ACT-GOTO-MYCLAIMINTIMATION</from-outcome>
+        <to-activity-id>CreateInsertIntimation</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__6">
+      <from-activity-id>PQClaimIntimation</from-activity-id>
+      <control-flow-case id="__7">
+        <from-outcome>ACT-BACK-TO-INTIMATION</from-outcome>
+        <to-activity-id>PQMyClaims</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__8">
+      <from-activity-id>CreateInsertIntimation</from-activity-id>
+      <control-flow-case id="__11">
+        <from-outcome>ACT-GOTO-MYCLAIMINTIMATION</from-outcome>
+        <to-activity-id>PQClaimIntimation</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
   </task-flow-definition>

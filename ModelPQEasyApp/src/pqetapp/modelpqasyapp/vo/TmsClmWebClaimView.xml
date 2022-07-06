@@ -46,7 +46,8 @@
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="LossDescription"/>
     </AttrArray>
-    <DisplayCriteria/>
+    <DisplayCriteria
+      Name="TmsClmStLossTypeFindVC"/>
   </ListBinding>
   <ListBinding
     Name="LovtxtCityName"
@@ -69,7 +70,8 @@
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="CityName"/>
     </AttrArray>
-    <DisplayCriteria/>
+    <DisplayCriteria
+      Name="TmsGenStCityFindVC"/>
   </ListBinding>
   <ListBinding
     Name="LovtxtWorkshopName"
@@ -91,8 +93,12 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="WorkshopName"/>
+      <Item Value="BranchName"/>
+      <Item Value="AccountTitle"/>
+      <Item Value="AccountNumber"/>
     </AttrArray>
-    <DisplayCriteria/>
+    <DisplayCriteria
+      Name="TmsClmStWorkshopFindVC"/>
   </ListBinding>
   <EntityUsage
     Name="TmsClmWebClaim"

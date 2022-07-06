@@ -8,6 +8,8 @@
     <page path="/PQClaimsHistory.jsf" usageId="pqetapp_viewpqeasyapp_PQClaimsHistoryPageDef"/>
     <page path="/PQClaimIntimation.jsf" usageId="pqetapp_viewpqeasyapp_PQClaimIntimationPageDef"/>
     <page path="/PQLogin.jsf" usageId="pqetapp_viewpqeasyapp_PQLoginPageDef"/>
+    <page path="/WEB-INF/PQEASY-APP-BTF.xml#PQEASY-APP-BTF@CreateInsertIntimation"
+          usageId="pqetapp_viewpqeasyapp_PQEASY_APP_BTF_PQEASY_APP_BTF_CreateInsertPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="pqetapp_viewpqeasyapp_PQMyClaimsPageDef" path="pqetapp.viewpqeasyapp.pageDefs.PQMyClaimsPageDef"/>
@@ -18,6 +20,8 @@
     <page id="pqetapp_viewpqeasyapp_PQClaimIntimationPageDef"
           path="pqetapp.viewpqeasyapp.pageDefs.PQClaimIntimationPageDef"/>
     <page id="pqetapp_viewpqeasyapp_PQLoginPageDef" path="pqetapp.viewpqeasyapp.pageDefs.PQLoginPageDef"/>
+    <page id="pqetapp_viewpqeasyapp_PQEASY_APP_BTF_PQEASY_APP_BTF_CreateInsertPageDef"
+          path="pqetapp.viewpqeasyapp.pageDefs.PQEASY_APP_BTF_PQEASY_APP_BTF_CreateInsertPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="EasyTakafulAppModuleDataControl" Package="pqetapp.modelpqasyapp.am"

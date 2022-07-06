@@ -264,6 +264,76 @@
     EntityAttrName="BankIdFk"
     EntityUsage="TmsClmStWorkshop"
     AliasName="BANK_ID_FK"/>
+  <ViewCriteria
+    Name="TmsClmStWorkshopFindVC"
+    ViewObjectName="pqetapp.modelpqasyapp.vo.TmsClmStWorkshopView"
+    Conjunction="AND">
+    <Properties Name="_Props">
+      <CustomProperties>
+        <Property
+          Name="autoExecute"
+          Value="false"/>
+        <Property
+          Name="mode"
+          Value="Basic"/>
+        <Property
+          Name="allowConjunctionOverride"
+          Value="true"/>
+        <Property
+          Name="showInList"
+          Value="true"/>
+        <Property
+          Name="displayOperators"
+          Value="InAdvancedMode"/>
+      </CustomProperties>
+    </Properties>
+    <ViewCriteriaRow
+      Name="TmsClmStWorkshopViewCriteria_row_0"
+      UpperColumns="1">
+      <ViewCriteriaItem
+        Name="WorkshopName"
+        ViewAttribute="WorkshopName"
+        Operator="="
+        Conjunction="AND"
+        Value=""
+        Required="Optional">
+        <Properties>
+          <SchemaBasedProperties>
+            <DISPLAYWIDTH
+              Value="20"/>
+          </SchemaBasedProperties>
+        </Properties>
+      </ViewCriteriaItem>
+      <ViewCriteriaItem
+        Name="BranchName"
+        ViewAttribute="BranchName"
+        Operator="CONTAINS"
+        Conjunction="AND"
+        Value=""
+        Required="Optional">
+        <Properties>
+          <SchemaBasedProperties>
+            <DISPLAYWIDTH
+              Value="20"/>
+          </SchemaBasedProperties>
+        </Properties>
+      </ViewCriteriaItem>
+      <ViewCriteriaItem
+        Name="TmsClmStWorkshopViewCriteria_TmsClmStWorkshopViewCriteria_row_0_AccountNumber"
+        ViewAttribute="AccountNumber"
+        Operator="CONTAINS"
+        Conjunction="AND"
+        Value=""
+        Required="Optional">
+        <Properties>
+          <SchemaBasedProperties>
+            <DISPLAYWIDTH
+              Value="20"/>
+          </SchemaBasedProperties>
+        </Properties>
+      </ViewCriteriaItem>
+    </ViewCriteriaRow>
+  </ViewCriteria>
   <ViewLinkAccessor
     Name="TmsClmWebClaimView"
     ViewLink="pqetapp.modelpqasyapp.link.TmsClmStWorkShopTmsClmWebClaimWorkShipIdFkLink"

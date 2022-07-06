@@ -47,6 +47,48 @@
     EntityAttrName="TotalLoss"
     EntityUsage="TmsClmStLossType"
     AliasName="TOTAL_LOSS"/>
+  <ViewCriteria
+    Name="TmsClmStLossTypeFindVC"
+    ViewObjectName="pqetapp.modelpqasyapp.vo.TmsClmStLossTypeView"
+    Conjunction="AND">
+    <Properties Name="_Props">
+      <CustomProperties>
+        <Property
+          Name="autoExecute"
+          Value="false"/>
+        <Property
+          Name="mode"
+          Value="Basic"/>
+        <Property
+          Name="allowConjunctionOverride"
+          Value="true"/>
+        <Property
+          Name="showInList"
+          Value="true"/>
+        <Property
+          Name="displayOperators"
+          Value="InAdvancedMode"/>
+      </CustomProperties>
+    </Properties>
+    <ViewCriteriaRow
+      Name="TmsClmStLossTypeViewCriteria_row_0"
+      UpperColumns="1">
+      <ViewCriteriaItem
+        Name="LossDescription"
+        ViewAttribute="LossDescription"
+        Operator="CONTAINS"
+        Conjunction="AND"
+        Value=""
+        Required="Optional">
+        <Properties>
+          <SchemaBasedProperties>
+            <DISPLAYWIDTH
+              Value="20"/>
+          </SchemaBasedProperties>
+        </Properties>
+      </ViewCriteriaItem>
+    </ViewCriteriaRow>
+  </ViewCriteria>
   <ViewLinkAccessor
     Name="TmsClmWebClaimView"
     ViewLink="pqetapp.modelpqasyapp.link.TmSClmStLossTypeTmsClmWebClaimLossTypeIDLink"
