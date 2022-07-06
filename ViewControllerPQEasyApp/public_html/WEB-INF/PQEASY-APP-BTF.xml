@@ -92,5 +92,12 @@
         <to-activity-id>PQPolicyView</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
+    <control-flow-rule id="__16">
+      <from-activity-id>PQPolicyView</from-activity-id>
+      <control-flow-case id="__17">
+        <from-outcome>ACT-GOTO-MYPOLICYVIEW-BACK</from-outcome>
+        <to-activity-id>PQMyTakaful</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
   </task-flow-definition>
 </adfc-config>

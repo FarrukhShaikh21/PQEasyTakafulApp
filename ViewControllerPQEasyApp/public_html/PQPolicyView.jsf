@@ -20,6 +20,7 @@
                                        inlineStyle="font-size:xx-large; font-style:italic; color:green;"/>
                         <af:outputText value="Know Your Protections" id="ot2"
                                        inlineStyle="font-size:xx-small; font-style:italic; color:green;"/>
+                        <af:link text="Back" id="l1" action="ACT-GOTO-MYPOLICYVIEW-BACK"/>
                       </af:panelGroupLayout>
                     </af:gridCell>
                     <af:gridCell marginStart="5px" width="70%" marginEnd="5px" id="gc27" valign="stretch"

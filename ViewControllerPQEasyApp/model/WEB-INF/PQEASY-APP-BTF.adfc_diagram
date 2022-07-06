@@ -225,6 +225,16 @@
       <property
          name="fromOutcome">ACT-GOTO-MYPOLICYVIEW</property>
       <property
-         name="sdm:polyPoints">B50,-222.5,880.7471,-184.32129,889.44824,T50</property>
+         name="sdm:polyPoints">B50,-222.5,880.7471,-187.82129,889.44824,T44</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase20"
+      from="View16"
+      to="View6">
+      <property
+         name="fromOutcome">ACT-GOTO-MYPOLICYVIEW-BACK</property>
+      <property
+         name="sdm:polyPoints">T56,-180.82129,883.8641,-219.0,880.7471,B56</property>
    </ControlFlowCase>
 </SDM>
