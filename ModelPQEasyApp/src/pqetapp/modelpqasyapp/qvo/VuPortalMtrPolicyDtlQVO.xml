@@ -21,7 +21,12 @@
   <Variable
     Name="P_ADF_PARTICIPANT_ID_FK"
     Kind="where"
-    Type="java.lang.Integer"/>
+    Type="java.lang.Integer">
+    <TransientExpression
+      Name="VariableScript"
+      trustMode="trusted"
+      CodeSourceName="VuPortalMtrPolicyDtlQVO"/>
+  </Variable>
   <SQLQuery><![CDATA[select document_id_pk,  
 document_no_uk,  
 participant_id_fk,  
