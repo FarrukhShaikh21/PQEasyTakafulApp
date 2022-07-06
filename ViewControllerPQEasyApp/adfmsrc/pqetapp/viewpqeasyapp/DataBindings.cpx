@@ -10,9 +10,9 @@
     <page path="/PQLogin.jsf" usageId="pqetapp_viewpqeasyapp_PQLoginPageDef"/>
     <page path="/WEB-INF/PQEASY-APP-BTF.xml#PQEASY-APP-BTF@CreateInsertIntimation"
           usageId="pqetapp_viewpqeasyapp_PQEASY_APP_BTF_PQEASY_APP_BTF_CreateInsertPageDef"/>
-    <page path="/WEB-INF/PQEASY-APP-BTF.xml#PQEASY-APP-BTF@ExecutePolicyVew"
-          usageId="pqetapp_viewpqeasyapp_PQEASY_APP_BTF_PQEASY_APP_BTF_ExecutePageDef"/>
     <page path="/PQPolicyView.jsf" usageId="pqetapp_viewpqeasyapp_PQPolicyViewPageDef"/>
+    <page path="/WEB-INF/PQEASY-APP-BTF.xml#PQEASY-APP-BTF@ExecutePolicyVew"
+          usageId="pqetapp_viewpqeasyapp_PQEASY_APP_BTF_PQEASY_APP_BTF_ExecuteWithParamsPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="pqetapp_viewpqeasyapp_PQMyClaimsPageDef" path="pqetapp.viewpqeasyapp.pageDefs.PQMyClaimsPageDef"/>
@@ -25,9 +25,9 @@
     <page id="pqetapp_viewpqeasyapp_PQLoginPageDef" path="pqetapp.viewpqeasyapp.pageDefs.PQLoginPageDef"/>
     <page id="pqetapp_viewpqeasyapp_PQEASY_APP_BTF_PQEASY_APP_BTF_CreateInsertPageDef"
           path="pqetapp.viewpqeasyapp.pageDefs.PQEASY_APP_BTF_PQEASY_APP_BTF_CreateInsertPageDef"/>
-    <page id="pqetapp_viewpqeasyapp_PQEASY_APP_BTF_PQEASY_APP_BTF_ExecutePageDef"
-          path="pqetapp.viewpqeasyapp.pageDefs.PQEASY_APP_BTF_PQEASY_APP_BTF_ExecutePageDef"/>
     <page id="pqetapp_viewpqeasyapp_PQPolicyViewPageDef" path="pqetapp.viewpqeasyapp.pageDefs.PQPolicyViewPageDef"/>
+    <page id="pqetapp_viewpqeasyapp_PQEASY_APP_BTF_PQEASY_APP_BTF_ExecuteWithParamsPageDef"
+          path="pqetapp.viewpqeasyapp.pageDefs.PQEASY_APP_BTF_PQEASY_APP_BTF_ExecuteWithParamsPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="EasyTakafulAppModuleDataControl" Package="pqetapp.modelpqasyapp.am"

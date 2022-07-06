@@ -184,48 +184,35 @@
       <property
          name="activityId">PQPolicyView</property>
       <property
-         name="x">-184.32129</property>
+         name="x">52.67871</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>PQPolicyView&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">943.7988</property>
+         name="y">1068.0977</property>
       <property
          name="page">/PQPolicyView.jsf</property>
       <property
          name="exceptionHandler">false</property>
    </View>
-   <MethodCall
-      id="MethodCall17">
-      <property
-         name="activityId">ExecutePolicyVew</property>
-      <property
-         name="x">-222.5</property>
-      <property
-         name="description">&lt;html>&lt;p>&lt;b>ExecutePolicyVew&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
-      <property
-         name="y">827.09766</property>
-      <property
-         name="exceptionHandler">false</property>
-   </MethodCall>
    <ControlFlowCase
       islink="true"
       id="ControlFlowCase18"
       from="View6"
-      to="MethodCall17">
+      to="MethodCall21">
       <property
          name="fromOutcome">ACT-GOTO-MYPOLICYVIEW</property>
       <property
-         name="sdm:polyPoints">L50,-157.65723,733.0459,-181.5,826.7471,R50</property>
+         name="sdm:polyPoints">B44,-120.15723,787.0459,-253.64844,907.7988,T50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
       id="ControlFlowCase19"
-      from="MethodCall17"
+      from="MethodCall21"
       to="View16">
       <property
          name="fromOutcome">ACT-GOTO-MYPOLICYVIEW</property>
       <property
-         name="sdm:polyPoints">B50,-222.5,880.7471,-187.82129,889.44824,T44</property>
+         name="sdm:polyPoints">R50,-212.64844,961.7988,11.678711,1067.7471,L50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -235,6 +222,19 @@
       <property
          name="fromOutcome">ACT-GOTO-MYPOLICYVIEW-BACK</property>
       <property
-         name="sdm:polyPoints">T56,-180.82129,883.8641,-219.0,880.7471,B56</property>
+         name="sdm:polyPoints">T50,52.67871,1013.7471,-116.65723,787.0459,B50</property>
    </ControlFlowCase>
+   <MethodCall
+      id="MethodCall21">
+      <property
+         name="activityId">ExecutePolicyVew</property>
+      <property
+         name="x">-253.64844</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>ExecutePolicyVew&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="y">961.7988</property>
+      <property
+         name="exceptionHandler">false</property>
+   </MethodCall>
 </SDM>

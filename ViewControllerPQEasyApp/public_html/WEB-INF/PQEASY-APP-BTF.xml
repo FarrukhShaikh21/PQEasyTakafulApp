@@ -33,7 +33,7 @@
       <page>/PQPolicyView.jsf</page>
     </view>
     <method-call id="ExecutePolicyVew">
-      <method>#{bindings.Execute.execute}</method>
+      <method>#{bindings.ExecuteWithParams.execute}</method>
       <outcome>
         <fixed-outcome>ACT-GOTO-MYPOLICYVIEW</fixed-outcome>
       </outcome>
@@ -85,18 +85,18 @@
         <to-activity-id>ExecutePolicyVew</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
-    <control-flow-rule id="__14">
-      <from-activity-id>ExecutePolicyVew</from-activity-id>
-      <control-flow-case id="__15">
-        <from-outcome>ACT-GOTO-MYPOLICYVIEW</from-outcome>
-        <to-activity-id>PQPolicyView</to-activity-id>
-      </control-flow-case>
-    </control-flow-rule>
     <control-flow-rule id="__16">
       <from-activity-id>PQPolicyView</from-activity-id>
       <control-flow-case id="__17">
         <from-outcome>ACT-GOTO-MYPOLICYVIEW-BACK</from-outcome>
         <to-activity-id>PQMyTakaful</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__18">
+      <from-activity-id>ExecutePolicyVew</from-activity-id>
+      <control-flow-case id="__19">
+        <from-outcome>ACT-GOTO-MYPOLICYVIEW</from-outcome>
+        <to-activity-id>PQPolicyView</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
   </task-flow-definition>
