@@ -135,7 +135,8 @@
                             <af:button text="Claim Tracking" id="b2" styleClass="PQTransactionButton"/>
                           </af:gridCell>
                           <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc25" halign="stretch">
-                            <af:button text="Claim History" id="b3" styleClass="PQTransactionButton"/>
+                            <af:button text="Claim History" id="b3" styleClass="PQTransactionButton"
+                                       action="ACT-GOTO-MYCLAIMHISTORY"/>
                           </af:gridCell>
                         </af:gridRow>
                         <af:gridRow marginTop="5px" height="auto" id="gr12">

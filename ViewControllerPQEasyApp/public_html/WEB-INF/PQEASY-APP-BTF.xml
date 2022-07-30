@@ -48,10 +48,6 @@
         <from-outcome>ACT-GOTO-MYTAKAFUL</from-outcome>
         <to-activity-id>PQMyTakaful</to-activity-id>
       </control-flow-case>
-      <control-flow-case id="__9">
-        <from-outcome>ACT-GOTO-MYCLAIMHISTORY</from-outcome>
-        <to-activity-id>PQClaimsHistory</to-activity-id>
-      </control-flow-case>
       <control-flow-case id="__10">
         <from-outcome>ACT-GOTO-MYCLAIMS</from-outcome>
         <to-activity-id>PQMyClaims</to-activity-id>
@@ -62,6 +58,10 @@
       <control-flow-case id="__5">
         <from-outcome>ACT-GOTO-MYCLAIMINTIMATION</from-outcome>
         <to-activity-id>CreateInsertIntimation</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__9">
+        <from-outcome>ACT-GOTO-MYCLAIMHISTORY</from-outcome>
+        <to-activity-id>PQClaimsHistory</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__6">
@@ -97,6 +97,13 @@
       <control-flow-case id="__19">
         <from-outcome>ACT-GOTO-MYPOLICYVIEW</from-outcome>
         <to-activity-id>PQPolicyView</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__14">
+      <from-activity-id>PQClaimsHistory</from-activity-id>
+      <control-flow-case id="__15">
+        <from-outcome>ACT-BACK-FROM-MYCLAIMHISTORY</from-outcome>
+        <to-activity-id>PQMyClaims</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
   </task-flow-definition>

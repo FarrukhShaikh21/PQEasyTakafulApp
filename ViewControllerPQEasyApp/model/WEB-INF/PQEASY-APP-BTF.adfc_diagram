@@ -114,7 +114,7 @@
       <property
          name="fromOutcome">ACT-GOTO-MYTAKAFUL</property>
       <property
-         name="sdm:polyPoints">B39,-123.5,604.782,-116.65723,679.0459,T50</property>
+         name="sdm:polyPoints">B44,-120.0,601.9245,-116.65723,679.0459,T50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -129,12 +129,12 @@
    <ControlFlowCase
       islink="true"
       id="ControlFlowCase11"
-      from="View7"
+      from="View2"
       to="View3">
       <property
          name="fromOutcome">ACT-GOTO-MYCLAIMHISTORY</property>
       <property
-         name="sdm:polyPoints">B50,-116.5,603.2343,23.670898,747.7471,T50</property>
+         name="sdm:polyPoints">L46,142.00098,858.79297,67.115585,798.2471,R46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -202,7 +202,7 @@
       <property
          name="fromOutcome">ACT-GOTO-MYPOLICYVIEW</property>
       <property
-         name="sdm:polyPoints">B44,-120.15723,787.0459,-253.64844,907.7988,T50</property>
+         name="sdm:polyPoints">B44,-120.15723,787.0459,-253.64844,907.44824,T50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -212,7 +212,7 @@
       <property
          name="fromOutcome">ACT-GOTO-MYPOLICYVIEW</property>
       <property
-         name="sdm:polyPoints">R50,-212.64844,961.7988,11.678711,1067.7471,L50</property>
+         name="sdm:polyPoints">R50,-212.64844,961.44824,11.678711,1067.7471,L50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -222,7 +222,7 @@
       <property
          name="fromOutcome">ACT-GOTO-MYPOLICYVIEW-BACK</property>
       <property
-         name="sdm:polyPoints">T50,52.67871,1013.7471,-116.65723,787.0459,B50</property>
+         name="sdm:polyPoints">T50,52.67871,1013.7471,-113.15723,787.0459,B56</property>
    </ControlFlowCase>
    <MethodCall
       id="MethodCall21">
@@ -237,4 +237,14 @@
       <property
          name="exceptionHandler">false</property>
    </MethodCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase22"
+      from="View3"
+      to="View2">
+      <property
+         name="fromOutcome">ACT-BACK-FROM-MYCLAIMHISTORY</property>
+      <property
+         name="sdm:polyPoints">R54,64.6709,805.2471,139.58662,865.79297,L54</property>
+   </ControlFlowCase>
 </SDM>
