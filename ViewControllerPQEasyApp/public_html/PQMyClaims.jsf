@@ -140,7 +140,9 @@
                           </af:gridCell>
                         </af:gridRow>
                         <af:gridRow marginTop="5px" height="auto" id="gr12">
-                          <af:gridCell marginStart="5px" width="34%" id="gc26"/>
+                          <af:gridCell marginStart="5px" width="34%" id="gc26">
+                            <af:button text="Work Shop" id="b4"/>
+                          </af:gridCell>
                           <af:gridCell marginStart="5px" width="33%" id="gc27"/>
                           <af:gridCell marginStart="5px" width="33%" marginEnd="5px" id="gc28"/>
                         </af:gridRow>

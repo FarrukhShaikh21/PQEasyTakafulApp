@@ -144,7 +144,7 @@
       <property
          name="fromOutcome">ACT-GOTO-MYCLAIMS</property>
       <property
-         name="sdm:polyPoints">B61,-109.5,600.0459,179.50098,808.29297,T44</property>
+         name="sdm:polyPoints">B56,-113.0,600.0459,179.50098,808.29297,T44</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -246,5 +246,30 @@
          name="fromOutcome">ACT-BACK-FROM-MYCLAIMHISTORY</property>
       <property
          name="sdm:polyPoints">R54,64.6709,805.2471,139.58662,865.79297,L54</property>
+   </ControlFlowCase>
+   <View
+      id="View23">
+      <property
+         name="activityId">PQWorkshop</property>
+      <property
+         name="x">-413.32227</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>PQWorkshop&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">922.7988</property>
+      <property
+         name="page">/PQWorkshop.jsf</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase24"
+      from="View2"
+      to="View23">
+      <property
+         name="fromOutcome">ACT-GOTO-WORKSHOP</property>
+      <property
+         name="sdm:polyPoints">L58,142.00098,869.29297,-372.32227,922.44824,R50</property>
    </ControlFlowCase>
 </SDM>

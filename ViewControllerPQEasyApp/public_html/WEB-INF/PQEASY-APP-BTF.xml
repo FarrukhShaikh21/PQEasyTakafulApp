@@ -38,6 +38,9 @@
         <fixed-outcome>ACT-GOTO-MYPOLICYVIEW</fixed-outcome>
       </outcome>
     </method-call>
+    <view id="PQWorkshop">
+      <page>/PQWorkshop.jsf</page>
+    </view>
     <control-flow-rule id="__1">
       <from-activity-id>PQMain</from-activity-id>
       <control-flow-case id="__2">
@@ -62,6 +65,10 @@
       <control-flow-case id="__9">
         <from-outcome>ACT-GOTO-MYCLAIMHISTORY</from-outcome>
         <to-activity-id>PQClaimsHistory</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__20">
+        <from-outcome>ACT-GOTO-WORKSHOP</from-outcome>
+        <to-activity-id>PQWorkshop</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__6">
