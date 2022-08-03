@@ -4,14 +4,22 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="VuPortalClientInfoQVORO" RangeSize="25" DataControl="EasyTakafulAppModuleDataControl"
-              id="VuPortalClientInfoQVOROIterator"/>
+    <iterator Binds="VuPortalClaiminfoQVORO" RangeSize="25" DataControl="EasyTakafulAppModuleDataControl"
+              id="VuPortalClaiminfoQVOROIterator"/>
   </executables>
   <bindings>
-    <attributeValues IterBinding="VuPortalClientInfoQVOROIterator" id="ParticipantName">
-      <AttrNames>
-        <Item Value="ParticipantName"/>
-      </AttrNames>
-    </attributeValues>
+    <tree IterBinding="VuPortalClaiminfoQVOROIterator" id="VuPortalClaiminfoQVORO">
+      <nodeDefinition DefName="pqetapp.modelpqasyapp.qvo.VuPortalClaiminfoQVO" Name="VuPortalClaiminfoQVORO0">
+        <AttrNames>
+          <Item Value="ClaimNo"/>
+          <Item Value="IntimationDate"/>
+          <Item Value="LossType"/>
+          <Item Value="LossDate"/>
+          <Item Value="VehicleName"/>
+          <Item Value="RegistrationNo"/>
+          <Item Value="ClaimAmount"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
   </bindings>
 </pageDefinition>

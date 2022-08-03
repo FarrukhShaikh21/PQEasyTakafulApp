@@ -70,6 +70,10 @@
         <from-outcome>ACT-GOTO-WORKSHOP</from-outcome>
         <to-activity-id>PQWorkshop</to-activity-id>
       </control-flow-case>
+      <control-flow-case id="__15">
+        <from-outcome>ACT-BACK-FROM-MYCLAIMS</from-outcome>
+        <to-activity-id>PQMain</to-activity-id>
+      </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__6">
       <from-activity-id>PQClaimIntimation</from-activity-id>
@@ -104,13 +108,6 @@
       <control-flow-case id="__19">
         <from-outcome>ACT-GOTO-MYPOLICYVIEW</from-outcome>
         <to-activity-id>PQPolicyView</to-activity-id>
-      </control-flow-case>
-    </control-flow-rule>
-    <control-flow-rule id="__14">
-      <from-activity-id>PQClaimsHistory</from-activity-id>
-      <control-flow-case id="__15">
-        <from-outcome>ACT-BACK-FROM-MYCLAIMHISTORY</from-outcome>
-        <to-activity-id>PQMyClaims</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
   </task-flow-definition>
