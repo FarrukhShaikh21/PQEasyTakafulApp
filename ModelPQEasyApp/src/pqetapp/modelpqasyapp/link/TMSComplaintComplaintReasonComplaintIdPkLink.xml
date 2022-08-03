@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TMSComplaintComplaintReasonComplaintIdPkLink"
+  Version="12.2.1.11.57"
+  InheritPersonalization="merge"
+  EntityAssociation="pqetapp.modelpqasyapp.assoc.TMSComplaintComplaintReasonComplaintIdPkAssoc">
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="pqetapp.modelpqasyapp.link.TMSComplaintComplaintReasonComplaintIdPkLink_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <ViewLinkDefEnd
+    Name="TmsClmWebComplaintView"
+    Cardinality="1"
+    Source="true"
+    Owner="pqetapp.modelpqasyapp.vo.TmsClmWebComplaintView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_accessor" Value="true"/>
+      <Attr Name="_finderName" Value="TmsClmWebComplaintView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="pqetapp.modelpqasyapp.vo.TmsClmWebComplaintView.ComplaintIdPk"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="TmsClmWebComplaintDtlView"
+    Cardinality="-1"
+    Owner="pqetapp.modelpqasyapp.vo.TmsClmWebComplaintDtlView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="TmsClmWebComplaintDtlView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="pqetapp.modelpqasyapp.vo.TmsClmWebComplaintDtlView.ComplaintIdPk"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="pqetapp.modelpqasyapp.ModelPQEasyAppBundle"/>
+  </ResourceBundle>
+</ViewLink>

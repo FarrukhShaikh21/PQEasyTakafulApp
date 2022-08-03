@@ -94,4 +94,9 @@
     EntityAttrName="EnterDate"
     EntityUsage="TmsClmWebComplaint"
     AliasName="ENTER_DATE"/>
+  <ViewLinkAccessor
+    Name="TmsClmWebComplaintDtlView"
+    ViewLink="pqetapp.modelpqasyapp.link.TMSComplaintComplaintReasonComplaintIdPkLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
 </ViewObject>

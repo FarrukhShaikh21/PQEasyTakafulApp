@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TMSComplaintComplaintReasonComplaintIdPkAssoc"
+  Version="12.2.1.11.57"
+  InheritPersonalization="merge">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="TmsClmWebComplaint"
+    Cardinality="1"
+    Source="true"
+    Owner="pqetapp.modelpqasyapp.eo.TmsClmWebComplaint"
+    LockLevel="NONE">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="TmsClmWebComplaint"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebComplaint.ComplaintIdPk"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="TmsClmWebComplaintDtl"
+    Cardinality="-1"
+    Owner="pqetapp.modelpqasyapp.eo.TmsClmWebComplaintDtl">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="TmsClmWebComplaintDtl"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebComplaintDtl.ComplaintIdPk"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>

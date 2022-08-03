@@ -154,6 +154,13 @@
     ColumnType="DATE"
     TableName="TMS_CLM_WEB_COMPLAINT"
     PrimaryKey="true"/>
+  <AccessorAttribute
+    Name="TmsClmWebComplaintDtl"
+    Association="pqetapp.modelpqasyapp.assoc.TMSComplaintComplaintReasonComplaintIdPkAssoc"
+    AssociationEnd="pqetapp.modelpqasyapp.assoc.TMSComplaintComplaintReasonComplaintIdPkAssoc.TmsClmWebComplaintDtl"
+    AssociationOtherEnd="pqetapp.modelpqasyapp.assoc.TMSComplaintComplaintReasonComplaintIdPkAssoc.TmsClmWebComplaint"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="TmsclmwebcomplaintPrimaryKey"
     PrimaryKey="true">

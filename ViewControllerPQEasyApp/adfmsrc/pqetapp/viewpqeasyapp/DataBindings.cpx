@@ -13,6 +13,7 @@
     <page path="/PQPolicyView.jsf" usageId="pqetapp_viewpqeasyapp_PQPolicyViewPageDef"/>
     <page path="/WEB-INF/PQEASY-APP-BTF.xml#PQEASY-APP-BTF@ExecutePolicyVew"
           usageId="pqetapp_viewpqeasyapp_PQEASY_APP_BTF_PQEASY_APP_BTF_ExecuteWithParamsPageDef"/>
+    <page path="/PQComplaint.jsf" usageId="pqetapp_viewpqeasyapp_PQComplaintPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="pqetapp_viewpqeasyapp_PQMyClaimsPageDef" path="pqetapp.viewpqeasyapp.pageDefs.PQMyClaimsPageDef"/>
@@ -28,6 +29,7 @@
     <page id="pqetapp_viewpqeasyapp_PQPolicyViewPageDef" path="pqetapp.viewpqeasyapp.pageDefs.PQPolicyViewPageDef"/>
     <page id="pqetapp_viewpqeasyapp_PQEASY_APP_BTF_PQEASY_APP_BTF_ExecuteWithParamsPageDef"
           path="pqetapp.viewpqeasyapp.pageDefs.PQEASY_APP_BTF_PQEASY_APP_BTF_ExecuteWithParamsPageDef"/>
+    <page id="pqetapp_viewpqeasyapp_PQComplaintPageDef" path="pqetapp.viewpqeasyapp.pageDefs.PQComplaintPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="EasyTakafulAppModuleDataControl" Package="pqetapp.modelpqasyapp.am"

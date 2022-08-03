@@ -1,7 +1,146 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
-    <af:document title="PQComplaint.jsf" id="d1">
-        <af:form id="f1"></af:form>
-    </af:document>
+  <af:document title="MyClaimsHistory.jsf" id="d1">
+    <af:messages id="m1"/>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>  
+    <af:form id="f1">
+      <af:decorativeBox id="db1" dimensionsFrom="parent">
+        <f:facet name="top"/>
+        <f:facet name="center">
+          <af:panelGridLayout id="pgl2">
+            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr4">
+              <af:gridCell marginStart="5px" width="10%" id="gc4" marginEnd="5px"/>
+              <af:gridCell marginStart="5px" width="80%" id="gc5" valign="stretch" halign="stretch">
+                <af:panelGridLayout id="pgl1" styleClass="PQLoginFormCurve">
+                  <af:gridRow marginTop="5px" height="auto" id="gr11">
+                    <af:gridCell marginStart="5px" width="30%" id="gc26" halign="stretch" valign="middle">
+                      <af:panelGroupLayout id="pgl5" layout="vertical" halign="center">
+                        <af:outputText value="Claim Information" id="ot1"
+                                       inlineStyle="font-size:xx-large; font-style:italic; color:green;"
+                                       truncateAt="0"/>
+                        <af:outputText value="Know Your Protections" id="ot2"
+                                       inlineStyle="font-size:xx-small; font-style:italic; color:green;"/>
+                        <af:link text="Back" id="l1" partialSubmit="true" action="ACT-BACK-FROM-MYCLAIMS"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                    <af:gridCell marginStart="5px" width="70%" marginEnd="5px" id="gc27" valign="stretch"
+                                 halign="stretch">
+                      <af:panelGroupLayout id="pgl8" layout="vertical" halign="end" styleClass="AFStretchWidth">
+                        <af:image source="#{resource['images:imgPQGT.png']}" id="i1"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                  </af:gridRow>                
+                  <af:gridRow marginTop="5px" height="auto" id="gr1">
+                    <af:gridCell marginStart="15px" width="100%" marginEnd="15px" id="gc1" halign="stretch" columnSpan="2"
+                                 rowSpan="1" valign="stretch">
+                      <af:panelBox text="Is The Complaint About?" id="pb1" showDisclosure="false">
+                        <f:facet name="toolbar"/>
+                        <af:panelGroupLayout id="pgl3" layout="horizontal">
+                          <af:selectOneRadio label="#{bindings.ComplaintType.hints.label}"
+                                             value="#{bindings.ComplaintType.inputValue}" id="sor1" layout="horizontal">
+                            <af:selectItem label="Head Office Staff" value="1" id="si1"/>
+                            <af:selectItem label="Branch Office Staff" value="2" id="si2"/>
+                            <af:selectItem label="Workshop" value="3" id="si3"/>
+                            <af:selectItem label="Surveyor" value="4" id="si4"/>
+                            <af:selectItem label="Other" value="5" id="si5"/>
+                          </af:selectOneRadio>
+                        </af:panelGroupLayout>
+                      </af:panelBox>
+                      <af:panelBox text="PanelBox1" id="pb2">
+                        <f:facet name="toolbar"/>
+                      </af:panelBox>
+                      <af:panelBox text="Please specify the particular Person Involved (If you Know)" id="pb3"
+                                   showDisclosure="false">
+                        <f:facet name="toolbar"/>
+                        <af:panelFormLayout id="pfl1">
+                          <af:inputText value="#{bindings.ParticularPersonName.inputValue}"
+                                        label="#{bindings.ParticularPersonName.hints.label}"
+                                        required="#{bindings.ParticularPersonName.hints.mandatory}"
+                                        columns="#{bindings.ParticularPersonName.hints.displayWidth}"
+                                        maximumLength="#{bindings.ParticularPersonName.hints.precision}"
+                                        shortDesc="#{bindings.ParticularPersonName.hints.tooltip}" id="it2">
+                            <f:validator binding="#{bindings.ParticularPersonName.validator}"/>
+                          </af:inputText>
+                          <af:inputText value="#{bindings.Designation.inputValue}"
+                                        label="#{bindings.Designation.hints.label}"
+                                        required="#{bindings.Designation.hints.mandatory}"
+                                        columns="#{bindings.Designation.hints.displayWidth}"
+                                        maximumLength="#{bindings.Designation.hints.precision}"
+                                        shortDesc="#{bindings.Designation.hints.tooltip}" id="it3">
+                            <f:validator binding="#{bindings.Designation.validator}"/>
+                          </af:inputText>
+                          <af:inputText value="#{bindings.Branch.inputValue}" label="#{bindings.Branch.hints.label}"
+                                        required="#{bindings.Branch.hints.mandatory}"
+                                        columns="#{bindings.Branch.hints.displayWidth}"
+                                        maximumLength="#{bindings.Branch.hints.precision}"
+                                        shortDesc="#{bindings.Branch.hints.tooltip}" id="it4">
+                            <f:validator binding="#{bindings.Branch.validator}"/>
+                          </af:inputText>
+                          <af:inputText value="#{bindings.DiscussedWithStaffFlag.inputValue}"
+                                        label="#{bindings.DiscussedWithStaffFlag.hints.label}"
+                                        required="#{bindings.DiscussedWithStaffFlag.hints.mandatory}"
+                                        columns="#{bindings.DiscussedWithStaffFlag.hints.displayWidth}"
+                                        maximumLength="#{bindings.DiscussedWithStaffFlag.hints.precision}"
+                                        shortDesc="#{bindings.DiscussedWithStaffFlag.hints.tooltip}" id="it5">
+                            <f:validator binding="#{bindings.DiscussedWithStaffFlag.validator}"/>
+                          </af:inputText>
+                          <af:inputText value="#{bindings.DiscussedPersonName.inputValue}"
+                                        label="#{bindings.DiscussedPersonName.hints.label}"
+                                        required="#{bindings.DiscussedPersonName.hints.mandatory}"
+                                        columns="#{bindings.DiscussedPersonName.hints.displayWidth}"
+                                        maximumLength="#{bindings.DiscussedPersonName.hints.precision}"
+                                        shortDesc="#{bindings.DiscussedPersonName.hints.tooltip}" id="it6">
+                            <f:validator binding="#{bindings.DiscussedPersonName.validator}"/>
+                          </af:inputText>
+                          <af:inputDate value="#{bindings.EnterDate.inputValue}"
+                                        label="#{bindings.EnterDate.hints.label}"
+                                        required="#{bindings.EnterDate.hints.mandatory}"
+                                        columns="#{bindings.EnterDate.hints.displayWidth}"
+                                        shortDesc="#{bindings.EnterDate.hints.tooltip}" id="id1">
+                            <f:validator binding="#{bindings.EnterDate.validator}"/>
+                            <af:convertDateTime pattern="#{bindings.EnterDate.format}"/>
+                          </af:inputDate>
+                          <af:inputText value="#{bindings.DiscussedDetail.inputValue}"
+                                        label="#{bindings.DiscussedDetail.hints.label}"
+                                        required="#{bindings.DiscussedDetail.hints.mandatory}"
+                                        columns="#{bindings.DiscussedDetail.hints.displayWidth}"
+                                        maximumLength="#{bindings.DiscussedDetail.hints.precision}"
+                                        shortDesc="#{bindings.DiscussedDetail.hints.tooltip}" id="it7">
+                            <f:validator binding="#{bindings.DiscussedDetail.validator}"/>
+                          </af:inputText>
+                          <af:inputText value="#{bindings.DiscussedResult.inputValue}"
+                                        label="#{bindings.DiscussedResult.hints.label}"
+                                        required="#{bindings.DiscussedResult.hints.mandatory}"
+                                        columns="#{bindings.DiscussedResult.hints.displayWidth}"
+                                        maximumLength="#{bindings.DiscussedResult.hints.precision}"
+                                        shortDesc="#{bindings.DiscussedResult.hints.tooltip}" id="it8">
+                            <f:validator binding="#{bindings.DiscussedResult.validator}"/>
+                          </af:inputText>
+                          <af:inputText value="#{bindings.Remarks.inputValue}" label="#{bindings.Remarks.hints.label}"
+                                        required="#{bindings.Remarks.hints.mandatory}"
+                                        columns="#{bindings.Remarks.hints.displayWidth}"
+                                        maximumLength="#{bindings.Remarks.hints.precision}"
+                                        shortDesc="#{bindings.Remarks.hints.tooltip}" id="it9">
+                            <f:validator binding="#{bindings.Remarks.validator}"/>
+                          </af:inputText>
+                        </af:panelFormLayout>
+                      </af:panelBox>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow marginTop="5px" height="auto" id="gr2">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2" columnSpan="2" rowSpan="1"/>
+                  </af:gridRow>
+                  <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr3">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc3" columnSpan="2" rowSpan="1"/>
+                  </af:gridRow>
+                </af:panelGridLayout>
+              </af:gridCell>
+              <af:gridCell marginStart="5px" width="10%" marginEnd="5px" id="gc6"/>
+            </af:gridRow>
+          </af:panelGridLayout>
+        </f:facet>
+      </af:decorativeBox>
+    </af:form>
+  </af:document>
 </f:view>

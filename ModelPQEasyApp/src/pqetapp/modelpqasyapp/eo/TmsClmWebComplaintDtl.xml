@@ -39,6 +39,13 @@
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
   </Attribute>
+  <AccessorAttribute
+    Name="TmsClmWebComplaint"
+    Association="pqetapp.modelpqasyapp.assoc.TMSComplaintComplaintReasonComplaintIdPkAssoc"
+    AssociationEnd="pqetapp.modelpqasyapp.assoc.TMSComplaintComplaintReasonComplaintIdPkAssoc.TmsClmWebComplaint"
+    AssociationOtherEnd="pqetapp.modelpqasyapp.assoc.TMSComplaintComplaintReasonComplaintIdPkAssoc.TmsClmWebComplaintDtl"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
   <Key
     Name="TmsclmwebcomplaintdtlPrimaryKey"
     PrimaryKey="true">

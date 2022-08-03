@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.57" id="PQComplaintPageDef"
+                Package="pqetapp.viewpqeasyapp.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="TmsClmWebComplaintCRUD" RangeSize="25" DataControl="EasyTakafulAppModuleDataControl"
+              id="TmsClmWebComplaintCRUDIterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="TmsClmWebComplaintCRUDIterator" id="ComplaintType">
+      <AttrNames>
+        <Item Value="ComplaintType"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmsClmWebComplaintCRUDIterator" id="ParticularPersonName">
+      <AttrNames>
+        <Item Value="ParticularPersonName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmsClmWebComplaintCRUDIterator" id="Designation">
+      <AttrNames>
+        <Item Value="Designation"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmsClmWebComplaintCRUDIterator" id="Branch">
+      <AttrNames>
+        <Item Value="Branch"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmsClmWebComplaintCRUDIterator" id="DiscussedWithStaffFlag">
+      <AttrNames>
+        <Item Value="DiscussedWithStaffFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmsClmWebComplaintCRUDIterator" id="DiscussedPersonName">
+      <AttrNames>
+        <Item Value="DiscussedPersonName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmsClmWebComplaintCRUDIterator" id="EnterDate">
+      <AttrNames>
+        <Item Value="EnterDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmsClmWebComplaintCRUDIterator" id="DiscussedDetail">
+      <AttrNames>
+        <Item Value="DiscussedDetail"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmsClmWebComplaintCRUDIterator" id="DiscussedResult">
+      <AttrNames>
+        <Item Value="DiscussedResult"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmsClmWebComplaintCRUDIterator" id="Remarks">
+      <AttrNames>
+        <Item Value="Remarks"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

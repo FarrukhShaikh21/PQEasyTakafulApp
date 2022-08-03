@@ -34,4 +34,10 @@
     EntityAttrName="FlagStatus"
     EntityUsage="TmsClmWebComplaintDtl"
     AliasName="FLAG_STATUS"/>
+  <ViewLinkAccessor
+    Name="TmsClmWebComplaintView"
+    ViewLink="pqetapp.modelpqasyapp.link.TMSComplaintComplaintReasonComplaintIdPkLink"
+    Type="oracle.jbo.Row"
+    Reversed="true"
+    IsUpdateable="false"/>
 </ViewObject>

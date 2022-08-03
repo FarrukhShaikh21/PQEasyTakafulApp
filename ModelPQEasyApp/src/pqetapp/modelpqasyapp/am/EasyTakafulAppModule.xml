@@ -28,6 +28,9 @@
   <ViewUsage
     Name="VuPortalMtrPolicyDtlQVORO"
     ViewObjectName="pqetapp.modelpqasyapp.qvo.VuPortalMtrPolicyDtlQVO"/>
+  <ViewUsage
+    Name="TmsClmWebComplaintCRUD"
+    ViewObjectName="pqetapp.modelpqasyapp.vo.TmsClmWebComplaintView"/>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="pqetapp.modelpqasyapp.ModelPQEasyAppBundle"/>
