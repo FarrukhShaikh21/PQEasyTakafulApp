@@ -13,6 +13,29 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <ViewAccessor
+    Name="AccTmsClmStComplaintReasonView"
+    ViewObjectName="pqetapp.modelpqasyapp.vo.TmsClmStComplaintReasonView"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LovComplaintReasonIdFk"
+    ListVOName="AccTmsClmStComplaintReasonView"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="ComplaintReasonIdFk"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="ComplaintReasonIdFk"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="ComplaintReasonIdFk"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="TmsClmWebComplaintDtl"
     Entity="pqetapp.modelpqasyapp.eo.TmsClmWebComplaintDtl"/>
@@ -27,7 +50,15 @@
     PrecisionRule="true"
     EntityAttrName="ComplaintReasonIdFk"
     EntityUsage="TmsClmWebComplaintDtl"
-    AliasName="COMPLAINT_REASON_ID_FK"/>
+    AliasName="COMPLAINT_REASON_ID_FK"
+    LOVName="LovComplaintReasonIdFk">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="FlagStatus"
     PrecisionRule="true"

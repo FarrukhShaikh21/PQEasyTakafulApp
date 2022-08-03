@@ -14,7 +14,7 @@
     Name="ComplaintIdPk"
     ColumnName="COMPLAINT_ID_PK"
     SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
+    Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
     TableName="TMS_CLM_WEB_COMPLAINT_DTL"
     PrimaryKey="true"/>
@@ -22,7 +22,7 @@
     Name="ComplaintReasonIdFk"
     ColumnName="COMPLAINT_REASON_ID_FK"
     SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
+    Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
     TableName="TMS_CLM_WEB_COMPLAINT_DTL"/>
   <Attribute
