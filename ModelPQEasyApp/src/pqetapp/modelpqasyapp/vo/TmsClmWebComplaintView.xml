@@ -12,7 +12,18 @@
   BindingStyle="OracleName"
   CustomQuery="false"
   SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  RowClass="pqetapp.modelpqasyapp.vo.TmsClmWebComplaintViewRowImpl"
+  RowInterface="pqetapp.modelpqasyapp.vo.common.TmsClmWebComplaintViewRow"
+  ClientRowProxyName="pqetapp.modelpqasyapp.vo.client.TmsClmWebComplaintViewRowClient">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <ViewAccessor
+    Name="AccTmsClmStComplaintReasonView"
+    ViewObjectName="pqetapp.modelpqasyapp.vo.TmsClmStComplaintReasonView"
+    RowLevelBinds="true"/>
   <EntityUsage
     Name="TmsClmWebComplaint"
     Entity="pqetapp.modelpqasyapp.eo.TmsClmWebComplaint"/>
@@ -93,4 +104,14 @@
     ViewLink="pqetapp.modelpqasyapp.link.TMSComplaintComplaintReasonComplaintIdPkLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ClientRowInterface
+    Name="__rowClientInterface">
+    <Method
+      Name="doTMSInsertReasonRows"
+      MethodName="doTMSInsertReasonRows">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+    </Method>
+  </ClientRowInterface>
 </ViewObject>

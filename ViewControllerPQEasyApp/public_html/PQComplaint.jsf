@@ -47,8 +47,41 @@
                           </af:selectOneRadio>
                         </af:panelGroupLayout>
                       </af:panelBox>
-                      <af:panelBox text="PanelBox1" id="pb2">
+                      <af:panelBox text="Please check the reasons that apply to your complant." id="pb2"
+                                   showDisclosure="false">
                         <f:facet name="toolbar"/>
+                        <af:table value="#{bindings.TmsClmWebComplaintDtlCRUD.collectionModel}" var="row"
+                                  rows="#{bindings.TmsClmWebComplaintDtlCRUD.rangeSize}"
+                                  emptyText="#{bindings.TmsClmWebComplaintDtlCRUD.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                  rowBandingInterval="0"
+                                  selectedRowKeys="#{bindings.TmsClmWebComplaintDtlCRUD.collectionModel.selectedRow}"
+                                  selectionListener="#{bindings.TmsClmWebComplaintDtlCRUD.collectionModel.makeCurrent}"
+                                  rowSelection="single" fetchSize="#{bindings.TmsClmWebComplaintDtlCRUD.rangeSize}"
+                                  id="t1" horizontalGridVisible="false" verticalGridVisible="false" autoHeightRows="12"
+                                  styleClass="AFStretchWidth">
+                          <af:column headerText="Reason"
+                                     id="c1" width="300" displayIndex="-1">
+                            <af:selectOneChoice value="#{row.bindings.ComplaintReasonIdFk.inputValue}"
+                                                label="#{row.bindings.ComplaintReasonIdFk.label}"
+                                                required="#{bindings.TmsClmWebComplaintDtlCRUD.hints.ComplaintReasonIdFk.mandatory}"
+                                                shortDesc="#{bindings.TmsClmWebComplaintDtlCRUD.hints.ComplaintReasonIdFk.tooltip}"
+                                                id="soc1" readOnly="true">
+                              <f:selectItems value="#{row.bindings.ComplaintReasonIdFk.items}" id="si6"/>
+                              <f:validator binding="#{row.bindings.ComplaintReasonIdFk.validator}"/>
+                            </af:selectOneChoice>
+                          </af:column>
+                          <af:column headerText="Apply" id="c2">
+                            <af:inputText value="#{row.bindings.FlagStatus.inputValue}"
+                                          label="#{bindings.TmsClmWebComplaintDtlCRUD.hints.FlagStatus.label}"
+                                          required="#{bindings.TmsClmWebComplaintDtlCRUD.hints.FlagStatus.mandatory}"
+                                          columns="#{bindings.TmsClmWebComplaintDtlCRUD.hints.FlagStatus.displayWidth}"
+                                          maximumLength="#{bindings.TmsClmWebComplaintDtlCRUD.hints.FlagStatus.precision}"
+                                          shortDesc="#{bindings.TmsClmWebComplaintDtlCRUD.hints.FlagStatus.tooltip}"
+                                          id="it1">
+                              <f:validator binding="#{row.bindings.FlagStatus.validator}"/>
+                            </af:inputText>
+                          </af:column>
+                        </af:table>
                       </af:panelBox>
                       <af:panelBox text="Please specify the particular Person Involved (If you Know)" id="pb3"
                                    showDisclosure="false">
