@@ -14,7 +14,7 @@
     Name="ComplaintIdPk"
     ColumnName="COMPLAINT_ID_PK"
     SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
+    Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
     TableName="TMS_CLM_WEB_COMPLAINT"
     PrimaryKey="true"/>
@@ -22,18 +22,9 @@
     Name="ComplaintType"
     ColumnName="COMPLAINT_TYPE"
     SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
+    Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
-    TableName="TMS_CLM_WEB_COMPLAINT"
-    PrimaryKey="true"/>
-  <Attribute
-    Name="ComplaintReasonIdFk"
-    ColumnName="COMPLAINT_REASON_ID_FK"
-    SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
-    ColumnType="NUMBER"
-    TableName="TMS_CLM_WEB_COMPLAINT"
-    PrimaryKey="true"/>
+    TableName="TMS_CLM_WEB_COMPLAINT"/>
   <Attribute
     Name="ParticularPersonName"
     Precision="250"
@@ -41,8 +32,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="TMS_CLM_WEB_COMPLAINT"
-    PrimaryKey="true">
+    TableName="TMS_CLM_WEB_COMPLAINT">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="250"/>
     </DesignTime>
@@ -54,8 +44,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="TMS_CLM_WEB_COMPLAINT"
-    PrimaryKey="true">
+    TableName="TMS_CLM_WEB_COMPLAINT">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="120"/>
     </DesignTime>
@@ -67,8 +56,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="TMS_CLM_WEB_COMPLAINT"
-    PrimaryKey="true">
+    TableName="TMS_CLM_WEB_COMPLAINT">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="100"/>
     </DesignTime>
@@ -80,8 +68,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="TMS_CLM_WEB_COMPLAINT"
-    PrimaryKey="true">
+    TableName="TMS_CLM_WEB_COMPLAINT">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
@@ -93,8 +80,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="TMS_CLM_WEB_COMPLAINT"
-    PrimaryKey="true">
+    TableName="TMS_CLM_WEB_COMPLAINT">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="500"/>
     </DesignTime>
@@ -106,8 +92,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="TMS_CLM_WEB_COMPLAINT"
-    PrimaryKey="true">
+    TableName="TMS_CLM_WEB_COMPLAINT">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="250"/>
     </DesignTime>
@@ -119,8 +104,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="TMS_CLM_WEB_COMPLAINT"
-    PrimaryKey="true">
+    TableName="TMS_CLM_WEB_COMPLAINT">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="500"/>
     </DesignTime>
@@ -132,8 +116,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="TMS_CLM_WEB_COMPLAINT"
-    PrimaryKey="true">
+    TableName="TMS_CLM_WEB_COMPLAINT">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="500"/>
     </DesignTime>
@@ -144,14 +127,13 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="TMS_CLM_WEB_COMPLAINT"
-    PrimaryKey="true"/>
+    TableName="TMS_CLM_WEB_COMPLAINT"/>
   <Attribute
     Name="EnterDate"
     ColumnName="ENTER_DATE"
     SQLType="DATE"
-    Type="java.sql.Timestamp"
-    ColumnType="DATE"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="NUMBER"
     TableName="TMS_CLM_WEB_COMPLAINT"
     PrimaryKey="true"/>
   <AccessorAttribute
@@ -169,17 +151,6 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebComplaint.ComplaintIdPk"/>
-      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebComplaint.ComplaintType"/>
-      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebComplaint.ComplaintReasonIdFk"/>
-      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebComplaint.ParticularPersonName"/>
-      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebComplaint.Designation"/>
-      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebComplaint.Branch"/>
-      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebComplaint.DiscussedWithStaffFlag"/>
-      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebComplaint.DiscussedDetail"/>
-      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebComplaint.DiscussedPersonName"/>
-      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebComplaint.DiscussedResult"/>
-      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebComplaint.Remarks"/>
-      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebComplaint.ParticipantIdFk"/>
       <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebComplaint.EnterDate"/>
     </AttrArray>
   </Key>

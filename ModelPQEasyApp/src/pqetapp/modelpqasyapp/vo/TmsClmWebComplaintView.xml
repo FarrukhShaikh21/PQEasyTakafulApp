@@ -29,12 +29,6 @@
     EntityUsage="TmsClmWebComplaint"
     AliasName="COMPLAINT_TYPE"/>
   <ViewAttribute
-    Name="ComplaintReasonIdFk"
-    PrecisionRule="true"
-    EntityAttrName="ComplaintReasonIdFk"
-    EntityUsage="TmsClmWebComplaint"
-    AliasName="COMPLAINT_REASON_ID_FK"/>
-  <ViewAttribute
     Name="ParticularPersonName"
     PrecisionRule="true"
     EntityAttrName="ParticularPersonName"

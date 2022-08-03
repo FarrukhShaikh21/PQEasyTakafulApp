@@ -31,6 +31,15 @@
   <ViewUsage
     Name="TmsClmWebComplaintCRUD"
     ViewObjectName="pqetapp.modelpqasyapp.vo.TmsClmWebComplaintView"/>
+  <ViewUsage
+    Name="TmsClmWebComplaintDtlCRUD"
+    ViewObjectName="pqetapp.modelpqasyapp.vo.TmsClmWebComplaintDtlView"/>
+  <ViewLinkUsage
+    Name="TMSComplaintComplaintReasonComplaintIdPkLink1"
+    ViewLinkObjectName="pqetapp.modelpqasyapp.link.TMSComplaintComplaintReasonComplaintIdPkLink"
+    SrcViewUsageName="pqetapp.modelpqasyapp.am.EasyTakafulAppModule.TmsClmWebComplaintCRUD"
+    DstViewUsageName="pqetapp.modelpqasyapp.am.EasyTakafulAppModule.TmsClmWebComplaintDtlCRUD"
+    Reversed="false"/>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="pqetapp.modelpqasyapp.ModelPQEasyAppBundle"/>
