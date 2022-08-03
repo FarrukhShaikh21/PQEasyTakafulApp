@@ -32,7 +32,7 @@
       <Item Value="ComplaintReasonIdFk"/>
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="ComplaintReasonIdFk"/>
+      <Item Value="ComplaintReason"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -65,6 +65,9 @@
     EntityAttrName="FlagStatus"
     EntityUsage="TmsClmWebComplaintDtl"
     AliasName="FLAG_STATUS"/>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="ComplaintIdPk"/>
+  </AttrArray>
   <ViewLinkAccessor
     Name="TmsClmWebComplaintView"
     ViewLink="pqetapp.modelpqasyapp.link.TMSComplaintComplaintReasonComplaintIdPkLink"

@@ -14,7 +14,7 @@
     Name="ComplaintReasonIdFk"
     ColumnName="COMPLAINT_REASON_ID_FK"
     SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
+    Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
     TableName="TMS_CLM_ST_COMPLAINT_REASON"
     PrimaryKey="true"/>
@@ -25,8 +25,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="TMS_CLM_ST_COMPLAINT_REASON"
-    PrimaryKey="true">
+    TableName="TMS_CLM_ST_COMPLAINT_REASON">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="250"/>
     </DesignTime>
@@ -37,16 +36,14 @@
     SQLType="DATE"
     Type="java.sql.Timestamp"
     ColumnType="DATE"
-    TableName="TMS_CLM_ST_COMPLAINT_REASON"
-    PrimaryKey="true"/>
+    TableName="TMS_CLM_ST_COMPLAINT_REASON"/>
   <Attribute
     Name="UserIdFk"
     ColumnName="USER_ID_FK"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="TMS_CLM_ST_COMPLAINT_REASON"
-    PrimaryKey="true"/>
+    TableName="TMS_CLM_ST_COMPLAINT_REASON"/>
   <Key
     Name="TmsclmstcomplaintreasonPrimaryKey"
     PrimaryKey="true">
@@ -55,9 +52,6 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStComplaintReason.ComplaintReasonIdFk"/>
-      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStComplaintReason.ComplaintReason"/>
-      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStComplaintReason.EnterDate"/>
-      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStComplaintReason.UserIdFk"/>
     </AttrArray>
   </Key>
 </Entity>

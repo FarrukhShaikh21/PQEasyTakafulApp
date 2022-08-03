@@ -8,6 +8,8 @@
               id="TmsClmWebComplaintCRUDIterator"/>
     <iterator Binds="TmsClmWebComplaintDtlCRUD" RangeSize="25" DataControl="EasyTakafulAppModuleDataControl"
               id="TmsClmWebComplaintDtlCRUDIterator"/>
+    <iterator Binds="TmsClmWebComplaintDtlDetNextCRUD" RangeSize="25" DataControl="EasyTakafulAppModuleDataControl"
+              id="TmsClmWebComplaintDtlDetNextCRUDIterator"/>
   </executables>
   <bindings>
     <attributeValues IterBinding="TmsClmWebComplaintCRUDIterator" id="ComplaintType">
@@ -62,6 +64,15 @@
     </attributeValues>
     <tree IterBinding="TmsClmWebComplaintDtlCRUDIterator" id="TmsClmWebComplaintDtlCRUD">
       <nodeDefinition DefName="pqetapp.modelpqasyapp.vo.TmsClmWebComplaintDtlView" Name="TmsClmWebComplaintDtlCRUD0">
+        <AttrNames>
+          <Item Value="ComplaintReasonIdFk"/>
+          <Item Value="FlagStatus"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="TmsClmWebComplaintDtlDetNextCRUDIterator" id="TmsClmWebComplaintDtlDetNextCRUD">
+      <nodeDefinition DefName="pqetapp.modelpqasyapp.vo.TmsClmWebComplaintDtlView"
+                      Name="TmsClmWebComplaintDtlDetNextCRUD0">
         <AttrNames>
           <Item Value="ComplaintReasonIdFk"/>
           <Item Value="FlagStatus"/>

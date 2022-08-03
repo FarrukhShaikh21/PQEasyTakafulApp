@@ -24,7 +24,8 @@
     SQLType="NUMERIC"
     Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
-    TableName="TMS_CLM_WEB_COMPLAINT_DTL"/>
+    TableName="TMS_CLM_WEB_COMPLAINT_DTL"
+    PrimaryKey="true"/>
   <Attribute
     Name="FlagStatus"
     Precision="1"
@@ -52,6 +53,7 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebComplaintDtl.ComplaintIdPk"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebComplaintDtl.ComplaintReasonIdFk"/>
     </AttrArray>
   </Key>
 </Entity>

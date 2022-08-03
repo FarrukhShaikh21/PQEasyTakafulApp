@@ -462,9 +462,12 @@ public class TmsClmWebComplaintViewRowImpl extends ViewRowImpl implements TmsClm
         super.setAttrInvokeAccessor(index, value, attrDef);
     }
     public void doTMSInsertReasonRows() {
+        getAccTmsClmStComplaintReasonView().executeQuery();
         getAccTmsClmStComplaintReasonView().setRangeSize(-1);
         for (int i = 0; i < getAccTmsClmStComplaintReasonView().getRowCount(); i++) {
+            System.out.println("print"+i);
             Row r=getTmsClmWebComplaintDtlView().createRow();
+            r.setAttribute("ComplaintReasonIdFk", getAccTmsClmStComplaintReasonView().getRowAtRangeIndex(i).getAttribute("ComplaintReasonIdFk"));
             getTmsClmWebComplaintDtlView().insertRow(r);
        }
 

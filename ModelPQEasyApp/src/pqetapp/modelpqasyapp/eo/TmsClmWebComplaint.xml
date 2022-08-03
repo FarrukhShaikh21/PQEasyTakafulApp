@@ -17,7 +17,8 @@
     Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
     TableName="TMS_CLM_WEB_COMPLAINT"
-    PrimaryKey="true"/>
+    PrimaryKey="true"
+    DefaultValue="-1"/>
   <Attribute
     Name="ComplaintType"
     ColumnName="COMPLAINT_TYPE"
