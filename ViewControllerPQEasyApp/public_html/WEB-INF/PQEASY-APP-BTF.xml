@@ -41,6 +41,21 @@
     <view id="PQWorkshop">
       <page>/PQWorkshop.jsf</page>
     </view>
+    <view id="PQComplaint">
+      <page>/PQComplaint.jsf</page>
+    </view>
+    <method-call id="doTMSInsertReasonRows">
+      <method>#{bindings.doTMSInsertReasonRows.execute}</method>
+      <outcome>
+        <fixed-outcome>ACT-GOTO-MYCOMPLAINT</fixed-outcome>
+      </outcome>
+    </method-call>
+    <method-call id="CreateComplaint">
+      <method>#{bindings.CreateInsert.execute}</method>
+      <outcome>
+        <fixed-outcome>ACT-GOTO-MYCOMPLAINT</fixed-outcome>
+      </outcome>
+    </method-call>
     <control-flow-rule id="__1">
       <from-activity-id>PQMain</from-activity-id>
       <control-flow-case id="__2">
@@ -54,6 +69,10 @@
       <control-flow-case id="__10">
         <from-outcome>ACT-GOTO-MYCLAIMS</from-outcome>
         <to-activity-id>PQMyClaims</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__14">
+        <from-outcome>ACT-GOTO-MYCOMPLAINT</from-outcome>
+        <to-activity-id>CreateComplaint</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__4">
@@ -108,6 +127,27 @@
       <control-flow-case id="__19">
         <from-outcome>ACT-GOTO-MYPOLICYVIEW</from-outcome>
         <to-activity-id>PQPolicyView</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__21">
+      <from-activity-id>PQComplaint</from-activity-id>
+      <control-flow-case id="__22">
+        <from-outcome>ACT-BACK-FROM-MYCOMPLAINT</from-outcome>
+        <to-activity-id>PQMain</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__23">
+      <from-activity-id>CreateComplaint</from-activity-id>
+      <control-flow-case id="__24">
+        <from-outcome>ACT-GOTO-MYCOMPLAINT</from-outcome>
+        <to-activity-id>doTMSInsertReasonRows</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__25">
+      <from-activity-id>doTMSInsertReasonRows</from-activity-id>
+      <control-flow-case id="__26">
+        <from-outcome>ACT-GOTO-MYCOMPLAINT</from-outcome>
+        <to-activity-id>PQComplaint</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
   </task-flow-definition>

@@ -21,7 +21,7 @@
                                        truncateAt="0"/>
                         <af:outputText value="Know Your Protections" id="ot2"
                                        inlineStyle="font-size:xx-small; font-style:italic; color:green;"/>
-                        <af:link text="Back" id="l1" partialSubmit="true" action="ACT-BACK-FROM-MYCLAIMS"/>
+                        <af:link text="Back" id="l1" partialSubmit="true" action="ACT-BACK-FROM-MYCOMPLAINT"/>
                       </af:panelGroupLayout>
                     </af:gridCell>
                     <af:gridCell marginStart="5px" width="70%" marginEnd="5px" id="gc27" valign="stretch"

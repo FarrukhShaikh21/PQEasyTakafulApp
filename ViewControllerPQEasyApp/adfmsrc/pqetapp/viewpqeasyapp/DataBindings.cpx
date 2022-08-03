@@ -14,6 +14,10 @@
     <page path="/WEB-INF/PQEASY-APP-BTF.xml#PQEASY-APP-BTF@ExecutePolicyVew"
           usageId="pqetapp_viewpqeasyapp_PQEASY_APP_BTF_PQEASY_APP_BTF_ExecuteWithParamsPageDef"/>
     <page path="/PQComplaint.jsf" usageId="pqetapp_viewpqeasyapp_PQComplaintPageDef"/>
+    <page path="/WEB-INF/PQEASY-APP-BTF.xml#PQEASY-APP-BTF@doTMSInsertReasonRows"
+          usageId="pqetapp_viewpqeasyapp_PQEASY_APP_BTF_PQEASY_APP_BTF_doTMSInsertReasonRowsPageDef"/>
+    <page path="/WEB-INF/PQEASY-APP-BTF.xml#PQEASY-APP-BTF@CreateComplaint"
+          usageId="pqetapp_viewpqeasyapp_PQEASY_APP_BTF_PQEASY_APP_BTF_CreateInsertPageDef1"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="pqetapp_viewpqeasyapp_PQMyClaimsPageDef" path="pqetapp.viewpqeasyapp.pageDefs.PQMyClaimsPageDef"/>
@@ -30,6 +34,10 @@
     <page id="pqetapp_viewpqeasyapp_PQEASY_APP_BTF_PQEASY_APP_BTF_ExecuteWithParamsPageDef"
           path="pqetapp.viewpqeasyapp.pageDefs.PQEASY_APP_BTF_PQEASY_APP_BTF_ExecuteWithParamsPageDef"/>
     <page id="pqetapp_viewpqeasyapp_PQComplaintPageDef" path="pqetapp.viewpqeasyapp.pageDefs.PQComplaintPageDef"/>
+    <page id="pqetapp_viewpqeasyapp_PQEASY_APP_BTF_PQEASY_APP_BTF_doTMSInsertReasonRowsPageDef"
+          path="pqetapp.viewpqeasyapp.pageDefs.PQEASY_APP_BTF_PQEASY_APP_BTF_doTMSInsertReasonRowsPageDef"/>
+    <page id="pqetapp_viewpqeasyapp_PQEASY_APP_BTF_PQEASY_APP_BTF_CreateInsertPageDef1"
+          path="pqetapp.viewpqeasyapp.pageDefs.PQEASY_APP_BTF_PQEASY_APP_BTF_CreateInsertPageDef1"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="EasyTakafulAppModuleDataControl" Package="pqetapp.modelpqasyapp.am"

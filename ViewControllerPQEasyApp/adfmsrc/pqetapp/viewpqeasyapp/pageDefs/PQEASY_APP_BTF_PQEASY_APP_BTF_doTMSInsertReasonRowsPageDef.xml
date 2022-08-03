@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.57"
+                id="PQEASY_APP_BTF_PQEASY_APP_BTF_doTMSInsertReasonRowsPageDef"
+                Package="pqetapp.viewpqeasyapp.pageDefs" SkipValidation="true">
+  <parameters/>
+  <executables>
+    <iterator Binds="TmsClmWebComplaintCRUD" RangeSize="25" DataControl="EasyTakafulAppModuleDataControl"
+              id="TmsClmWebComplaintCRUDIterator"/>
+  </executables>
+  <bindings>
+    <methodAction IterBinding="TmsClmWebComplaintCRUDIterator" id="doTMSInsertReasonRows" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="doTMSInsertReasonRows" IsViewObjectMethod="false"
+                  DataControl="EasyTakafulAppModuleDataControl"
+                  InstanceName="bindings.TmsClmWebComplaintCRUDIterator.currentRow" IsLocalObjectReference="true"/>
+  </bindings>
+</pageDefinition>
