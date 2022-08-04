@@ -133,7 +133,7 @@ public class TmsClmWebComplaintViewRowImpl extends ViewRowImpl implements TmsClm
             }
 
             public void put(TmsClmWebComplaintViewRowImpl obj, Object value) {
-                obj.setParticipantIdFk((BigDecimal) value);
+                obj.setParticipantIdFk((Number) value);
             }
         }
         ,
@@ -389,15 +389,15 @@ public class TmsClmWebComplaintViewRowImpl extends ViewRowImpl implements TmsClm
      * Gets the attribute value for PARTICIPANT_ID_FK using the alias name ParticipantIdFk.
      * @return the PARTICIPANT_ID_FK
      */
-    public BigDecimal getParticipantIdFk() {
-        return (BigDecimal) getAttributeInternal(PARTICIPANTIDFK);
+    public Number getParticipantIdFk() {
+        return (Number) getAttributeInternal(PARTICIPANTIDFK);
     }
 
     /**
      * Sets <code>value</code> as attribute value for PARTICIPANT_ID_FK using the alias name ParticipantIdFk.
      * @param value value to set the PARTICIPANT_ID_FK
      */
-    public void setParticipantIdFk(BigDecimal value) {
+    public void setParticipantIdFk(Number value) {
         setAttributeInternal(PARTICIPANTIDFK, value);
     }
 

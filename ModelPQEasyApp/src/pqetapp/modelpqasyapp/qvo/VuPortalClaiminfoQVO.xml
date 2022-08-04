@@ -24,20 +24,22 @@
     Type="java.lang.Integer">
     <TransientExpression
       Name="VariableScript"
-      trustMode="trusted"
       CodeSourceName="VuPortalClaiminfoQVO"/>
   </Variable>
-  <SQLQuery><![CDATA[select    
-participant_id_fk,    
-claim_id_pk,    
-claim_no,    
-loss_type,    
-intimation_date,    
-loss_date,    
-vehicle_name,    
-registration_no,    
-claim_amount   
-from vu_portal_claim_info  
+  <SQLQuery><![CDATA[select     
+participant_id_fk,     
+claim_id_pk,     
+claim_no,     
+loss_type,     
+intimation_date,     
+loss_date,     
+vehicle_name,     
+registration_no,     
+claim_amount  , 
+surveyor_appointment_dt,  
+inspection_date 
+ 
+from vu_portal_claim_info   
 where participant_id_fk=:P_ADF_PARTICIPANT_ID]]></SQLQuery>
   <ViewAttribute
     Name="ParticipantIdFk"
@@ -194,6 +196,40 @@ where participant_id_fk=:P_ADF_PARTICIPANT_ID]]></SQLQuery>
       <SchemaBasedProperties>
         <LABEL
           ResId="pqetapp.modelpqasyapp.qvo.VuPortalClaiminfoQVO.ClaimAmount_LABEL"/>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="SurveyorAppointmentDt"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    AliasName="SURVEYOR_APPOINTMENT_DT"
+    Expression="SURVEYOR_APPOINTMENT_DT"
+    SQLType="DATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="InspectionDate"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    AliasName="INSPECTION_DATE"
+    Expression="INSPECTION_DATE"
+    SQLType="DATE">
+    <Properties>
+      <SchemaBasedProperties>
         <DISPLAYWIDTH
           Value="20"/>
       </SchemaBasedProperties>

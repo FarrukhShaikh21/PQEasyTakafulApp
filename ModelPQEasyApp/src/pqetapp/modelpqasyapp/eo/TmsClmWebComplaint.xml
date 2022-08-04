@@ -199,9 +199,13 @@
     Name="ParticipantIdFk"
     ColumnName="PARTICIPANT_ID_FK"
     SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
+    Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
-    TableName="TMS_CLM_WEB_COMPLAINT"/>
+    TableName="TMS_CLM_WEB_COMPLAINT">
+    <TransientExpression
+      trustMode="untrusted"
+      Name="ExpressionScript"><![CDATA[pqetapp.modelpqasyapp.gclass.PQEasyTakafulModelGlobal.dogetParticipantID()]]></TransientExpression>
+  </Attribute>
   <Attribute
     Name="EnterDate"
     ColumnName="ENTER_DATE"
