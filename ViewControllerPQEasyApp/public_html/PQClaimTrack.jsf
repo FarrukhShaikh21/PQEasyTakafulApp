@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:document title="ClaimTrack.jsf" id="d1">
+    <af:messages id="m1"/>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>  
+    <af:form id="f1">
+      <af:decorativeBox id="db1" dimensionsFrom="parent">
+        <f:facet name="top"/>
+        <f:facet name="center">
+          <af:panelGridLayout id="pgl2">
+            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr4">
+              <af:gridCell marginStart="5px" width="10%" id="gc4" marginEnd="5px"/>
+              <af:gridCell marginStart="5px" width="80%" id="gc5" valign="stretch" halign="stretch">
+                <af:panelGridLayout id="pgl1" styleClass="PQLoginFormCurve">
+                  <af:gridRow marginTop="5px" height="auto" id="gr11">
+                    <af:gridCell marginStart="5px" width="30%" id="gc26" halign="stretch" valign="middle">
+                      <af:panelGroupLayout id="pgl5" layout="vertical" halign="center">
+                        <af:outputText value="Tracking" id="ot1"
+                                       inlineStyle="font-size:xx-large; font-style:italic; color:green;"
+                                       truncateAt="0"/>
+                        <af:outputText value="Know Your Protections" id="ot2"
+                                       inlineStyle="font-size:xx-small; font-style:italic; color:green;"/>
+                        <af:link text="Back" id="l1" partialSubmit="true" action="ACT-BACK-FROM-MYCLAIMS"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                    <af:gridCell marginStart="5px" width="70%" marginEnd="5px" id="gc27" valign="stretch"
+                                 halign="stretch">
+                      <af:panelGroupLayout id="pgl8" layout="vertical" halign="end" styleClass="AFStretchWidth">
+                        <af:image source="#{resource['images:imgPQGT.png']}" id="i1"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                  </af:gridRow>                
+                  <af:gridRow marginTop="5px" height="auto" id="gr1">
+                    <af:gridCell marginStart="15px" width="100%" marginEnd="15px" id="gc1" halign="stretch" columnSpan="2"
+                                 rowSpan="1">
+                      <af:panelGridLayout id="pgl3">
+                        <af:gridRow marginTop="5px" height="auto" id="gr5">
+                          <af:gridCell marginStart="5px" width="25%" id="gc7"/>
+                          <af:gridCell marginStart="5px" width="25%" id="gc8" halign="center" valign="middle">
+                            <af:outputText value="Date Time" id="ot7" inlineStyle="font-weight:bold"/>
+                          </af:gridCell>
+                          <af:gridCell marginStart="5px" width="25%" id="gc9" halign="center" valign="middle">
+                            <af:outputText value="Status" id="ot8" inlineStyle="font-weight:bold"/>
+                          </af:gridCell>
+                          <af:gridCell marginStart="5px" width="25%" marginEnd="5px" id="gc10"/>
+                        </af:gridRow>
+                        <af:gridRow marginTop="5px" height="auto" id="gr6">
+                          <af:gridCell marginStart="5px" width="25%" id="gc11">
+                            <af:outputText value="Appointment of Surveyor" id="ot3" truncateAt="0"
+                                           inlineStyle="font-size:small;font-weight:bold"/>
+                          </af:gridCell>
+                          <af:gridCell marginStart="5px" width="25%" id="gc12"/>
+                          <af:gridCell marginStart="5px" width="25%" id="gc13"/>
+                          <af:gridCell marginStart="5px" width="25%" marginEnd="5px" id="gc14"/>
+                        </af:gridRow>
+                        <af:gridRow marginTop="5px" height="auto" id="gr7">
+                          <af:gridCell marginStart="5px" width="25%" id="gc15">
+                            <af:outputText value="Inspection of the Vehicle" id="ot4"
+                                           inlineStyle="font-size:small;font-weight:bold"/>
+                          </af:gridCell>
+                          <af:gridCell marginStart="5px" width="25%" id="gc16"/>
+                          <af:gridCell marginStart="5px" width="25%" id="gc17"/>
+                          <af:gridCell marginStart="5px" width="25%" marginEnd="5px" id="gc18"/>
+                        </af:gridRow>
+                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr8">
+                          <af:gridCell marginStart="5px" width="25%" id="gc19">
+                            <af:outputText value="Approval of Claim" id="ot5"
+                                           inlineStyle="font-size:small;font-weight:bold"/>
+                          </af:gridCell>
+                          <af:gridCell marginStart="5px" width="25%" id="gc20"/>
+                          <af:gridCell marginStart="5px" width="25%" id="gc21"/>
+                          <af:gridCell marginStart="5px" width="25%" marginEnd="5px" id="gc22"/>
+                        </af:gridRow>
+                        <af:gridRow id="gr9">
+                          <af:gridCell id="gc23" width="25%">
+                            <af:outputText value="Cheque Status (If reimbursement)" id="ot6"
+                                           inlineStyle="font-size:small;font-weight:bold"/>
+                          </af:gridCell>
+                          <af:gridCell id="gc24" width="25%"/>
+                          <af:gridCell id="gc25" width="25%"/>
+                          <af:gridCell id="gc28" width="25%"/>
+                        </af:gridRow>
+                      </af:panelGridLayout>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow marginTop="5px" height="auto" id="gr2">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2" columnSpan="2" rowSpan="1"/>
+                  </af:gridRow>
+                  <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr3">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc3" columnSpan="2" rowSpan="1"/>
+                  </af:gridRow>
+                </af:panelGridLayout>
+              </af:gridCell>
+              <af:gridCell marginStart="5px" width="10%" marginEnd="5px" id="gc6"/>
+            </af:gridRow>
+          </af:panelGridLayout>
+        </f:facet>
+      </af:decorativeBox>
+    </af:form>
+  </af:document>
+</f:view>
