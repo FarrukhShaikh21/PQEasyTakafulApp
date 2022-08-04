@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:document title="Feedback.jsf" id="d1">
+    <af:messages id="m1"/>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>  
+    <af:form id="f1">
+      <af:decorativeBox id="db1" dimensionsFrom="parent">
+        <f:facet name="top"/>
+        <f:facet name="center">
+          <af:panelGridLayout id="pgl2">
+            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr4">
+              <af:gridCell marginStart="5px" width="10%" id="gc4" marginEnd="5px"/>
+              <af:gridCell marginStart="5px" width="80%" id="gc5" valign="stretch" halign="stretch">
+                <af:panelGridLayout id="pgl1" styleClass="PQLoginFormCurve">
+                  <af:gridRow marginTop="5px" height="auto" id="gr11">
+                    <af:gridCell marginStart="5px" width="30%" id="gc26" halign="stretch" valign="middle">
+                      <af:panelGroupLayout id="pgl5" layout="vertical" halign="center">
+                        <af:outputText value="Claim Information" id="ot1"
+                                       inlineStyle="font-size:xx-large; font-style:italic; color:green;"
+                                       truncateAt="0"/>
+                        <af:outputText value="Know Your Protections" id="ot2"
+                                       inlineStyle="font-size:xx-small; font-style:italic; color:green;"/>
+                        <af:link text="Back" id="l1" partialSubmit="true" action="ACT-BACK-FROM-MYCLAIMS"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                    <af:gridCell marginStart="5px" width="70%" marginEnd="5px" id="gc27" valign="stretch"
+                                 halign="stretch">
+                      <af:panelGroupLayout id="pgl8" layout="vertical" halign="end" styleClass="AFStretchWidth">
+                        <af:image source="#{resource['images:imgPQGT.png']}" id="i1"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                  </af:gridRow>                
+                  <af:gridRow marginTop="5px" height="auto" id="gr1">
+                    <af:gridCell marginStart="15px" width="100%" marginEnd="15px" id="gc1" halign="stretch" columnSpan="2"
+                                 rowSpan="1">
+                      <af:panelGroupLayout id="pgl3" layout="vertical" halign="center" styleClass="AFStretchWidth">
+                        <af:table value="#{bindings.VuPortalClaiminfoQVORO.collectionModel}" var="row"
+                                  rows="#{bindings.VuPortalClaiminfoQVORO.rangeSize}"
+                                  emptyText="#{bindings.VuPortalClaiminfoQVORO.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                  rowBandingInterval="0"
+                                  selectedRowKeys="#{bindings.VuPortalClaiminfoQVORO.collectionModel.selectedRow}"
+                                  selectionListener="#{bindings.VuPortalClaiminfoQVORO.collectionModel.makeCurrent}"
+                                  rowSelection="single" fetchSize="#{bindings.VuPortalClaiminfoQVORO.rangeSize}"
+                                  id="t2" columnStretching="column:c11">
+                          <af:column headerText="#{bindings.VuPortalClaiminfoQVORO.hints.ClaimNo.label}" id="c7"
+                                     width="200">
+                            <af:inputText value="#{row.bindings.ClaimNo.inputValue}"
+                                          label="#{bindings.VuPortalClaiminfoQVORO.hints.ClaimNo.label}"
+                                          required="#{bindings.VuPortalClaiminfoQVORO.hints.ClaimNo.mandatory}"
+                                          columns="#{bindings.VuPortalClaiminfoQVORO.hints.ClaimNo.displayWidth}"
+                                          maximumLength="#{bindings.VuPortalClaiminfoQVORO.hints.ClaimNo.precision}"
+                                          shortDesc="#{bindings.VuPortalClaiminfoQVORO.hints.ClaimNo.tooltip}" id="it3">
+                              <f:validator binding="#{row.bindings.ClaimNo.validator}"/>
+                            </af:inputText>
+                          </af:column>
+                          <af:column headerText="#{bindings.VuPortalClaiminfoQVORO.hints.IntimationDate.label}" id="c8"
+                                     displayIndex="-1" width="80">
+                            <af:inputDate value="#{row.bindings.IntimationDate.inputValue}"
+                                          label="#{bindings.VuPortalClaiminfoQVORO.hints.IntimationDate.label}"
+                                          required="#{bindings.VuPortalClaiminfoQVORO.hints.IntimationDate.mandatory}"
+                                          columns="#{bindings.VuPortalClaiminfoQVORO.hints.IntimationDate.displayWidth}"
+                                          shortDesc="#{bindings.VuPortalClaiminfoQVORO.hints.IntimationDate.tooltip}"
+                                          id="id3">
+                              <f:validator binding="#{row.bindings.IntimationDate.validator}"/>
+                              <af:convertDateTime pattern="#{bindings.VuPortalClaiminfoQVORO.hints.IntimationDate.format}"/>
+                            </af:inputDate>
+                          </af:column>
+                          <af:column headerText="#{bindings.VuPortalClaiminfoQVORO.hints.LossType.label}" id="c9">
+                            <af:inputText value="#{row.bindings.LossType.inputValue}"
+                                          label="#{bindings.VuPortalClaiminfoQVORO.hints.LossType.label}"
+                                          required="#{bindings.VuPortalClaiminfoQVORO.hints.LossType.mandatory}"
+                                          columns="#{bindings.VuPortalClaiminfoQVORO.hints.LossType.displayWidth}"
+                                          maximumLength="#{bindings.VuPortalClaiminfoQVORO.hints.LossType.precision}"
+                                          shortDesc="#{bindings.VuPortalClaiminfoQVORO.hints.LossType.tooltip}"
+                                          id="it4">
+                              <f:validator binding="#{row.bindings.LossType.validator}"/>
+                            </af:inputText>
+                          </af:column>
+                          <af:column headerText="#{bindings.VuPortalClaiminfoQVORO.hints.LossDate.label}" id="c10"
+                                     width="80">
+                            <af:inputDate value="#{row.bindings.LossDate.inputValue}"
+                                          label="#{bindings.VuPortalClaiminfoQVORO.hints.LossDate.label}"
+                                          required="#{bindings.VuPortalClaiminfoQVORO.hints.LossDate.mandatory}"
+                                          columns="#{bindings.VuPortalClaiminfoQVORO.hints.LossDate.displayWidth}"
+                                          shortDesc="#{bindings.VuPortalClaiminfoQVORO.hints.LossDate.tooltip}"
+                                          id="id4">
+                              <f:validator binding="#{row.bindings.LossDate.validator}"/>
+                              <af:convertDateTime pattern="#{bindings.VuPortalClaiminfoQVORO.hints.LossDate.format}"/>
+                            </af:inputDate>
+                          </af:column>
+                          <af:column headerText="#{bindings.VuPortalClaiminfoQVORO.hints.VehicleName.label}" id="c11">
+                            <af:inputText value="#{row.bindings.VehicleName.inputValue}"
+                                          label="#{bindings.VuPortalClaiminfoQVORO.hints.VehicleName.label}"
+                                          required="#{bindings.VuPortalClaiminfoQVORO.hints.VehicleName.mandatory}"
+                                          columns="#{bindings.VuPortalClaiminfoQVORO.hints.VehicleName.displayWidth}"
+                                          maximumLength="#{bindings.VuPortalClaiminfoQVORO.hints.VehicleName.precision}"
+                                          shortDesc="#{bindings.VuPortalClaiminfoQVORO.hints.VehicleName.tooltip}"
+                                          id="it5">
+                              <f:validator binding="#{row.bindings.VehicleName.validator}"/>
+                            </af:inputText>
+                          </af:column>
+                          <af:column headerText="#{bindings.VuPortalClaiminfoQVORO.hints.RegistrationNo.label}"
+                                     id="c12">
+                            <af:inputText value="#{row.bindings.RegistrationNo.inputValue}"
+                                          label="#{bindings.VuPortalClaiminfoQVORO.hints.RegistrationNo.label}"
+                                          required="#{bindings.VuPortalClaiminfoQVORO.hints.RegistrationNo.mandatory}"
+                                          columns="#{bindings.VuPortalClaiminfoQVORO.hints.RegistrationNo.displayWidth}"
+                                          maximumLength="#{bindings.VuPortalClaiminfoQVORO.hints.RegistrationNo.precision}"
+                                          shortDesc="#{bindings.VuPortalClaiminfoQVORO.hints.RegistrationNo.tooltip}"
+                                          id="it6">
+                              <f:validator binding="#{row.bindings.RegistrationNo.validator}"/>
+                            </af:inputText>
+                          </af:column>
+                          <af:column headerText="#{bindings.VuPortalClaiminfoQVORO.hints.ClaimAmount.label}" id="c13">
+                            <af:inputText value="#{row.bindings.ClaimAmount.inputValue}"
+                                          label="#{bindings.VuPortalClaiminfoQVORO.hints.ClaimAmount.label}"
+                                          required="#{bindings.VuPortalClaiminfoQVORO.hints.ClaimAmount.mandatory}"
+                                          columns="#{bindings.VuPortalClaiminfoQVORO.hints.ClaimAmount.displayWidth}"
+                                          maximumLength="#{bindings.VuPortalClaiminfoQVORO.hints.ClaimAmount.precision}"
+                                          shortDesc="#{bindings.VuPortalClaiminfoQVORO.hints.ClaimAmount.tooltip}"
+                                          id="it7">
+                              <f:validator binding="#{row.bindings.ClaimAmount.validator}"/>
+                              <af:convertNumber groupingUsed="false"
+                                                pattern="#{bindings.VuPortalClaiminfoQVORO.hints.ClaimAmount.format}"/>
+                            </af:inputText>
+                          </af:column>
+                        </af:table>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow marginTop="5px" height="auto" id="gr2">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2" columnSpan="2" rowSpan="1">
+                      <af:button text="Track Claim" id="b1" action="ACT-GOTO-TRACKING"/>
+                    </af:gridCell>
+                  </af:gridRow>
+                </af:panelGridLayout>
+              </af:gridCell>
+              <af:gridCell marginStart="5px" width="10%" marginEnd="5px" id="gc6"/>
+            </af:gridRow>
+          </af:panelGridLayout>
+        </f:facet>
+      </af:decorativeBox>
+    </af:form>
+  </af:document>
+</f:view>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TmsClmWebFeedback"
+  Version="12.2.1.11.57"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="TMS_CLM_WEB_FEEDBACK"
+  AliasName="TmsClmWebFeedback"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="ClmFeedbackIdFk"
+    ColumnName="CLM_FEEDBACK_ID_FK"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="TMS_CLM_WEB_FEEDBACK"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="FeedbackIdPk"
+    ColumnName="FEEDBACK_ID_PK"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="TMS_CLM_WEB_FEEDBACK"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="ExcellentFlag"
+    Precision="1"
+    ColumnName="EXCELLENT_FLAG"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TMS_CLM_WEB_FEEDBACK"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="GoodFlag"
+    Precision="1"
+    ColumnName="GOOD_FLAG"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TMS_CLM_WEB_FEEDBACK"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="AverageFlag"
+    Precision="1"
+    ColumnName="AVERAGE_FLAG"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TMS_CLM_WEB_FEEDBACK"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="PoorFlag"
+    Precision="1"
+    ColumnName="POOR_FLAG"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TMS_CLM_WEB_FEEDBACK"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="VeryPoorFlag"
+    Precision="1"
+    ColumnName="VERY_POOR_FLAG"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TMS_CLM_WEB_FEEDBACK"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="EnterDate"
+    ColumnName="ENTER_DATE"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="TMS_CLM_WEB_FEEDBACK"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="ParticipantIdFk"
+    ColumnName="PARTICIPANT_ID_FK"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="TMS_CLM_WEB_FEEDBACK"
+    PrimaryKey="true"/>
+  <Key
+    Name="TmsclmwebfeedbackPrimaryKey"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="TMSCLMWEBFEEDBACK_PRIMARY_KEY"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebFeedback.ClmFeedbackIdFk"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebFeedback.FeedbackIdPk"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebFeedback.ExcellentFlag"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebFeedback.GoodFlag"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebFeedback.AverageFlag"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebFeedback.PoorFlag"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebFeedback.VeryPoorFlag"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebFeedback.EnterDate"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebFeedback.ParticipantIdFk"/>
+    </AttrArray>
+  </Key>
+</Entity>
