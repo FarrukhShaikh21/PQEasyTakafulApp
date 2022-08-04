@@ -65,6 +65,15 @@
     <view id="PQClaimTrack">
       <page>/PQClaimTrack.jsf</page>
     </view>
+    <view id="PQFeedback">
+      <page>/PQFeedback.jsf</page>
+    </view>
+    <method-call id="doTMSFeedbackReasonRows">
+      <method>#{bindings.doTMSFeedbackReasonRows.execute}</method>
+      <outcome>
+        <fixed-outcome>ACT-GOTO-FEEDBACK</fixed-outcome>
+      </outcome>
+    </method-call>
     <control-flow-rule id="__1">
       <from-activity-id>PQMain</from-activity-id>
       <control-flow-case id="__2">
@@ -82,6 +91,10 @@
       <control-flow-case id="__14">
         <from-outcome>ACT-GOTO-MYCOMPLAINT</from-outcome>
         <to-activity-id>CreateComplaint</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__29">
+        <from-outcome>ACT-GOTO-FEEDBACK</from-outcome>
+        <to-activity-id>doTMSFeedbackReasonRows</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__4">
@@ -175,6 +188,20 @@
       <control-flow-case id="__31">
         <from-outcome>ACT-GOTO-BACK-FROM-TRACKING</from-outcome>
         <to-activity-id>PQMyClaims</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__33">
+      <from-activity-id>PQFeedback</from-activity-id>
+      <control-flow-case id="__34">
+        <from-outcome>ACT-GOTO-BACK-FEEDBACK</from-outcome>
+        <to-activity-id>PQMain</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__35">
+      <from-activity-id>doTMSFeedbackReasonRows</from-activity-id>
+      <control-flow-case id="__36">
+        <from-outcome>ACT-GOTO-FEEDBACK</from-outcome>
+        <to-activity-id>PQFeedback</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
   </task-flow-definition>

@@ -14,7 +14,7 @@
     Name="FeedbackIdPk"
     ColumnName="FEEDBACK_ID_PK"
     SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
+    Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
     TableName="TMS_CLM_ST_FEEDBACK"
     PrimaryKey="true"/>
@@ -22,10 +22,9 @@
     Name="FeedbackType"
     ColumnName="FEEDBACK_TYPE"
     SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
+    Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
-    TableName="TMS_CLM_ST_FEEDBACK"
-    PrimaryKey="true"/>
+    TableName="TMS_CLM_ST_FEEDBACK"/>
   <Attribute
     Name="FeedbackDesc"
     Precision="500"
@@ -33,8 +32,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="TMS_CLM_ST_FEEDBACK"
-    PrimaryKey="true">
+    TableName="TMS_CLM_ST_FEEDBACK">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="500"/>
     </DesignTime>
@@ -43,18 +41,16 @@
     Name="UserIdFk"
     ColumnName="USER_ID_FK"
     SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
+    Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
-    TableName="TMS_CLM_ST_FEEDBACK"
-    PrimaryKey="true"/>
+    TableName="TMS_CLM_ST_FEEDBACK"/>
   <Attribute
     Name="EnterDate"
     ColumnName="ENTER_DATE"
     SQLType="DATE"
-    Type="java.sql.Timestamp"
+    Type="oracle.jbo.domain.Date"
     ColumnType="DATE"
-    TableName="TMS_CLM_ST_FEEDBACK"
-    PrimaryKey="true"/>
+    TableName="TMS_CLM_ST_FEEDBACK"/>
   <Key
     Name="TmsclmstfeedbackPrimaryKey"
     PrimaryKey="true">
@@ -63,10 +59,6 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStFeedback.FeedbackIdPk"/>
-      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStFeedback.FeedbackType"/>
-      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStFeedback.FeedbackDesc"/>
-      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStFeedback.UserIdFk"/>
-      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmStFeedback.EnterDate"/>
     </AttrArray>
   </Key>
 </Entity>

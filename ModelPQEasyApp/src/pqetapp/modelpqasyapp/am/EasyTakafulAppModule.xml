@@ -6,7 +6,12 @@
   Name="EasyTakafulAppModule"
   Version="12.2.1.11.57"
   InheritPersonalization="merge"
-  ClearCacheOnRollback="true">
+  ClearCacheOnRollback="true"
+  ComponentClass="pqetapp.modelpqasyapp.am.EasyTakafulAppModuleImpl"
+  ComponentInterface="pqetapp.modelpqasyapp.am.common.EasyTakafulAppModule">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
   <Properties>
     <SchemaBasedProperties>
       <LABEL
@@ -45,6 +50,12 @@
       Name="TmsClmWebComplaintDtNextReasionIdVC"
       FullName="pqetapp.modelpqasyapp.vo.TmsClmWebComplaintDtlView.TmsClmWebComplaintDtNextReasionIdVC"/>
   </ViewUsage>
+  <ViewUsage
+    Name="TmsClmStFeedbackViewRO"
+    ViewObjectName="pqetapp.modelpqasyapp.vo.TmsClmStFeedbackView"/>
+  <ViewUsage
+    Name="TmsClmWebFeedbackCRUD"
+    ViewObjectName="pqetapp.modelpqasyapp.vo.TmsClmWebFeedbackView"/>
   <ViewLinkUsage
     Name="TMSComplaintComplaintReasonComplaintIdPkLink1"
     ViewLinkObjectName="pqetapp.modelpqasyapp.link.TMSComplaintComplaintReasonComplaintIdPkLink"
@@ -57,6 +68,16 @@
     SrcViewUsageName="pqetapp.modelpqasyapp.am.EasyTakafulAppModule.TmsClmWebComplaintCRUD"
     DstViewUsageName="pqetapp.modelpqasyapp.am.EasyTakafulAppModule.TmsClmWebComplaintDtlDetNextCRUD"
     Reversed="false"/>
+  <ClientInterface
+    Name="__clientInterface">
+    <Method
+      Name="doTMSFeedbackReasonRows"
+      MethodName="doTMSFeedbackReasonRows">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+    </Method>
+  </ClientInterface>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="pqetapp.modelpqasyapp.ModelPQEasyAppBundle"/>

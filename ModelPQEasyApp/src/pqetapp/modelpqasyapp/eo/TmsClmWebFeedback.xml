@@ -9,12 +9,17 @@
   DBObjectType="table"
   DBObjectName="TMS_CLM_WEB_FEEDBACK"
   AliasName="TmsClmWebFeedback"
-  BindingStyle="OracleName">
+  BindingStyle="OracleName"
+  RowClass="pqetapp.modelpqasyapp.eo.TmsClmWebFeedbackImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Init|Delete|Access|DML"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
   <Attribute
     Name="ClmFeedbackIdFk"
     ColumnName="CLM_FEEDBACK_ID_FK"
     SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
+    Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
     TableName="TMS_CLM_WEB_FEEDBACK"
     PrimaryKey="true"/>
@@ -22,10 +27,9 @@
     Name="FeedbackIdPk"
     ColumnName="FEEDBACK_ID_PK"
     SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
+    Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
-    TableName="TMS_CLM_WEB_FEEDBACK"
-    PrimaryKey="true"/>
+    TableName="TMS_CLM_WEB_FEEDBACK"/>
   <Attribute
     Name="ExcellentFlag"
     Precision="1"
@@ -33,8 +37,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="TMS_CLM_WEB_FEEDBACK"
-    PrimaryKey="true">
+    TableName="TMS_CLM_WEB_FEEDBACK">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
@@ -46,8 +49,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="TMS_CLM_WEB_FEEDBACK"
-    PrimaryKey="true">
+    TableName="TMS_CLM_WEB_FEEDBACK">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
@@ -59,8 +61,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="TMS_CLM_WEB_FEEDBACK"
-    PrimaryKey="true">
+    TableName="TMS_CLM_WEB_FEEDBACK">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
@@ -72,8 +73,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="TMS_CLM_WEB_FEEDBACK"
-    PrimaryKey="true">
+    TableName="TMS_CLM_WEB_FEEDBACK">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
@@ -85,8 +85,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="TMS_CLM_WEB_FEEDBACK"
-    PrimaryKey="true">
+    TableName="TMS_CLM_WEB_FEEDBACK">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
@@ -95,18 +94,24 @@
     Name="EnterDate"
     ColumnName="ENTER_DATE"
     SQLType="DATE"
-    Type="java.sql.Timestamp"
+    Type="oracle.jbo.domain.Date"
     ColumnType="DATE"
-    TableName="TMS_CLM_WEB_FEEDBACK"
-    PrimaryKey="true"/>
+    TableName="TMS_CLM_WEB_FEEDBACK">
+    <TransientExpression
+      trustMode="untrusted"
+      Name="ExpressionScript"><![CDATA[adf.currentDateTime]]></TransientExpression>
+  </Attribute>
   <Attribute
     Name="ParticipantIdFk"
     ColumnName="PARTICIPANT_ID_FK"
     SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
+    Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
-    TableName="TMS_CLM_WEB_FEEDBACK"
-    PrimaryKey="true"/>
+    TableName="TMS_CLM_WEB_FEEDBACK">
+    <TransientExpression
+      trustMode="untrusted"
+      Name="ExpressionScript"><![CDATA[pqetapp.modelpqasyapp.gclass.PQEasyTakafulModelGlobal.dogetParticipantID()]]></TransientExpression>
+  </Attribute>
   <Key
     Name="TmsclmwebfeedbackPrimaryKey"
     PrimaryKey="true">
@@ -115,14 +120,6 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebFeedback.ClmFeedbackIdFk"/>
-      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebFeedback.FeedbackIdPk"/>
-      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebFeedback.ExcellentFlag"/>
-      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebFeedback.GoodFlag"/>
-      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebFeedback.AverageFlag"/>
-      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebFeedback.PoorFlag"/>
-      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebFeedback.VeryPoorFlag"/>
-      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebFeedback.EnterDate"/>
-      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebFeedback.ParticipantIdFk"/>
     </AttrArray>
   </Key>
 </Entity>

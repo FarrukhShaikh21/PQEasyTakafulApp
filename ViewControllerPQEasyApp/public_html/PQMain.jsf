@@ -7,7 +7,7 @@
       <af:decorativeBox id="db1" dimensionsFrom="parent">
         <f:facet name="top"/>
         <f:facet name="center">
-          <af:panelGridLayout id="pgl1" dimensionsFrom="auto">
+          <af:panelGridLayout id="pgl1">
             <af:gridRow id="gr2" height="100%" marginTop="10px">
               <af:gridCell id="gc1" width="10%"/>
               <af:gridCell marginStart="5px" width="80%" id="gc5" valign="stretch" halign="stretch">
@@ -74,7 +74,7 @@
                     </af:gridCell>
                     <af:gridCell id="gc15" width="33%" halign="stretch" valign="stretch">
                       <af:panelGroupLayout id="pgl10" halign="center" layout="vertical">
-                        <af:link id="l8" icon="#{resource['images:imgPQSupport.png']}"/>
+                        <af:link id="l8" icon="#{resource['images:imgPQSupport.png']}" action="ACT-GOTO-FEEDBACK"/>
                       </af:panelGroupLayout>
                     </af:gridCell>
                     <af:gridCell id="gc16" width="34%" halign="stretch" valign="stretch">

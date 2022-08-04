@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.57"
+                id="PQEASY_APP_BTF_PQEASY_APP_BTF_doTMSFeedbackReasonRowsPageDef"
+                Package="pqetapp.viewpqeasyapp.pageDefs" SkipValidation="true">
+  <parameters/>
+  <executables/>
+  <bindings>
+    <methodAction id="doTMSFeedbackReasonRows" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="doTMSFeedbackReasonRows" IsViewObjectMethod="false"
+                  DataControl="EasyTakafulAppModuleDataControl"
+                  InstanceName="data.EasyTakafulAppModuleDataControl.dataProvider"/>
+  </bindings>
+</pageDefinition>
