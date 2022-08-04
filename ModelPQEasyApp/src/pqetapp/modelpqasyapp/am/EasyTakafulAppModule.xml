@@ -33,10 +33,18 @@
     ViewObjectName="pqetapp.modelpqasyapp.vo.TmsClmWebComplaintView"/>
   <ViewUsage
     Name="TmsClmWebComplaintDtlCRUD"
-    ViewObjectName="pqetapp.modelpqasyapp.vo.TmsClmWebComplaintDtlView"/>
+    ViewObjectName="pqetapp.modelpqasyapp.vo.TmsClmWebComplaintDtlView">
+    <ViewCriteriaUsage
+      Name="TmsClmWebComplaintDtFirst5ReasionIdVC"
+      FullName="pqetapp.modelpqasyapp.vo.TmsClmWebComplaintDtlView.TmsClmWebComplaintDtFirst5ReasionIdVC"/>
+  </ViewUsage>
   <ViewUsage
     Name="TmsClmWebComplaintDtlDetNextCRUD"
-    ViewObjectName="pqetapp.modelpqasyapp.vo.TmsClmWebComplaintDtlView"/>
+    ViewObjectName="pqetapp.modelpqasyapp.vo.TmsClmWebComplaintDtlView">
+    <ViewCriteriaUsage
+      Name="TmsClmWebComplaintDtNextReasionIdVC"
+      FullName="pqetapp.modelpqasyapp.vo.TmsClmWebComplaintDtlView.TmsClmWebComplaintDtNextReasionIdVC"/>
+  </ViewUsage>
   <ViewLinkUsage
     Name="TMSComplaintComplaintReasonComplaintIdPkLink1"
     ViewLinkObjectName="pqetapp.modelpqasyapp.link.TMSComplaintComplaintReasonComplaintIdPkLink"

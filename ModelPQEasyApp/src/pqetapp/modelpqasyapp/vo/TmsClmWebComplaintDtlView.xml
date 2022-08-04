@@ -65,6 +65,76 @@
     EntityAttrName="FlagStatus"
     EntityUsage="TmsClmWebComplaintDtl"
     AliasName="FLAG_STATUS"/>
+  <ViewCriteria
+    Name="TmsClmWebComplaintDtFirst5ReasionIdVC"
+    ViewObjectName="pqetapp.modelpqasyapp.vo.TmsClmWebComplaintDtlView"
+    Conjunction="AND">
+    <Properties Name="_Props">
+      <CustomProperties>
+        <Property
+          Name="autoExecute"
+          Value="false"/>
+        <Property
+          Name="mode"
+          Value="Basic"/>
+        <Property
+          Name="allowConjunctionOverride"
+          Value="true"/>
+        <Property
+          Name="showInList"
+          Value="true"/>
+        <Property
+          Name="displayOperators"
+          Value="InAdvancedMode"/>
+      </CustomProperties>
+    </Properties>
+    <ViewCriteriaRow
+      Name="TmsClmWebComplaintDtlViewCriteria_row_0"
+      UpperColumns="1">
+      <ViewCriteriaItem
+        Name="ComplaintReasonIdFk"
+        ViewAttribute="ComplaintReasonIdFk"
+        Operator="&lt;="
+        Conjunction="AND"
+        Value="5"
+        Required="Optional"/>
+    </ViewCriteriaRow>
+  </ViewCriteria>
+  <ViewCriteria
+    Name="TmsClmWebComplaintDtNextReasionIdVC"
+    ViewObjectName="pqetapp.modelpqasyapp.vo.TmsClmWebComplaintDtlView"
+    Conjunction="AND">
+    <Properties Name="_Props">
+      <CustomProperties>
+        <Property
+          Name="autoExecute"
+          Value="false"/>
+        <Property
+          Name="mode"
+          Value="Basic"/>
+        <Property
+          Name="allowConjunctionOverride"
+          Value="true"/>
+        <Property
+          Name="showInList"
+          Value="true"/>
+        <Property
+          Name="displayOperators"
+          Value="InAdvancedMode"/>
+      </CustomProperties>
+    </Properties>
+    <ViewCriteriaRow
+      Name="TmsClmWebComplaintDtlViewCriteria_row_0"
+      UpperColumns="1">
+      <ViewCriteriaItem
+        Name="ComplaintReasonIdFk"
+        ViewAttribute="ComplaintReasonIdFk"
+        Operator=">"
+        Conjunction="AND"
+        Value="5"
+        Required="Optional"/>
+    </ViewCriteriaRow>
+  </ViewCriteria>
   <AttrArray Name="KeyAttributes">
     <Item Value="ComplaintIdPk"/>
   </AttrArray>

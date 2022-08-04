@@ -18,14 +18,28 @@
     ColumnType="NUMBER"
     TableName="TMS_CLM_WEB_COMPLAINT"
     PrimaryKey="true"
-    DefaultValue="-1"/>
+    DefaultValue="-1">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="ComplaintType"
     ColumnName="COMPLAINT_TYPE"
     SQLType="NUMERIC"
     Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
-    TableName="TMS_CLM_WEB_COMPLAINT"/>
+    TableName="TMS_CLM_WEB_COMPLAINT">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="ParticularPersonName"
     Precision="250"
@@ -37,6 +51,14 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="250"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="pqetapp.modelpqasyapp.eo.TmsClmWebComplaint.ParticularPersonName_LABEL"/>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="Designation"
@@ -49,6 +71,12 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="120"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="Branch"
@@ -61,6 +89,12 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="100"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="DiscussedWithStaffFlag"
@@ -73,6 +107,12 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="DiscussedDetail"
@@ -85,6 +125,12 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="500"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="DiscussedPersonName"
@@ -97,6 +143,12 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="250"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="DiscussedResult"
@@ -109,6 +161,12 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="500"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="Remarks"
@@ -121,6 +179,12 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="500"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="ParticipantIdFk"
@@ -135,8 +199,14 @@
     SQLType="DATE"
     Type="oracle.jbo.domain.Date"
     ColumnType="NUMBER"
-    TableName="TMS_CLM_WEB_COMPLAINT"
-    PrimaryKey="true"/>
+    TableName="TMS_CLM_WEB_COMPLAINT">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <AccessorAttribute
     Name="TmsClmWebComplaintDtl"
     Association="pqetapp.modelpqasyapp.assoc.TMSComplaintComplaintReasonComplaintIdPkAssoc"
@@ -152,7 +222,10 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebComplaint.ComplaintIdPk"/>
-      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebComplaint.EnterDate"/>
     </AttrArray>
   </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="pqetapp.modelpqasyapp.ModelPQEasyAppBundle"/>
+  </ResourceBundle>
 </Entity>
