@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.57" id="PQClaimTrackPageDef"
+                Package="pqetapp.viewpqeasyapp.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="VuPortalClaiminfoQVORO" RangeSize="25" DataControl="EasyTakafulAppModuleDataControl"
+              id="VuPortalClaiminfoQVOROIterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="VuPortalClaiminfoQVOROIterator" id="InspectionDate">
+      <AttrNames>
+        <Item Value="InspectionDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="VuPortalClaiminfoQVOROIterator" id="SurveyorAppointmentDt">
+      <AttrNames>
+        <Item Value="SurveyorAppointmentDt"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

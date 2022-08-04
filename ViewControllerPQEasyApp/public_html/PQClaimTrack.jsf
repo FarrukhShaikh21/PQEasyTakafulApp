@@ -21,7 +21,7 @@
                                        truncateAt="0"/>
                         <af:outputText value="Know Your Protections" id="ot2"
                                        inlineStyle="font-size:xx-small; font-style:italic; color:green;"/>
-                        <af:link text="Back" id="l1" partialSubmit="true" action="ACT-BACK-FROM-MYCLAIMS"/>
+                        <af:link text="Back" id="l1" partialSubmit="true" action="ACT-GOTO-BACK-FROM-TRACKING"/>
                       </af:panelGroupLayout>
                     </af:gridCell>
                     <af:gridCell marginStart="5px" width="70%" marginEnd="5px" id="gc27" valign="stretch"
@@ -50,7 +50,17 @@
                             <af:outputText value="Appointment of Surveyor" id="ot3" truncateAt="0"
                                            inlineStyle="font-size:small;font-weight:bold"/>
                           </af:gridCell>
-                          <af:gridCell marginStart="5px" width="25%" id="gc12"/>
+                          <af:gridCell marginStart="5px" width="25%" id="gc12" halign="center">
+                            <af:inputDate value="#{bindings.SurveyorAppointmentDt.inputValue}"
+                                          label="#{bindings.SurveyorAppointmentDt.hints.label}"
+                                          required="#{bindings.SurveyorAppointmentDt.hints.mandatory}"
+                                          columns="#{bindings.SurveyorAppointmentDt.hints.displayWidth}"
+                                          shortDesc="#{bindings.SurveyorAppointmentDt.hints.tooltip}" id="id2"
+                                          simple="true" readOnly="true">
+                              <f:validator binding="#{bindings.SurveyorAppointmentDt.validator}"/>
+                              <af:convertDateTime pattern="#{bindings.SurveyorAppointmentDt.format}"/>
+                            </af:inputDate>
+                          </af:gridCell>
                           <af:gridCell marginStart="5px" width="25%" id="gc13"/>
                           <af:gridCell marginStart="5px" width="25%" marginEnd="5px" id="gc14"/>
                         </af:gridRow>
@@ -59,7 +69,17 @@
                             <af:outputText value="Inspection of the Vehicle" id="ot4"
                                            inlineStyle="font-size:small;font-weight:bold"/>
                           </af:gridCell>
-                          <af:gridCell marginStart="5px" width="25%" id="gc16"/>
+                          <af:gridCell marginStart="5px" width="25%" id="gc16" halign="center">
+                            <af:inputDate value="#{bindings.InspectionDate.inputValue}"
+                                          label="#{bindings.InspectionDate.hints.label}"
+                                          required="#{bindings.InspectionDate.hints.mandatory}"
+                                          columns="#{bindings.InspectionDate.hints.displayWidth}"
+                                          shortDesc="#{bindings.InspectionDate.hints.tooltip}" id="id1" simple="true"
+                                          readOnly="true">
+                              <f:validator binding="#{bindings.InspectionDate.validator}"/>
+                              <af:convertDateTime pattern="#{bindings.InspectionDate.format}" type="both"/>
+                            </af:inputDate>
+                          </af:gridCell>
                           <af:gridCell marginStart="5px" width="25%" id="gc17"/>
                           <af:gridCell marginStart="5px" width="25%" marginEnd="5px" id="gc18"/>
                         </af:gridRow>

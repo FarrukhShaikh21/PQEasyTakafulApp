@@ -62,6 +62,9 @@
         <fixed-outcome>Execute</fixed-outcome>
       </outcome>
     </method-call>
+    <view id="PQClaimTrack">
+      <page>/PQClaimTrack.jsf</page>
+    </view>
     <control-flow-rule id="__1">
       <from-activity-id>PQMain</from-activity-id>
       <control-flow-case id="__2">
@@ -98,6 +101,10 @@
       <control-flow-case id="__15">
         <from-outcome>ACT-BACK-FROM-MYCLAIMS</from-outcome>
         <to-activity-id>PQMain</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__32">
+        <from-outcome>ACT-GOTO-TRACKING</from-outcome>
+        <to-activity-id>PQClaimTrack</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__6">
@@ -161,6 +168,13 @@
       <control-flow-case id="__28">
         <from-outcome>Execute</from-outcome>
         <to-activity-id>PQComplaint</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__30">
+      <from-activity-id>PQClaimTrack</from-activity-id>
+      <control-flow-case id="__31">
+        <from-outcome>ACT-GOTO-BACK-FROM-TRACKING</from-outcome>
+        <to-activity-id>PQMyClaims</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
   </task-flow-definition>
