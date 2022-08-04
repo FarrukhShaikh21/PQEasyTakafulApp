@@ -57,11 +57,6 @@
         <Item Value="DiscussedResult"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="TmsClmWebComplaintCRUDIterator" id="Remarks">
-      <AttrNames>
-        <Item Value="Remarks"/>
-      </AttrNames>
-    </attributeValues>
     <tree IterBinding="TmsClmWebComplaintDtlCRUDIterator" id="TmsClmWebComplaintDtlCRUD">
       <nodeDefinition DefName="pqetapp.modelpqasyapp.vo.TmsClmWebComplaintDtlView" Name="TmsClmWebComplaintDtlCRUD0">
         <AttrNames>
@@ -79,5 +74,7 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction"
+            DataControl="EasyTakafulAppModuleDataControl"/>
   </bindings>
 </pageDefinition>

@@ -68,7 +68,8 @@
   <ViewCriteria
     Name="TmsClmWebComplaintDtFirst5ReasionIdVC"
     ViewObjectName="pqetapp.modelpqasyapp.vo.TmsClmWebComplaintDtlView"
-    Conjunction="AND">
+    Conjunction="AND"
+    Mode="2">
     <Properties Name="_Props">
       <CustomProperties>
         <Property
@@ -103,7 +104,8 @@
   <ViewCriteria
     Name="TmsClmWebComplaintDtNextReasionIdVC"
     ViewObjectName="pqetapp.modelpqasyapp.vo.TmsClmWebComplaintDtlView"
-    Conjunction="AND">
+    Conjunction="AND"
+    Mode="2">
     <Properties Name="_Props">
       <CustomProperties>
         <Property

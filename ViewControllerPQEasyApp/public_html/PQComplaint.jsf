@@ -4,7 +4,7 @@
   <af:document title="MyClaimsHistory.jsf" id="d1">
     <af:messages id="m1"/>
     <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>  
-    <af:form id="f1">
+    <af:form id="f1" usesUpload="true">
       <af:decorativeBox id="db1" dimensionsFrom="parent">
         <f:facet name="top"/>
         <f:facet name="center">
@@ -16,7 +16,7 @@
                   <af:gridRow marginTop="5px" height="auto" id="gr11">
                     <af:gridCell marginStart="5px" width="30%" id="gc26" halign="stretch" valign="middle">
                       <af:panelGroupLayout id="pgl5" layout="vertical" halign="center">
-                        <af:outputText value="Claim Information" id="ot1"
+                        <af:outputText value="Complaint Registration" id="ot1"
                                        inlineStyle="font-size:xx-large; font-style:italic; color:green;"
                                        truncateAt="0"/>
                         <af:outputText value="Know Your Protections" id="ot2"
@@ -52,7 +52,7 @@
                         <f:facet name="toolbar"/>
                         <af:panelGridLayout id="pgl4">
                           <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr5">
-                            <af:gridCell marginStart="5px" width="50%" id="gc7">
+                            <af:gridCell marginStart="5px" width="50%" id="gc7" halign="stretch">
                               <af:table value="#{bindings.TmsClmWebComplaintDtlCRUD.collectionModel}" var="row"
                                         rows="#{bindings.TmsClmWebComplaintDtlCRUD.rangeSize}"
                                         emptyText="#{bindings.TmsClmWebComplaintDtlCRUD.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -62,8 +62,8 @@
                                         rowSelection="single"
                                         fetchSize="#{bindings.TmsClmWebComplaintDtlCRUD.rangeSize}" id="t1"
                                         horizontalGridVisible="false" verticalGridVisible="false" autoHeightRows="12"
-                                        styleClass="AFStretchWidth">
-                                <af:column headerText="Reason" id="c1" width="300" displayIndex="-1">
+                                        styleClass="AFStretchWidth" columnStretching="column:c1">
+                                <af:column headerText="Reason" id="c1" width="200" displayIndex="-1">
                                   <af:selectOneChoice value="#{row.bindings.ComplaintReasonIdFk.inputValue}"
                                                       label="#{row.bindings.ComplaintReasonIdFk.label}"
                                                       required="#{bindings.TmsClmWebComplaintDtlCRUD.hints.ComplaintReasonIdFk.mandatory}"
@@ -90,9 +90,10 @@
                                         selectedRowKeys="#{bindings.TmsClmWebComplaintDtlDetNextCRUD.collectionModel.selectedRow}"
                                         selectionListener="#{bindings.TmsClmWebComplaintDtlDetNextCRUD.collectionModel.makeCurrent}"
                                         rowSelection="single"
-                                        fetchSize="#{bindings.TmsClmWebComplaintDtlDetNextCRUD.rangeSize}" id="t2">
+                                        fetchSize="#{bindings.TmsClmWebComplaintDtlDetNextCRUD.rangeSize}" id="t2"
+                                        columnStretching="column:c3">
                                 <af:column headerText="Reason"
-                                           id="c3" width="300" displayIndex="-1">
+                                           id="c3" width="200" displayIndex="-1">
                                   <af:selectOneChoice value="#{row.bindings.ComplaintReasonIdFk.inputValue}"
                                                       label="#{row.bindings.ComplaintReasonIdFk.label}"
                                                       required="#{bindings.TmsClmWebComplaintDtlDetNextCRUD.hints.ComplaintReasonIdFk.mandatory}"
@@ -124,38 +125,47 @@
                                         required="#{bindings.ParticularPersonName.hints.mandatory}"
                                         columns="#{bindings.ParticularPersonName.hints.displayWidth}"
                                         maximumLength="#{bindings.ParticularPersonName.hints.precision}"
-                                        shortDesc="#{bindings.ParticularPersonName.hints.tooltip}" id="it2">
+                                        shortDesc="#{bindings.ParticularPersonName.hints.tooltip}" id="it2"
+                                        contentStyle="width:100%">
                             <f:validator binding="#{bindings.ParticularPersonName.validator}"/>
                           </af:inputText>
-                          <af:inputText value="#{bindings.Designation.inputValue}"
-                                        label="#{bindings.Designation.hints.label}"
-                                        required="#{bindings.Designation.hints.mandatory}"
-                                        columns="#{bindings.Designation.hints.displayWidth}"
-                                        maximumLength="#{bindings.Designation.hints.precision}"
-                                        shortDesc="#{bindings.Designation.hints.tooltip}" id="it3">
-                            <f:validator binding="#{bindings.Designation.validator}"/>
-                          </af:inputText>
-                          <af:inputText value="#{bindings.Branch.inputValue}" label="#{bindings.Branch.hints.label}"
-                                        required="#{bindings.Branch.hints.mandatory}"
-                                        columns="#{bindings.Branch.hints.displayWidth}"
-                                        maximumLength="#{bindings.Branch.hints.precision}"
-                                        shortDesc="#{bindings.Branch.hints.tooltip}" id="it4">
-                            <f:validator binding="#{bindings.Branch.validator}"/>
-                          </af:inputText>
-                          <af:inputText value="#{bindings.DiscussedWithStaffFlag.inputValue}"
-                                        label="#{bindings.DiscussedWithStaffFlag.hints.label}"
-                                        required="#{bindings.DiscussedWithStaffFlag.hints.mandatory}"
-                                        columns="#{bindings.DiscussedWithStaffFlag.hints.displayWidth}"
-                                        maximumLength="#{bindings.DiscussedWithStaffFlag.hints.precision}"
-                                        shortDesc="#{bindings.DiscussedWithStaffFlag.hints.tooltip}" id="it5">
-                            <f:validator binding="#{bindings.DiscussedWithStaffFlag.validator}"/>
-                          </af:inputText>
+                          <af:panelLabelAndMessage label="#{bindings.Designation.hints.label}" id="plam1">
+                            <af:panelGroupLayout id="pgl6" layout="horizontal">
+                              <af:inputText value="#{bindings.Designation.inputValue}"
+                                            label="#{bindings.Designation.hints.label}"
+                                            required="#{bindings.Designation.hints.mandatory}"
+                                            columns="40"
+                                            maximumLength="#{bindings.Designation.hints.precision}"
+                                            shortDesc="#{bindings.Designation.hints.tooltip}" id="it3" simple="true"
+                                            rows="1">
+                                <f:validator binding="#{bindings.Designation.validator}"/>
+                              </af:inputText>
+                              <af:inputText value="#{bindings.Branch.inputValue}" label="#{bindings.Branch.hints.label}"
+                                            required="#{bindings.Branch.hints.mandatory}"
+                                            columns="40"
+                                            maximumLength="#{bindings.Branch.hints.precision}"
+                                            shortDesc="#{bindings.Branch.hints.tooltip}" id="it4">
+                                <f:validator binding="#{bindings.Branch.validator}"/>
+                              </af:inputText>
+                            </af:panelGroupLayout>
+                          </af:panelLabelAndMessage>
+                          <af:panelLabelAndMessage id="plam2">
+                            <af:panelGroupLayout id="pgl7" layout="horizontal">
+                              <af:outputText value="Have you discussed the matter with any staff member?" id="ot3"/>
+                              <af:selectOneChoice value="#{bindings.DiscussedWithStaffFlag.inputValue}"
+                                                  id="soc5">
+                                <af:selectItem label="Yes" value="Y" id="si12"/>
+                                <af:selectItem label="No" value="N" id="si13"/>
+                              </af:selectOneChoice>
+                            </af:panelGroupLayout>
+                          </af:panelLabelAndMessage>
                           <af:inputText value="#{bindings.DiscussedPersonName.inputValue}"
                                         label="#{bindings.DiscussedPersonName.hints.label}"
                                         required="#{bindings.DiscussedPersonName.hints.mandatory}"
                                         columns="#{bindings.DiscussedPersonName.hints.displayWidth}"
                                         maximumLength="#{bindings.DiscussedPersonName.hints.precision}"
-                                        shortDesc="#{bindings.DiscussedPersonName.hints.tooltip}" id="it6">
+                                        shortDesc="#{bindings.DiscussedPersonName.hints.tooltip}" id="it6"
+                                        contentStyle="width:100%">
                             <f:validator binding="#{bindings.DiscussedPersonName.validator}"/>
                           </af:inputText>
                           <af:inputDate value="#{bindings.EnterDate.inputValue}"
@@ -164,31 +174,35 @@
                                         columns="#{bindings.EnterDate.hints.displayWidth}"
                                         shortDesc="#{bindings.EnterDate.hints.tooltip}" id="id1">
                             <f:validator binding="#{bindings.EnterDate.validator}"/>
-                            <af:convertDateTime pattern="#{bindings.EnterDate.format}"/>
+                            <af:convertDateTime pattern="#{bindings.EnterDate.format}" type="both"/>
                           </af:inputDate>
-                          <af:inputText value="#{bindings.DiscussedDetail.inputValue}"
-                                        label="#{bindings.DiscussedDetail.hints.label}"
-                                        required="#{bindings.DiscussedDetail.hints.mandatory}"
-                                        columns="#{bindings.DiscussedDetail.hints.displayWidth}"
-                                        maximumLength="#{bindings.DiscussedDetail.hints.precision}"
-                                        shortDesc="#{bindings.DiscussedDetail.hints.tooltip}" id="it7">
-                            <f:validator binding="#{bindings.DiscussedDetail.validator}"/>
-                          </af:inputText>
+                          <af:outputText value="#{bindings.DiscussedResult.hints.label}" id="ot4" truncateAt="0"/>
                           <af:inputText value="#{bindings.DiscussedResult.inputValue}"
                                         label="#{bindings.DiscussedResult.hints.label}"
                                         required="#{bindings.DiscussedResult.hints.mandatory}"
                                         columns="#{bindings.DiscussedResult.hints.displayWidth}"
                                         maximumLength="#{bindings.DiscussedResult.hints.precision}"
-                                        shortDesc="#{bindings.DiscussedResult.hints.tooltip}" id="it8">
+                                        shortDesc="#{bindings.DiscussedResult.hints.tooltip}" id="it8"
+                                        contentStyle="width:100%" simple="true">
                             <f:validator binding="#{bindings.DiscussedResult.validator}"/>
                           </af:inputText>
-                          <af:inputText value="#{bindings.Remarks.inputValue}" label="#{bindings.Remarks.hints.label}"
-                                        required="#{bindings.Remarks.hints.mandatory}"
-                                        columns="#{bindings.Remarks.hints.displayWidth}"
-                                        maximumLength="#{bindings.Remarks.hints.precision}"
-                                        shortDesc="#{bindings.Remarks.hints.tooltip}" id="it9">
-                            <f:validator binding="#{bindings.Remarks.validator}"/>
+                          <af:outputText value="Please give details of the complaint and outome you are seeking (you may attached document to this form)" id="ot5"
+                                         truncateAt="0"/>
+                          <af:inputText value="#{bindings.DiscussedDetail.inputValue}"
+                                        label="#{bindings.DiscussedDetail.hints.label}"
+                                        required="#{bindings.DiscussedDetail.hints.mandatory}"
+                                        columns="#{bindings.DiscussedDetail.hints.displayWidth}"
+                                        maximumLength="#{bindings.DiscussedDetail.hints.precision}"
+                                        shortDesc="#{bindings.DiscussedDetail.hints.tooltip}" id="it7"
+                                        contentStyle="width:100%" rows="5" simple="true">
+                            <f:validator binding="#{bindings.DiscussedDetail.validator}"/>
                           </af:inputText>
+                          <af:panelGroupLayout id="pgl9" layout="horizontal">
+                            <af:inputFile label="Choose File" id="if1"/>
+                            <af:button actionListener="#{bindings.Commit.execute}" text="Submit"
+                                       disabled="#{!bindings.Commit.enabled}" id="b2"
+                                       action="ACT-BACK-FROM-MYCOMPLAINT"/>
+                          </af:panelGroupLayout>
                         </af:panelFormLayout>
                       </af:panelBox>
                     </af:gridCell>

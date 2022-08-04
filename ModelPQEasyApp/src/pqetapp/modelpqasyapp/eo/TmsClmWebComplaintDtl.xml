@@ -33,7 +33,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="TMS_CLM_WEB_COMPLAINT_DTL">
+    TableName="TMS_CLM_WEB_COMPLAINT_DTL"
+    DefaultValue="N">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>

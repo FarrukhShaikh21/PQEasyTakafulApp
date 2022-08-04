@@ -103,7 +103,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="TMS_CLM_WEB_COMPLAINT">
+    TableName="TMS_CLM_WEB_COMPLAINT"
+    DefaultValue="N">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
@@ -147,6 +148,8 @@
       <SchemaBasedProperties>
         <DISPLAYWIDTH
           Value="20"/>
+        <LABEL
+          ResId="pqetapp.modelpqasyapp.eo.TmsClmWebComplaint.DiscussedPersonName_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -165,6 +168,8 @@
       <SchemaBasedProperties>
         <DISPLAYWIDTH
           Value="20"/>
+        <LABEL
+          ResId="pqetapp.modelpqasyapp.eo.TmsClmWebComplaint.DiscussedResult_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -204,6 +209,8 @@
       <SchemaBasedProperties>
         <DISPLAYWIDTH
           Value="20"/>
+        <LABEL
+          ResId="pqetapp.modelpqasyapp.eo.TmsClmWebComplaint.EnterDate_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
