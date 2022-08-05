@@ -37,7 +37,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="TMS_CLM_WEB_FEEDBACK">
+    TableName="TMS_CLM_WEB_FEEDBACK"
+    DefaultValue="N">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
@@ -49,7 +50,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="TMS_CLM_WEB_FEEDBACK">
+    TableName="TMS_CLM_WEB_FEEDBACK"
+    DefaultValue="N">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
@@ -61,7 +63,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="TMS_CLM_WEB_FEEDBACK">
+    TableName="TMS_CLM_WEB_FEEDBACK"
+    DefaultValue="N">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
@@ -73,7 +76,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="TMS_CLM_WEB_FEEDBACK">
+    TableName="TMS_CLM_WEB_FEEDBACK"
+    DefaultValue="N">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
@@ -85,7 +89,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="TMS_CLM_WEB_FEEDBACK">
+    TableName="TMS_CLM_WEB_FEEDBACK"
+    DefaultValue="N">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
@@ -98,7 +103,7 @@
     ColumnType="DATE"
     TableName="TMS_CLM_WEB_FEEDBACK">
     <TransientExpression
-      trustMode="untrusted"
+      trustMode="trusted"
       Name="ExpressionScript"><![CDATA[adf.currentDateTime]]></TransientExpression>
   </Attribute>
   <Attribute
@@ -109,7 +114,7 @@
     ColumnType="NUMBER"
     TableName="TMS_CLM_WEB_FEEDBACK">
     <TransientExpression
-      trustMode="untrusted"
+      trustMode="trusted"
       Name="ExpressionScript"><![CDATA[pqetapp.modelpqasyapp.gclass.PQEasyTakafulModelGlobal.dogetParticipantID()]]></TransientExpression>
   </Attribute>
   <Key

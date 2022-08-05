@@ -23,6 +23,7 @@
     <page path="/PQClaimTrack.jsf" usageId="pqetapp_viewpqeasyapp_PQClaimTrackPageDef"/>
     <page path="/WEB-INF/PQEASY-APP-BTF.xml#PQEASY-APP-BTF@doTMSFeedbackReasonRows"
           usageId="pqetapp_viewpqeasyapp_PQEASY_APP_BTF_PQEASY_APP_BTF_doTMSFeedbackReasonRowsPageDef"/>
+    <page path="/PQFeedback.jsf" usageId="pqetapp_viewpqeasyapp_PQFeedbackPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="pqetapp_viewpqeasyapp_PQMyClaimsPageDef" path="pqetapp.viewpqeasyapp.pageDefs.PQMyClaimsPageDef"/>
@@ -48,6 +49,7 @@
     <page id="pqetapp_viewpqeasyapp_PQClaimTrackPageDef" path="pqetapp.viewpqeasyapp.pageDefs.PQClaimTrackPageDef"/>
     <page id="pqetapp_viewpqeasyapp_PQEASY_APP_BTF_PQEASY_APP_BTF_doTMSFeedbackReasonRowsPageDef"
           path="pqetapp.viewpqeasyapp.pageDefs.PQEASY_APP_BTF_PQEASY_APP_BTF_doTMSFeedbackReasonRowsPageDef"/>
+    <page id="pqetapp_viewpqeasyapp_PQFeedbackPageDef" path="pqetapp.viewpqeasyapp.pageDefs.PQFeedbackPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="EasyTakafulAppModuleDataControl" Package="pqetapp.modelpqasyapp.am"

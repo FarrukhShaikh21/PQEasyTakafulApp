@@ -21,7 +21,7 @@
                                        truncateAt="0"/>
                         <af:outputText value="Know Your Protections" id="ot2"
                                        inlineStyle="font-size:xx-small; font-style:italic; color:green;"/>
-                        <af:link text="Back" id="l1" partialSubmit="true" action="ACT-BACK-FROM-MYCLAIMS"/>
+                        <af:link text="Back" id="l1" partialSubmit="true" action="ACT-GOTO-BACK-FEEDBACK"/>
                       </af:panelGroupLayout>
                     </af:gridCell>
                     <af:gridCell marginStart="5px" width="70%" marginEnd="5px" id="gc27" valign="stretch"
@@ -34,7 +34,62 @@
                   <af:gridRow marginTop="5px" height="auto" id="gr1">
                     <af:gridCell marginStart="15px" width="100%" marginEnd="15px" id="gc1" halign="stretch" columnSpan="2"
                                  rowSpan="1">
-                      <af:panelGroupLayout id="pgl3" layout="vertical" halign="center" styleClass="AFStretchWidth"/>
+                      <af:panelGroupLayout id="pgl3" layout="vertical" halign="center" styleClass="AFStretchWidth">
+                        <af:table value="#{bindings.TmsClmWebFeedbackCRUD.collectionModel}" var="row"
+                                  rows="#{bindings.TmsClmWebFeedbackCRUD.rangeSize}"
+                                  emptyText="#{bindings.TmsClmWebFeedbackCRUD.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                  rowBandingInterval="0"
+                                  selectedRowKeys="#{bindings.TmsClmWebFeedbackCRUD.collectionModel.selectedRow}"
+                                  selectionListener="#{bindings.TmsClmWebFeedbackCRUD.collectionModel.makeCurrent}"
+                                  rowSelection="single" fetchSize="#{bindings.TmsClmWebFeedbackCRUD.rangeSize}" id="t1"
+                                  columnStretching="column:c1">
+                          <af:column headerText="#{bindings.TmsClmWebFeedbackCRUD.hints.FeedbackIdPk.label}" id="c1"
+                                     width="200" displayIndex="-1">
+                            <af:selectOneChoice value="#{row.bindings.FeedbackIdPk.inputValue}"
+                                                label="#{row.bindings.FeedbackIdPk.label}"
+                                                required="#{bindings.TmsClmWebFeedbackCRUD.hints.FeedbackIdPk.mandatory}"
+                                                shortDesc="#{bindings.TmsClmWebFeedbackCRUD.hints.FeedbackIdPk.tooltip}"
+                                                id="soc1" readOnly="true">
+                              <f:selectItems value="#{row.bindings.FeedbackIdPk.items}" id="si1"/>
+                              <f:validator binding="#{row.bindings.FeedbackIdPk.validator}"/>
+                            </af:selectOneChoice>
+                          </af:column>
+                          <af:column headerText="#{bindings.TmsClmWebFeedbackCRUD.hints.ExcellentFlag.label}" id="c2">
+                            <af:selectOneRadio id="sor1"
+                                               value="#{row.bindings.ExcellentFlag.inputValue}" autoSubmit="true">
+                              <af:selectItem value="Y" id="si2"/>
+                              <af:selectItem value="N" id="si3"/>
+                            </af:selectOneRadio>
+                          </af:column>
+                          <af:column headerText="#{bindings.TmsClmWebFeedbackCRUD.hints.GoodFlag.label}" id="c3">
+                            <af:selectOneRadio id="sor2" value="#{row.bindings.GoodFlag.inputValue}" autoSubmit="true">
+                              <af:selectItem value="Y" id="si4"/>
+                              <af:selectItem value="N" id="si5"/>
+                              
+                            </af:selectOneRadio>
+                          </af:column>
+                          <af:column headerText="#{bindings.TmsClmWebFeedbackCRUD.hints.AverageFlag.label}" id="c4">
+                            <af:selectOneRadio id="sor3" value="#{row.bindings.AverageFlag.inputValue}"
+                                               autoSubmit="true">
+                              <af:selectItem value="Y" id="si6"/>
+                              <af:selectItem value="N" id="si7"/>
+                            </af:selectOneRadio>
+                          </af:column>
+                          <af:column headerText="#{bindings.TmsClmWebFeedbackCRUD.hints.PoorFlag.label}" id="c5">
+                            <af:selectOneRadio id="sor4" value="#{row.bindings.PoorFlag.inputValue}" autoSubmit="true">
+                              <af:selectItem value="Y" id="si8"/>
+                              <af:selectItem value="N" id="si9"/>
+                            </af:selectOneRadio>
+                          </af:column>
+                          <af:column headerText="#{bindings.TmsClmWebFeedbackCRUD.hints.VeryPoorFlag.label}" id="c6">
+                            <af:selectOneRadio id="sor5" value="#{row.bindings.VeryPoorFlag.inputValue}"
+                                               autoSubmit="true">
+                              <af:selectItem value="Y" id="si10"/>
+                              <af:selectItem value="N" id="si11"/>
+                            </af:selectOneRadio>
+                          </af:column>
+                        </af:table>
+                      </af:panelGroupLayout>
                     </af:gridCell>
                   </af:gridRow>
                   <af:gridRow marginTop="5px" height="auto" id="gr2">

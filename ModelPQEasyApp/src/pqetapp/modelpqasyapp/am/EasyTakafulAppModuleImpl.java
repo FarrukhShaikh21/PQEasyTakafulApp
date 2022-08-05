@@ -104,7 +104,7 @@ public class EasyTakafulAppModuleImpl extends ApplicationModuleImpl implements E
             for (int i = 0; i < getTmsClmStFeedbackViewRO().getRowCount(); i++) {
                 System.out.println("printing"+i);
                 Row r=getTmsClmWebFeedbackCRUD().createRow();
-                r.setAttribute("ClmFeedbackIdFk", getTmsClmStFeedbackViewRO().getRowAtRangeIndex(i).getAttribute("ComplaintReasonIdFk"));
+                r.setAttribute("FeedbackIdPk", getTmsClmStFeedbackViewRO().getRowAtRangeIndex(i).getAttribute("FeedbackIdPk"));
                 getTmsClmWebFeedbackCRUD().insertRow(r);
            }
 

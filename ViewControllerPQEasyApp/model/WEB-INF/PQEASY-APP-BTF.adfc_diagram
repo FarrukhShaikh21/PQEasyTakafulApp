@@ -448,7 +448,7 @@
       <property
          name="fromOutcome">ACT-GOTO-BACK-FEEDBACK</property>
       <property
-         name="sdm:polyPoints">B56,-114.481445,353.0459,-113.0,490.2552,T56</property>
+         name="sdm:polyPoints">B50,-117.981445,353.0459,-113.0,487.85056,T56</property>
    </ControlFlowCase>
    <MethodCall
       id="MethodCall42">

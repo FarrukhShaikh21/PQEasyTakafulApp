@@ -203,7 +203,7 @@
     ColumnType="NUMBER"
     TableName="TMS_CLM_WEB_COMPLAINT">
     <TransientExpression
-      trustMode="untrusted"
+      trustMode="trusted"
       Name="ExpressionScript"><![CDATA[pqetapp.modelpqasyapp.gclass.PQEasyTakafulModelGlobal.dogetParticipantID()]]></TransientExpression>
   </Attribute>
   <Attribute

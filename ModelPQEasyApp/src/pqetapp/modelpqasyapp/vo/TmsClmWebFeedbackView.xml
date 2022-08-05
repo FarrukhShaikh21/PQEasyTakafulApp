@@ -12,7 +12,35 @@
   BindingStyle="OracleName"
   CustomQuery="false"
   SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  RowClass="pqetapp.modelpqasyapp.vo.TmsClmWebFeedbackViewRowImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <ViewAccessor
+    Name="AccTmsClmStFeedbackView"
+    ViewObjectName="pqetapp.modelpqasyapp.vo.TmsClmStFeedbackView"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_FeedbackIdPk"
+    ListVOName="AccTmsClmStFeedbackView"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="FeedbackIdPk"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="FeedbackIdPk"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="FeedbackDesc"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="TmsClmWebFeedback"
     Entity="pqetapp.modelpqasyapp.eo.TmsClmWebFeedback"/>
@@ -27,7 +55,15 @@
     PrecisionRule="true"
     EntityAttrName="FeedbackIdPk"
     EntityUsage="TmsClmWebFeedback"
-    AliasName="FEEDBACK_ID_PK"/>
+    AliasName="FEEDBACK_ID_PK"
+    LOVName="LOV_FeedbackIdPk">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ExcellentFlag"
     PrecisionRule="true"
