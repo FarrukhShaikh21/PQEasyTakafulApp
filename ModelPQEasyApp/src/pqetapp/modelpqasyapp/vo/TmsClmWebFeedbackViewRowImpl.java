@@ -14,6 +14,7 @@ import pqetapp.modelpqasyapp.eo.TmsClmWebFeedbackImpl;
 // ---    Warning: Do not modify method signatures of generated methods.
 // ---------------------------------------------------------------------
 public class TmsClmWebFeedbackViewRowImpl extends ViewRowImpl {
+
     public static final int ENTITY_TMSCLMWEBFEEDBACK = 0;
 
     /**
@@ -110,6 +111,16 @@ public class TmsClmWebFeedbackViewRowImpl extends ViewRowImpl {
             }
         }
         ,
+        txtFeedbackValue {
+            public Object get(TmsClmWebFeedbackViewRowImpl obj) {
+                return obj.gettxtFeedbackValue();
+            }
+
+            public void put(TmsClmWebFeedbackViewRowImpl obj, Object value) {
+                obj.settxtFeedbackValue((String) value);
+            }
+        }
+        ,
         AccTmsClmStFeedbackView {
             public Object get(TmsClmWebFeedbackViewRowImpl obj) {
                 return obj.getAccTmsClmStFeedbackView();
@@ -120,7 +131,8 @@ public class TmsClmWebFeedbackViewRowImpl extends ViewRowImpl {
             }
         }
         ;
-        private static AttributesEnum[] vals = null;
+        static AttributesEnum[] vals = null;
+        ;
         private static final int firstIndex = 0;
 
         public abstract Object get(TmsClmWebFeedbackViewRowImpl object);
@@ -146,6 +158,7 @@ public class TmsClmWebFeedbackViewRowImpl extends ViewRowImpl {
             return vals;
         }
     }
+
     public static final int CLMFEEDBACKIDFK = AttributesEnum.ClmFeedbackIdFk.index();
     public static final int FEEDBACKIDPK = AttributesEnum.FeedbackIdPk.index();
     public static final int EXCELLENTFLAG = AttributesEnum.ExcellentFlag.index();
@@ -155,6 +168,7 @@ public class TmsClmWebFeedbackViewRowImpl extends ViewRowImpl {
     public static final int VERYPOORFLAG = AttributesEnum.VeryPoorFlag.index();
     public static final int ENTERDATE = AttributesEnum.EnterDate.index();
     public static final int PARTICIPANTIDFK = AttributesEnum.ParticipantIdFk.index();
+    public static final int TXTFEEDBACKVALUE = AttributesEnum.txtFeedbackValue.index();
     public static final int ACCTMSCLMSTFEEDBACKVIEW = AttributesEnum.AccTmsClmStFeedbackView.index();
 
     /**
@@ -315,6 +329,22 @@ public class TmsClmWebFeedbackViewRowImpl extends ViewRowImpl {
      */
     public void setParticipantIdFk(Number value) {
         setAttributeInternal(PARTICIPANTIDFK, value);
+    }
+
+    /**
+     * Gets the attribute value for TXT_FEEDBACK_VALUE using the alias name txtFeedbackValue.
+     * @return the TXT_FEEDBACK_VALUE
+     */
+    public String gettxtFeedbackValue() {
+        return (String) getAttributeInternal(TXTFEEDBACKVALUE);
+    }
+
+    /**
+     * Sets <code>value</code> as attribute value for TXT_FEEDBACK_VALUE using the alias name txtFeedbackValue.
+     * @param value value to set the TXT_FEEDBACK_VALUE
+     */
+    public void settxtFeedbackValue(String value) {
+        setAttributeInternal(TXTFEEDBACKVALUE, value);
     }
 
     /**

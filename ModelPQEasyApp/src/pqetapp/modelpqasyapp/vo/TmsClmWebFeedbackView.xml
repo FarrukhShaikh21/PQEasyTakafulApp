@@ -106,4 +106,12 @@
     EntityAttrName="ParticipantIdFk"
     EntityUsage="TmsClmWebFeedback"
     AliasName="PARTICIPANT_ID_FK"/>
+  <ViewAttribute
+    Name="txtFeedbackValue"
+    IsQueriable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    EntityAttrName="txtFeedbackValue"
+    EntityUsage="TmsClmWebFeedback"
+    AliasName="TXT_FEEDBACK_VALUE"/>
 </ViewObject>

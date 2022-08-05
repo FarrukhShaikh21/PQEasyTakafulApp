@@ -108,6 +108,16 @@ public class TmsClmWebFeedbackImpl extends EntityImpl {
                 obj.setParticipantIdFk((Number) value);
             }
         }
+        ,
+        txtFeedbackValue {
+            public Object get(TmsClmWebFeedbackImpl obj) {
+                return obj.gettxtFeedbackValue();
+            }
+
+            public void put(TmsClmWebFeedbackImpl obj, Object value) {
+                obj.settxtFeedbackValue((String) value);
+            }
+        }
         ;
         private static AttributesEnum[] vals = null;
         private static final int firstIndex = 0;
@@ -135,6 +145,7 @@ public class TmsClmWebFeedbackImpl extends EntityImpl {
             return vals;
         }
     }
+
     public static final int CLMFEEDBACKIDFK = AttributesEnum.ClmFeedbackIdFk.index();
     public static final int FEEDBACKIDPK = AttributesEnum.FeedbackIdPk.index();
     public static final int EXCELLENTFLAG = AttributesEnum.ExcellentFlag.index();
@@ -144,11 +155,19 @@ public class TmsClmWebFeedbackImpl extends EntityImpl {
     public static final int VERYPOORFLAG = AttributesEnum.VeryPoorFlag.index();
     public static final int ENTERDATE = AttributesEnum.EnterDate.index();
     public static final int PARTICIPANTIDFK = AttributesEnum.ParticipantIdFk.index();
+    public static final int TXTFEEDBACKVALUE = AttributesEnum.txtFeedbackValue.index();
 
     /**
      * This is the default constructor (do not remove).
      */
     public TmsClmWebFeedbackImpl() {
+    }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("pqetapp.modelpqasyapp.eo.TmsClmWebFeedback");
     }
 
     /**
@@ -296,6 +315,22 @@ public class TmsClmWebFeedbackImpl extends EntityImpl {
     }
 
     /**
+     * Gets the attribute value for txtFeedbackValue, using the alias name txtFeedbackValue.
+     * @return the value of txtFeedbackValue
+     */
+    public String gettxtFeedbackValue() {
+        return (String) getAttributeInternal(TXTFEEDBACKVALUE);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for txtFeedbackValue.
+     * @param value value to set the txtFeedbackValue
+     */
+    public void settxtFeedbackValue(String value) {
+        setAttributeInternal(TXTFEEDBACKVALUE, value);
+    }
+
+    /**
      * getAttrInvokeAccessor: generated method. Do not modify.
      * @param index the index identifying the attribute
      * @param attrDef the attribute
@@ -326,6 +361,7 @@ public class TmsClmWebFeedbackImpl extends EntityImpl {
         super.setAttrInvokeAccessor(index, value, attrDef);
     }
 
+
     /**
      * @param clmFeedbackIdFk key constituent
 
@@ -333,13 +369,6 @@ public class TmsClmWebFeedbackImpl extends EntityImpl {
      */
     public static Key createPrimaryKey(Number clmFeedbackIdFk) {
         return new Key(new Object[] { clmFeedbackIdFk });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("pqetapp.modelpqasyapp.eo.TmsClmWebFeedback");
     }
 
     /**
@@ -374,6 +403,25 @@ public class TmsClmWebFeedbackImpl extends EntityImpl {
      * @param e the transaction event
      */
     protected void doDML(int operation, TransactionEvent e) {
+        if (operation==DML_INSERT) {
+            System.out.println(gettxtFeedbackValue());
+       
+        if (gettxtFeedbackValue().equals("E")) {
+            populateAttributeAsChanged(EXCELLENTFLAG, "Y");
+       }
+      else  if (gettxtFeedbackValue().equals("G")) {
+            populateAttributeAsChanged(GOODFLAG, "Y");
+        }
+     else   if (gettxtFeedbackValue().equals("A")) {
+            populateAttributeAsChanged(AVERAGEFLAG, "Y");
+        }
+     else   if (gettxtFeedbackValue().equals("P")) {
+            populateAttributeAsChanged(POORFLAG, "Y");
+        }
+     else   if (gettxtFeedbackValue().equals("V")) {
+            populateAttributeAsChanged(VERYPOORFLAG, "Y");
+        }
+        }
         super.doDML(operation, e);
     }
 }

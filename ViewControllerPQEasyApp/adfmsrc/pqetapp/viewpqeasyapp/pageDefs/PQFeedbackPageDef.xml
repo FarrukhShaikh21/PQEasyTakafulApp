@@ -17,8 +17,11 @@
           <Item Value="AverageFlag"/>
           <Item Value="PoorFlag"/>
           <Item Value="VeryPoorFlag"/>
+          <Item Value="txtFeedbackValue"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction"
+            DataControl="EasyTakafulAppModuleDataControl"/>
   </bindings>
 </pageDefinition>

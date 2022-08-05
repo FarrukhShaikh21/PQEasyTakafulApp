@@ -42,7 +42,8 @@
                                   selectedRowKeys="#{bindings.TmsClmWebFeedbackCRUD.collectionModel.selectedRow}"
                                   selectionListener="#{bindings.TmsClmWebFeedbackCRUD.collectionModel.makeCurrent}"
                                   rowSelection="single" fetchSize="#{bindings.TmsClmWebFeedbackCRUD.rangeSize}" id="t1"
-                                  columnStretching="column:c1">
+                                  columnStretching="column:c1" autoHeightRows="12" styleClass="AFStretchWidth"
+                                  scrollPolicy="page">
                           <af:column headerText="#{bindings.TmsClmWebFeedbackCRUD.hints.FeedbackIdPk.label}" id="c1"
                                      width="200" displayIndex="-1">
                             <af:selectOneChoice value="#{row.bindings.FeedbackIdPk.inputValue}"
@@ -54,38 +55,14 @@
                               <f:validator binding="#{row.bindings.FeedbackIdPk.validator}"/>
                             </af:selectOneChoice>
                           </af:column>
-                          <af:column headerText="#{bindings.TmsClmWebFeedbackCRUD.hints.ExcellentFlag.label}" id="c2">
-                            <af:selectOneRadio id="sor1"
-                                               value="#{row.bindings.ExcellentFlag.inputValue}" autoSubmit="true">
-                              <af:selectItem value="Y" id="si2"/>
-                              <af:selectItem value="N" id="si3"/>
-                            </af:selectOneRadio>
-                          </af:column>
-                          <af:column headerText="#{bindings.TmsClmWebFeedbackCRUD.hints.GoodFlag.label}" id="c3">
-                            <af:selectOneRadio id="sor2" value="#{row.bindings.GoodFlag.inputValue}" autoSubmit="true">
-                              <af:selectItem value="Y" id="si4"/>
-                              <af:selectItem value="N" id="si5"/>
-                              
-                            </af:selectOneRadio>
-                          </af:column>
-                          <af:column headerText="#{bindings.TmsClmWebFeedbackCRUD.hints.AverageFlag.label}" id="c4">
-                            <af:selectOneRadio id="sor3" value="#{row.bindings.AverageFlag.inputValue}"
-                                               autoSubmit="true">
-                              <af:selectItem value="Y" id="si6"/>
-                              <af:selectItem value="N" id="si7"/>
-                            </af:selectOneRadio>
-                          </af:column>
-                          <af:column headerText="#{bindings.TmsClmWebFeedbackCRUD.hints.PoorFlag.label}" id="c5">
-                            <af:selectOneRadio id="sor4" value="#{row.bindings.PoorFlag.inputValue}" autoSubmit="true">
-                              <af:selectItem value="Y" id="si8"/>
-                              <af:selectItem value="N" id="si9"/>
-                            </af:selectOneRadio>
-                          </af:column>
-                          <af:column headerText="#{bindings.TmsClmWebFeedbackCRUD.hints.VeryPoorFlag.label}" id="c6">
-                            <af:selectOneRadio id="sor5" value="#{row.bindings.VeryPoorFlag.inputValue}"
-                                               autoSubmit="true">
-                              <af:selectItem value="Y" id="si10"/>
-                              <af:selectItem value="N" id="si11"/>
+                          <af:column id="c7" width="400" displayIndex="-1">
+                            <af:selectOneRadio label="Label 1" id="sor1" layout="horizontal"
+                                               value="#{row.bindings.txtFeedbackValue.inputValue}">
+                              <af:selectItem label="Excellent" value="E" id="si2"/>
+                              <af:selectItem label="Good" value="G" id="si3"/>
+                              <af:selectItem label="Average" value="A" id="si4"/>
+                              <af:selectItem label="Poor" value="P" id="si5"/>
+                              <af:selectItem label="Very Poor" value="V" id="si6"/>
                             </af:selectOneRadio>
                           </af:column>
                         </af:table>
@@ -94,7 +71,8 @@
                   </af:gridRow>
                   <af:gridRow marginTop="5px" height="auto" id="gr2">
                     <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2" columnSpan="2" rowSpan="1">
-                      <af:button text="Track Claim" id="b1" action="ACT-GOTO-TRACKING"/>
+                      <af:button text="Track Claim" id="b1" action="ACT-GOTO-BACK-FEEDBACK"
+                                 actionListener="#{bindings.Commit.execute}"/>
                     </af:gridCell>
                   </af:gridRow>
                 </af:panelGridLayout>

@@ -103,7 +103,6 @@
     ColumnType="DATE"
     TableName="TMS_CLM_WEB_FEEDBACK">
     <TransientExpression
-      trustMode="trusted"
       Name="ExpressionScript"><![CDATA[adf.currentDateTime]]></TransientExpression>
   </Attribute>
   <Attribute
@@ -114,9 +113,19 @@
     ColumnType="NUMBER"
     TableName="TMS_CLM_WEB_FEEDBACK">
     <TransientExpression
-      trustMode="trusted"
       Name="ExpressionScript"><![CDATA[pqetapp.modelpqasyapp.gclass.PQEasyTakafulModelGlobal.dogetParticipantID()]]></TransientExpression>
   </Attribute>
+  <Attribute
+    Name="txtFeedbackValue"
+    Precision="80"
+    ColumnName="TXT_FEEDBACK_VALUE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TMS_CLM_WEB_FEEDBACK"
+    IsPersistent="false"
+    IsQueriable="false"
+    DefaultValue="E"/>
   <Key
     Name="TmsclmwebfeedbackPrimaryKey"
     PrimaryKey="true">
