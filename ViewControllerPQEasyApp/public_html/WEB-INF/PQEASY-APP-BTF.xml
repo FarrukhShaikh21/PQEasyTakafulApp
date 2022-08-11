@@ -74,6 +74,9 @@
         <fixed-outcome>ACT-GOTO-FEEDBACK</fixed-outcome>
       </outcome>
     </method-call>
+    <view id="PQFaq">
+      <page>/PQFaq.jsf</page>
+    </view>
     <control-flow-rule id="__1">
       <from-activity-id>PQMain</from-activity-id>
       <control-flow-case id="__2">
@@ -118,6 +121,10 @@
       <control-flow-case id="__29">
         <from-outcome>ACT-GOTO-FEEDBACK</from-outcome>
         <to-activity-id>doTMSFeedbackReasonRows</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__37">
+        <from-outcome>ACT-GOTO-FAQ</from-outcome>
+        <to-activity-id>PQFaq</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__6">
@@ -202,6 +209,13 @@
       <control-flow-case id="__36">
         <from-outcome>ACT-GOTO-FEEDBACK</from-outcome>
         <to-activity-id>PQFeedback</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__38">
+      <from-activity-id>PQFaq</from-activity-id>
+      <control-flow-case id="__39">
+        <from-outcome>ACT-GOTO-BACK-FROM-FAQ</from-outcome>
+        <to-activity-id>PQMyClaims</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
   </task-flow-definition>

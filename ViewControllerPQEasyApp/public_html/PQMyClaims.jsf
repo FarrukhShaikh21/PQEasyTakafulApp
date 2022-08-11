@@ -130,14 +130,20 @@
                     </af:gridCell>
                   </af:gridRow>
                   <af:gridRow marginTop="5px" height="auto" id="gr2">
-                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2" columnSpan="2" rowSpan="1">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2" columnSpan="2" rowSpan="1"
+                                 halign="center">
                       <af:button text="Track Claim" id="b1" action="ACT-GOTO-TRACKING"
                                  styleClass="PQTransactionButton"/>
+                      <af:spacer width="10" height="10" id="s1"/>
                       <af:button text="Feedback" id="b2" styleClass="PQTransactionButton" action="ACT-GOTO-FEEDBACK"/>
+                      <af:spacer width="10" height="10" id="s2"/>
                       <af:button text="Claim Intimation" id="b3" styleClass="PQTransactionButton"
                                  action="ACT-GOTO-MYCLAIMINTIMATION"/>
+                      <af:spacer width="10" height="10" id="s3"/>
                       <af:button text="Workshop Panel" id="b4" styleClass="PQTransactionButton"
                                  action="ACT-GOTO-WORKSHOP"/>
+                      <af:spacer width="10" height="10" id="s4"/>
+                      <af:button text="FAQ" id="b5" styleClass="PQTransactionButton" action="ACT-GOTO-FAQ"/>
                     </af:gridCell>
                   </af:gridRow>
                 </af:panelGridLayout>

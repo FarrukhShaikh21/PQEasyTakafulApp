@@ -134,7 +134,7 @@
       <property
          name="fromOutcome">ACT-GOTO-MYCLAIMHISTORY</property>
       <property
-         name="sdm:polyPoints">L46,142.00098,858.79297,64.6709,801.7471,R50</property>
+         name="sdm:polyPoints">L38,142.00098,851.79297,64.6709,801.7471,R50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -476,5 +476,40 @@
          name="fromsrcid">__4</property>
       <property
          name="sdm:polyPoints">T67,193.50098,793.23114,-204.62793,456.79883,B50</property>
+   </ControlFlowCase>
+   <View
+      id="View45">
+      <property
+         name="activityId">PQFaq</property>
+      <property
+         name="x">-333.5</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>PQFaq&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">1090.7988</property>
+      <property
+         name="page">/PQFaq.jsf</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase46"
+      from="View2"
+      to="View45">
+      <property
+         name="fromOutcome">ACT-GOTO-FAQ</property>
+      <property
+         name="sdm:polyPoints">L58,142.00098,869.29297,-292.5,1090.4482,R50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase47"
+      from="View45"
+      to="View2">
+      <property
+         name="fromOutcome">ACT-GOTO-BACK-FROM-FAQ</property>
+      <property
+         name="sdm:polyPoints">R46,-292.5,1086.9482,140.322,865.79297,L54</property>
    </ControlFlowCase>
 </SDM>

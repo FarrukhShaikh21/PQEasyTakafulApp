@@ -1,7 +1,139 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
-    <af:document title="PQFaq.jsf" id="d1">
-        <af:form id="f1"></af:form>
-    </af:document>
+  <af:document title="FAQ" id="d1">
+    <af:messages id="m1"/>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>  
+    <af:form id="f1">
+      <af:decorativeBox id="db1" dimensionsFrom="parent">
+        <f:facet name="top"/>
+        <f:facet name="center">
+          <af:panelGridLayout id="pgl2">
+            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr4">
+              <af:gridCell marginStart="5px" width="10%" id="gc4" marginEnd="5px"/>
+              <af:gridCell marginStart="5px" width="80%" id="gc5" valign="stretch" halign="stretch">
+                <af:panelGridLayout id="pgl1" styleClass="PQLoginFormCurve">
+                  <af:gridRow marginTop="5px" height="auto" id="gr11">
+                    <af:gridCell marginStart="5px" width="30%" id="gc26" halign="stretch" valign="middle">
+                      <af:panelGroupLayout id="pgl5" layout="vertical" halign="center">
+                        <af:outputText value="FAQ" id="ot1"
+                                       inlineStyle="font-size:xx-large; font-style:italic; color:green;"
+                                       truncateAt="0"/>
+                        <af:outputText value="Know Your Protections" id="ot2"
+                                       inlineStyle="font-size:xx-small; font-style:italic; color:green;"/>
+                        <af:link text="Back" id="l1" partialSubmit="true" action="ACT-GOTO-BACK-FROM-FAQ"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                    <af:gridCell marginStart="5px" width="70%" marginEnd="5px" id="gc27" valign="stretch"
+                                 halign="stretch">
+                      <af:panelGroupLayout id="pgl8" layout="vertical" halign="end" styleClass="AFStretchWidth">
+                        <af:image source="#{resource['images:imgPQGT.png']}" id="i1"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                  </af:gridRow>                
+                  <af:gridRow marginTop="5px" height="auto" id="gr1">
+                    <af:gridCell marginStart="15px" width="100%" marginEnd="15px" id="gc1" halign="stretch" columnSpan="2"
+                                 rowSpan="1">
+                      <af:outputText value="Frequently Asked Questions (FAQ)" id="ot19"/>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow marginTop="5px" height="auto" id="gr2"/>
+                  <af:gridRow id="gr3">
+                    <af:gridCell id="gc3" columnSpan="2" rowSpan="1">
+                      <af:outputText value="Q1. What to do in case my car meets with an accident?" id="ot3"/>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow id="gr12">
+                    <af:gridCell id="gc7" columnSpan="2" rowSpan="1">
+                      <af:outputText value="In case do accident or third-party injury or damage the property of a third party, inform us on our helpline numbers (Head Office-Karachi 0315-2005017. Lahore Office 0315-2005018, Islamabad Office 0315-2005020) or mail claimo@pakqatar.com.pk. Our cams executive will get in touch with you and guide you on the procedures and documents necessary to process r dam. " id="ot4"/>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow id="gr5">
+                    <af:gridCell id="gc8" columnSpan="2" rowSpan="1">
+                      <af:outputText value="Q2. Can I lodge claim if accident takes place in another city?" id="ot5"/>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow id="gr13">
+                    <af:gridCell id="gc9" columnSpan="2" rowSpan="1">
+                      <af:outputText value="It doesn’t matter where the accident happens. Just all on our helpline numbers or email and our dam executive will guide you through the procedures. "
+                                     id="ot6"/>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow id="gr6">
+                    <af:gridCell id="gc10" columnSpan="2" rowSpan="1">
+                      <af:outputText value="Q3. Are the accidental damages to my car covered under the policy?"
+                                     id="ot7"/>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow id="gr7">
+                    <af:gridCell id="gc11" columnSpan="2" rowSpan="1">
+                      <af:outputText value="If you valued Own Damage coverage under your motor comprehensive Talked policy, the damages to your car will be covered subject to terms, conditions and exclusions of the policy. "
+                                     id="ot8"/>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow id="gr8">
+                    <af:gridCell id="gc12" columnSpan="2" rowSpan="1">
+                      <af:outputText value="Q4. Where wills the survey be carried out?" id="ot9"/>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow id="gr9">
+                    <af:gridCell id="gc13" columnSpan="2" rowSpan="1">
+                      <af:outputText value="The survey will be conducted by our author sad Surveyor at the agreed workshop."
+                                     id="ot10"/>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow id="gr10">
+                    <af:gridCell id="gc14" columnSpan="2" rowSpan="1">
+                      <af:outputText value="Q5. Where should I repair my car?" id="ot11"/>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow id="gr14">
+                    <af:gridCell id="gc15" columnSpan="2" rowSpan="1">
+                      <af:outputText value="You and gut your car roared at any of our panel workshops. Our dam’s executives will also  you in selecting one convenient to you "
+                                     id="ot12"/>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow id="gr15">
+                    <af:gridCell id="gc16" columnSpan="2" rowSpan="1">
+                      <af:outputText value="Q6. What f l wants to use a workshop of my own choice?"
+                                     id="ot13"/>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow id="gr16">
+                    <af:gridCell id="gc17" columnSpan="2" rowSpan="1">
+                      <af:outputText value="Yes. You an chore your own workshop to get you are repaired and Surveyor aspect your vehicle at workshop 2nd approve damage Too will have to make the full payment to the workshop and submit this final bills and receipt We will reimburse the approved cam amount dusty to you after deducting balance amount (if may) that has to be paid by you as per policy terms and conditions. "
+                                     id="ot14"/>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow id="gr17">
+                    <af:gridCell id="gc2" columnSpan="2" rowSpan="1">
+                      <af:outputText value="Q7. How much time will be required to repair the car?" id="ot15"/>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow id="gr18">
+                    <af:gridCell id="gc18" columnSpan="2" rowSpan="1">
+                      <af:outputText value="It depends on the extent of the damages to your car and also on the term that the workshop will take to repair the car. However, f you have opted to repair the are at our payment Workshop. your are will be given priory "
+                                     id="ot16"/>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow id="gr19">
+                    <af:gridCell id="gc19" columnSpan="2" rowSpan="1">
+                      <af:outputText value="Q8. Do all car Takaful policies cover vehicle damage due to flooding?" id="ot17"/>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow id="gr20">
+                    <af:gridCell id="gc20" columnSpan="2" rowSpan="1">
+                      <af:outputText value="No. It depends on your covering. If you have comprehensive Takaful on your poles. His cover’s flood damages. The comprehensive coverage on ca are Takaful policy helps cover certain types of water damage to your vehicle, depend on the cause. For example. It does not cover water "
+                                     id="ot18"/>
+                    </af:gridCell>
+                  </af:gridRow>
+                </af:panelGridLayout>
+              </af:gridCell>
+              <af:gridCell marginStart="5px" width="10%" marginEnd="5px" id="gc6"/>
+            </af:gridRow>
+          </af:panelGridLayout>
+        </f:facet>
+      </af:decorativeBox>
+    </af:form>
+  </af:document>
 </f:view>
