@@ -16,10 +16,11 @@
                   <af:gridRow marginTop="5px" height="auto" id="gr11">
                     <af:gridCell marginStart="5px" width="30%" id="gc26" halign="stretch" valign="middle">
                       <af:panelGroupLayout id="pgl5" layout="vertical" halign="center">
-                        <af:outputText value="MyTakaful" id="ot1"
+                        <af:outputText value="Workshop" id="ot1"
                                        inlineStyle="font-size:xx-large; font-style:italic; color:green;"/>
                         <af:outputText value="Know Your Protections" id="ot2"
                                        inlineStyle="font-size:xx-small; font-style:italic; color:green;"/>
+                        <af:link text="Back" id="l1" partialSubmit="true" action="ACT-GOTO-BACK-WORKSHOP"/>
                       </af:panelGroupLayout>
                     </af:gridCell>
                     <af:gridCell marginStart="5px" width="70%" marginEnd="5px" id="gc27" valign="stretch"
@@ -40,7 +41,8 @@
                                   selectedRowKeys="#{bindings.TmsClmStWorkshopQVORO.collectionModel.selectedRow}"
                                   selectionListener="#{bindings.TmsClmStWorkshopQVORO.collectionModel.makeCurrent}"
                                   rowSelection="single" fetchSize="#{bindings.TmsClmStWorkshopQVORO.rangeSize}" id="t1"
-                                  columnStretching="last">
+                                  columnStretching="last" styleClass="AFStretchWidth" scrollPolicy="page"
+                                  autoHeightRows="10">
                           <af:column headerText="#{bindings.TmsClmStWorkshopQVORO.hints.WorkshopName.label}" id="c1"
                                      width="200">
                             <af:inputText value="#{row.bindings.WorkshopName.inputValue}"

@@ -32,13 +32,12 @@
                     </af:gridCell>
                   </af:gridRow>                
                   <af:gridRow marginTop="5px" height="auto" id="gr1">
-                    <af:gridCell marginStart="15px" width="100%" marginEnd="15px" id="gc1" halign="stretch" columnSpan="2"
+                    <af:gridCell marginStart="15px" width="100%" marginEnd="15px" id="gc1" halign="center" columnSpan="2"
                                  rowSpan="1">
-                      <af:outputText value="Frequently Asked Questions (FAQ)" id="ot19"/>
+                      <af:outputText value="Frequently Asked Questions (FAQ)" id="ot19" inlineStyle="font-weight:bold"/>
                     </af:gridCell>
                   </af:gridRow>
-                  <af:gridRow marginTop="5px" height="auto" id="gr2"/>
-                  <af:gridRow id="gr3">
+                  <af:gridRow id="gr3" marginBottom="2px">
                     <af:gridCell id="gc3" columnSpan="2" rowSpan="1">
                       <af:outputText value="Q1. What to do in case my car meets with an accident?" id="ot3"/>
                     </af:gridCell>
@@ -48,69 +47,69 @@
                       <af:outputText value="In case do accident or third-party injury or damage the property of a third party, inform us on our helpline numbers (Head Office-Karachi 0315-2005017. Lahore Office 0315-2005018, Islamabad Office 0315-2005020) or mail claimo@pakqatar.com.pk. Our cams executive will get in touch with you and guide you on the procedures and documents necessary to process r dam. " id="ot4"/>
                     </af:gridCell>
                   </af:gridRow>
-                  <af:gridRow id="gr5">
+                  <af:gridRow id="gr5" marginTop="20px">
                     <af:gridCell id="gc8" columnSpan="2" rowSpan="1">
                       <af:outputText value="Q2. Can I lodge claim if accident takes place in another city?" id="ot5"/>
                     </af:gridCell>
                   </af:gridRow>
-                  <af:gridRow id="gr13">
+                  <af:gridRow id="gr13" marginBottom="20px">
                     <af:gridCell id="gc9" columnSpan="2" rowSpan="1">
                       <af:outputText value="It doesn’t matter where the accident happens. Just all on our helpline numbers or email and our dam executive will guide you through the procedures. "
                                      id="ot6"/>
                     </af:gridCell>
                   </af:gridRow>
-                  <af:gridRow id="gr6">
+                  <af:gridRow id="gr6" marginBottom="5px">
                     <af:gridCell id="gc10" columnSpan="2" rowSpan="1">
                       <af:outputText value="Q3. Are the accidental damages to my car covered under the policy?"
                                      id="ot7"/>
                     </af:gridCell>
                   </af:gridRow>
-                  <af:gridRow id="gr7">
+                  <af:gridRow id="gr7" marginBottom="20px">
                     <af:gridCell id="gc11" columnSpan="2" rowSpan="1">
                       <af:outputText value="If you valued Own Damage coverage under your motor comprehensive Talked policy, the damages to your car will be covered subject to terms, conditions and exclusions of the policy. "
                                      id="ot8"/>
                     </af:gridCell>
                   </af:gridRow>
-                  <af:gridRow id="gr8">
+                  <af:gridRow id="gr8" marginBottom="5px">
                     <af:gridCell id="gc12" columnSpan="2" rowSpan="1">
                       <af:outputText value="Q4. Where wills the survey be carried out?" id="ot9"/>
                     </af:gridCell>
                   </af:gridRow>
-                  <af:gridRow id="gr9">
+                  <af:gridRow id="gr9" marginBottom="20px">
                     <af:gridCell id="gc13" columnSpan="2" rowSpan="1">
                       <af:outputText value="The survey will be conducted by our author sad Surveyor at the agreed workshop."
                                      id="ot10"/>
                     </af:gridCell>
                   </af:gridRow>
-                  <af:gridRow id="gr10">
+                  <af:gridRow id="gr10" marginBottom="5px">
                     <af:gridCell id="gc14" columnSpan="2" rowSpan="1">
                       <af:outputText value="Q5. Where should I repair my car?" id="ot11"/>
                     </af:gridCell>
                   </af:gridRow>
-                  <af:gridRow id="gr14">
+                  <af:gridRow id="gr14" marginBottom="20px">
                     <af:gridCell id="gc15" columnSpan="2" rowSpan="1">
                       <af:outputText value="You and gut your car roared at any of our panel workshops. Our dam’s executives will also  you in selecting one convenient to you "
                                      id="ot12"/>
                     </af:gridCell>
                   </af:gridRow>
-                  <af:gridRow id="gr15">
+                  <af:gridRow id="gr15" marginBottom="5px">
                     <af:gridCell id="gc16" columnSpan="2" rowSpan="1">
                       <af:outputText value="Q6. What f l wants to use a workshop of my own choice?"
                                      id="ot13"/>
                     </af:gridCell>
                   </af:gridRow>
-                  <af:gridRow id="gr16">
+                  <af:gridRow id="gr16" marginBottom="20px">
                     <af:gridCell id="gc17" columnSpan="2" rowSpan="1">
                       <af:outputText value="Yes. You an chore your own workshop to get you are repaired and Surveyor aspect your vehicle at workshop 2nd approve damage Too will have to make the full payment to the workshop and submit this final bills and receipt We will reimburse the approved cam amount dusty to you after deducting balance amount (if may) that has to be paid by you as per policy terms and conditions. "
                                      id="ot14"/>
                     </af:gridCell>
                   </af:gridRow>
-                  <af:gridRow id="gr17">
+                  <af:gridRow id="gr17" marginBottom="5px">
                     <af:gridCell id="gc2" columnSpan="2" rowSpan="1">
                       <af:outputText value="Q7. How much time will be required to repair the car?" id="ot15"/>
                     </af:gridCell>
                   </af:gridRow>
-                  <af:gridRow id="gr18">
+                  <af:gridRow id="gr18" marginBottom="20px">
                     <af:gridCell id="gc18" columnSpan="2" rowSpan="1">
                       <af:outputText value="It depends on the extent of the damages to your car and also on the term that the workshop will take to repair the car. However, f you have opted to repair the are at our payment Workshop. your are will be given priory "
                                      id="ot16"/>

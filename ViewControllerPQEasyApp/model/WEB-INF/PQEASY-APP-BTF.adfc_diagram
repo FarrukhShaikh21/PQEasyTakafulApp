@@ -134,7 +134,7 @@
       <property
          name="fromOutcome">ACT-GOTO-MYCLAIMHISTORY</property>
       <property
-         name="sdm:polyPoints">L38,142.00098,851.79297,64.6709,801.7471,R50</property>
+         name="sdm:polyPoints">L34,142.00098,848.29297,64.6709,801.7471,R50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -260,7 +260,7 @@
       <property
          name="fromOutcome">ACT-GOTO-WORKSHOP</property>
       <property
-         name="sdm:polyPoints">L54,142.00098,865.79297,-372.32227,922.44824,R50</property>
+         name="sdm:polyPoints">L42,138.87083,855.29297,-372.32227,918.94824,R46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -500,7 +500,7 @@
       <property
          name="fromOutcome">ACT-GOTO-FAQ</property>
       <property
-         name="sdm:polyPoints">L58,142.00098,869.29297,-292.5,1090.4482,R50</property>
+         name="sdm:polyPoints">L66,142.00098,876.29297,-290.84195,1093.9482,R54</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -510,6 +510,16 @@
       <property
          name="fromOutcome">ACT-GOTO-BACK-FROM-FAQ</property>
       <property
-         name="sdm:polyPoints">R46,-292.5,1086.9482,140.322,865.79297,L54</property>
+         name="sdm:polyPoints">R46,-292.5,1086.9482,140.34575,869.29297,L58</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase48"
+      from="View23"
+      to="View2">
+      <property
+         name="fromOutcome">ACT-GOTO-BACK-WORKSHOP</property>
+      <property
+         name="sdm:polyPoints">R54,-371.8883,925.94824,139.30237,862.29297,L50</property>
    </ControlFlowCase>
 </SDM>

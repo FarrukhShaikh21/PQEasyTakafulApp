@@ -21,7 +21,5 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
-    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction"
-            DataControl="EasyTakafulAppModuleDataControl"/>
   </bindings>
 </pageDefinition>

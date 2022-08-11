@@ -5,7 +5,7 @@
     <af:messages id="m1"/>
     <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>  
     <af:form id="f1">
-      <af:decorativeBox id="db1" dimensionsFrom="parent">
+      <af:decorativeBox id="db1">
         <f:facet name="top"/>
         <f:facet name="center">
           <af:panelGridLayout id="pgl2">
@@ -33,47 +33,50 @@
                   </af:gridRow>                
                   <af:gridRow marginTop="5px" height="auto" id="gr1">
                     <af:gridCell marginStart="15px" width="100%" marginEnd="15px" id="gc1" halign="stretch" columnSpan="2"
-                                 rowSpan="1">
+                                 rowSpan="1" valign="stretch">
                       <af:panelGroupLayout id="pgl3" layout="vertical" halign="center" styleClass="AFStretchWidth">
-                        <af:table value="#{bindings.TmsClmWebFeedbackCRUD.collectionModel}" var="row"
-                                  rows="#{bindings.TmsClmWebFeedbackCRUD.rangeSize}"
-                                  emptyText="#{bindings.TmsClmWebFeedbackCRUD.viewable ? 'No data to display.' : 'Access Denied.'}"
-                                  rowBandingInterval="0"
-                                  selectedRowKeys="#{bindings.TmsClmWebFeedbackCRUD.collectionModel.selectedRow}"
-                                  selectionListener="#{bindings.TmsClmWebFeedbackCRUD.collectionModel.makeCurrent}"
-                                  rowSelection="single" fetchSize="#{bindings.TmsClmWebFeedbackCRUD.rangeSize}" id="t1"
-                                  columnStretching="column:c1" autoHeightRows="12" styleClass="AFStretchWidth"
-                                  scrollPolicy="page">
-                          <af:column headerText="#{bindings.TmsClmWebFeedbackCRUD.hints.FeedbackIdPk.label}" id="c1"
-                                     width="200" displayIndex="-1">
-                            <af:selectOneChoice value="#{row.bindings.FeedbackIdPk.inputValue}"
-                                                label="#{row.bindings.FeedbackIdPk.label}"
-                                                required="#{bindings.TmsClmWebFeedbackCRUD.hints.FeedbackIdPk.mandatory}"
-                                                shortDesc="#{bindings.TmsClmWebFeedbackCRUD.hints.FeedbackIdPk.tooltip}"
-                                                id="soc1" readOnly="true">
-                              <f:selectItems value="#{row.bindings.FeedbackIdPk.items}" id="si1"/>
-                              <f:validator binding="#{row.bindings.FeedbackIdPk.validator}"/>
-                            </af:selectOneChoice>
-                          </af:column>
-                          <af:column id="c7" width="400" displayIndex="-1">
-                            <af:selectOneRadio label="Label 1" id="sor1" layout="horizontal"
-                                               value="#{row.bindings.txtFeedbackValue.inputValue}">
-                              <af:selectItem label="Excellent" value="E" id="si2"/>
-                              <af:selectItem label="Good" value="G" id="si3"/>
-                              <af:selectItem label="Average" value="A" id="si4"/>
-                              <af:selectItem label="Poor" value="P" id="si5"/>
-                              <af:selectItem label="Very Poor" value="V" id="si6"/>
-                            </af:selectOneRadio>
-                          </af:column>
-                        </af:table>
+                        <af:panelBox text="Claim Handler / Staff Service" id="pb1" showDisclosure="false">
+                          <f:facet name="toolbar"/>
+                          <af:table value="#{bindings.TmsClmWebFeedbackCRUD.collectionModel}" var="row"
+                                    rows="#{bindings.TmsClmWebFeedbackCRUD.rangeSize}"
+                                    emptyText="#{bindings.TmsClmWebFeedbackCRUD.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                    rowBandingInterval="0"
+                                    selectedRowKeys="#{bindings.TmsClmWebFeedbackCRUD.collectionModel.selectedRow}"
+                                    selectionListener="#{bindings.TmsClmWebFeedbackCRUD.collectionModel.makeCurrent}"
+                                    rowSelection="single" fetchSize="#{bindings.TmsClmWebFeedbackCRUD.rangeSize}"
+                                    id="t1" columnStretching="column:c1" autoHeightRows="12" styleClass="AFStretchWidth"
+                                    scrollPolicy="page">
+                            <af:column headerText="#{bindings.TmsClmWebFeedbackCRUD.hints.FeedbackIdPk.label}" id="c1"
+                                       width="200" displayIndex="-1">
+                              <af:selectOneChoice value="#{row.bindings.FeedbackIdPk.inputValue}"
+                                                  label="#{row.bindings.FeedbackIdPk.label}"
+                                                  required="#{bindings.TmsClmWebFeedbackCRUD.hints.FeedbackIdPk.mandatory}"
+                                                  shortDesc="#{bindings.TmsClmWebFeedbackCRUD.hints.FeedbackIdPk.tooltip}"
+                                                  id="soc1" readOnly="true">
+                                <f:selectItems value="#{row.bindings.FeedbackIdPk.items}" id="si1"/>
+                                <f:validator binding="#{row.bindings.FeedbackIdPk.validator}"/>
+                              </af:selectOneChoice>
+                            </af:column>
+                            <af:column id="c7" width="400" displayIndex="-1">
+                              <af:selectOneRadio label="Label 1" id="sor1" layout="horizontal"
+                                                 value="#{row.bindings.txtFeedbackValue.inputValue}">
+                                <af:selectItem label="Excellent" value="E" id="si2"/>
+                                <af:selectItem label="Good" value="G" id="si3"/>
+                                <af:selectItem label="Average" value="A" id="si4"/>
+                                <af:selectItem label="Poor" value="P" id="si5"/>
+                                <af:selectItem label="Very Poor" value="V" id="si6"/>
+                              </af:selectOneRadio>
+                            </af:column>
+                          </af:table>
+                        </af:panelBox>
+                        <af:panelBox text="Surveyor Response / Service" id="pb2" showDisclosure="false">
+                          <f:facet name="toolbar"/>
+                        </af:panelBox>
                       </af:panelGroupLayout>
                     </af:gridCell>
                   </af:gridRow>
                   <af:gridRow marginTop="5px" height="auto" id="gr2">
-                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2" columnSpan="2" rowSpan="1">
-                      <af:button text="Track Claim" id="b1" action="ACT-GOTO-BACK-FEEDBACK"
-                                 actionListener="#{bindings.Commit.execute}"/>
-                    </af:gridCell>
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2" columnSpan="2" rowSpan="1"/>
                   </af:gridRow>
                 </af:panelGridLayout>
               </af:gridCell>

@@ -218,5 +218,12 @@
         <to-activity-id>PQMyClaims</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
+    <control-flow-rule id="__40">
+      <from-activity-id>PQWorkshop</from-activity-id>
+      <control-flow-case id="__41">
+        <from-outcome>ACT-GOTO-BACK-WORKSHOP</from-outcome>
+        <to-activity-id>PQMyClaims</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
   </task-flow-definition>
 </adfc-config>
