@@ -92,10 +92,6 @@
         <from-outcome>ACT-GOTO-MYCOMPLAINT</from-outcome>
         <to-activity-id>CreateComplaint</to-activity-id>
       </control-flow-case>
-      <control-flow-case id="__29">
-        <from-outcome>ACT-GOTO-FEEDBACK</from-outcome>
-        <to-activity-id>doTMSFeedbackReasonRows</to-activity-id>
-      </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__4">
       <from-activity-id>PQMyClaims</from-activity-id>
@@ -118,6 +114,10 @@
       <control-flow-case id="__32">
         <from-outcome>ACT-GOTO-TRACKING</from-outcome>
         <to-activity-id>PQClaimTrack</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__29">
+        <from-outcome>ACT-GOTO-FEEDBACK</from-outcome>
+        <to-activity-id>doTMSFeedbackReasonRows</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__6">

@@ -114,7 +114,7 @@
       <property
          name="fromOutcome">ACT-GOTO-MYTAKAFUL</property>
       <property
-         name="sdm:polyPoints">B39,-123.5,604.0445,-116.65723,679.0459,T50</property>
+         name="sdm:polyPoints">B39,-123.5,604.0072,-116.65723,679.0459,T50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -144,7 +144,7 @@
       <property
          name="fromOutcome">ACT-GOTO-MYCLAIMS</property>
       <property
-         name="sdm:polyPoints">B50,-116.5,602.035,183.00098,800.2019,T50</property>
+         name="sdm:polyPoints">B61,-109.5,598.29297,186.50098,796.6183,T56</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -154,7 +154,7 @@
       <property
          name="fromOutcome">ACT-BACK-TO-INTIMATION</property>
       <property
-         name="sdm:polyPoints">L50,295.01562,684.64355,197.00098,808.29297,T73</property>
+         name="sdm:polyPoints">L50,295.01562,684.64355,200.50098,808.29297,T79</property>
    </ControlFlowCase>
    <MethodCall
       id="MethodCall14">
@@ -274,7 +274,7 @@
       <property
          name="fromsrcid">__4</property>
       <property
-         name="sdm:polyPoints">T61,190.00098,796.56085,-109.5,598.29297,B61</property>
+         name="sdm:polyPoints">T44,179.50098,800.2348,-116.5,602.01,B50</property>
    </ControlFlowCase>
    <View
       id="View27">
@@ -403,7 +403,7 @@
       <property
          name="fromOutcome">ACT-GOTO-TRACKING</property>
       <property
-         name="sdm:polyPoints">T27,169.00098,808.29297,-334.99707,538.94824,R54</property>
+         name="sdm:polyPoints">T33,172.50098,804.12244,-333.2358,531.94824,R46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -413,7 +413,7 @@
       <property
          name="fromOutcome">ACT-GOTO-BACK-FROM-TRACKING</property>
       <property
-         name="sdm:polyPoints">R46,-333.24655,531.94824,176.00098,804.1087,T39</property>
+         name="sdm:polyPoints">R54,-334.99707,538.94824,165.50098,808.29297,T21</property>
    </ControlFlowCase>
    <View
       id="View39">
@@ -432,23 +432,13 @@
    </View>
    <ControlFlowCase
       islink="true"
-      id="ControlFlowCase40"
-      from="View7"
-      to="MethodCall42">
-      <property
-         name="fromOutcome">ACT-GOTO-FEEDBACK</property>
-      <property
-         name="sdm:polyPoints">T44,-120.0,490.29297,-204.62793,456.79883,B50</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
       id="ControlFlowCase41"
       from="View39"
       to="View7">
       <property
          name="fromOutcome">ACT-GOTO-BACK-FEEDBACK</property>
       <property
-         name="sdm:polyPoints">B50,-117.981445,353.0459,-113.0,487.85056,T56</property>
+         name="sdm:polyPoints">B50,-117.981445,353.0459,-116.5,490.29297,T50</property>
    </ControlFlowCase>
    <MethodCall
       id="MethodCall42">
@@ -472,5 +462,19 @@
          name="fromOutcome">ACT-GOTO-FEEDBACK</property>
       <property
          name="sdm:polyPoints">T50,-204.62793,348.79883,-158.98145,299.0459,L50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase44"
+      from="View2"
+      to="MethodCall42">
+      <property
+         name="tosrcid">__29</property>
+      <property
+         name="fromOutcome">ACT-GOTO-FEEDBACK</property>
+      <property
+         name="fromsrcid">__4</property>
+      <property
+         name="sdm:polyPoints">T67,193.50098,793.23114,-204.62793,456.79883,B50</property>
    </ControlFlowCase>
 </SDM>

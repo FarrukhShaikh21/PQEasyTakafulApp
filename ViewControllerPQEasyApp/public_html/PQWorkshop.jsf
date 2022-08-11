@@ -1,7 +1,152 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
-    <af:document title="PQWorkshop.jsf" id="d1">
-        <af:form id="f1"></af:form>
-    </af:document>
+  <af:document title="MyTakaful.jsf" id="d1">
+    <af:messages id="m1"/>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>  
+    <af:form id="f1">
+      <af:decorativeBox id="db1" dimensionsFrom="parent">
+        <f:facet name="top"/>
+        <f:facet name="center">
+          <af:panelGridLayout id="pgl2">
+            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr4">
+              <af:gridCell marginStart="5px" width="10%" id="gc4" marginEnd="5px"/>
+              <af:gridCell marginStart="5px" width="80%" id="gc5" valign="stretch" halign="stretch">
+                <af:panelGridLayout id="pgl1" styleClass="PQLoginFormCurve">
+                  <af:gridRow marginTop="5px" height="auto" id="gr11">
+                    <af:gridCell marginStart="5px" width="30%" id="gc26" halign="stretch" valign="middle">
+                      <af:panelGroupLayout id="pgl5" layout="vertical" halign="center">
+                        <af:outputText value="MyTakaful" id="ot1"
+                                       inlineStyle="font-size:xx-large; font-style:italic; color:green;"/>
+                        <af:outputText value="Know Your Protections" id="ot2"
+                                       inlineStyle="font-size:xx-small; font-style:italic; color:green;"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                    <af:gridCell marginStart="5px" width="70%" marginEnd="5px" id="gc27" valign="stretch"
+                                 halign="stretch">
+                      <af:panelGroupLayout id="pgl8" layout="vertical" halign="end" styleClass="AFStretchWidth">
+                        <af:image source="#{resource['images:imgPQGT.png']}" id="i1"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                  </af:gridRow>                
+                  <af:gridRow marginTop="5px" height="auto" id="gr1">
+                    <af:gridCell marginStart="15px" width="100%" marginEnd="15px" id="gc1" halign="stretch" columnSpan="2"
+                                 rowSpan="1">
+                      <af:panelGroupLayout id="pgl3" layout="vertical" halign="center" styleClass="AFStretchWidth">
+                        <af:table value="#{bindings.TmsClmStWorkshopQVORO.collectionModel}" var="row"
+                                  rows="#{bindings.TmsClmStWorkshopQVORO.rangeSize}"
+                                  emptyText="#{bindings.TmsClmStWorkshopQVORO.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                  rowBandingInterval="0"
+                                  selectedRowKeys="#{bindings.TmsClmStWorkshopQVORO.collectionModel.selectedRow}"
+                                  selectionListener="#{bindings.TmsClmStWorkshopQVORO.collectionModel.makeCurrent}"
+                                  rowSelection="single" fetchSize="#{bindings.TmsClmStWorkshopQVORO.rangeSize}" id="t1"
+                                  columnStretching="last">
+                          <af:column headerText="#{bindings.TmsClmStWorkshopQVORO.hints.WorkshopName.label}" id="c1"
+                                     width="200">
+                            <af:inputText value="#{row.bindings.WorkshopName.inputValue}"
+                                          label="#{bindings.TmsClmStWorkshopQVORO.hints.WorkshopName.label}"
+                                          required="#{bindings.TmsClmStWorkshopQVORO.hints.WorkshopName.mandatory}"
+                                          columns="#{bindings.TmsClmStWorkshopQVORO.hints.WorkshopName.displayWidth}"
+                                          maximumLength="#{bindings.TmsClmStWorkshopQVORO.hints.WorkshopName.precision}"
+                                          shortDesc="#{bindings.TmsClmStWorkshopQVORO.hints.WorkshopName.tooltip}"
+                                          id="it1" readOnly="true">
+                              <f:validator binding="#{row.bindings.WorkshopName.validator}"/>
+                            </af:inputText>
+                          </af:column>
+                          <af:column headerText="#{bindings.TmsClmStWorkshopQVORO.hints.ContactPerson.label}" id="c2">
+                            <af:inputText value="#{row.bindings.ContactPerson.inputValue}"
+                                          label="#{bindings.TmsClmStWorkshopQVORO.hints.ContactPerson.label}"
+                                          required="#{bindings.TmsClmStWorkshopQVORO.hints.ContactPerson.mandatory}"
+                                          columns="#{bindings.TmsClmStWorkshopQVORO.hints.ContactPerson.displayWidth}"
+                                          maximumLength="#{bindings.TmsClmStWorkshopQVORO.hints.ContactPerson.precision}"
+                                          shortDesc="#{bindings.TmsClmStWorkshopQVORO.hints.ContactPerson.tooltip}"
+                                          id="it2" readOnly="true">
+                              <f:validator binding="#{row.bindings.ContactPerson.validator}"/>
+                            </af:inputText>
+                          </af:column>
+                          <af:column headerText="#{bindings.TmsClmStWorkshopQVORO.hints.Email.label}" id="c3">
+                            <af:inputText value="#{row.bindings.Email.inputValue}"
+                                          label="#{bindings.TmsClmStWorkshopQVORO.hints.Email.label}"
+                                          required="#{bindings.TmsClmStWorkshopQVORO.hints.Email.mandatory}"
+                                          columns="#{bindings.TmsClmStWorkshopQVORO.hints.Email.displayWidth}"
+                                          maximumLength="#{bindings.TmsClmStWorkshopQVORO.hints.Email.precision}"
+                                          shortDesc="#{bindings.TmsClmStWorkshopQVORO.hints.Email.tooltip}" id="it3"
+                                          readOnly="true">
+                              <f:validator binding="#{row.bindings.Email.validator}"/>
+                            </af:inputText>
+                          </af:column>
+                          <af:column headerText="#{bindings.TmsClmStWorkshopQVORO.hints.PhoneNo.label}" id="c4">
+                            <af:inputText value="#{row.bindings.PhoneNo.inputValue}"
+                                          label="#{bindings.TmsClmStWorkshopQVORO.hints.PhoneNo.label}"
+                                          required="#{bindings.TmsClmStWorkshopQVORO.hints.PhoneNo.mandatory}"
+                                          columns="#{bindings.TmsClmStWorkshopQVORO.hints.PhoneNo.displayWidth}"
+                                          maximumLength="#{bindings.TmsClmStWorkshopQVORO.hints.PhoneNo.precision}"
+                                          shortDesc="#{bindings.TmsClmStWorkshopQVORO.hints.PhoneNo.tooltip}" id="it4"
+                                          readOnly="true">
+                              <f:validator binding="#{row.bindings.PhoneNo.validator}"/>
+                            </af:inputText>
+                          </af:column>
+                          <af:column headerText="#{bindings.TmsClmStWorkshopQVORO.hints.RegNo.label}" id="c5">
+                            <af:inputText value="#{row.bindings.RegNo.inputValue}"
+                                          label="#{bindings.TmsClmStWorkshopQVORO.hints.RegNo.label}"
+                                          required="#{bindings.TmsClmStWorkshopQVORO.hints.RegNo.mandatory}"
+                                          columns="#{bindings.TmsClmStWorkshopQVORO.hints.RegNo.displayWidth}"
+                                          maximumLength="#{bindings.TmsClmStWorkshopQVORO.hints.RegNo.precision}"
+                                          shortDesc="#{bindings.TmsClmStWorkshopQVORO.hints.RegNo.tooltip}" id="it5"
+                                          readOnly="true">
+                              <f:validator binding="#{row.bindings.RegNo.validator}"/>
+                            </af:inputText>
+                          </af:column>
+                          <af:column headerText="#{bindings.TmsClmStWorkshopQVORO.hints.FaxNo.label}" id="c6">
+                            <af:inputText value="#{row.bindings.FaxNo.inputValue}"
+                                          label="#{bindings.TmsClmStWorkshopQVORO.hints.FaxNo.label}"
+                                          required="#{bindings.TmsClmStWorkshopQVORO.hints.FaxNo.mandatory}"
+                                          columns="#{bindings.TmsClmStWorkshopQVORO.hints.FaxNo.displayWidth}"
+                                          maximumLength="#{bindings.TmsClmStWorkshopQVORO.hints.FaxNo.precision}"
+                                          shortDesc="#{bindings.TmsClmStWorkshopQVORO.hints.FaxNo.tooltip}" id="it6"
+                                          readOnly="true">
+                              <f:validator binding="#{row.bindings.FaxNo.validator}"/>
+                            </af:inputText>
+                          </af:column>
+                          <af:column headerText="#{bindings.TmsClmStWorkshopQVORO.hints.NtnNo.label}" id="c7">
+                            <af:inputText value="#{row.bindings.NtnNo.inputValue}"
+                                          label="#{bindings.TmsClmStWorkshopQVORO.hints.NtnNo.label}"
+                                          required="#{bindings.TmsClmStWorkshopQVORO.hints.NtnNo.mandatory}"
+                                          columns="#{bindings.TmsClmStWorkshopQVORO.hints.NtnNo.displayWidth}"
+                                          maximumLength="#{bindings.TmsClmStWorkshopQVORO.hints.NtnNo.precision}"
+                                          shortDesc="#{bindings.TmsClmStWorkshopQVORO.hints.NtnNo.tooltip}" id="it7"
+                                          readOnly="true">
+                              <f:validator binding="#{row.bindings.NtnNo.validator}"/>
+                            </af:inputText>
+                          </af:column>
+                          <af:column headerText="#{bindings.TmsClmStWorkshopQVORO.hints.Address.label}" id="c8">
+                            <af:inputText value="#{row.bindings.Address.inputValue}"
+                                          label="#{bindings.TmsClmStWorkshopQVORO.hints.Address.label}"
+                                          required="#{bindings.TmsClmStWorkshopQVORO.hints.Address.mandatory}"
+                                          columns="#{bindings.TmsClmStWorkshopQVORO.hints.Address.displayWidth}"
+                                          maximumLength="#{bindings.TmsClmStWorkshopQVORO.hints.Address.precision}"
+                                          shortDesc="#{bindings.TmsClmStWorkshopQVORO.hints.Address.tooltip}" id="it8"
+                                          readOnly="true">
+                              <f:validator binding="#{row.bindings.Address.validator}"/>
+                            </af:inputText>
+                          </af:column>
+                        </af:table>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow marginTop="5px" height="auto" id="gr2">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2" columnSpan="2" rowSpan="1"/>
+                  </af:gridRow>
+                  <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr3">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc3" columnSpan="2" rowSpan="1"/>
+                  </af:gridRow>
+                </af:panelGridLayout>
+              </af:gridCell>
+              <af:gridCell marginStart="5px" width="10%" marginEnd="5px" id="gc6"/>
+            </af:gridRow>
+          </af:panelGridLayout>
+        </f:facet>
+      </af:decorativeBox>
+    </af:form>
+  </af:document>
 </f:view>

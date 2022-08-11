@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.57" id="PQWorkshopPageDef"
+                Package="pqetapp.viewpqeasyapp.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="TmsClmStWorkshopQVORO" RangeSize="25" DataControl="EasyTakafulAppModuleDataControl"
+              id="TmsClmStWorkshopQVOROIterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="TmsClmStWorkshopQVOROIterator" id="TmsClmStWorkshopQVORO">
+      <nodeDefinition DefName="pqetapp.modelpqasyapp.vo.TmsClmStWorkshopView" Name="TmsClmStWorkshopQVORO0">
+        <AttrNames>
+          <Item Value="WorkshopName"/>
+          <Item Value="ContactPerson"/>
+          <Item Value="Email"/>
+          <Item Value="PhoneNo"/>
+          <Item Value="RegNo"/>
+          <Item Value="FaxNo"/>
+          <Item Value="NtnNo"/>
+          <Item Value="Address"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>
