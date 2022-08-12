@@ -124,7 +124,7 @@
       <property
          name="fromOutcome">ACT-GOTO-MYCLAIMINTIMATION</property>
       <property
-         name="sdm:polyPoints">B50,183.00098,916.29297,215.01465,965.3965,L50</property>
+         name="sdm:polyPoints">B61,190.00098,916.29297,215.01465,965.3965,L50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -544,5 +544,40 @@
          name="fromOutcome">ACT-GOTO-BACK-FEEDBACK</property>
       <property
          name="sdm:polyPoints">B50,238.5,762.09766,200.50098,808.29297,T79</property>
+   </ControlFlowCase>
+   <View
+      id="View51">
+      <property
+         name="activityId">PQContact</property>
+      <property
+         name="x">194.5</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>PQContact&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">1111.7988</property>
+      <property
+         name="page">/PQContact.jsf</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase52"
+      from="View2"
+      to="View51">
+      <property
+         name="fromOutcome">ACT-GOTO-CONTACT-US</property>
+      <property
+         name="sdm:polyPoints">B50,183.00098,917.3185,198.0,1057.0742,T56</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase53"
+      from="View51"
+      to="View2">
+      <property
+         name="fromOutcome">ACT-GOTO-BACK-CONTACT-US</property>
+      <property
+         name="sdm:polyPoints">T44,191.0,1057.4482,176.00098,917.6894,B39</property>
    </ControlFlowCase>
 </SDM>

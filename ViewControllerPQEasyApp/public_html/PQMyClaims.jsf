@@ -144,6 +144,9 @@
                                  action="ACT-GOTO-WORKSHOP"/>
                       <af:spacer width="10" height="10" id="s4"/>
                       <af:button text="FAQ" id="b5" styleClass="PQTransactionButton" action="ACT-GOTO-FAQ"/>
+                      <af:spacer width="10" height="10" id="s5"/>
+                      <af:button text="Contact Us" id="b6" styleClass="PQTransactionButton"
+                                 action="ACT-GOTO-CONTACT-US"/>
                     </af:gridCell>
                   </af:gridRow>
                 </af:panelGridLayout>

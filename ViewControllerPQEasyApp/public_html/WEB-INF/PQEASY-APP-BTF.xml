@@ -83,6 +83,9 @@
         <fixed-outcome>ACT-GOTO-BACK-FEEDBACK</fixed-outcome>
       </outcome>
     </method-call>
+    <view id="PQContact">
+      <page>/PQContact.jsf</page>
+    </view>
     <control-flow-rule id="__1">
       <from-activity-id>PQMain</from-activity-id>
       <control-flow-case id="__2">
@@ -131,6 +134,10 @@
       <control-flow-case id="__37">
         <from-outcome>ACT-GOTO-FAQ</from-outcome>
         <to-activity-id>PQFaq</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__44">
+        <from-outcome>ACT-GOTO-CONTACT-US</from-outcome>
+        <to-activity-id>PQContact</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__6">
@@ -235,6 +242,13 @@
       <from-activity-id>RollbackFromFeedback</from-activity-id>
       <control-flow-case id="__43">
         <from-outcome>ACT-GOTO-BACK-FEEDBACK</from-outcome>
+        <to-activity-id>PQMyClaims</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__45">
+      <from-activity-id>PQContact</from-activity-id>
+      <control-flow-case id="__46">
+        <from-outcome>ACT-GOTO-BACK-CONTACT-US</from-outcome>
         <to-activity-id>PQMyClaims</to-activity-id>
       </control-flow-case>
     </control-flow-rule>

@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:document title="Contact Us" id="d1">
+    <af:messages id="m1"/>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>  
+    <af:form id="f1">
+      <af:decorativeBox id="db1" dimensionsFrom="parent">
+        <f:facet name="top"/>
+        <f:facet name="center">
+          <af:panelGridLayout id="pgl2">
+            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr4">
+              <af:gridCell marginStart="5px" width="10%" id="gc4" marginEnd="5px"/>
+              <af:gridCell marginStart="5px" width="80%" id="gc5" valign="stretch" halign="stretch">
+                <af:panelGridLayout id="pgl1" styleClass="PQLoginFormCurve">
+                  <af:gridRow marginTop="5px" height="auto" id="gr11">
+                    <af:gridCell marginStart="5px" width="30%" id="gc26" halign="stretch" valign="middle">
+                      <af:panelGroupLayout id="pgl5" layout="vertical" halign="center">
+                        <af:outputText value="Contact Us" id="ot1"
+                                       inlineStyle="font-size:xx-large; font-style:italic; color:green;"
+                                       truncateAt="0"/>
+                        <af:outputText value="Know Your Protections" id="ot2"
+                                       inlineStyle="font-size:xx-small; font-style:italic; color:green;"/>
+                        <af:link text="Back" id="l1" partialSubmit="true" action="ACT-GOTO-BACK-CONTACT-US"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                    <af:gridCell marginStart="5px" width="70%" marginEnd="5px" id="gc27" valign="stretch"
+                                 halign="stretch">
+                      <af:panelGroupLayout id="pgl8" layout="vertical" halign="end" styleClass="AFStretchWidth">
+                        <af:image source="#{resource['images:imgPQGT.png']}" id="i1"/>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow id="gr3" marginBottom="2px">
+                    <af:gridCell id="gc3" columnSpan="2" rowSpan="1" halign="center">
+                      <af:panelGridLayout id="pgl3" dimensionsFrom="parent"
+                                          inlineStyle="border-style:outset; border-bottom-left-radius:0px 0px; border-color:Green;">
+                        <af:gridRow marginTop="5px" height="auto" id="gr7">
+                          <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc16" columnSpan="2"
+                                       rowSpan="1"
+                                       halign="stretch" valign="middle">
+                            <af:outputText value="Sales Representative" id="ot3" truncateAt="0"
+                                           inlineStyle="color:green;font-size:30px"/>
+                          </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow marginTop="5px" height="auto" id="gr8">
+                          <af:gridCell id="gc7" columnSpan="1" rowSpan="1" width="50%"
+                                       halign="stretch" valign="middle">
+                            <af:separator id="s7"/>
+                            <af:outputText value="Name" id="ot4" inlineStyle="font-size:20px"/>
+                          </af:gridCell>
+                          <af:gridCell id="gc1" halign="stretch" valign="middle">
+                            <af:separator id="s8"/>
+                            <af:outputText value="Mobile No" id="ot19" truncateAt="0" inlineStyle="font-size:20px"/>
+                          </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow id="gr5" marginTop="20px" marginBottom="20px">
+                          <af:gridCell id="gc8" columnSpan="2" rowSpan="1" halign="stretch">
+                            <af:separator id="s9"/>
+                            <af:outputText value="Claim Department" id="ot5" inlineStyle="color:green;font-size:30px"/>
+                          </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow id="gr13" marginBottom="20px">
+                          <af:gridCell id="gc9" columnSpan="1" rowSpan="1" width="50%" halign="stretch">
+                            <af:separator id="s10"/>
+                            <af:outputText value="Head Office - Karachi" id="ot6" inlineStyle="font-size:20px"/>
+                          </af:gridCell>
+                          <af:gridCell id="gc21" width="50%" halign="stretch">
+                            <af:separator id="s11"/>
+                            <af:outputText value="0315-2005017" id="ot20" truncateAt="0" inlineStyle="font-size:20px"/>
+                          </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow id="gr2" marginBottom="20px">
+                          <af:gridCell id="gc11" columnSpan="1" rowSpan="1" width="50%" halign="stretch"
+                                       valign="middle">
+                            <af:separator id="s1"/>
+                            <af:outputText value="Islamabad Office" id="ot9" inlineStyle="font-size:20px"/>
+                          </af:gridCell>
+                          <af:gridCell id="gc12" width="50%" valign="middle" halign="stretch">
+                            <af:separator id="s2"/>
+                            <af:outputText value="0315-2005018" id="ot10" truncateAt="0" inlineStyle="font-size:20px"/>
+                          </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow id="gr1" marginBottom="20px">
+                          <af:gridCell id="gc2" columnSpan="1" rowSpan="1" width="50%" halign="stretch">
+                            <af:separator id="s3"/>
+                            <af:outputText value="Lahore Office" id="ot7" inlineStyle="font-size:20px"/>
+                          </af:gridCell>
+                          <af:gridCell id="gc10" width="50%" halign="stretch">
+                            <af:separator id="s4"/>
+                            <af:outputText value="0315-2005020" id="ot8" truncateAt="0" inlineStyle="font-size:20px"/>
+                          </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow id="gr6" marginBottom="20px">
+                          <af:gridCell id="gc13" columnSpan="1" rowSpan="1" width="50%" halign="stretch">
+                            <af:separator id="s5"/>
+                            <af:outputText value="email" id="ot11" inlineStyle="font-size:20px"/>
+                          </af:gridCell>
+                          <af:gridCell id="gc14" width="50%" halign="stretch">
+                            <af:separator id="s6"/>
+                            <af:outputText value="claims@paqqatar.com.pk" id="ot12" truncateAt="0" inlineStyle="font-size:20px"/>
+                          </af:gridCell>
+                        </af:gridRow>
+                      </af:panelGridLayout>
+                    </af:gridCell>
+                  </af:gridRow>
+                </af:panelGridLayout>
+              </af:gridCell>
+              <af:gridCell marginStart="5px" width="10%" marginEnd="5px" id="gc6"/>
+            </af:gridRow>
+          </af:panelGridLayout>
+        </f:facet>
+      </af:decorativeBox>
+    </af:form>
+  </af:document>
+</f:view>
