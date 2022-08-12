@@ -201,7 +201,7 @@
       <from-activity-id>PQFeedback</from-activity-id>
       <control-flow-case id="__34">
         <from-outcome>ACT-GOTO-BACK-FEEDBACK</from-outcome>
-        <to-activity-id>PQMain</to-activity-id>
+        <to-activity-id>PQMyClaims</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__35">

@@ -3,6 +3,7 @@ package pqetapp.modelpqasyapp.am;
 import oracle.jbo.Row;
 import oracle.jbo.server.ApplicationModuleImpl;
 import oracle.jbo.server.ViewLinkImpl;
+
 import oracle.jbo.server.ViewObjectImpl;
 
 import pqetapp.modelpqasyapp.am.common.EasyTakafulAppModule;
@@ -99,6 +100,7 @@ public class EasyTakafulAppModuleImpl extends ApplicationModuleImpl implements E
         return (ViewLinkImpl) findViewLink("TMSComplaintComplaintReasonComplaintIdPkLink2");
     }
     public void doTMSFeedbackReasonRows() {
+            getTmsClmStFeedbackViewRO().setNamedWhereClauseParam("P_ADF_FEEDBACK_TYPE", 1);
             getTmsClmStFeedbackViewRO().executeQuery();
             getTmsClmStFeedbackViewRO().setRangeSize(-1);
             for (int i = 0; i < getTmsClmStFeedbackViewRO().getRowCount(); i++) {
@@ -107,7 +109,15 @@ public class EasyTakafulAppModuleImpl extends ApplicationModuleImpl implements E
                 r.setAttribute("FeedbackIdPk", getTmsClmStFeedbackViewRO().getRowAtRangeIndex(i).getAttribute("FeedbackIdPk"));
                 getTmsClmWebFeedbackCRUD().insertRow(r);
            }
-
+        getTmsClmStFeedbackViewRO().setNamedWhereClauseParam("P_ADF_FEEDBACK_TYPE", 2);
+        getTmsClmStFeedbackViewRO().executeQuery();
+        getTmsClmStFeedbackViewRO().setRangeSize(-1);
+        for (int i = 0; i < getTmsClmStFeedbackViewRO().getRowCount(); i++) {
+            System.out.println("printingfb"+i);
+            Row r=getTmsClmWebFeedbackSurveyorCRUD().createRow();
+            r.setAttribute("FeedbackIdPk", getTmsClmStFeedbackViewRO().getRowAtRangeIndex(i).getAttribute("FeedbackIdPk"));
+            getTmsClmWebFeedbackSurveyorCRUD().insertRow(r);
+        }
     }
 
     /**
@@ -132,6 +142,14 @@ public class EasyTakafulAppModuleImpl extends ApplicationModuleImpl implements E
      */
     public ViewObjectImpl getTmsClmStWorkshopQVORO() {
         return (ViewObjectImpl) findViewObject("TmsClmStWorkshopQVORO");
+    }
+
+    /**
+     * Container's getter for TmsClmWebFeedbackView1.
+     * @return TmsClmWebFeedbackView1
+     */
+    public ViewObjectImpl getTmsClmWebFeedbackSurveyorCRUD() {
+        return (ViewObjectImpl) findViewObject("TmsClmWebFeedbackSurveyorCRUD");
     }
 }
 

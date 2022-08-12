@@ -13,7 +13,9 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full"
-  RowClass="pqetapp.modelpqasyapp.vo.TmsClmWebFeedbackViewRowImpl">
+  RowClass="pqetapp.modelpqasyapp.vo.TmsClmWebFeedbackViewRowImpl"
+  FetchMode="FETCH_AS_NEEDED"
+  MaxFetchSize="0">
   <DesignTime>
     <Attr Name="_codeGenFlag2" Value="Access"/>
     <Attr Name="_isCodegen" Value="true"/>

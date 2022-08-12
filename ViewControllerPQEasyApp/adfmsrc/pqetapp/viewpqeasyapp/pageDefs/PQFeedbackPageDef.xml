@@ -6,6 +6,8 @@
     <variableIterator id="variables"/>
     <iterator Binds="TmsClmWebFeedbackCRUD" RangeSize="25" DataControl="EasyTakafulAppModuleDataControl"
               id="TmsClmWebFeedbackCRUDIterator"/>
+    <iterator Binds="TmsClmWebFeedbackSurveyorCRUD" RangeSize="25" DataControl="EasyTakafulAppModuleDataControl"
+              id="TmsClmWebFeedbackSurveyorCRUDIterator"/>
   </executables>
   <bindings>
     <tree IterBinding="TmsClmWebFeedbackCRUDIterator" id="TmsClmWebFeedbackCRUD">
@@ -17,6 +19,14 @@
           <Item Value="AverageFlag"/>
           <Item Value="PoorFlag"/>
           <Item Value="VeryPoorFlag"/>
+          <Item Value="txtFeedbackValue"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="TmsClmWebFeedbackSurveyorCRUDIterator" id="TmsClmWebFeedbackSurveyorCRUD">
+      <nodeDefinition DefName="pqetapp.modelpqasyapp.vo.TmsClmWebFeedbackView" Name="TmsClmWebFeedbackSurveyorCRUD0">
+        <AttrNames>
+          <Item Value="FeedbackIdPk"/>
           <Item Value="txtFeedbackValue"/>
         </AttrNames>
       </nodeDefinition>

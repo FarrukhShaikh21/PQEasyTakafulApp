@@ -5,7 +5,7 @@
     <af:messages id="m1"/>
     <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>  
     <af:form id="f1">
-      <af:decorativeBox id="db1">
+      <af:decorativeBox id="db1" dimensionsFrom="parent">
         <f:facet name="top"/>
         <f:facet name="center">
           <af:panelGridLayout id="pgl2">
@@ -71,6 +71,47 @@
                         </af:panelBox>
                         <af:panelBox text="Surveyor Response / Service" id="pb2" showDisclosure="false">
                           <f:facet name="toolbar"/>
+                          <af:table value="#{bindings.TmsClmWebFeedbackSurveyorCRUD.collectionModel}" var="row"
+                                    rows="#{bindings.TmsClmWebFeedbackSurveyorCRUD.rangeSize}"
+                                    emptyText="#{bindings.TmsClmWebFeedbackSurveyorCRUD.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                    rowBandingInterval="0"
+                                    selectedRowKeys="#{bindings.TmsClmWebFeedbackSurveyorCRUD.collectionModel.selectedRow}"
+                                    selectionListener="#{bindings.TmsClmWebFeedbackSurveyorCRUD.collectionModel.makeCurrent}"
+                                    rowSelection="single"
+                                    fetchSize="#{bindings.TmsClmWebFeedbackSurveyorCRUD.rangeSize}" id="t2"
+                                    columnStretching="column:c2">
+                            <af:column headerText="#{bindings.TmsClmWebFeedbackSurveyorCRUD.hints.FeedbackIdPk.label}"
+                                       id="c2" width="200">
+                              <af:selectOneChoice value="#{row.bindings.FeedbackIdPk.inputValue}"
+                                                  label="#{row.bindings.FeedbackIdPk.label}"
+                                                  required="#{bindings.TmsClmWebFeedbackSurveyorCRUD.hints.FeedbackIdPk.mandatory}"
+                                                  shortDesc="#{bindings.TmsClmWebFeedbackSurveyorCRUD.hints.FeedbackIdPk.tooltip}"
+                                                  id="soc2" readOnly="true">
+                                <f:selectItems value="#{row.bindings.FeedbackIdPk.items}" id="si7"/>
+                                <f:validator binding="#{row.bindings.FeedbackIdPk.validator}"/>
+                              </af:selectOneChoice>
+                            </af:column>
+                            <af:column
+                                       id="c3" width="400" displayIndex="-1">
+                              <af:inputText value="#{row.bindings.txtFeedbackValue.inputValue}"
+                                            label="#{bindings.TmsClmWebFeedbackSurveyorCRUD.hints.txtFeedbackValue.label}"
+                                            required="#{bindings.TmsClmWebFeedbackSurveyorCRUD.hints.txtFeedbackValue.mandatory}"
+                                            columns="#{bindings.TmsClmWebFeedbackSurveyorCRUD.hints.txtFeedbackValue.displayWidth}"
+                                            maximumLength="#{bindings.TmsClmWebFeedbackSurveyorCRUD.hints.txtFeedbackValue.precision}"
+                                            shortDesc="#{bindings.TmsClmWebFeedbackSurveyorCRUD.hints.txtFeedbackValue.tooltip}"
+                                            id="it1" rendered="false">
+                                <f:validator binding="#{row.bindings.txtFeedbackValue.validator}"/>
+                              </af:inputText>
+                    <af:selectOneRadio label="Label 1" id="sor2" layout="horizontal"
+                                                 value="#{row.bindings.txtFeedbackValue.inputValue}">
+                                <af:selectItem label="Excellent" value="E" id="si17"/>
+                                <af:selectItem label="Good" value="G" id="si8"/>
+                                <af:selectItem label="Average" value="A" id="si9"/>
+                                <af:selectItem label="Poor" value="P" id="si15"/>
+                                <af:selectItem label="Very Poor" value="V" id="si16"/>
+                              </af:selectOneRadio>                              
+                            </af:column>
+                          </af:table>
                         </af:panelBox>
                       </af:panelGroupLayout>
                     </af:gridCell>

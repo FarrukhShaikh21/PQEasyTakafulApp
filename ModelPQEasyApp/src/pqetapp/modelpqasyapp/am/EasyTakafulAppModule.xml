@@ -52,13 +52,20 @@
   </ViewUsage>
   <ViewUsage
     Name="TmsClmStFeedbackViewRO"
-    ViewObjectName="pqetapp.modelpqasyapp.vo.TmsClmStFeedbackView"/>
+    ViewObjectName="pqetapp.modelpqasyapp.vo.TmsClmStFeedbackView">
+    <ViewCriteriaUsage
+      Name="TmsClmStFeedbackViewCriteria"
+      FullName="pqetapp.modelpqasyapp.vo.TmsClmStFeedbackView.TmsClmStFeedbackViewCriteria"/>
+  </ViewUsage>
   <ViewUsage
     Name="TmsClmWebFeedbackCRUD"
-    ViewObjectName="pqetapp.modelpqasyapp.vo.TmsClmWebFeedbackView"/>
+    ViewObjectName="pqetapp.modelpqasyapp.vo.TmsClmWebFeedbackView"/>    
   <ViewUsage
     Name="TmsClmStWorkshopQVORO"
     ViewObjectName="pqetapp.modelpqasyapp.vo.TmsClmStWorkshopView"/>
+  <ViewUsage
+    Name="TmsClmWebFeedbackSurveyorCRUD"
+    ViewObjectName="pqetapp.modelpqasyapp.vo.TmsClmWebFeedbackView"/>
   <ViewLinkUsage
     Name="TMSComplaintComplaintReasonComplaintIdPkLink1"
     ViewLinkObjectName="pqetapp.modelpqasyapp.link.TMSComplaintComplaintReasonComplaintIdPkLink"

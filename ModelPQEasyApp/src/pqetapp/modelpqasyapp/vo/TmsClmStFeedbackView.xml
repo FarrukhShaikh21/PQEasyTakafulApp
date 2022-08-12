@@ -13,6 +13,10 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <Variable
+    Name="P_ADF_FEEDBACK_TYPE"
+    Kind="viewcriteria"
+    Type="oracle.jbo.domain.Number"/>
   <EntityUsage
     Name="TmsClmStFeedback"
     Entity="pqetapp.modelpqasyapp.eo.TmsClmStFeedback"/>
@@ -46,4 +50,40 @@
     EntityAttrName="EnterDate"
     EntityUsage="TmsClmStFeedback"
     AliasName="ENTER_DATE"/>
+  <ViewCriteria
+    Name="TmsClmStFeedbackViewCriteria"
+    ViewObjectName="pqetapp.modelpqasyapp.vo.TmsClmStFeedbackView"
+    Conjunction="AND">
+    <Properties Name="_Props">
+      <CustomProperties>
+        <Property
+          Name="autoExecute"
+          Value="false"/>
+        <Property
+          Name="mode"
+          Value="Basic"/>
+        <Property
+          Name="allowConjunctionOverride"
+          Value="true"/>
+        <Property
+          Name="showInList"
+          Value="true"/>
+        <Property
+          Name="displayOperators"
+          Value="InAdvancedMode"/>
+      </CustomProperties>
+    </Properties>
+    <ViewCriteriaRow
+      Name="TmsClmStFeedbackViewCriteria_row_0"
+      UpperColumns="1">
+      <ViewCriteriaItem
+        Name="FeedbackType"
+        ViewAttribute="FeedbackType"
+        Operator="="
+        Conjunction="AND"
+        Value=":P_ADF_FEEDBACK_TYPE"
+        IsBindVarValue="true"
+        Required="Optional"/>
+    </ViewCriteriaRow>
+  </ViewCriteria>
 </ViewObject>
