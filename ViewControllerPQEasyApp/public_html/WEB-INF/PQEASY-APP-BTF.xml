@@ -77,6 +77,12 @@
     <view id="PQFaq">
       <page>/PQFaq.jsf</page>
     </view>
+    <method-call id="RollbackFromFeedback">
+      <method>#{bindings.Rollback.execute}</method>
+      <outcome>
+        <fixed-outcome>ACT-GOTO-BACK-FEEDBACK</fixed-outcome>
+      </outcome>
+    </method-call>
     <control-flow-rule id="__1">
       <from-activity-id>PQMain</from-activity-id>
       <control-flow-case id="__2">
@@ -201,7 +207,7 @@
       <from-activity-id>PQFeedback</from-activity-id>
       <control-flow-case id="__34">
         <from-outcome>ACT-GOTO-BACK-FEEDBACK</from-outcome>
-        <to-activity-id>PQMyClaims</to-activity-id>
+        <to-activity-id>RollbackFromFeedback</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__35">
@@ -222,6 +228,13 @@
       <from-activity-id>PQWorkshop</from-activity-id>
       <control-flow-case id="__41">
         <from-outcome>ACT-GOTO-BACK-WORKSHOP</from-outcome>
+        <to-activity-id>PQMyClaims</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__42">
+      <from-activity-id>RollbackFromFeedback</from-activity-id>
+      <control-flow-case id="__43">
+        <from-outcome>ACT-GOTO-BACK-FEEDBACK</from-outcome>
         <to-activity-id>PQMyClaims</to-activity-id>
       </control-flow-case>
     </control-flow-rule>

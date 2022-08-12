@@ -113,6 +113,9 @@
                             </af:column>
                           </af:table>
                         </af:panelBox>
+                        <af:button actionListener="#{bindings.Commit.execute}" text="Submit"
+                                   disabled="#{!bindings.Commit.enabled}" id="b1" styleClass="PQTransactionButton"
+                                   action="ACT-GOTO-BACK-FEEDBACK"/>
                       </af:panelGroupLayout>
                     </af:gridCell>
                   </af:gridRow>

@@ -25,6 +25,8 @@
           usageId="pqetapp_viewpqeasyapp_PQEASY_APP_BTF_PQEASY_APP_BTF_doTMSFeedbackReasonRowsPageDef"/>
     <page path="/PQFeedback.jsf" usageId="pqetapp_viewpqeasyapp_PQFeedbackPageDef"/>
     <page path="/PQWorkshop.jsf" usageId="pqetapp_viewpqeasyapp_PQWorkshopPageDef"/>
+    <page path="/WEB-INF/PQEASY-APP-BTF.xml#PQEASY-APP-BTF@RollbackFromFeedback"
+          usageId="pqetapp_viewpqeasyapp_PQEASY_APP_BTF_PQEASY_APP_BTF_RollbackPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="pqetapp_viewpqeasyapp_PQMyClaimsPageDef" path="pqetapp.viewpqeasyapp.pageDefs.PQMyClaimsPageDef"/>
@@ -52,6 +54,8 @@
           path="pqetapp.viewpqeasyapp.pageDefs.PQEASY_APP_BTF_PQEASY_APP_BTF_doTMSFeedbackReasonRowsPageDef"/>
     <page id="pqetapp_viewpqeasyapp_PQFeedbackPageDef" path="pqetapp.viewpqeasyapp.pageDefs.PQFeedbackPageDef"/>
     <page id="pqetapp_viewpqeasyapp_PQWorkshopPageDef" path="pqetapp.viewpqeasyapp.pageDefs.PQWorkshopPageDef"/>
+    <page id="pqetapp_viewpqeasyapp_PQEASY_APP_BTF_PQEASY_APP_BTF_RollbackPageDef"
+          path="pqetapp.viewpqeasyapp.pageDefs.PQEASY_APP_BTF_PQEASY_APP_BTF_RollbackPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="EasyTakafulAppModuleDataControl" Package="pqetapp.modelpqasyapp.am"
