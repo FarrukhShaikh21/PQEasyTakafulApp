@@ -46,7 +46,7 @@
                                     rowSelection="single" fetchSize="#{bindings.TmsClmWebFeedbackCRUD.rangeSize}"
                                     id="t1" columnStretching="column:c1" autoHeightRows="12" styleClass="AFStretchWidth"
                                     scrollPolicy="page">
-                            <af:column headerText="#{bindings.TmsClmWebFeedbackCRUD.hints.FeedbackIdPk.label}" id="c1"
+                            <af:column headerText="Feedback" id="c1"
                                        width="200" displayIndex="-1">
                               <af:selectOneChoice value="#{row.bindings.FeedbackIdPk.inputValue}"
                                                   label="#{row.bindings.FeedbackIdPk.label}"
@@ -80,7 +80,7 @@
                                     rowSelection="single"
                                     fetchSize="#{bindings.TmsClmWebFeedbackSurveyorCRUD.rangeSize}" id="t2"
                                     columnStretching="column:c2">
-                            <af:column headerText="#{bindings.TmsClmWebFeedbackSurveyorCRUD.hints.FeedbackIdPk.label}"
+                            <af:column headerText="Feedback"
                                        id="c2" width="200">
                               <af:selectOneChoice value="#{row.bindings.FeedbackIdPk.inputValue}"
                                                   label="#{row.bindings.FeedbackIdPk.label}"
