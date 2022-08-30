@@ -5,7 +5,7 @@
     <af:messages id="m1"/>
     <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>  
     <af:form id="f1">
-      <af:decorativeBox id="db1" dimensionsFrom="parent">
+      <af:decorativeBox id="db1">
         <f:facet name="top"/>
         <f:facet name="center">
           <af:panelGridLayout id="pgl2">
@@ -34,176 +34,142 @@
                     <af:gridCell marginStart="15px" width="100%" marginEnd="15px" id="gc1" halign="stretch" columnSpan="2"
                                  rowSpan="1">
                       <af:panelGroupLayout id="pgl3" layout="vertical" halign="center" styleClass="AFStretchWidth">
-                        <af:table value="#{bindings.VuPortalMtrPolicyDtlQVORO.collectionModel}" var="row"
-                                  rows="#{bindings.VuPortalMtrPolicyDtlQVORO.rangeSize}"
-                                  emptyText="#{bindings.VuPortalMtrPolicyDtlQVORO.viewable ? 'No data to display.' : 'Access Denied.'}"
-                                  rowBandingInterval="0"
-                                  selectedRowKeys="#{bindings.VuPortalMtrPolicyDtlQVORO.collectionModel.selectedRow}"
-                                  selectionListener="#{bindings.VuPortalMtrPolicyDtlQVORO.collectionModel.makeCurrent}"
-                                  rowSelection="single" fetchSize="#{bindings.VuPortalMtrPolicyDtlQVORO.rangeSize}"
-                                  id="t1">
-                          <af:column headerText="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.VehicleName.label}" id="c1">
-                            <af:inputText value="#{row.bindings.VehicleName.inputValue}"
-                                          label="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.VehicleName.label}"
-                                          required="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.VehicleName.mandatory}"
-                                          columns="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.VehicleName.displayWidth}"
-                                          maximumLength="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.VehicleName.precision}"
-                                          shortDesc="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.VehicleName.tooltip}"
-                                          id="it1">
-                              <f:validator binding="#{row.bindings.VehicleName.validator}"/>
-                            </af:inputText>
-                          </af:column>
-                          <af:column headerText="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.ClassName.label}" id="c2">
-                            <af:inputText value="#{row.bindings.ClassName.inputValue}"
-                                          label="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.ClassName.label}"
-                                          required="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.ClassName.mandatory}"
-                                          columns="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.ClassName.displayWidth}"
-                                          maximumLength="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.ClassName.precision}"
-                                          shortDesc="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.ClassName.tooltip}"
-                                          id="it2">
-                              <f:validator binding="#{row.bindings.ClassName.validator}"/>
-                            </af:inputText>
-                          </af:column>
-                          <af:column headerText="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.PeriodFrom.label}" id="c3">
-                            <af:inputDate value="#{row.bindings.PeriodFrom.inputValue}"
-                                          label="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.PeriodFrom.label}"
-                                          required="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.PeriodFrom.mandatory}"
-                                          columns="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.PeriodFrom.displayWidth}"
-                                          shortDesc="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.PeriodFrom.tooltip}"
-                                          id="id1">
-                              <f:validator binding="#{row.bindings.PeriodFrom.validator}"/>
-                              <af:convertDateTime pattern="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.PeriodFrom.format}"/>
-                            </af:inputDate>
-                          </af:column>
-                          <af:column headerText="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.PeriodTo.label}" id="c4">
-                            <af:inputDate value="#{row.bindings.PeriodTo.inputValue}"
-                                          label="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.PeriodTo.label}"
-                                          required="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.PeriodTo.mandatory}"
-                                          columns="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.PeriodTo.displayWidth}"
-                                          shortDesc="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.PeriodTo.tooltip}"
-                                          id="id2">
-                              <f:validator binding="#{row.bindings.PeriodTo.validator}"/>
-                              <af:convertDateTime pattern="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.PeriodTo.format}"/>
-                            </af:inputDate>
-                          </af:column>
-                          <af:column headerText="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.Status.label}" id="c5">
-                            <af:inputText value="#{row.bindings.Status.inputValue}"
-                                          label="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.Status.label}"
-                                          required="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.Status.mandatory}"
-                                          columns="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.Status.displayWidth}"
-                                          maximumLength="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.Status.precision}"
-                                          shortDesc="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.Status.tooltip}"
-                                          id="it3">
-                              <f:validator binding="#{row.bindings.Status.validator}"/>
-                            </af:inputText>
-                          </af:column>
-                          <af:column headerText="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.SumCovered.label}" id="c6">
-                            <af:inputText value="#{row.bindings.SumCovered.inputValue}"
-                                          label="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.SumCovered.label}"
-                                          required="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.SumCovered.mandatory}"
-                                          columns="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.SumCovered.displayWidth}"
-                                          maximumLength="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.SumCovered.precision}"
-                                          shortDesc="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.SumCovered.tooltip}"
-                                          id="it4">
-                              <f:validator binding="#{row.bindings.SumCovered.validator}"/>
-                              <af:convertNumber groupingUsed="false"
-                                                pattern="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.SumCovered.format}"/>
-                            </af:inputText>
-                          </af:column>
-                          <af:column headerText="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.BodyName.label}" id="c7">
-                            <af:inputText value="#{row.bindings.BodyName.inputValue}"
-                                          label="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.BodyName.label}"
-                                          required="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.BodyName.mandatory}"
-                                          columns="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.BodyName.displayWidth}"
-                                          maximumLength="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.BodyName.precision}"
-                                          shortDesc="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.BodyName.tooltip}"
-                                          id="it5">
-                              <f:validator binding="#{row.bindings.BodyName.validator}"/>
-                            </af:inputText>
-                          </af:column>
-                          <af:column headerText="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.ColorName.label}" id="c8">
-                            <af:inputText value="#{row.bindings.ColorName.inputValue}"
-                                          label="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.ColorName.label}"
-                                          required="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.ColorName.mandatory}"
-                                          columns="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.ColorName.displayWidth}"
-                                          maximumLength="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.ColorName.precision}"
-                                          shortDesc="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.ColorName.tooltip}"
-                                          id="it6">
-                              <f:validator binding="#{row.bindings.ColorName.validator}"/>
-                            </af:inputText>
-                          </af:column>
-                          <af:column headerText="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.ModelNo.label}" id="c9">
-                            <af:inputText value="#{row.bindings.ModelNo.inputValue}"
-                                          label="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.ModelNo.label}"
-                                          required="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.ModelNo.mandatory}"
-                                          columns="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.ModelNo.displayWidth}"
-                                          maximumLength="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.ModelNo.precision}"
-                                          shortDesc="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.ModelNo.tooltip}"
-                                          id="it7">
-                              <f:validator binding="#{row.bindings.ModelNo.validator}"/>
-                              <af:convertNumber groupingUsed="false"
-                                                pattern="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.ModelNo.format}"/>
-                            </af:inputText>
-                          </af:column>
-                          <af:column headerText="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.RegistrationYear.label}"
-                                     id="c10">
-                            <af:inputText value="#{row.bindings.RegistrationYear.inputValue}"
-                                          label="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.RegistrationYear.label}"
-                                          required="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.RegistrationYear.mandatory}"
-                                          columns="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.RegistrationYear.displayWidth}"
-                                          maximumLength="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.RegistrationYear.precision}"
-                                          shortDesc="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.RegistrationYear.tooltip}"
-                                          id="it8">
-                              <f:validator binding="#{row.bindings.RegistrationYear.validator}"/>
-                            </af:inputText>
-                          </af:column>
-                          <af:column headerText="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.RegistrationNo.label}"
-                                     id="c11">
-                            <af:inputText value="#{row.bindings.RegistrationNo.inputValue}"
-                                          label="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.RegistrationNo.label}"
-                                          required="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.RegistrationNo.mandatory}"
-                                          columns="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.RegistrationNo.displayWidth}"
-                                          maximumLength="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.RegistrationNo.precision}"
-                                          shortDesc="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.RegistrationNo.tooltip}"
-                                          id="it9">
-                              <f:validator binding="#{row.bindings.RegistrationNo.validator}"/>
-                            </af:inputText>
-                          </af:column>
-                          <af:column headerText="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.EngineNo.label}" id="c12">
-                            <af:inputText value="#{row.bindings.EngineNo.inputValue}"
-                                          label="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.EngineNo.label}"
-                                          required="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.EngineNo.mandatory}"
-                                          columns="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.EngineNo.displayWidth}"
-                                          maximumLength="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.EngineNo.precision}"
-                                          shortDesc="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.EngineNo.tooltip}"
-                                          id="it10">
-                              <f:validator binding="#{row.bindings.EngineNo.validator}"/>
-                            </af:inputText>
-                          </af:column>
-                          <af:column headerText="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.ChassisNo.label}" id="c13">
-                            <af:inputText value="#{row.bindings.ChassisNo.inputValue}"
-                                          label="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.ChassisNo.label}"
-                                          required="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.ChassisNo.mandatory}"
-                                          columns="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.ChassisNo.displayWidth}"
-                                          maximumLength="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.ChassisNo.precision}"
-                                          shortDesc="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.ChassisNo.tooltip}"
-                                          id="it11">
-                              <f:validator binding="#{row.bindings.ChassisNo.validator}"/>
-                            </af:inputText>
-                          </af:column>
-                          <af:column headerText="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.TrackerCompany.label}"
-                                     id="c14">
-                            <af:inputText value="#{row.bindings.TrackerCompany.inputValue}"
-                                          label="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.TrackerCompany.label}"
-                                          required="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.TrackerCompany.mandatory}"
-                                          columns="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.TrackerCompany.displayWidth}"
-                                          maximumLength="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.TrackerCompany.precision}"
-                                          shortDesc="#{bindings.VuPortalMtrPolicyDtlQVORO.hints.TrackerCompany.tooltip}"
-                                          id="it12">
-                              <f:validator binding="#{row.bindings.TrackerCompany.validator}"/>
-                            </af:inputText>
-                          </af:column>
-                        </af:table>
+                        <af:panelFormLayout id="pfl1">
+                          <af:inputText value="#{bindings.VehicleName.inputValue}"
+                                        label="#{bindings.VehicleName.hints.label}"
+                                        required="#{bindings.VehicleName.hints.mandatory}"
+                                        columns="#{bindings.VehicleName.hints.displayWidth}"
+                                        maximumLength="#{bindings.VehicleName.hints.precision}"
+                                        shortDesc="#{bindings.VehicleName.hints.tooltip}" id="it1">
+                            <f:validator binding="#{bindings.VehicleName.validator}"/>
+                          </af:inputText>
+                          <af:inputText value="#{bindings.ClassName.inputValue}"
+                                        label="#{bindings.ClassName.hints.label}"
+                                        required="#{bindings.ClassName.hints.mandatory}"
+                                        columns="#{bindings.ClassName.hints.displayWidth}"
+                                        maximumLength="#{bindings.ClassName.hints.precision}"
+                                        shortDesc="#{bindings.ClassName.hints.tooltip}" id="it2">
+                            <f:validator binding="#{bindings.ClassName.validator}"/>
+                          </af:inputText>
+                          <af:inputDate value="#{bindings.PeriodFrom.inputValue}"
+                                        label="#{bindings.PeriodFrom.hints.label}"
+                                        required="#{bindings.PeriodFrom.hints.mandatory}"
+                                        columns="#{bindings.PeriodFrom.hints.displayWidth}"
+                                        shortDesc="#{bindings.PeriodFrom.hints.tooltip}" id="id1">
+                            <f:validator binding="#{bindings.PeriodFrom.validator}"/>
+                            <af:convertDateTime pattern="#{bindings.PeriodFrom.format}"/>
+                          </af:inputDate>
+                          <af:inputDate value="#{bindings.PeriodTo.inputValue}" label="#{bindings.PeriodTo.hints.label}"
+                                        required="#{bindings.PeriodTo.hints.mandatory}"
+                                        columns="#{bindings.PeriodTo.hints.displayWidth}"
+                                        shortDesc="#{bindings.PeriodTo.hints.tooltip}" id="id2">
+                            <f:validator binding="#{bindings.PeriodTo.validator}"/>
+                            <af:convertDateTime pattern="#{bindings.PeriodTo.format}"/>
+                          </af:inputDate>
+                          <af:inputText value="#{bindings.Status.inputValue}" label="#{bindings.Status.hints.label}"
+                                        required="#{bindings.Status.hints.mandatory}"
+                                        columns="#{bindings.Status.hints.displayWidth}"
+                                        maximumLength="#{bindings.Status.hints.precision}"
+                                        shortDesc="#{bindings.Status.hints.tooltip}" id="it3">
+                            <f:validator binding="#{bindings.Status.validator}"/>
+                          </af:inputText>
+                          <af:inputText value="#{bindings.SumCovered.inputValue}"
+                                        label="#{bindings.SumCovered.hints.label}"
+                                        required="#{bindings.SumCovered.hints.mandatory}"
+                                        columns="#{bindings.SumCovered.hints.displayWidth}"
+                                        maximumLength="#{bindings.SumCovered.hints.precision}"
+                                        shortDesc="#{bindings.SumCovered.hints.tooltip}" id="it4">
+                            <f:validator binding="#{bindings.SumCovered.validator}"/>
+                            <af:convertNumber groupingUsed="false" pattern="#{bindings.SumCovered.format}"/>
+                          </af:inputText>
+                          <af:inputText value="#{bindings.ColorName.inputValue}"
+                                        label="#{bindings.ColorName.hints.label}"
+                                        required="#{bindings.ColorName.hints.mandatory}"
+                                        columns="#{bindings.ColorName.hints.displayWidth}"
+                                        maximumLength="#{bindings.ColorName.hints.precision}"
+                                        shortDesc="#{bindings.ColorName.hints.tooltip}" id="it5">
+                            <f:validator binding="#{bindings.ColorName.validator}"/>
+                          </af:inputText>
+                          <af:inputText value="#{bindings.ModelNo.inputValue}" label="#{bindings.ModelNo.hints.label}"
+                                        required="#{bindings.ModelNo.hints.mandatory}"
+                                        columns="#{bindings.ModelNo.hints.displayWidth}"
+                                        maximumLength="#{bindings.ModelNo.hints.precision}"
+                                        shortDesc="#{bindings.ModelNo.hints.tooltip}" id="it6">
+                            <f:validator binding="#{bindings.ModelNo.validator}"/>
+                            <af:convertNumber groupingUsed="false" pattern="#{bindings.ModelNo.format}"/>
+                          </af:inputText>
+                          <af:inputText value="#{bindings.RegistrationYear.inputValue}"
+                                        label="#{bindings.RegistrationYear.hints.label}"
+                                        required="#{bindings.RegistrationYear.hints.mandatory}"
+                                        columns="#{bindings.RegistrationYear.hints.displayWidth}"
+                                        maximumLength="#{bindings.RegistrationYear.hints.precision}"
+                                        shortDesc="#{bindings.RegistrationYear.hints.tooltip}" id="it7">
+                            <f:validator binding="#{bindings.RegistrationYear.validator}"/>
+                          </af:inputText>
+                          <af:inputText value="#{bindings.RegistrationNo.inputValue}"
+                                        label="#{bindings.RegistrationNo.hints.label}"
+                                        required="#{bindings.RegistrationNo.hints.mandatory}"
+                                        columns="#{bindings.RegistrationNo.hints.displayWidth}"
+                                        maximumLength="#{bindings.RegistrationNo.hints.precision}"
+                                        shortDesc="#{bindings.RegistrationNo.hints.tooltip}" id="it8">
+                            <f:validator binding="#{bindings.RegistrationNo.validator}"/>
+                          </af:inputText>
+                          <af:inputText value="#{bindings.EngineNo.inputValue}" label="#{bindings.EngineNo.hints.label}"
+                                        required="#{bindings.EngineNo.hints.mandatory}"
+                                        columns="#{bindings.EngineNo.hints.displayWidth}"
+                                        maximumLength="#{bindings.EngineNo.hints.precision}"
+                                        shortDesc="#{bindings.EngineNo.hints.tooltip}" id="it9">
+                            <f:validator binding="#{bindings.EngineNo.validator}"/>
+                          </af:inputText>
+                          <af:inputText value="#{bindings.ChassisNo.inputValue}"
+                                        label="#{bindings.ChassisNo.hints.label}"
+                                        required="#{bindings.ChassisNo.hints.mandatory}"
+                                        columns="#{bindings.ChassisNo.hints.displayWidth}"
+                                        maximumLength="#{bindings.ChassisNo.hints.precision}"
+                                        shortDesc="#{bindings.ChassisNo.hints.tooltip}" id="it10">
+                            <f:validator binding="#{bindings.ChassisNo.validator}"/>
+                          </af:inputText>
+                          <af:inputText value="#{bindings.TrackerCompany.inputValue}"
+                                        label="#{bindings.TrackerCompany.hints.label}"
+                                        required="#{bindings.TrackerCompany.hints.mandatory}"
+                                        columns="#{bindings.TrackerCompany.hints.displayWidth}"
+                                        maximumLength="#{bindings.TrackerCompany.hints.precision}"
+                                        shortDesc="#{bindings.TrackerCompany.hints.tooltip}" id="it11">
+                            <f:validator binding="#{bindings.TrackerCompany.validator}"/>
+                          </af:inputText>
+                          <af:inputText value="#{bindings.BodyName.inputValue}" label="#{bindings.BodyName.hints.label}"
+                                        required="#{bindings.BodyName.hints.mandatory}"
+                                        columns="#{bindings.BodyName.hints.displayWidth}"
+                                        maximumLength="#{bindings.BodyName.hints.precision}"
+                                        shortDesc="#{bindings.BodyName.hints.tooltip}" id="it12">
+                            <f:validator binding="#{bindings.BodyName.validator}"/>
+                          </af:inputText>
+                          <af:inputText value="#{bindings.DocumentNoUk.inputValue}"
+                                        label="#{bindings.DocumentNoUk.hints.label}"
+                                        required="#{bindings.DocumentNoUk.hints.mandatory}"
+                                        columns="#{bindings.DocumentNoUk.hints.displayWidth}"
+                                        maximumLength="#{bindings.DocumentNoUk.hints.precision}"
+                                        shortDesc="#{bindings.DocumentNoUk.hints.tooltip}" id="it14">
+                            <f:validator binding="#{bindings.DocumentNoUk.validator}"/>
+                          </af:inputText>
+                          <af:inputText value="#{bindings.Gross.inputValue}" label="#{bindings.Gross.hints.label}"
+                                        required="#{bindings.Gross.hints.mandatory}"
+                                        columns="#{bindings.Gross.hints.displayWidth}"
+                                        maximumLength="#{bindings.Gross.hints.precision}"
+                                        shortDesc="#{bindings.Gross.hints.tooltip}" id="it16">
+                            <f:validator binding="#{bindings.Gross.validator}"/>
+                            <af:convertNumber groupingUsed="false" pattern="#{bindings.Gross.format}"/>
+                          </af:inputText>
+                          <af:panelGroupLayout layout="horizontal" id="pgl4">
+                            <af:button actionListener="#{bindings.Previous.execute}" text="Previous"
+                                       disabled="#{!bindings.Previous.enabled}" partialSubmit="true" id="b3"
+                                       styleClass="PQLoginButton"/>
+                            <af:button actionListener="#{bindings.Next.execute}" text="Next"
+                                       disabled="#{!bindings.Next.enabled}" partialSubmit="true" id="b2"
+                                       styleClass="PQLoginButton"/>
+                          </af:panelGroupLayout>
+                          <f:facet name="footer"/>
+                        </af:panelFormLayout>
                       </af:panelGroupLayout>
                     </af:gridCell>
                   </af:gridRow>

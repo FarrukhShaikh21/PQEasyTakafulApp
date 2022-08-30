@@ -5,7 +5,7 @@
     <af:messages id="m1"/>
     <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>  
     <af:form id="f1" usesUpload="true">
-      <af:decorativeBox id="db1">
+      <af:decorativeBox id="db1" dimensionsFrom="children">
         <f:facet name="top"/>
         <f:facet name="center">
           <af:panelGridLayout id="pgl1" dimensionsFrom="auto">

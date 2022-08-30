@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 
 import oracle.jbo.AttributeList;
 import oracle.jbo.Key;
+import oracle.jbo.domain.BlobDomain;
 import oracle.jbo.domain.Date;
 import oracle.jbo.domain.Number;
 import oracle.jbo.server.AttributeDefImpl;
@@ -181,6 +182,16 @@ public class TmsClmWebClaimImpl extends EntityImpl {
             }
         }
         ,
+        ImageUpload {
+            public Object get(TmsClmWebClaimImpl obj) {
+                return obj.getImageUpload();
+            }
+
+            public void put(TmsClmWebClaimImpl obj, Object value) {
+                obj.setImageUpload((BlobDomain) value);
+            }
+        }
+        ,
         TmsClmStLossType {
             public Object get(TmsClmWebClaimImpl obj) {
                 return obj.getTmsClmStLossType();
@@ -237,6 +248,7 @@ public class TmsClmWebClaimImpl extends EntityImpl {
             return vals;
         }
     }
+
     public static final int WEBCLAIMIDPK = AttributesEnum.WebClaimIdPk.index();
     public static final int LOSSTYPEIDFK = AttributesEnum.LossTypeIdFk.index();
     public static final int LOSSCAUSE = AttributesEnum.LossCause.index();
@@ -253,6 +265,7 @@ public class TmsClmWebClaimImpl extends EntityImpl {
     public static final int TXTLOSSTYPEDESCRIPTION = AttributesEnum.txtLossTypeDescription.index();
     public static final int TXTCITYNAME = AttributesEnum.txtCityName.index();
     public static final int TXTWORKSHOPNAME = AttributesEnum.txtWorkshopName.index();
+    public static final int IMAGEUPLOAD = AttributesEnum.ImageUpload.index();
     public static final int TMSCLMSTLOSSTYPE = AttributesEnum.TmsClmStLossType.index();
     public static final int TMSGENSTCITY = AttributesEnum.TmsGenStCity.index();
     public static final int TMSCLMSTWORKSHOP = AttributesEnum.TmsClmStWorkshop.index();
@@ -261,6 +274,13 @@ public class TmsClmWebClaimImpl extends EntityImpl {
      * This is the default constructor (do not remove).
      */
     public TmsClmWebClaimImpl() {
+    }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("pqetapp.modelpqasyapp.eo.TmsClmWebClaim");
     }
 
     /**
@@ -520,6 +540,22 @@ public class TmsClmWebClaimImpl extends EntityImpl {
     }
 
     /**
+     * Gets the attribute value for ImageUpload, using the alias name ImageUpload.
+     * @return the value of ImageUpload
+     */
+    public BlobDomain getImageUpload() {
+        return (BlobDomain) getAttributeInternal(IMAGEUPLOAD);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for ImageUpload.
+     * @param value value to set the ImageUpload
+     */
+    public void setImageUpload(BlobDomain value) {
+        setAttributeInternal(IMAGEUPLOAD, value);
+    }
+
+    /**
      * getAttrInvokeAccessor: generated method. Do not modify.
      * @param index the index identifying the attribute
      * @param attrDef the attribute
@@ -592,6 +628,7 @@ public class TmsClmWebClaimImpl extends EntityImpl {
         setAttributeInternal(TMSCLMSTWORKSHOP, value);
     }
 
+
     /**
      * @param webClaimIdPk key constituent
 
@@ -599,13 +636,6 @@ public class TmsClmWebClaimImpl extends EntityImpl {
      */
     public static Key createPrimaryKey(Number webClaimIdPk) {
         return new Key(new Object[] { webClaimIdPk });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("pqetapp.modelpqasyapp.eo.TmsClmWebClaim");
     }
 
     /**

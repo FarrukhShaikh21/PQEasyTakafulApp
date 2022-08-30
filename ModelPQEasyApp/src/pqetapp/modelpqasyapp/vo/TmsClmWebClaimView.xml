@@ -229,6 +229,13 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
+  <ViewAttribute
+    Name="ImageUpload"
+    IsQueriable="false"
+    PrecisionRule="true"
+    EntityAttrName="ImageUpload"
+    EntityUsage="TmsClmWebClaim"
+    AliasName="IMAGE_UPLOAD"/>
   <ViewLinkAccessor
     Name="TmsClmStLossTypeView"
     ViewLink="pqetapp.modelpqasyapp.link.TmSClmStLossTypeTmsClmWebClaimLossTypeIDLink"

@@ -274,6 +274,14 @@
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
+  <Attribute
+    Name="ImageUpload"
+    IsQueriable="false"
+    ColumnName="IMAGE_UPLOAD"
+    SQLType="BLOB"
+    Type="oracle.jbo.domain.BlobDomain"
+    ColumnType="BLOB"
+    TableName="TMS_CLM_WEB_CLAIM"/>
   <AccessorAttribute
     Name="TmsClmStLossType"
     Association="pqetapp.modelpqasyapp.assoc.TmSClmStLossTypeTmsClmWebClaimLossTypeIDAssoc"

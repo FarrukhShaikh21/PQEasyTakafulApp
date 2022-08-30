@@ -1,5 +1,11 @@
 package pqetapp.viewpqeasyapp.pqbean;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+
+import java.sql.SQLException;
+
 import javax.faces.application.FacesMessage;
 import javax.faces.context.ExternalContext;
 
@@ -11,6 +17,10 @@ import oracle.adf.model.BindingContext;
 import oracle.adf.model.binding.DCBindingContainer;
 import oracle.adf.model.binding.DCIteratorBinding;
 import oracle.adf.share.ADFContext;
+
+import oracle.jbo.domain.BlobDomain;
+
+import org.apache.myfaces.trinidad.model.UploadedFile;
 
 public class PQEasyTakafulBean {
     public PQEasyTakafulBean() {
@@ -50,4 +60,32 @@ public class PQEasyTakafulBean {
         FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Invalid CNIC No"));
         return null;
     }
+
+    private BlobDomain createBlobDomain(UploadedFile file) {
+        InputStream in = null;
+        BlobDomain blobDomain = null;
+        OutputStream out = null;
+
+        try {
+            in = file.getInputStream();
+
+            blobDomain = new BlobDomain();
+            out = blobDomain.getBinaryOutputStream();
+            byte[] buffer = new byte[8192];
+            int bytesRead = 0;
+
+            while ((bytesRead = in.read(buffer, 0, 8192)) != -1) {
+                out.write(buffer, 0, bytesRead);
+            }
+
+            in.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.fillInStackTrace();
+        }
+
+        return blobDomain;
+    }    
 }
