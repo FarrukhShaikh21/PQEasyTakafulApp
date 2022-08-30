@@ -6,6 +6,8 @@
     <variableIterator id="variables"/>
     <iterator Binds="TmsClmStWorkshopQVORO" RangeSize="25" DataControl="EasyTakafulAppModuleDataControl"
               id="TmsClmStWorkshopQVOROIterator"/>
+    <searchRegion Binds="TmsClmStWorkshopQVOROIterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TmsClmStWorkshopQVOROQuery"/>
   </executables>
   <bindings>
     <tree IterBinding="TmsClmStWorkshopQVOROIterator" id="TmsClmStWorkshopQVORO">

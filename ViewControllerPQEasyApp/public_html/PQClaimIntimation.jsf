@@ -31,7 +31,9 @@
                                  marginEnd="10px" columnSpan="2" rowSpan="1">
                       <af:panelGroupLayout id="pgl28" styleClass="width:80%" halign="center" layout="vertical">
                         <af:panelLabelAndMessage label="Upload Video/Image/Document" id="plam1">
-                          <af:inputFile label="Label 1" id="if1" simple="true" rows="1"/>
+                          <af:inputFile label="Label 1" id="if1" simple="true" rows="1"
+                                        valueChangeListener="#{PQEasyTakafulBeanClass.DocClaimIntUploadFileEvent}"
+                                        autoSubmit="true"/>
                         </af:panelLabelAndMessage>
                         <f:facet name="separator"/>
                       </af:panelGroupLayout>

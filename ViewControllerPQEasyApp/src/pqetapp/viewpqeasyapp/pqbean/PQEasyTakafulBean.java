@@ -11,6 +11,8 @@ import javax.faces.context.ExternalContext;
 
 import javax.faces.context.FacesContext;
 
+import javax.faces.event.ValueChangeEvent;
+
 import javax.servlet.http.HttpSession;
 
 import oracle.adf.model.BindingContext;
@@ -18,6 +20,9 @@ import oracle.adf.model.binding.DCBindingContainer;
 import oracle.adf.model.binding.DCIteratorBinding;
 import oracle.adf.share.ADFContext;
 
+import oracle.binding.BindingContainer;
+
+import oracle.jbo.Row;
 import oracle.jbo.domain.BlobDomain;
 
 import org.apache.myfaces.trinidad.model.UploadedFile;
@@ -61,6 +66,31 @@ public class PQEasyTakafulBean {
         return null;
     }
 
+    public void DocClaimIntUploadFileEvent(ValueChangeEvent vc) {
+        // Add event code here...
+        if (vc.getNewValue() != null) {
+            UploadedFile fileVal = (UploadedFile) vc.getNewValue();
+            BindingContext bcx = BindingContext.getCurrent();
+            BindingContainer bc = bcx.getCurrentBindingsEntry();
+            DCBindingContainer dbc = (DCBindingContainer) bc;
+            DCIteratorBinding iter = dbc.findIteratorBinding("TmsClmWebClaimCRUDIterator");
+
+            String vLineIDPk = null;
+            //            vtime = (String)System.currentTimeMillis();
+            Row row = iter.getCurrentRow();
+
+            try {
+                //Save image in Blob column in database
+                row.setAttribute("ImageUpload", createBlobDomain(fileVal));
+                String fileName = (String) fileVal.getFilename();
+
+            } catch (Exception ex) {
+                System.out.println("Exception-" + ex);
+            }
+          
+        }
+    }
+    
     private BlobDomain createBlobDomain(UploadedFile file) {
         InputStream in = null;
         BlobDomain blobDomain = null;
