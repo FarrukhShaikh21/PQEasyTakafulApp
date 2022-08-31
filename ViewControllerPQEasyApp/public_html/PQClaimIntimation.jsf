@@ -15,9 +15,10 @@
                 <af:panelGridLayout id="pgl2" styleClass="PQLoginFormCurve">
                   <af:gridRow id="gr3" height="100px" marginTop="10px">
                     <af:gridCell id="gc6" halign="stretch" valign="middle" width="30%">
-                      <af:panelGroupLayout id="pgl5" layout="vertical" halign="end">
+                      <af:panelGroupLayout id="pgl5" layout="vertical" halign="center">
                         <af:outputText value="MyClaims" id="ot1"
                                        inlineStyle="font-size:xx-large; font-style:italic; color:green;"/>
+                        <af:link text="Back" id="l1" partialSubmit="true" action="ACT-BACK-TO-INTIMATION"/>
                       </af:panelGroupLayout>
                     </af:gridCell>
                     <af:gridCell id="gc4" halign="stretch" columnSpan="1" rowSpan="1" valign="middle" width="70%">

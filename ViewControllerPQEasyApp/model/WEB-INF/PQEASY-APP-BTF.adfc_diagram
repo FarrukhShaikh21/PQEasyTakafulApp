@@ -134,7 +134,7 @@
       <property
          name="fromOutcome">ACT-GOTO-MYCLAIMHISTORY</property>
       <property
-         name="sdm:polyPoints">L34,142.00098,848.29297,64.6709,801.7471,R50</property>
+         name="sdm:polyPoints">L30,142.00098,844.79297,64.6709,801.7471,R50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -150,11 +150,11 @@
       islink="true"
       id="ControlFlowCase13"
       from="View5"
-      to="View2">
+      to="MethodCall54">
       <property
          name="fromOutcome">ACT-BACK-TO-INTIMATION</property>
       <property
-         name="sdm:polyPoints">B44,332.51562,738.64355,224.00098,862.29297,R50</property>
+         name="sdm:polyPoints">B56,339.51562,738.64355,390.5,839.09766,T50</property>
    </ControlFlowCase>
    <MethodCall
       id="MethodCall14">
@@ -260,7 +260,7 @@
       <property
          name="fromOutcome">ACT-GOTO-WORKSHOP</property>
       <property
-         name="sdm:polyPoints">L42,138.87083,855.29297,-372.32227,918.94824,R46</property>
+         name="sdm:polyPoints">L46,138.94196,858.79297,-372.32227,918.94824,R46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -294,12 +294,12 @@
    <ControlFlowCase
       islink="true"
       id="ControlFlowCase28"
-      from="View7"
+      from="View2"
       to="MethodCall31">
       <property
          name="fromOutcome">ACT-GOTO-MYCOMPLAINT</property>
       <property
-         name="sdm:polyPoints">L54,-157.5,547.79297,-235.98535,615.3965,T50</property>
+         name="sdm:polyPoints">L38,140.20602,851.79297,-194.98535,669.3965,R50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -309,7 +309,7 @@
       <property
          name="fromOutcome">ACT-BACK-FROM-MYCOMPLAINT</property>
       <property
-         name="sdm:polyPoints">R50,-377.31934,709.7471,-159.98921,540.79297,L46</property>
+         name="sdm:polyPoints">R50,-377.31934,709.7471,-157.5,544.29297,L50</property>
    </ControlFlowCase>
    <MethodCall
       id="MethodCall30">
@@ -500,7 +500,7 @@
       <property
          name="fromOutcome">ACT-GOTO-FAQ</property>
       <property
-         name="sdm:polyPoints">L66,142.00098,876.29297,-290.84195,1093.9482,R54</property>
+         name="sdm:polyPoints">L70,142.00098,879.79297,-290.86588,1093.9482,R54</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -510,7 +510,7 @@
       <property
          name="fromOutcome">ACT-GOTO-BACK-FROM-FAQ</property>
       <property
-         name="sdm:polyPoints">R46,-292.5,1086.9482,140.34575,869.29297,L58</property>
+         name="sdm:polyPoints">R46,-292.5,1086.9482,140.3696,872.79297,L62</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -520,7 +520,7 @@
       <property
          name="fromOutcome">ACT-GOTO-BACK-WORKSHOP</property>
       <property
-         name="sdm:polyPoints">R54,-371.8883,925.94824,139.30237,862.29297,L50</property>
+         name="sdm:polyPoints">R54,-371.91205,925.94824,139.34993,865.79297,L54</property>
    </ControlFlowCase>
    <MethodCall
       id="MethodCall49">
@@ -568,7 +568,7 @@
       <property
          name="fromOutcome">ACT-GOTO-CONTACT-US</property>
       <property
-         name="sdm:polyPoints">B50,183.00098,917.3185,198.0,1057.0742,T56</property>
+         name="sdm:polyPoints">B39,176.00098,917.6894,191.0,1057.4482,T44</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -578,6 +578,29 @@
       <property
          name="fromOutcome">ACT-GOTO-BACK-CONTACT-US</property>
       <property
-         name="sdm:polyPoints">T44,191.0,1057.4482,176.00098,917.6894,B39</property>
+         name="sdm:polyPoints">T56,198.0,1057.0742,183.00098,917.3185,B50</property>
+   </ControlFlowCase>
+   <MethodCall
+      id="MethodCall54">
+      <property
+         name="activityId">RollbackBackFromIntimation</property>
+      <property
+         name="x">390.5</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>RollbackBackFromIntimation&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="y">893.44824</property>
+      <property
+         name="exceptionHandler">false</property>
+   </MethodCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase55"
+      from="MethodCall54"
+      to="View2">
+      <property
+         name="fromOutcome">ACT-BACK-TO-INTIMATION</property>
+      <property
+         name="sdm:polyPoints">L50,349.5,893.09766,224.00098,862.29297,R50</property>
    </ControlFlowCase>
 </SDM>
