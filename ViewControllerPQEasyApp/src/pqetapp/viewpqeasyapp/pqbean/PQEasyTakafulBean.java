@@ -66,6 +66,12 @@ public class PQEasyTakafulBean {
         return null;
     }
 
+    public String doSetLogOut() {
+            ADFContext.getCurrent().getSessionScope().put("pCNICNo", null);
+            ADFContext.getCurrent().getSessionScope().put("pParticipantId", null);
+            return null;
+        }
+    
     public void DocClaimIntUploadFileEvent(ValueChangeEvent vc) {
         // Add event code here...
         if (vc.getNewValue() != null) {

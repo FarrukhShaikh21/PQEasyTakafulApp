@@ -5,7 +5,12 @@
 <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>  
     <af:form id="f1">
       <af:decorativeBox id="db1" dimensionsFrom="parent">
-        <f:facet name="top"/>
+        <f:facet name="top">
+          <af:panelGroupLayout id="pgl13" layout="vertical" halign="end">
+            <af:link text="Logout" id="l10" icon="#{resource['images:imgLogOut.png']}" iconPosition="top"
+                     action="ACT-LOGOUT-APP"/>
+          </af:panelGroupLayout>
+        </f:facet>
         <f:facet name="center">
           <af:panelGridLayout id="pgl1">
             <af:gridRow id="gr2" height="100%" marginTop="10px">
@@ -57,7 +62,7 @@
                     </af:gridCell>
                     <af:gridCell id="gc12" width="33%" halign="stretch" valign="stretch">
                       <af:panelGroupLayout id="pgl7" halign="center" layout="vertical">
-                        <af:link id="l4" icon="#{resource['images:imgPQGetQuote.png']}" action="ACT-GOTO-MYCOMPLAINT"/>
+                        <af:link id="l4" icon="#{resource['images:imgPQGetQuote.png']}"/>
                       </af:panelGroupLayout>
                     </af:gridCell>
                     <af:gridCell id="gc13" width="34%" halign="stretch" valign="stretch">

@@ -177,7 +177,7 @@
       <property
          name="fromOutcome">ACT-GOTO-MYCLAIMINTIMATION</property>
       <property
-         name="sdm:polyPoints">T50,256.01465,911.3965,339.51562,740.76306,B56</property>
+         name="sdm:polyPoints">T50,256.01465,911.3965,332.51562,738.64355,B44</property>
    </ControlFlowCase>
    <View
       id="View16">
@@ -602,5 +602,30 @@
          name="fromOutcome">ACT-BACK-TO-INTIMATION</property>
       <property
          name="sdm:polyPoints">L50,349.5,893.09766,224.00098,862.29297,R50</property>
+   </ControlFlowCase>
+   <TaskFlowReturn
+      id="TaskFlowReturn56">
+      <property
+         name="activityId">ACT-LOGOUT</property>
+      <property
+         name="x">-212.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>ACT-LOGOUT&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  ACT-LOGOUT&lt;/p></property>
+      <property
+         name="y">146.89648</property>
+      <property
+         name="finish">true</property>
+      <property
+         name="exceptionHandler">false</property>
+   </TaskFlowReturn>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase57"
+      from="View7"
+      to="TaskFlowReturn56">
+      <property
+         name="fromOutcome">ACT-LOGOUT-APP</property>
+      <property
+         name="sdm:polyPoints">T50,-116.5,490.29297,-212.0,200.5459,B50</property>
    </ControlFlowCase>
 </SDM>
