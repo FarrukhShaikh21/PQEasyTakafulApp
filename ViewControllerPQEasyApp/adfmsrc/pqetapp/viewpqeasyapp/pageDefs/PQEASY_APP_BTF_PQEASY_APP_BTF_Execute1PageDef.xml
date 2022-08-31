@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.57"
+                id="PQEASY_APP_BTF_PQEASY_APP_BTF_Execute1PageDef" Package="pqetapp.viewpqeasyapp.pageDefs"
+                SkipValidation="true">
+  <parameters/>
+  <executables>
+    <iterator Binds="VuPortalClaiminfoQVORO" RangeSize="25" DataControl="EasyTakafulAppModuleDataControl"
+              id="VuPortalClaiminfoQVOROIterator" Refresh="never"/>
+  </executables>
+  <bindings>
+    <action IterBinding="VuPortalClaiminfoQVOROIterator" id="Execute" RequiresUpdateModel="true"
+            Action="iteratorExecute"/>
+  </bindings>
+</pageDefinition>

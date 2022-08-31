@@ -30,6 +30,8 @@
     <page path="/WEB-INF/PQEASY-APP-BTF.xml#PQEASY-APP-BTF@RollbackBackFromIntimation"
           usageId="pqetapp_viewpqeasyapp_PQEASY_APP_BTF_PQEASY_APP_BTF_RollbackPageDef1"/>
     <page path="/PQContact.jsf" usageId="pqetapp_viewpqeasyapp_PQContactPageDef"/>
+    <page path="/WEB-INF/PQEASY-APP-BTF.xml#PQEASY-APP-BTF@ExecutePortalClaimInfo"
+          usageId="pqetapp_viewpqeasyapp_PQEASY_APP_BTF_PQEASY_APP_BTF_Execute1PageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="pqetapp_viewpqeasyapp_PQMyClaimsPageDef" path="pqetapp.viewpqeasyapp.pageDefs.PQMyClaimsPageDef"/>
@@ -62,6 +64,8 @@
     <page id="pqetapp_viewpqeasyapp_PQEASY_APP_BTF_PQEASY_APP_BTF_RollbackPageDef1"
           path="pqetapp.viewpqeasyapp.pageDefs.PQEASY_APP_BTF_PQEASY_APP_BTF_RollbackPageDef1"/>
     <page id="pqetapp_viewpqeasyapp_PQContactPageDef" path="pqetapp.viewpqeasyapp.pageDefs.PQContactPageDef"/>
+    <page id="pqetapp_viewpqeasyapp_PQEASY_APP_BTF_PQEASY_APP_BTF_Execute1PageDef"
+          path="pqetapp.viewpqeasyapp.pageDefs.PQEASY_APP_BTF_PQEASY_APP_BTF_Execute1PageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="EasyTakafulAppModuleDataControl" Package="pqetapp.modelpqasyapp.am"

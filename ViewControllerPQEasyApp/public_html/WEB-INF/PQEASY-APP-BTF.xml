@@ -100,6 +100,12 @@
         <name>ACT-LOGOUT</name>
       </outcome>
     </task-flow-return>
+    <method-call id="ExecutePortalClaimInfo">
+      <method>#{bindings.Execute.execute}</method>
+      <outcome>
+        <fixed-outcome>ACT-GOTO-MYCLAIMS</fixed-outcome>
+      </outcome>
+    </method-call>
     <control-flow-rule id="__1">
       <from-activity-id>PQMain</from-activity-id>
       <control-flow-case id="__2">
@@ -112,7 +118,7 @@
       </control-flow-case>
       <control-flow-case id="__10">
         <from-outcome>ACT-GOTO-MYCLAIMS</from-outcome>
-        <to-activity-id>PQMyClaims</to-activity-id>
+        <to-activity-id>ExecutePortalClaimInfo</to-activity-id>
       </control-flow-case>
       <control-flow-case id="__49">
         <from-outcome>ACT-LOGOUT-APP</from-outcome>
@@ -275,6 +281,20 @@
       <control-flow-case id="__48">
         <from-outcome>ACT-BACK-TO-INTIMATION</from-outcome>
         <to-activity-id>PQMyClaims</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__50">
+      <from-activity-id>ExecutePortalClaimInfo</from-activity-id>
+      <control-flow-case id="__51">
+        <from-outcome>ACT-GOTO-MYCLAIMS</from-outcome>
+        <to-activity-id>PQMyClaims</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__52">
+      <from-activity-id>PQMyProfile</from-activity-id>
+      <control-flow-case id="__53">
+        <from-outcome>ACT-GOTO-BACK-MYPROFILE</from-outcome>
+        <to-activity-id>PQMain</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
   </task-flow-definition>
