@@ -66,6 +66,9 @@
   <ViewUsage
     Name="TmsClmWebFeedbackSurveyorCRUD"
     ViewObjectName="pqetapp.modelpqasyapp.vo.TmsClmWebFeedbackView"/>
+  <ViewUsage
+    Name="TmsClmWebContactRO"
+    ViewObjectName="pqetapp.modelpqasyapp.vo.TmsClmWebContactVO"/>
   <ViewLinkUsage
     Name="TMSComplaintComplaintReasonComplaintIdPkLink1"
     ViewLinkObjectName="pqetapp.modelpqasyapp.link.TMSComplaintComplaintReasonComplaintIdPkLink"

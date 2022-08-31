@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.57" id="PQContactPageDef"
+                Package="pqetapp.viewpqeasyapp.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="TmsClmWebContactRO" RangeSize="25" DataControl="EasyTakafulAppModuleDataControl"
+              id="TmsClmWebContactROIterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="TmsClmWebContactROIterator" id="SaleRepresentative">
+      <AttrNames>
+        <Item Value="SaleRepresentative"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmsClmWebContactROIterator" id="MobileNumber">
+      <AttrNames>
+        <Item Value="MobileNumber"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmsClmWebContactROIterator" id="HoContactNo">
+      <AttrNames>
+        <Item Value="HoContactNo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmsClmWebContactROIterator" id="IsbContactNo">
+      <AttrNames>
+        <Item Value="IsbContactNo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmsClmWebContactROIterator" id="LahoreContactNo">
+      <AttrNames>
+        <Item Value="LahoreContactNo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TmsClmWebContactROIterator" id="EmailAdd">
+      <AttrNames>
+        <Item Value="EmailAdd"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

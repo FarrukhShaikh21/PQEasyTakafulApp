@@ -151,5 +151,13 @@ public class EasyTakafulAppModuleImpl extends ApplicationModuleImpl implements E
     public ViewObjectImpl getTmsClmWebFeedbackSurveyorCRUD() {
         return (ViewObjectImpl) findViewObject("TmsClmWebFeedbackSurveyorCRUD");
     }
+
+    /**
+     * Container's getter for TmsClmWebContactVO1.
+     * @return TmsClmWebContactVO1
+     */
+    public ViewObjectImpl getTmsClmWebContactRO() {
+        return (ViewObjectImpl) findViewObject("TmsClmWebContactRO");
+    }
 }
 

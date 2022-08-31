@@ -8,7 +8,7 @@
       <af:decorativeBox id="db1" dimensionsFrom="parent">
         <f:facet name="top"/>
         <f:facet name="center">
-          <af:panelGridLayout id="pgl2">
+          <af:panelGridLayout id="pgl2" dimensionsFrom="parent">
             <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr4">
               <af:gridCell marginStart="5px" width="10%" id="gc4" marginEnd="5px"/>
               <af:gridCell marginStart="5px" width="80%" id="gc5" valign="stretch" halign="stretch">
@@ -47,11 +47,11 @@
                           <af:gridCell id="gc7" columnSpan="1" rowSpan="1" width="50%"
                                        halign="stretch" valign="middle">
                             <af:separator id="s7"/>
-                            <af:outputText value="Name" id="ot4" inlineStyle="font-size:20px"/>
+                            <af:outputText value="#{bindings.SaleRepresentative.inputValue}" id="ot4" inlineStyle="font-size:20px"/>
                           </af:gridCell>
                           <af:gridCell id="gc1" halign="stretch" valign="middle">
                             <af:separator id="s8"/>
-                            <af:outputText value="Mobile No" id="ot19" truncateAt="0" inlineStyle="font-size:20px"/>
+                            <af:outputText value="#{bindings.MobileNumber.inputValue}" id="ot19" truncateAt="0" inlineStyle="font-size:20px"/>
                           </af:gridCell>
                         </af:gridRow>
                         <af:gridRow id="gr5" marginTop="20px" marginBottom="20px">
@@ -67,7 +67,7 @@
                           </af:gridCell>
                           <af:gridCell id="gc21" width="50%" halign="stretch">
                             <af:separator id="s11"/>
-                            <af:outputText value="0315-2005017" id="ot20" truncateAt="0" inlineStyle="font-size:20px"/>
+                            <af:outputText value="#{bindings.HoContactNo.inputValue}" id="ot20" truncateAt="0" inlineStyle="font-size:20px"/>
                           </af:gridCell>
                         </af:gridRow>
                         <af:gridRow id="gr2" marginBottom="20px">
@@ -78,7 +78,7 @@
                           </af:gridCell>
                           <af:gridCell id="gc12" width="50%" valign="middle" halign="stretch">
                             <af:separator id="s2"/>
-                            <af:outputText value="0315-2005018" id="ot10" truncateAt="0" inlineStyle="font-size:20px"/>
+                            <af:outputText value="#{bindings.IsbContactNo.inputValue}" id="ot10" truncateAt="0" inlineStyle="font-size:20px"/>
                           </af:gridCell>
                         </af:gridRow>
                         <af:gridRow id="gr1" marginBottom="20px">
@@ -88,7 +88,7 @@
                           </af:gridCell>
                           <af:gridCell id="gc10" width="50%" halign="stretch">
                             <af:separator id="s4"/>
-                            <af:outputText value="0315-2005020" id="ot8" truncateAt="0" inlineStyle="font-size:20px"/>
+                            <af:outputText value="#{bindings.LahoreContactNo.inputValue}" id="ot8" truncateAt="0" inlineStyle="font-size:20px"/>
                           </af:gridCell>
                         </af:gridRow>
                         <af:gridRow id="gr6" marginBottom="20px">
@@ -98,7 +98,7 @@
                           </af:gridCell>
                           <af:gridCell id="gc14" width="50%" halign="stretch">
                             <af:separator id="s6"/>
-                            <af:outputText value="claims@paqqatar.com.pk" id="ot12" truncateAt="0" inlineStyle="font-size:20px"/>
+                            <af:outputText value="#{bindings.EmailAdd.inputValue}" id="ot12" truncateAt="0" inlineStyle="font-size:20px"/>
                           </af:gridCell>
                         </af:gridRow>
                       </af:panelGridLayout>
