@@ -305,7 +305,7 @@
       islink="true"
       id="ControlFlowCase29"
       from="View27"
-      to="View7">
+      to="View2">
       <property
          name="fromOutcome">ACT-BACK-FROM-MYCOMPLAINT</property>
       <property

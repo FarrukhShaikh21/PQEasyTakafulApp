@@ -5,7 +5,7 @@
     <af:messages id="m1"/>
     <meta name="viewport" content="width = device-width, initial-scale = 1.0, user-scalable = no"/>  
     <af:form id="f1" usesUpload="true">
-      <af:decorativeBox id="db1" dimensionsFrom="parent">
+      <af:decorativeBox id="db1" dimensionsFrom="children">
         <f:facet name="top"/>
         <f:facet name="center">
           <af:panelGridLayout id="pgl2">
@@ -14,7 +14,7 @@
               <af:gridCell marginStart="5px" width="80%" id="gc5" valign="stretch" halign="stretch">
                 <af:panelGridLayout id="pgl1" styleClass="PQLoginFormCurve">
                   <af:gridRow marginTop="5px" height="auto" id="gr11">
-                    <af:gridCell marginStart="5px" width="30%" id="gc26" halign="stretch" valign="middle">
+                    <af:gridCell marginStart="5px" width="30%" id="gc26" halign="stretch" valign="stretch">
                       <af:panelGroupLayout id="pgl5" layout="vertical" halign="center">
                         <af:outputText value="Complaint Registration" id="ot1"
                                        inlineStyle="font-size:xx-large; font-style:italic; color:green;"
@@ -32,8 +32,8 @@
                     </af:gridCell>
                   </af:gridRow>                
                   <af:gridRow marginTop="5px" height="auto" id="gr1">
-                    <af:gridCell marginStart="15px" width="100%" marginEnd="15px" id="gc1" halign="stretch" columnSpan="2"
-                                 rowSpan="1" valign="stretch">
+                    <af:gridCell marginStart="15px" width="100%" marginEnd="15px" id="gc1" columnSpan="2"
+                                 rowSpan="1" valign="stretch" halign="stretch">
                       <af:panelBox text="Is The Complaint About?" id="pb1" showDisclosure="false">
                         <f:facet name="toolbar"/>
                         <af:panelGroupLayout id="pgl3" layout="horizontal">
@@ -119,7 +119,7 @@
                       <af:panelBox text="Please specify the particular Person Involved (If you Know)" id="pb3"
                                    showDisclosure="false">
                         <f:facet name="toolbar"/>
-                        <af:panelFormLayout id="pfl1">
+                        <af:panelFormLayout id="pfl1" styleClass="AFStretchWidth">
                           <af:inputText value="#{bindings.ParticularPersonName.inputValue}"
                                         label="#{bindings.ParticularPersonName.hints.label}"
                                         required="#{bindings.ParticularPersonName.hints.mandatory}"

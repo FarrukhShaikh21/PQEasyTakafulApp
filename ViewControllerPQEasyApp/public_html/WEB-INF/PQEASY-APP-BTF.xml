@@ -203,7 +203,7 @@
       <from-activity-id>PQComplaint</from-activity-id>
       <control-flow-case id="__22">
         <from-outcome>ACT-BACK-FROM-MYCOMPLAINT</from-outcome>
-        <to-activity-id>PQMain</to-activity-id>
+        <to-activity-id>PQMyClaims</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__23">

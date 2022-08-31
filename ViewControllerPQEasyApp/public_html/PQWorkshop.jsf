@@ -44,7 +44,8 @@
                                   filterModel="#{bindings.TmsClmStWorkshopQVOROQuery.queryDescriptor}"
                                   filterVisible="true"
                                   queryListener="#{bindings.TmsClmStWorkshopQVOROQuery.processQuery}" varStatus="vs"
-                                  id="t1" columnStretching="last">
+                                  id="t1" columnStretching="last" scrollPolicy="page" autoHeightRows="10"
+                                  styleClass="AFStretchWidth">
                           <af:column sortProperty="#{bindings.TmsClmStWorkshopQVORO.hints.WorkshopName.name}"
                                      filterable="true"
                                      headerText="#{bindings.TmsClmStWorkshopQVORO.hints.WorkshopName.label}" id="c1"
