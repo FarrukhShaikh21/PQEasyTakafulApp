@@ -6,6 +6,8 @@
     <variableIterator id="variables"/>
     <iterator Binds="VuPortalMtrPolicyDtlQVORO" RangeSize="25" DataControl="EasyTakafulAppModuleDataControl"
               id="VuPortalMtrPolicyDtlQVOROIterator"/>
+    <iterator Binds="TmsClmWebClaimCRUD" RangeSize="25" DataControl="EasyTakafulAppModuleDataControl"
+              id="TmsClmWebClaimCRUDIterator"/>
   </executables>
   <bindings>
     <attributeValues IterBinding="VuPortalMtrPolicyDtlQVOROIterator" id="VehicleName">
@@ -90,5 +92,20 @@
     </attributeValues>
     <action IterBinding="VuPortalMtrPolicyDtlQVOROIterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
     <action IterBinding="VuPortalMtrPolicyDtlQVOROIterator" id="Next" RequiresUpdateModel="true" Action="next"/>
+    <attributeValues IterBinding="VuPortalMtrPolicyDtlQVOROIterator" id="ItemDetailId">
+      <AttrNames>
+        <Item Value="ItemDetailId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="VuPortalMtrPolicyDtlQVOROIterator" id="DocumentIdPk">
+      <AttrNames>
+        <Item Value="DocumentIdPk"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="TmsClmWebClaimCRUDIterator" id="CreateWithParams" RequiresUpdateModel="true"
+            Action="createWithParams">
+      <NamedData NDName="DocumentIdFk" NDValue="#{bindings.DocumentIdPk.inputValue}" NDType="java.lang.String"/>
+      <NamedData NDName="ItemDetailId" NDValue="#{bindings.ItemDetailId.inputValue}" NDType="java.lang.String"/>
+    </action>
   </bindings>
 </pageDefinition>

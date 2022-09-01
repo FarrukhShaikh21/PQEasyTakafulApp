@@ -159,10 +159,6 @@
         <from-outcome>ACT-GOTO-CONTACT-US</from-outcome>
         <to-activity-id>PQContact</to-activity-id>
       </control-flow-case>
-      <control-flow-case id="__14">
-        <from-outcome>ACT-GOTO-MYCOMPLAINT</from-outcome>
-        <to-activity-id>CreateComplaint</to-activity-id>
-      </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__6">
       <from-activity-id>PQClaimIntimation</from-activity-id>
@@ -191,6 +187,10 @@
         <from-outcome>ACT-GOTO-MYPOLICYVIEW-BACK</from-outcome>
         <to-activity-id>PQMyTakaful</to-activity-id>
       </control-flow-case>
+      <control-flow-case id="__14">
+        <from-outcome>ACT-GOTO-MYCOMPLAINT</from-outcome>
+        <to-activity-id>CreateComplaint</to-activity-id>
+      </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__18">
       <from-activity-id>ExecutePolicyVew</from-activity-id>
@@ -203,7 +203,7 @@
       <from-activity-id>PQComplaint</from-activity-id>
       <control-flow-case id="__22">
         <from-outcome>ACT-BACK-FROM-MYCOMPLAINT</from-outcome>
-        <to-activity-id>PQMyClaims</to-activity-id>
+        <to-activity-id>PQPolicyView</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__23">

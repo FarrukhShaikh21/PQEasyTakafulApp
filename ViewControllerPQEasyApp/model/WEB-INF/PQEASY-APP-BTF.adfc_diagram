@@ -134,7 +134,7 @@
       <property
          name="fromOutcome">ACT-GOTO-MYCLAIMHISTORY</property>
       <property
-         name="sdm:polyPoints">L30,142.00098,844.79297,64.6709,801.7471,R50</property>
+         name="sdm:polyPoints">L34,142.00098,848.29297,64.6709,801.7471,R50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -260,7 +260,7 @@
       <property
          name="fromOutcome">ACT-GOTO-WORKSHOP</property>
       <property
-         name="sdm:polyPoints">L46,138.94196,858.79297,-372.32227,918.94824,R46</property>
+         name="sdm:polyPoints">L50,139.0133,862.29297,-372.32227,918.94824,R46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -294,7 +294,7 @@
    <ControlFlowCase
       islink="true"
       id="ControlFlowCase28"
-      from="View2"
+      from="View16"
       to="MethodCall31">
       <property
          name="fromOutcome">ACT-GOTO-MYCOMPLAINT</property>
@@ -305,11 +305,11 @@
       islink="true"
       id="ControlFlowCase29"
       from="View27"
-      to="View2">
+      to="View16">
       <property
          name="fromOutcome">ACT-BACK-FROM-MYCOMPLAINT</property>
       <property
-         name="sdm:polyPoints">R50,-377.31934,709.7471,-157.5,544.29297,L50</property>
+         name="sdm:polyPoints">B56,-414.81934,763.7471,11.678711,1064.2471,L46</property>
    </ControlFlowCase>
    <MethodCall
       id="MethodCall30">
@@ -378,7 +378,7 @@
       <property
          name="fromOutcome">Execute</property>
       <property
-         name="sdm:polyPoints">T50,-402.5,785.7988,-418.31934,763.7471,B50</property>
+         name="sdm:polyPoints">T50,-402.5,785.7988,-421.81934,768.0324,B44</property>
    </ControlFlowCase>
    <View
       id="View36">
@@ -500,7 +500,7 @@
       <property
          name="fromOutcome">ACT-GOTO-FAQ</property>
       <property
-         name="sdm:polyPoints">L70,142.00098,879.79297,-290.86588,1093.9482,R54</property>
+         name="sdm:polyPoints">L74,142.00098,883.29297,-290.88992,1093.9482,R54</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -510,7 +510,7 @@
       <property
          name="fromOutcome">ACT-GOTO-BACK-FROM-FAQ</property>
       <property
-         name="sdm:polyPoints">R46,-292.5,1086.9482,140.3696,872.79297,L62</property>
+         name="sdm:polyPoints">R46,-292.5,1086.9482,140.39357,876.29297,L66</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -520,7 +520,7 @@
       <property
          name="fromOutcome">ACT-GOTO-BACK-WORKSHOP</property>
       <property
-         name="sdm:polyPoints">R54,-371.91205,925.94824,139.34993,865.79297,L54</property>
+         name="sdm:polyPoints">R54,-371.9358,925.94824,139.39769,869.29297,L58</property>
    </ControlFlowCase>
    <MethodCall
       id="MethodCall49">

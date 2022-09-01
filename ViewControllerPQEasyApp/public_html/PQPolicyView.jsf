@@ -35,6 +35,15 @@
                                  rowSpan="1">
                       <af:panelGroupLayout id="pgl3" layout="vertical" halign="center" styleClass="AFStretchWidth">
                         <af:panelFormLayout id="pfl1">
+                          <af:inputText value="#{bindings.ItemDetailId.inputValue}"
+                                        label="#{bindings.ItemDetailId.hints.label}"
+                                        required="#{bindings.ItemDetailId.hints.mandatory}"
+                                        columns="#{bindings.ItemDetailId.hints.displayWidth}"
+                                        maximumLength="#{bindings.ItemDetailId.hints.precision}"
+                                        shortDesc="#{bindings.ItemDetailId.hints.tooltip}" id="it13" rendered="false">
+                            <f:validator binding="#{bindings.ItemDetailId.validator}"/>
+                            <af:convertNumber groupingUsed="false" pattern="#{bindings.ItemDetailId.format}"/>
+                          </af:inputText>
                           <af:inputText value="#{bindings.VehicleName.inputValue}"
                                         label="#{bindings.VehicleName.hints.label}"
                                         required="#{bindings.VehicleName.hints.mandatory}"
@@ -160,12 +169,24 @@
                             <f:validator binding="#{bindings.Gross.validator}"/>
                             <af:convertNumber groupingUsed="false" pattern="#{bindings.Gross.format}"/>
                           </af:inputText>
+                          <af:inputText value="#{bindings.DocumentIdPk.inputValue}"
+                                        label="#{bindings.DocumentIdPk.hints.label}"
+                                        required="#{bindings.DocumentIdPk.hints.mandatory}"
+                                        columns="#{bindings.DocumentIdPk.hints.displayWidth}"
+                                        maximumLength="#{bindings.DocumentIdPk.hints.precision}"
+                                        shortDesc="#{bindings.DocumentIdPk.hints.tooltip}" id="it15" rendered="false">
+                            <f:validator binding="#{bindings.DocumentIdPk.validator}"/>
+                            <af:convertNumber groupingUsed="false" pattern="#{bindings.DocumentIdPk.format}"/>
+                          </af:inputText>
                           <af:panelGroupLayout layout="horizontal" id="pgl4">
                             <af:button actionListener="#{bindings.Previous.execute}" text="Previous"
                                        disabled="#{!bindings.Previous.enabled}" partialSubmit="true" id="b3"
                                        styleClass="PQTransactionButton"/>
                             <af:button actionListener="#{bindings.Next.execute}" text="Next"
                                        disabled="#{!bindings.Next.enabled}" partialSubmit="true" id="b2"
+                                       styleClass="PQTransactionButton"/>
+                            <af:button actionListener="#{bindings.CreateWithParams.execute}" text="Complaint"
+                                       disabled="#{!bindings.CreateWithParams.enabled}" id="b1"
                                        styleClass="PQTransactionButton"/>
                           </af:panelGroupLayout>
                           <f:facet name="footer"/>
