@@ -203,7 +203,6 @@
     ColumnType="NUMBER"
     TableName="TMS_CLM_WEB_COMPLAINT">
     <TransientExpression
-      trustMode="trusted"
       Name="ExpressionScript"><![CDATA[pqetapp.modelpqasyapp.gclass.PQEasyTakafulModelGlobal.dogetParticipantID()]]></TransientExpression>
   </Attribute>
   <Attribute
@@ -222,6 +221,14 @@
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
+  <Attribute
+    Name="ImageUpload"
+    IsQueriable="false"
+    ColumnName="IMAGE_UPLOAD"
+    SQLType="BLOB"
+    Type="oracle.jbo.domain.BlobDomain"
+    ColumnType="BLOB"
+    TableName="TMS_CLM_WEB_COMPLAINT"/>
   <AccessorAttribute
     Name="TmsClmWebComplaintDtl"
     Association="pqetapp.modelpqasyapp.assoc.TMSComplaintComplaintReasonComplaintIdPkAssoc"

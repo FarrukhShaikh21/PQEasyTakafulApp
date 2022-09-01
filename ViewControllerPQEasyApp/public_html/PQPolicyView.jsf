@@ -163,10 +163,10 @@
                           <af:panelGroupLayout layout="horizontal" id="pgl4">
                             <af:button actionListener="#{bindings.Previous.execute}" text="Previous"
                                        disabled="#{!bindings.Previous.enabled}" partialSubmit="true" id="b3"
-                                       styleClass="PQLoginButton"/>
+                                       styleClass="PQTransactionButton"/>
                             <af:button actionListener="#{bindings.Next.execute}" text="Next"
                                        disabled="#{!bindings.Next.enabled}" partialSubmit="true" id="b2"
-                                       styleClass="PQLoginButton"/>
+                                       styleClass="PQTransactionButton"/>
                           </af:panelGroupLayout>
                           <f:facet name="footer"/>
                         </af:panelFormLayout>

@@ -99,6 +99,13 @@
     EntityAttrName="EnterDate"
     EntityUsage="TmsClmWebComplaint"
     AliasName="ENTER_DATE"/>
+  <ViewAttribute
+    Name="ImageUpload"
+    IsQueriable="false"
+    PrecisionRule="true"
+    EntityAttrName="ImageUpload"
+    EntityUsage="TmsClmWebComplaint"
+    AliasName="IMAGE_UPLOAD"/>
   <ViewLinkAccessor
     Name="TmsClmWebComplaintDtlView"
     ViewLink="pqetapp.modelpqasyapp.link.TMSComplaintComplaintReasonComplaintIdPkLink"

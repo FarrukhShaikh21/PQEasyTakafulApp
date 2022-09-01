@@ -96,7 +96,30 @@ public class PQEasyTakafulBean {
           
         }
     }
-    
+    public void DocComplaintUploadFileEvent(ValueChangeEvent vc) {
+        // Add event code here...
+        if (vc.getNewValue() != null) {
+            UploadedFile fileVal = (UploadedFile) vc.getNewValue();
+            BindingContext bcx = BindingContext.getCurrent();
+            BindingContainer bc = bcx.getCurrentBindingsEntry();
+            DCBindingContainer dbc = (DCBindingContainer) bc;
+            DCIteratorBinding iter = dbc.findIteratorBinding("TmsClmWebComplaintCRUDIterator");
+
+            String vLineIDPk = null;
+            //            vtime = (String)System.currentTimeMillis();
+            Row row = iter.getCurrentRow();
+
+            try {
+                //Save image in Blob column in database
+                row.setAttribute("ImageUpload", createBlobDomain(fileVal));
+                String fileName = (String) fileVal.getFilename();
+
+            } catch (Exception ex) {
+                System.out.println("Exception-" + ex);
+            }
+          
+        }
+    }  
     private BlobDomain createBlobDomain(UploadedFile file) {
         InputStream in = null;
         BlobDomain blobDomain = null;

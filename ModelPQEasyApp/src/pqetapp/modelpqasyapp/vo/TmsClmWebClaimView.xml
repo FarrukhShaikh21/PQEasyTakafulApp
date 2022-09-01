@@ -236,6 +236,12 @@
     EntityAttrName="ImageUpload"
     EntityUsage="TmsClmWebClaim"
     AliasName="IMAGE_UPLOAD"/>
+  <ViewAttribute
+    Name="ItemDetailId"
+    PrecisionRule="true"
+    EntityAttrName="ItemDetailId"
+    EntityUsage="TmsClmWebClaim"
+    AliasName="ITEM_DETAIL_ID"/>
   <ViewLinkAccessor
     Name="TmsClmStLossTypeView"
     ViewLink="pqetapp.modelpqasyapp.link.TmSClmStLossTypeTmsClmWebClaimLossTypeIDLink"

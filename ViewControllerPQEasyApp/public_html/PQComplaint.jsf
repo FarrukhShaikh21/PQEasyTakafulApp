@@ -198,10 +198,12 @@
                             <f:validator binding="#{bindings.DiscussedDetail.validator}"/>
                           </af:inputText>
                           <af:panelGroupLayout id="pgl9" layout="horizontal">
-                            <af:inputFile label="Choose File" id="if1"/>
+                            <af:inputFile label="Choose File" id="if1"
+                                          valueChangeListener="#{PQEasyTakafulBeanClass.DocComplaintUploadFileEvent}"
+                                          autoSubmit="true"/>
                             <af:button actionListener="#{bindings.Commit.execute}" text="Submit"
                                        disabled="#{!bindings.Commit.enabled}" id="b2"
-                                       action="ACT-BACK-FROM-MYCOMPLAINT"/>
+                                       action="ACT-BACK-FROM-MYCOMPLAINT" styleClass="PQTransactionButton"/>
                           </af:panelGroupLayout>
                         </af:panelFormLayout>
                       </af:panelBox>

@@ -5,6 +5,7 @@ import java.math.BigDecimal;
 import oracle.jbo.AttributeList;
 import oracle.jbo.Key;
 import oracle.jbo.RowIterator;
+import oracle.jbo.domain.BlobDomain;
 import oracle.jbo.domain.Date;
 import oracle.jbo.domain.Number;
 import oracle.jbo.server.AttributeDefImpl;
@@ -144,6 +145,16 @@ public class TmsClmWebComplaintImpl extends EntityImpl {
             }
         }
         ,
+        ImageUpload {
+            public Object get(TmsClmWebComplaintImpl obj) {
+                return obj.getImageUpload();
+            }
+
+            public void put(TmsClmWebComplaintImpl obj, Object value) {
+                obj.setImageUpload((BlobDomain) value);
+            }
+        }
+        ,
         TmsClmWebComplaintDtl {
             public Object get(TmsClmWebComplaintImpl obj) {
                 return obj.getTmsClmWebComplaintDtl();
@@ -181,6 +192,7 @@ public class TmsClmWebComplaintImpl extends EntityImpl {
         }
     }
 
+
     public static final int COMPLAINTIDPK = AttributesEnum.ComplaintIdPk.index();
     public static final int COMPLAINTTYPE = AttributesEnum.ComplaintType.index();
     public static final int PARTICULARPERSONNAME = AttributesEnum.ParticularPersonName.index();
@@ -193,6 +205,7 @@ public class TmsClmWebComplaintImpl extends EntityImpl {
     public static final int REMARKS = AttributesEnum.Remarks.index();
     public static final int PARTICIPANTIDFK = AttributesEnum.ParticipantIdFk.index();
     public static final int ENTERDATE = AttributesEnum.EnterDate.index();
+    public static final int IMAGEUPLOAD = AttributesEnum.ImageUpload.index();
     public static final int TMSCLMWEBCOMPLAINTDTL = AttributesEnum.TmsClmWebComplaintDtl.index();
 
     /**
@@ -207,6 +220,7 @@ public class TmsClmWebComplaintImpl extends EntityImpl {
     public static synchronized EntityDefImpl getDefinitionObject() {
         return EntityDefImpl.findDefObject("pqetapp.modelpqasyapp.eo.TmsClmWebComplaint");
     }
+
 
     /**
      * Gets the attribute value for ComplaintIdPk, using the alias name ComplaintIdPk.
@@ -398,6 +412,22 @@ public class TmsClmWebComplaintImpl extends EntityImpl {
      */
     public void setEnterDate(Date value) {
         setAttributeInternal(ENTERDATE, value);
+    }
+
+    /**
+     * Gets the attribute value for ImageUpload, using the alias name ImageUpload.
+     * @return the value of ImageUpload
+     */
+    public BlobDomain getImageUpload() {
+        return (BlobDomain) getAttributeInternal(IMAGEUPLOAD);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for ImageUpload.
+     * @param value value to set the ImageUpload
+     */
+    public void setImageUpload(BlobDomain value) {
+        setAttributeInternal(IMAGEUPLOAD, value);
     }
 
     /**

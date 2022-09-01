@@ -192,6 +192,16 @@ public class TmsClmWebClaimImpl extends EntityImpl {
             }
         }
         ,
+        ItemDetailId {
+            public Object get(TmsClmWebClaimImpl obj) {
+                return obj.getItemDetailId();
+            }
+
+            public void put(TmsClmWebClaimImpl obj, Object value) {
+                obj.setItemDetailId((Number) value);
+            }
+        }
+        ,
         TmsClmStLossType {
             public Object get(TmsClmWebClaimImpl obj) {
                 return obj.getTmsClmStLossType();
@@ -249,6 +259,7 @@ public class TmsClmWebClaimImpl extends EntityImpl {
         }
     }
 
+
     public static final int WEBCLAIMIDPK = AttributesEnum.WebClaimIdPk.index();
     public static final int LOSSTYPEIDFK = AttributesEnum.LossTypeIdFk.index();
     public static final int LOSSCAUSE = AttributesEnum.LossCause.index();
@@ -266,6 +277,7 @@ public class TmsClmWebClaimImpl extends EntityImpl {
     public static final int TXTCITYNAME = AttributesEnum.txtCityName.index();
     public static final int TXTWORKSHOPNAME = AttributesEnum.txtWorkshopName.index();
     public static final int IMAGEUPLOAD = AttributesEnum.ImageUpload.index();
+    public static final int ITEMDETAILID = AttributesEnum.ItemDetailId.index();
     public static final int TMSCLMSTLOSSTYPE = AttributesEnum.TmsClmStLossType.index();
     public static final int TMSGENSTCITY = AttributesEnum.TmsGenStCity.index();
     public static final int TMSCLMSTWORKSHOP = AttributesEnum.TmsClmStWorkshop.index();
@@ -282,6 +294,7 @@ public class TmsClmWebClaimImpl extends EntityImpl {
     public static synchronized EntityDefImpl getDefinitionObject() {
         return EntityDefImpl.findDefObject("pqetapp.modelpqasyapp.eo.TmsClmWebClaim");
     }
+
 
     /**
      * Gets the attribute value for WebClaimIdPk, using the alias name WebClaimIdPk.
@@ -553,6 +566,22 @@ public class TmsClmWebClaimImpl extends EntityImpl {
      */
     public void setImageUpload(BlobDomain value) {
         setAttributeInternal(IMAGEUPLOAD, value);
+    }
+
+    /**
+     * Gets the attribute value for ItemDetailId, using the alias name ItemDetailId.
+     * @return the value of ItemDetailId
+     */
+    public Number getItemDetailId() {
+        return (Number) getAttributeInternal(ITEMDETAILID);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for ItemDetailId.
+     * @param value value to set the ItemDetailId
+     */
+    public void setItemDetailId(Number value) {
+        setAttributeInternal(ITEMDETAILID, value);
     }
 
     /**

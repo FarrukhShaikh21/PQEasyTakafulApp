@@ -282,6 +282,13 @@
     Type="oracle.jbo.domain.BlobDomain"
     ColumnType="BLOB"
     TableName="TMS_CLM_WEB_CLAIM"/>
+  <Attribute
+    Name="ItemDetailId"
+    ColumnName="ITEM_DETAIL_ID"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="TMS_CLM_WEB_CLAIM"/>
   <AccessorAttribute
     Name="TmsClmStLossType"
     Association="pqetapp.modelpqasyapp.assoc.TmSClmStLossTypeTmsClmWebClaimLossTypeIDAssoc"
