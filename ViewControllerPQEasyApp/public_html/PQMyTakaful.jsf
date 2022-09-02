@@ -62,13 +62,24 @@
                             </af:inputText>
                             <f:facet name="header"/>
                           </af:column>
-                          <af:column headerText="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.label}" id="c2">
+                          <af:column headerText="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodFrom.label}" id="c7">
+                            <af:inputDate value="#{row.bindings.PeriodFrom.inputValue}"
+                                          label="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodFrom.label}"
+                                          required="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodFrom.mandatory}"
+                                          columns="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodFrom.displayWidth}"
+                                          shortDesc="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodFrom.tooltip}"
+                                          id="id3">
+                              <f:validator binding="#{row.bindings.PeriodFrom.validator}"/>
+                              <af:convertDateTime pattern="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodFrom.format}"/>
+                            </af:inputDate>
+                          </af:column>
+                          <af:column headerText="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.label}" id="c4">
                             <af:inputDate value="#{row.bindings.PeriodTo.inputValue}"
                                           label="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.label}"
                                           required="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.mandatory}"
                                           columns="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.displayWidth}"
                                           shortDesc="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.tooltip}"
-                                          id="id1" contentStyle="font-weight:bold;font-size:xx-small">
+                                          id="id2" contentStyle="font-weight:bold;font-size:xx-small">
                               <f:validator binding="#{row.bindings.PeriodTo.validator}"/>
                               <af:convertDateTime pattern="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.format}"/>
                             </af:inputDate>
@@ -83,17 +94,6 @@
                                           contentStyle="font-weight:bold;font-size:xx-small;#{row.bindings.Status.inputValue=='IN-ACTIVE'?'color:red':'color:green'}">
                               <f:validator binding="#{row.bindings.Status.validator}"/>
                             </af:inputText>
-                          </af:column>
-                          <af:column headerText="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.label}" id="c4">
-                            <af:inputDate value="#{row.bindings.PeriodTo.inputValue}"
-                                          label="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.label}"
-                                          required="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.mandatory}"
-                                          columns="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.displayWidth}"
-                                          shortDesc="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.tooltip}"
-                                          id="id2" contentStyle="font-weight:bold;font-size:xx-small">
-                              <f:validator binding="#{row.bindings.PeriodTo.validator}"/>
-                              <af:convertDateTime pattern="#{bindings.VuPortalPolicyInfoQVORO.hints.PeriodTo.format}"/>
-                            </af:inputDate>
                           </af:column>
                           <af:column id="c5" headerText="Add-On">
                             <af:link text="Make a Request" id="l1" partialSubmit="true"/>

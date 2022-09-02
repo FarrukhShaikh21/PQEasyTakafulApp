@@ -135,7 +135,16 @@ where participant_id_fk=:P_ADF_PARTICIPANT_ID]]></SQLQuery>
     ColumnType="DATE"
     AliasName="LOSS_DATE"
     Expression="LOSS_DATE"
-    SQLType="DATE"/>
+    SQLType="DATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="pqetapp.modelpqasyapp.qvo.VuPortalClaiminfoQVO.LossDate_LABEL"/>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="VehicleName"
     IsUpdateable="false"
@@ -152,10 +161,10 @@ where participant_id_fk=:P_ADF_PARTICIPANT_ID]]></SQLQuery>
     </DesignTime>
     <Properties>
       <SchemaBasedProperties>
-        <LABEL
-          ResId="pqetapp.modelpqasyapp.qvo.VuPortalClaiminfoQVO.VehicleName_LABEL"/>
         <DISPLAYWIDTH
           Value="20"/>
+        <LABEL
+          ResId="pqetapp.modelpqasyapp.qvo.VuPortalClaiminfoQVO.VehicleName_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>

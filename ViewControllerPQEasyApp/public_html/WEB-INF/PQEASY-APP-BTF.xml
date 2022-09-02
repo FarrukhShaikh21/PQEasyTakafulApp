@@ -26,12 +26,6 @@
     <view id="PQMain">
       <page>/PQMain.jsf</page>
     </view>
-    <method-call id="CreateInsertIntimation">
-      <method>#{bindings.CreateInsert.execute}</method>
-      <outcome>
-        <fixed-outcome>ACT-GOTO-MYCLAIMINTIMATION</fixed-outcome>
-      </outcome>
-    </method-call>
     <view id="PQPolicyView">
       <page>/PQPolicyView.jsf</page>
     </view>
@@ -127,10 +121,6 @@
     </control-flow-rule>
     <control-flow-rule id="__4">
       <from-activity-id>PQMyClaims</from-activity-id>
-      <control-flow-case id="__5">
-        <from-outcome>ACT-GOTO-MYCLAIMINTIMATION</from-outcome>
-        <to-activity-id>CreateInsertIntimation</to-activity-id>
-      </control-flow-case>
       <control-flow-case id="__9">
         <from-outcome>ACT-GOTO-MYCLAIMHISTORY</from-outcome>
         <to-activity-id>PQClaimsHistory</to-activity-id>
@@ -159,19 +149,16 @@
         <from-outcome>ACT-GOTO-CONTACT-US</from-outcome>
         <to-activity-id>PQContact</to-activity-id>
       </control-flow-case>
+      <control-flow-case id="__14">
+        <from-outcome>ACT-GOTO-MYCOMPLAINT</from-outcome>
+        <to-activity-id>CreateComplaint</to-activity-id>
+      </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__6">
       <from-activity-id>PQClaimIntimation</from-activity-id>
       <control-flow-case id="__7">
         <from-outcome>ACT-BACK-TO-INTIMATION</from-outcome>
         <to-activity-id>RollbackBackFromIntimation</to-activity-id>
-      </control-flow-case>
-    </control-flow-rule>
-    <control-flow-rule id="__8">
-      <from-activity-id>CreateInsertIntimation</from-activity-id>
-      <control-flow-case id="__11">
-        <from-outcome>ACT-GOTO-MYCLAIMINTIMATION</from-outcome>
-        <to-activity-id>PQClaimIntimation</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__12">
@@ -187,9 +174,9 @@
         <from-outcome>ACT-GOTO-MYPOLICYVIEW-BACK</from-outcome>
         <to-activity-id>PQMyTakaful</to-activity-id>
       </control-flow-case>
-      <control-flow-case id="__14">
-        <from-outcome>ACT-GOTO-MYCOMPLAINT</from-outcome>
-        <to-activity-id>CreateComplaint</to-activity-id>
+      <control-flow-case id="__54">
+        <from-outcome>ACT-GOTO-MYCLAIMINTIMATION</from-outcome>
+        <to-activity-id>PQClaimIntimation</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__18">
