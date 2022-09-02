@@ -271,7 +271,7 @@
       <from-activity-id>RollbackBackFromIntimation</from-activity-id>
       <control-flow-case id="__48">
         <from-outcome>ACT-BACK-TO-INTIMATION</from-outcome>
-        <to-activity-id>PQMyClaims</to-activity-id>
+        <to-activity-id>PQPolicyView</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__50">

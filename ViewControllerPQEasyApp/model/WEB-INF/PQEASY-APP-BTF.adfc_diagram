@@ -54,11 +54,11 @@
       <property
          name="activityId">PQClaimIntimation</property>
       <property
-         name="x">336.01562</property>
+         name="x">326.01562</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>PQClaimIntimation&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">684.99414</property>
+         name="y">650.29297</property>
       <property
          name="page">/PQClaimIntimation.jsf</property>
       <property
@@ -104,7 +104,7 @@
       <property
          name="fromOutcome">ACT-GOTO-PROFILE</property>
       <property
-         name="sdm:polyPoints">R42,-75.12968,537.29297,149.67383,543.2471,L46</property>
+         name="sdm:polyPoints">R46,-75.46185,540.79297,149.67383,543.2471,L46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -114,7 +114,7 @@
       <property
          name="fromOutcome">ACT-GOTO-MYTAKAFUL</property>
       <property
-         name="sdm:polyPoints">B44,-120.0,600.202,-116.65723,679.0459,T50</property>
+         name="sdm:polyPoints">B39,-123.5,600.3472,-120.15723,679.0459,T44</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -124,7 +124,7 @@
       <property
          name="fromOutcome">ACT-GOTO-MYCLAIMINTIMATION</property>
       <property
-         name="sdm:polyPoints">T56,56.17871,1013.7471,332.51562,738.64355,B44</property>
+         name="sdm:polyPoints">T56,56.17871,1013.7471,322.51562,703.9424,B44</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -144,7 +144,7 @@
       <property
          name="fromOutcome">ACT-GOTO-MYCLAIMS</property>
       <property
-         name="sdm:polyPoints">R58,-75.5,551.29297,443.5,620.2471,L46</property>
+         name="sdm:polyPoints">T56,-113.0,490.29297,484.5,569.7471,T50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -154,7 +154,7 @@
       <property
          name="fromOutcome">ACT-BACK-TO-INTIMATION</property>
       <property
-         name="sdm:polyPoints">B56,339.51562,738.64355,527.5,892.8965,L46</property>
+         name="sdm:polyPoints">B56,329.51562,703.9424,527.5,892.8965,L46</property>
    </ControlFlowCase>
    <View
       id="View16">
@@ -251,7 +251,7 @@
       <property
          name="fromsrcid">__4</property>
       <property
-         name="sdm:polyPoints">T44,179.50098,800.2598,-109.5,598.29297,B61</property>
+         name="sdm:polyPoints">T50,183.00098,800.2267,-109.5,598.29297,B61</property>
    </ControlFlowCase>
    <View
       id="View27">
@@ -380,7 +380,7 @@
       <property
          name="fromOutcome">ACT-GOTO-TRACKING</property>
       <property
-         name="sdm:polyPoints">T33,172.50098,804.12244,-333.2358,531.94824,R46</property>
+         name="sdm:polyPoints">T39,176.00098,804.1087,-333.24655,531.94824,R46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -390,7 +390,7 @@
       <property
          name="fromOutcome">ACT-GOTO-BACK-FROM-TRACKING</property>
       <property
-         name="sdm:polyPoints">R54,-334.99707,538.94824,165.50098,808.29297,T21</property>
+         name="sdm:polyPoints">R54,-334.99707,538.94824,169.00098,808.29297,T27</property>
    </ControlFlowCase>
    <View
       id="View39">
@@ -452,7 +452,7 @@
       <property
          name="fromsrcid">__4</property>
       <property
-         name="sdm:polyPoints">T56,186.50098,796.9163,-204.62793,456.79883,B50</property>
+         name="sdm:polyPoints">T61,190.00098,796.86127,-204.62793,456.79883,B50</property>
    </ControlFlowCase>
    <View
       id="View45">
@@ -520,7 +520,7 @@
       <property
          name="fromOutcome">ACT-GOTO-BACK-FEEDBACK</property>
       <property
-         name="sdm:polyPoints">B50,238.5,762.09766,193.50098,805.1131,T67</property>
+         name="sdm:polyPoints">B50,238.5,762.09766,197.00098,808.29297,T73</property>
    </ControlFlowCase>
    <View
       id="View51">
@@ -574,11 +574,11 @@
       islink="true"
       id="ControlFlowCase55"
       from="MethodCall54"
-      to="View2">
+      to="View16">
       <property
          name="fromOutcome">ACT-BACK-TO-INTIMATION</property>
       <property
-         name="sdm:polyPoints">L54,526.0318,899.8965,224.00098,862.29297,R50</property>
+         name="sdm:polyPoints">L54,525.90186,899.8965,224.00098,865.79297,R54</property>
    </ControlFlowCase>
    <TaskFlowReturn
       id="TaskFlowReturn56">
@@ -603,7 +603,7 @@
       <property
          name="fromOutcome">ACT-LOGOUT-APP</property>
       <property
-         name="sdm:polyPoints">T50,-116.5,490.29297,-212.0,200.5459,B50</property>
+         name="sdm:polyPoints">T44,-120.0,490.29297,-212.0,200.5459,B50</property>
    </ControlFlowCase>
    <MethodCall
       id="MethodCall58">
@@ -626,7 +626,7 @@
       <property
          name="fromOutcome">ACT-GOTO-MYCLAIMS</property>
       <property
-         name="sdm:polyPoints">L54,443.5,627.2471,200.50098,808.29297,T79</property>
+         name="sdm:polyPoints">B50,484.5,677.7471,224.00098,858.79297,R46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -636,7 +636,7 @@
       <property
          name="fromOutcome">ACT-GOTO-BACK-MYPROFILE</property>
       <property
-         name="sdm:polyPoints">L54,149.5813,550.2471,-75.22223,544.29297,R50</property>
+         name="sdm:polyPoints">L54,149.63568,550.2471,-75.5,547.79297,R54</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -646,6 +646,6 @@
       <property
          name="fromOutcome">ACT-GOTO-BACK-FROM-MYTAKAFUL</property>
       <property
-         name="sdm:polyPoints">T56,-113.15723,678.90106,-116.5,600.1895,B50</property>
+         name="sdm:polyPoints">T56,-113.15723,678.90106,-116.5,600.2023,B50</property>
    </ControlFlowCase>
 </SDM>
