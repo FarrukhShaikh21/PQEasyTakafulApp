@@ -167,6 +167,10 @@
         <from-outcome>ACT-GOTO-MYPOLICYVIEW</from-outcome>
         <to-activity-id>ExecutePolicyVew</to-activity-id>
       </control-flow-case>
+      <control-flow-case id="__5">
+        <from-outcome>ACT-GOTO-BACK-FROM-MYTAKAFUL</from-outcome>
+        <to-activity-id>PQMain</to-activity-id>
+      </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__16">
       <from-activity-id>PQPolicyView</from-activity-id>

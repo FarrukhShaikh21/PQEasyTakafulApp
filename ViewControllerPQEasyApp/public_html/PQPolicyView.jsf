@@ -16,7 +16,7 @@
                   <af:gridRow marginTop="5px" height="auto" id="gr11">
                     <af:gridCell marginStart="5px" width="30%" id="gc26" halign="stretch" valign="middle">
                       <af:panelGroupLayout id="pgl5" layout="vertical" halign="center">
-                        <af:outputText value="MyTakaful" id="ot1"
+                        <af:outputText value="Policy View" id="ot1"
                                        inlineStyle="font-size:xx-large; font-style:italic; color:green;"/>
                         <af:outputText value="Know Your Protections" id="ot2"
                                        inlineStyle="font-size:xx-small; font-style:italic; color:green;"/>
@@ -35,6 +35,14 @@
                                  rowSpan="1">
                       <af:panelGroupLayout id="pgl3" layout="vertical" halign="center" styleClass="AFStretchWidth">
                         <af:panelFormLayout id="pfl1" rows="3" maxColumns="3" labelAlignment="top">
+                          <af:inputText value="#{bindings.RegistrationNo.inputValue}"
+                                        label="#{bindings.RegistrationNo.hints.label}"
+                                        required="#{bindings.RegistrationNo.hints.mandatory}"
+                                        columns="#{bindings.RegistrationNo.hints.displayWidth}"
+                                        maximumLength="#{bindings.RegistrationNo.hints.precision}"
+                                        shortDesc="#{bindings.RegistrationNo.hints.tooltip}" id="it8">
+                            <f:validator binding="#{bindings.RegistrationNo.validator}"/>
+                          </af:inputText>
                           <af:inputText value="#{bindings.ItemDetailId.inputValue}"
                                         label="#{bindings.ItemDetailId.hints.label}"
                                         required="#{bindings.ItemDetailId.hints.mandatory}"
@@ -115,14 +123,6 @@
                                         shortDesc="#{bindings.RegistrationYear.hints.tooltip}" id="it7">
                             <f:validator binding="#{bindings.RegistrationYear.validator}"/>
                           </af:inputText>
-                          <af:inputText value="#{bindings.RegistrationNo.inputValue}"
-                                        label="#{bindings.RegistrationNo.hints.label}"
-                                        required="#{bindings.RegistrationNo.hints.mandatory}"
-                                        columns="#{bindings.RegistrationNo.hints.displayWidth}"
-                                        maximumLength="#{bindings.RegistrationNo.hints.precision}"
-                                        shortDesc="#{bindings.RegistrationNo.hints.tooltip}" id="it8">
-                            <f:validator binding="#{bindings.RegistrationNo.validator}"/>
-                          </af:inputText>
                           <af:inputText value="#{bindings.EngineNo.inputValue}" label="#{bindings.EngineNo.hints.label}"
                                         required="#{bindings.EngineNo.hints.mandatory}"
                                         columns="#{bindings.EngineNo.hints.displayWidth}"
@@ -181,11 +181,11 @@
                           <f:facet name="footer">
                             <af:panelGroupLayout layout="horizontal" id="pgl4">
                               <af:button actionListener="#{bindings.Previous.execute}" text="Previous"
-                                         disabled="#{!bindings.Previous.enabled}" partialSubmit="true" id="b3"
-                                         styleClass="PQTransactionButton"/>
+                                         disabled="#{!bindings.Previous.enabled}" partialSubmit="true" id="b3"/>
+                              <af:spacer width="10" height="10" id="s2"/>
                               <af:button actionListener="#{bindings.Next.execute}" text="Next"
-                                         disabled="#{!bindings.Next.enabled}" partialSubmit="true" id="b2"
-                                         styleClass="PQTransactionButton"/>
+                                         disabled="#{!bindings.Next.enabled}" partialSubmit="true" id="b2"/>
+                              <af:spacer width="200" height="10" id="s1"/>
                               <af:button actionListener="#{bindings.CreateWithParams.execute}" text="Claim Intimate"
                                          disabled="#{!bindings.CreateWithParams.enabled}" id="b1"
                                          styleClass="PQTransactionButton" action="ACT-GOTO-MYCLAIMINTIMATION"/>

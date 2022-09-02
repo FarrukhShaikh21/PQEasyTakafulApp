@@ -251,7 +251,7 @@
       <property
          name="fromsrcid">__4</property>
       <property
-         name="sdm:polyPoints">T44,179.50098,800.24725,-113.0,598.29297,B56</property>
+         name="sdm:polyPoints">T44,179.50098,800.2598,-109.5,598.29297,B61</property>
    </ControlFlowCase>
    <View
       id="View27">
@@ -452,7 +452,7 @@
       <property
          name="fromsrcid">__4</property>
       <property
-         name="sdm:polyPoints">T56,186.50098,796.8911,-204.62793,456.79883,B50</property>
+         name="sdm:polyPoints">T56,186.50098,796.9163,-204.62793,456.79883,B50</property>
    </ControlFlowCase>
    <View
       id="View45">
@@ -637,5 +637,15 @@
          name="fromOutcome">ACT-GOTO-BACK-MYPROFILE</property>
       <property
          name="sdm:polyPoints">L54,149.5813,550.2471,-75.22223,544.29297,R50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase61"
+      from="View6"
+      to="View7">
+      <property
+         name="fromOutcome">ACT-GOTO-BACK-FROM-MYTAKAFUL</property>
+      <property
+         name="sdm:polyPoints">T56,-113.15723,678.90106,-116.5,600.1895,B50</property>
    </ControlFlowCase>
 </SDM>
