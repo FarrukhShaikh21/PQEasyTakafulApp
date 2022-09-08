@@ -1,0 +1,12 @@
+//Groovy Scripts for pqetapp.modelpqasyapp.eo.TmsClmWebClaim
+
+package pqetapp.modelpqasyapp.eo
+
+import oracle.jbo.script.annotation.TransientValueExpression;
+
+@TransientValueExpression(attributeName="txtWorkshopName")
+def txtWorkshopName_ExpressionScript_Expression()
+{
+TmsClmStWorkshop?.WorkshopName
+}
+

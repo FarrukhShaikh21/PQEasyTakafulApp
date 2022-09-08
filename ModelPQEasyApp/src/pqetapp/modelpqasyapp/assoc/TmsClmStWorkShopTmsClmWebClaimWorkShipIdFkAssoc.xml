@@ -33,10 +33,9 @@
       <Attr Name="_isUpdateable" Value="true"/>
       <Attr Name="_aggregation" Value="0"/>
       <Attr Name="_finderName" Value="TmsClmWebClaim"/>
-      <Attr Name="_foreignKey" Value="pqetapp.modelpqasyapp.eo.TmsClmWebClaim.fk_TmsClmWebClaim2"/>
     </DesignTime>
     <AttrArray Name="Attributes">
-      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebClaim.WebClaimIdPk"/>
+      <Item Value="pqetapp.modelpqasyapp.eo.TmsClmWebClaim.WorkshopIdFk"/>
     </AttrArray>
   </AssociationEnd>
 </Association>

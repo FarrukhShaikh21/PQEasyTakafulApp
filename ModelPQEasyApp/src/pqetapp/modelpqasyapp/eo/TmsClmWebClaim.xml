@@ -265,7 +265,8 @@
     IsQueriable="false">
     <TransientExpression
       trustMode="untrusted"
-      Name="ExpressionScript"><![CDATA[WorkshopIdFk==null?null:TmsClmStWorkshop?.WorkshopName]]></TransientExpression>
+      Name="ExpressionScript"
+      CodeSourceName="TmsClmWebClaimRow"/>
     <Dependencies>
       <Item
         Value="CityIdFk"/>
