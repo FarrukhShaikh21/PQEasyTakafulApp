@@ -13,6 +13,10 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <Variable
+    Name="P_CITY_ID_FK"
+    Kind="viewcriteria"
+    Type="oracle.jbo.domain.Number"/>
   <EntityUsage
     Name="TmsClmStWorkshop"
     Entity="pqetapp.modelpqasyapp.eo.TmsClmStWorkshop"/>
@@ -295,7 +299,6 @@
         ViewAttribute="WorkshopName"
         Operator="="
         Conjunction="AND"
-        Value=""
         Required="Optional">
         <Properties>
           <SchemaBasedProperties>
@@ -309,7 +312,6 @@
         ViewAttribute="BranchName"
         Operator="CONTAINS"
         Conjunction="AND"
-        Value=""
         Required="Optional">
         <Properties>
           <SchemaBasedProperties>
@@ -323,7 +325,6 @@
         ViewAttribute="AccountNumber"
         Operator="CONTAINS"
         Conjunction="AND"
-        Value=""
         Required="Optional">
         <Properties>
           <SchemaBasedProperties>
@@ -332,6 +333,42 @@
           </SchemaBasedProperties>
         </Properties>
       </ViewCriteriaItem>
+    </ViewCriteriaRow>
+  </ViewCriteria>
+  <ViewCriteria
+    Name="TmsClmStWorkshopViewByCityIDVC"
+    ViewObjectName="pqetapp.modelpqasyapp.vo.TmsClmStWorkshopView"
+    Conjunction="AND">
+    <Properties Name="_Props">
+      <CustomProperties>
+        <Property
+          Name="autoExecute"
+          Value="false"/>
+        <Property
+          Name="mode"
+          Value="Basic"/>
+        <Property
+          Name="allowConjunctionOverride"
+          Value="true"/>
+        <Property
+          Name="showInList"
+          Value="true"/>
+        <Property
+          Name="displayOperators"
+          Value="InAdvancedMode"/>
+      </CustomProperties>
+    </Properties>
+    <ViewCriteriaRow
+      Name="TmsClmStWorkshopViewCriteria_row_0"
+      UpperColumns="1">
+      <ViewCriteriaItem
+        Name="CityIdFk"
+        ViewAttribute="CityIdFk"
+        Operator="="
+        Conjunction="AND"
+        Value=":P_CITY_ID_FK"
+        IsBindVarValue="true"
+        Required="Optional"/>
     </ViewCriteriaRow>
   </ViewCriteria>
   <ViewLinkAccessor

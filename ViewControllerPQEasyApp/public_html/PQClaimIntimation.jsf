@@ -144,7 +144,7 @@
                                               required="#{bindings.txtCityName.hints.mandatory}"
                                               columns="#{bindings.txtCityName.hints.displayWidth}"
                                               shortDesc="#{bindings.txtCityName.hints.tooltip}" styleClass="PQTLovBox"
-                                              contentStyle="width:90%" simple="true">
+                                              contentStyle="width:90%" simple="true" autoSubmit="true">
                           <f:validator binding="#{bindings.txtCityName.validator}"/>
                         </af:inputListOfValues>
                       </af:panelGroupLayout>
@@ -168,7 +168,8 @@
                                               required="#{bindings.txtWorkshopName.hints.mandatory}"
                                               columns="#{bindings.txtWorkshopName.hints.displayWidth}"
                                               shortDesc="#{bindings.txtWorkshopName.hints.tooltip}" simple="true"
-                                              contentStyle="width:90%" styleClass="PQTLovBox">
+                                              contentStyle="width:90%" styleClass="PQTLovBox"
+                                              partialTriggers="txtCityNameId">
                           <f:validator binding="#{bindings.txtWorkshopName.validator}"/>
                         </af:inputListOfValues>
                       </af:panelGroupLayout>
@@ -190,7 +191,7 @@
                                       columns="#{bindings.ContactPerson.hints.displayWidth}"
                                       maximumLength="#{bindings.ContactPerson.hints.precision}"
                                       shortDesc="#{bindings.ContactPerson.hints.tooltip}" id="it4" simple="true"
-                                      styleClass="PQTTextBox" contentStyle="width:100%">
+                                      styleClass="PQTTextBox" contentStyle="width:100%;text-transform:upperCase">
                           <f:validator binding="#{bindings.ContactPerson.validator}"/>
                         </af:inputText>
                       </af:panelGroupLayout>
@@ -256,7 +257,7 @@
                                       columns="#{bindings.DetailRemarks.hints.displayWidth}"
                                       maximumLength="#{bindings.DetailRemarks.hints.precision}"
                                       shortDesc="#{bindings.DetailRemarks.hints.tooltip}" id="it3" simple="true"
-                                      styleClass="PQTTextBox" contentStyle="width:100%" rows="3">
+                                      styleClass="PQTTextBox" contentStyle="width:100%;text-transform:upperCase" rows="3">
                           <f:validator binding="#{bindings.DetailRemarks.validator}"/>
                         </af:inputText>
                       </af:panelGroupLayout>

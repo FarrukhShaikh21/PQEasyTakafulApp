@@ -24,7 +24,18 @@
   <ViewAccessor
     Name="AccTmsClmStWorkshopView"
     ViewObjectName="pqetapp.modelpqasyapp.vo.TmsClmStWorkshopView"
-    RowLevelBinds="true"/>
+    RowLevelBinds="true">
+    <ViewCriteriaUsage
+      Name="TmsClmStWorkshopViewByCityIDVC"
+      FullName="pqetapp.modelpqasyapp.vo.TmsClmStWorkshopView.TmsClmStWorkshopViewByCityIDVC"/>
+    <ParameterMap>
+      <PIMap Variable="P_CITY_ID_FK">
+        <TransientExpression
+          trustMode="untrusted"
+          Name="ExpressionScript"><![CDATA[CityIdFk==null?0:CityIdFk]]></TransientExpression>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
   <ListBinding
     Name="LovtxtLossTypeDescription"
     ListVOName="AccTmsClmStLossTypeView"

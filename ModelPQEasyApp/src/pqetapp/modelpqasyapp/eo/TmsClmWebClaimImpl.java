@@ -437,7 +437,7 @@ public class TmsClmWebClaimImpl extends EntityImpl {
      * @param value value to set the ContactPerson
      */
     public void setContactPerson(String value) {
-        setAttributeInternal(CONTACTPERSON, value);
+        setAttributeInternal(CONTACTPERSON, value==null?null:value.toUpperCase());
     }
 
     /**
@@ -485,7 +485,7 @@ public class TmsClmWebClaimImpl extends EntityImpl {
      * @param value value to set the DetailRemarks
      */
     public void setDetailRemarks(String value) {
-        setAttributeInternal(DETAILREMARKS, value);
+        setAttributeInternal(DETAILREMARKS, value==null?null:value.toUpperCase());
     }
 
     /**

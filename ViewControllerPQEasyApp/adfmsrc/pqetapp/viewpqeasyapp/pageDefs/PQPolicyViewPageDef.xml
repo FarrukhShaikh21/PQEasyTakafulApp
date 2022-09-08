@@ -103,9 +103,12 @@
       </AttrNames>
     </attributeValues>
     <action IterBinding="TmsClmWebClaimCRUDIterator" id="CreateWithParams" RequiresUpdateModel="true"
-            Action="createWithParams">
+            Action="createWithParams" InstanceName="EasyTakafulAppModuleDataControl.TmsClmWebClaimCRUD"
+            DataControl="EasyTakafulAppModuleDataControl">
       <NamedData NDName="DocumentIdFk" NDValue="#{bindings.DocumentIdPk.inputValue}" NDType="java.lang.String"/>
       <NamedData NDName="ItemDetailId" NDValue="#{bindings.ItemDetailId.inputValue}" NDType="java.lang.String"/>
+      <NamedData NDName="WorkshopIdFk" NDValue="#{''}" NDType="java.lang.String"/>
+      <NamedData NDName="txtWorkshopName" NDValue="#{''}" NDType="java.lang.String"/>
     </action>
   </bindings>
 </pageDefinition>

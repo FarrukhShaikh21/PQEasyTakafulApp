@@ -119,7 +119,12 @@
     SQLType="NUMERIC"
     Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
-    TableName="TMS_CLM_WEB_CLAIM"/>
+    TableName="TMS_CLM_WEB_CLAIM">
+    <Dependencies>
+      <Item
+        Value="CityIdFk"/>
+    </Dependencies>
+  </Attribute>
   <Attribute
     Name="ContactPerson"
     Precision="250"
@@ -260,8 +265,10 @@
     IsQueriable="false">
     <TransientExpression
       trustMode="untrusted"
-      Name="ExpressionScript"><![CDATA[TmsClmStWorkshop?.WorkshopName]]></TransientExpression>
+      Name="ExpressionScript"><![CDATA[WorkshopIdFk==null?null:TmsClmStWorkshop?.WorkshopName]]></TransientExpression>
     <Dependencies>
+      <Item
+        Value="CityIdFk"/>
       <Item
         Value="WorkshopIdFk"/>
     </Dependencies>

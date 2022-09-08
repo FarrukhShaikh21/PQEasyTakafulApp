@@ -8,7 +8,7 @@
       <af:decorativeBox id="db1" dimensionsFrom="parent">
         <f:facet name="top"/>
         <f:facet name="center">
-          <af:panelGridLayout id="pgl2" dimensionsFrom="auto">
+          <af:panelGridLayout id="pgl2">
             <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr4">
               <af:gridCell marginStart="5px" width="10%" id="gc4" marginEnd="5px"/>
               <af:gridCell marginStart="5px" width="80%" id="gc5" valign="stretch" halign="stretch">
