@@ -138,7 +138,7 @@
                       <af:button text="Feedback" id="b2" styleClass="PQTransactionButton" action="ACT-GOTO-FEEDBACK"/>
                       <af:spacer width="10" height="10" id="s2"/>
                       <af:button text="Claim Intimation" id="b3" styleClass="PQTransactionButton"
-                                 action="ACT-GOTO-MYCLAIMINTIMATION"/>
+                                 action="ACT-GOTO-MYCLAIMINTIMATION" rendered="false"/>
                       <af:spacer width="10" height="10" id="s3"/>
                       <af:button text="Workshop Panel" id="b4" styleClass="PQTransactionButton"
                                  action="ACT-GOTO-WORKSHOP"/>
